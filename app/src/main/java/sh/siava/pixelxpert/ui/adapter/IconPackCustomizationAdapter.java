@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import sh.siava.pixelxpert.PixelXpert;
+import sh.siava.pixelxpert.AOSPXpert;
 import sh.siava.pixelxpert.R;
 import sh.siava.pixelxpert.databinding.ViewItemIconPackCustomizationBinding;
 import sh.siava.pixelxpert.utils.IconPackUtil;
@@ -111,7 +111,7 @@ public class IconPackCustomizationAdapter extends RecyclerView.Adapter<IconPackC
 				binding.desc.setAlpha(.4f);
 				binding.reset.setVisibility(View.INVISIBLE);
 			}
-			binding.desc.setText(replacementIcon != null && replacementIcon.isEnabled() ? replacementIcon.mIconPack.mName : PixelXpert.get().getString(R.string.icon_pack_icon_disabled));
+			binding.desc.setText(replacementIcon != null && replacementIcon.isEnabled() ? replacementIcon.mIconPack.mName : AOSPXpert.get().getString(R.string.icon_pack_icon_disabled));
 
 			List<IconDialogAdapter.ReplacementIcon> mReplacementIcons = new LinkedList<>();
 			for (IconPackUtil.ReplacementIcon replacementIconFromPack : replacementIcons) {

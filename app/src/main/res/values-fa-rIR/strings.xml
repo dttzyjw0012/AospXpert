@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">برای تغییر نمایه، نوار وضعیت را طولانی فشار دهید</string>
     <string name="statusbar_app_switch_icon">هنگامی که جابجایی در دسترس است، نمادی را در نوار وضعیت نشان دهید</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">از طریق <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font> بدون محدودیت باز شد: حالشو ببر!</string>
+    <string name="settings_cloned_apps_active">از طریق <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font> بدون محدودیت باز شد: حالشو ببر!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">اطلاعات باتری…</string>
     <string name="power_indication_error">خطا در واکشی داده‌های شارژ</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">تغییر نسخه</string>
     <string name="reinstall_word">نصب مجدد</string>
     <string name="changelog_title">تغییرات</string>
-    <string name="own_prefs_header">تنظیمات AOSPMods</string>
+    <string name="own_prefs_header">تنظیمات AOSPXpert</string>
     <string name="language_title">زبان</string>
     <string name="toggle_dark_apply">(برای اعمال، یک بار رنگ صفحه را تیره/روشن کنید)</string>
     <string name="gesture_nav_extra_cat">حرکات از پایین صفحه</string>

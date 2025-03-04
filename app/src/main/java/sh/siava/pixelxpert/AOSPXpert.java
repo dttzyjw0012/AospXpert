@@ -17,13 +17,13 @@ import java.util.concurrent.TimeUnit;
 
 import sh.siava.pixelxpert.service.RootProvider;
 
-public class PixelXpert extends Application {
+public class AOSPXpert extends Application {
 
 	/** @noinspection unused*/
 	private static final String TAG = "PixelXpertSingleton";
 	private final Handler mainThreadHandler = new Handler(Looper.getMainLooper());
 
-	private static PixelXpert instance;
+	private static AOSPXpert instance;
 	private boolean mCoreRootServiceBound = false;
 	public final CountDownLatch mRootServiceConnected = new CountDownLatch(1);
 
@@ -45,9 +45,9 @@ public class PixelXpert extends Application {
 		return mCoreRootService;
 	}
 
-	public static PixelXpert get() {
+	public static AOSPXpert get() {
 		if (instance == null) {
-			instance = new PixelXpert();
+			instance = new AOSPXpert();
 		}
 		return instance;
 	}

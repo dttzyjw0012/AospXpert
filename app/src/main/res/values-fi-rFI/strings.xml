@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Vaihda profiilia painamalla pitkään tilapalkkia</string>
     <string name="statusbar_app_switch_icon">Näytä kuvake tilapalkissa, kun vaihto on käytettävissä</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Avattu kaikille sovelluksille <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Nauti!</string>
+    <string name="settings_cloned_apps_active">Avattu kaikille sovelluksille <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Nauti!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Akun tiedot…</string>
     <string name="power_indication_error">Virhe ladattavien tietojen haussa</string>

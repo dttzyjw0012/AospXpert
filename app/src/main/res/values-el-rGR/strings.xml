@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Πατήστε παρατεταμένα τη γραμμή κατάστασης για εναλλαγή προφίλ</string>
     <string name="statusbar_app_switch_icon">Εμφάνιση ενός εικονιδίου στη γραμμή κατάστασης όταν είναι διαθέσιμη η εναλλαγή</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Ξεκλείδωτο για όλες τις εφαρμογές μέσω <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Απολαύστε!</string>
+    <string name="settings_cloned_apps_active">Ξεκλείδωτο για όλες τις εφαρμογές μέσω <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Απολαύστε!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Σφάλμα λήψης δεδομένων φόρτισης</string>

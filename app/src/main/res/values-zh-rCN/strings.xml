@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">长按状态栏切换空间</string>
     <string name="statusbar_app_switch_icon">切换可用时在状态栏显示图标</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">通过 <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font> 解锁所有应用：开始 享受吧！</string>
+    <string name="settings_cloned_apps_active">通过 <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font> 解锁所有应用：开始 享受吧！</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">电池信息…</string>
     <string name="power_indication_error">获取充电信息出错</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">更换分支</string>
     <string name="reinstall_word">重装</string>
     <string name="changelog_title">更新日志</string>
-    <string name="own_prefs_header">AOSP Mods 设置</string>
+    <string name="own_prefs_header">AOSP Xpert 设置</string>
     <string name="language_title">语言(Language)</string>
     <string name="toggle_dark_apply">(切换深色模式以应用)</string>
     <string name="gesture_nav_extra_cat">更多导航栏手势</string>

@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">प्रोफ़ाइल स्विच करने के लिए स्टेटसबार को देर तक दबाएँ</string>
     <string name="statusbar_app_switch_icon">स्विचिंग उपलब्ध होने पर स्टेटसबार पर एक आइकन दिखाएं</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Unlocked for all apps via <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Enjoy!</string>
+    <string name="settings_cloned_apps_active">Unlocked for all apps via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Enjoy!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Error fetching charging data</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">स्विच ब्रांच</string>
     <string name="reinstall_word">पुनर्स्थापित करें</string>
     <string name="changelog_title">बदलाव का</string>
-    <string name="own_prefs_header">AOSPMods सेटिंग</string>
+    <string name="own_prefs_header">AOSPXpert सेटिंग</string>
     <string name="language_title">भाषा चुनें</string>
     <string name="toggle_dark_apply">(गहरे रंग वाली थीम पर स्विच करें)</string>
     <string name="gesture_nav_extra_cat">नेविगेशन बार के लिए अतिरिक्त जेस्चर</string>

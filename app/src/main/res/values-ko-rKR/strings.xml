@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--General strings-->
-    <string name="app_themed_icon_title">AOSP Mods 테마의 대체 아이콘 활성화</string>
+    <string name="app_themed_icon_title">AOSP Xpert 테마의 대체 아이콘 활성화</string>
     <string name="xposed_desc">구글 픽셀용 커스텀마이징</string>
     <string name="volume_tile_title">미디어 볼륨</string>
     <string name="app_switch_tile_title">앱 프로필 바꾸기</string>
@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">상태표시줄을 길게 눌러 프로필 전환하기</string>
     <string name="statusbar_app_switch_icon">프로필 전환이 가능할 때 상태표시줄에 아이콘을 표시합니다</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Unlocked for all apps via <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Enjoy!</string>
+    <string name="settings_cloned_apps_active">Unlocked for all apps via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Enjoy!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Error fetching charging data</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">branch 전환하기</string>
     <string name="reinstall_word">재설치</string>
     <string name="changelog_title">변경 사항</string>
-    <string name="own_prefs_header">AOSPMods 설정</string>
+    <string name="own_prefs_header">AOSPXpert 설정</string>
     <string name="language_title">언어</string>
     <string name="toggle_dark_apply">(다크 테마를 토글하여 적용)</string>
     <string name="gesture_nav_extra_cat">추가 네비게이션 바 제스쳐</string>

@@ -16,7 +16,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.concurrent.CountDownLatch;
 
-import sh.siava.pixelxpert.PixelXpert;
+import sh.siava.pixelxpert.AOSPXpert;
 import sh.siava.pixelxpert.R;
 import sh.siava.pixelxpert.databinding.ActivitySplashScreenBinding;
 import sh.siava.pixelxpert.utils.AppUtils;
@@ -43,7 +43,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
 		// Root permission check
 		new Thread(() -> {
-			if (PixelXpert.get().hasRootAccess()) {
+			if (AOSPXpert.get().hasRootAccess()) {
 				mRootCheckPassed.countDown();
 			} else {
 				if (!getIntent().hasExtra("FromKSU")) {
@@ -68,8 +68,8 @@ public class SplashScreenActivity extends AppCompatActivity {
 				// Wait for all checks to pass and for all operations to finish
 				mRootCheckPassed.await();
 
-				PixelXpert app = PixelXpert.get();
-				if (!PixelXpert.get().isCoreRootServiceBound()) {
+				AOSPXpert app = AOSPXpert.get();
+				if (!AOSPXpert.get().isCoreRootServiceBound()) {
 					app.tryConnectRootService();
 				}
 

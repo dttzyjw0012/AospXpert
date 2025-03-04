@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Naciśnij i przytrzymaj pasek stanu, aby przełączyć profil</string>
     <string name="statusbar_app_switch_icon">Pokaż ikonę na pasku stanu, gdy możliwe jest przełączanie</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Odblokowane dla wszystkich aplikacji przez <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Ciesz się!</string>
+    <string name="settings_cloned_apps_active">Odblokowane dla wszystkich aplikacji przez <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Ciesz się!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Informacje o baterii…</string>
     <string name="power_indication_error">Błąd pobierania danych ładowania</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">Przełącz gałąź</string>
     <string name="reinstall_word">Zainstaluj ponownie</string>
     <string name="changelog_title">Dziennik zmian</string>
-    <string name="own_prefs_header">Ustawienia AOSPMods</string>
+    <string name="own_prefs_header">Ustawienia AOSPXpert</string>
     <string name="language_title">Język</string>
     <string name="toggle_dark_apply">(Przełącz ciemny motyw, aby zastosować)</string>
     <string name="gesture_nav_extra_cat">Dodatkowe gesty paska nawigacyjnego</string>

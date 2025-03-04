@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Длительное нажатие на строке состояния для переключения профиля</string>
     <string name="statusbar_app_switch_icon">Показывать значок в строке состояния, когда переключение доступно</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Разблокировано для всех приложений через <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Наслаждайтесь!</string>
+    <string name="settings_cloned_apps_active">Разблокировано для всех приложений через <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Наслаждайтесь!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Информация о батарее…</string>
     <string name="power_indication_error">Ошибка при получении данных о зарядке</string>

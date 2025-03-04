@@ -19,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import sh.siava.pixelxpert.IRootProviderProxy;
-import sh.siava.pixelxpert.PixelXpert;
+import sh.siava.pixelxpert.AOSPXpert;
 import sh.siava.pixelxpert.R;
 import sh.siava.pixelxpert.modpacks.Constants;
 import sh.siava.pixelxpert.utils.PyTorchSegmentor;
@@ -75,17 +75,17 @@ public class RootProviderProxy extends Service {
 		public Bitmap extractSubject(Bitmap input, int method) throws RemoteException {
 			ensureEnvironment();
 
-			if(!PixelXpert.get().isCoreRootServiceBound())
+			if(!AOSPXpert.get().isCoreRootServiceBound())
 			{
-				PixelXpert.get().tryConnectRootService();
+				AOSPXpert.get().tryConnectRootService();
 			}
 
 			switch (method)
 			{
 				case AI_METHOD_MLKIT:
-					return MLKitSegmentor.extractSubject(PixelXpert.get(), input);
+					return MLKitSegmentor.extractSubject(AOSPXpert.get(), input);
 				case AI_METHOD_PYTORCH:
-					return PyTorchSegmentor.extractSubject(PixelXpert.get(), input);
+					return PyTorchSegmentor.extractSubject(AOSPXpert.get(), input);
 			}
 
 			return null;

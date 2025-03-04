@@ -10,11 +10,11 @@
 		tools:ignore="QueryAllPackagesPermission" />
 
 	<application
-		android:name=".PixelXpert"
+		android:name=".AOSPXpert"
 		android:enableOnBackInvokedCallback="true"
 		android:forceQueryable="true"
 		android:icon="@mipmap/ic_launcher"
-		android:label="Pixel Xpert"
+		android:label="AOSP Xpert"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme.PixelXpert">
 		<activity

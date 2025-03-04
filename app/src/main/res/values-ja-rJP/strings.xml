@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">ステータスバーを長押ししてプロファイルを切り替えます</string>
     <string name="statusbar_app_switch_icon">切り替えが可能な場合はステータスバーにアイコンを表示します</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active"><font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>により、全てのアプリでご利用いただけます。</string>
+    <string name="settings_cloned_apps_active"><font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>により、全てのアプリでご利用いただけます。</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">バッテリー情報</string>
     <string name="power_indication_error">充電データの取得に失敗</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">ブランチを切り替え</string>
     <string name="reinstall_word">再インストール</string>
     <string name="changelog_title">変更履歴</string>
-    <string name="own_prefs_header">AOSPModsの設定</string>
+    <string name="own_prefs_header">AOSPXpertの設定</string>
     <string name="language_title">言語</string>
     <string name="toggle_dark_apply">(ダークテーマの適用)</string>
     <string name="gesture_nav_extra_cat">ナビゲーションバーの追加ジェスチャー</string>

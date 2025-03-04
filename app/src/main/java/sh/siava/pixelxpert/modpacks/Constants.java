@@ -25,7 +25,7 @@ public final class Constants {
 	public static final String SYSTEM_UI_PACKAGE = "com.android.systemui";
 	public static final String SYSTEM_FRAMEWORK_PACKAGE = "android";
 	public static final String TELECOM_SERVER_PACKAGE = "com.android.server.telecom";
-	public static final String LAUNCHER_PACKAGE = "com.google.android.apps.nexuslauncher";
+	public static final String LAUNCHER_PACKAGE = "com.android.launcher3";
 	public static final String SETTINGS_PACKAGE = "com.android.settings";
 	public static final String DIALER_PACKAGE = "com.google.android.dialer";
 	public static final String KSU_PACKAGE = "me.weishu.kernelsu";

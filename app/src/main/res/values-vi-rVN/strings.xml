@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Nhấn và giữ thanh trạng thái để chuyển hồ sơ</string>
     <string name="statusbar_app_switch_icon">Hiển thị biểu tượng trên thanh trạng thái khi có thể chuyển đổi</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Mở khóa toàn bộ tại <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Hãy tận hưởng!</string>
+    <string name="settings_cloned_apps_active">Mở khóa toàn bộ tại <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Hãy tận hưởng!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Thông tin pin…</string>
     <string name="power_indication_error">Lỗi khi tải về dữ liệu sạc</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">Đổi kênh cập nhật</string>
     <string name="reinstall_word">Cài đặt lại</string>
     <string name="changelog_title">Nhật ký thay đổi</string>
-    <string name="own_prefs_header">Cài đặt AOSPMods</string>
+    <string name="own_prefs_header">Cài đặt AOSPXpert</string>
     <string name="language_title">Ngôn ngữ</string>
     <string name="toggle_dark_apply">(Chuyển đổi chủ đề tối để áp dụng)</string>
     <string name="gesture_nav_extra_cat">Cử chỉ bổ sung cho thanh điều hướng</string>

@@ -5,7 +5,7 @@ import android.util.TypedValue;
 
 import androidx.annotation.ColorInt;
 
-import sh.siava.pixelxpert.PixelXpert;
+import sh.siava.pixelxpert.AOSPXpert;
 
 public class MiscUtils {
 
@@ -24,6 +24,6 @@ public class MiscUtils {
 	}
 
 	public static int dpToPx(float dp) {
-		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, PixelXpert.get().getResources().getDisplayMetrics());
+		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, AOSPXpert.get().getResources().getDisplayMetrics());
 	}
 }

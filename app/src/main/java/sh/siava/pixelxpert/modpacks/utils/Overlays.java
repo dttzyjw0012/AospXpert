@@ -38,7 +38,7 @@ public class Overlays {
 		Overlays.put("QSLightThemeOverlay", new OverlayProp("sh.siava.pixelxpert_QSTheme", false));
 		Overlays.put("QSLightThemeBSTOverlay", new OverlayProp("sh.siava.pixelxpert_QSTheme_BST", false));
 		Overlays.put("QSDualToneOverlay", new OverlayProp("sh.siava.pixelxpert_QSDualTone", false));
-		Overlays.put("CustomThemedIconsOverlay", new OverlayProp("com.romcontrolicons.nexuslauncher", false));
+		Overlays.put("CustomThemedIconsOverlay", new OverlayProp("com.romcontrolicons.aosplauncher", false));
 		Overlays.put("DualToneBatteryOverlay", new OverlayProp("com.android.dualtonebattery", false));
 		Overlays.put("UnreadMessagesNumberOverlay", new OverlayProp("com.android.systemui.shownumber", false));
         /*Deprecated shortcut...no longer makes sense

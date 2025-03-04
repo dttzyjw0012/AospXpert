@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Appuyez longuement sur la barre d\'état pour changer de profil</string>
     <string name="statusbar_app_switch_icon">Afficher une icône sur la barre d\'état lorsque la commutation est disponible</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Déverrouillé pour toutes les applications via <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Profitez !</string>
+    <string name="settings_cloned_apps_active">Déverrouillé pour toutes les applications via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Profitez !</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Informations sur la batterie…</string>
     <string name="power_indication_error">Erreur de récupération des données de chargement</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">Changer de branche</string>
     <string name="reinstall_word">Réinstaller</string>
     <string name="changelog_title">Journal des modifications</string>
-    <string name="own_prefs_header">Paramètre d’AOSPMods</string>
+    <string name="own_prefs_header">Paramètre d’AOSPXpert</string>
     <string name="language_title">Langues</string>
     <string name="toggle_dark_apply">(désactiver puis réactiver le thème sombre pour appliquer)</string>
     <string name="gesture_nav_extra_cat">Plus de gestes pour la barre de navigation</string>

@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Houd de statusbalk lang ingedrukt om van profiel te wisselen</string>
     <string name="statusbar_app_switch_icon">Toon een pictogram op de statusbalk wanneer schakelen beschikbaar is</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Ontgrendeld voor alle apps via <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Veel plezier!</string>
+    <string name="settings_cloned_apps_active">Ontgrendeld voor alle apps via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Veel plezier!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Fout bij ophalen van opladen gegevens</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">Van tak wisselen</string>
     <string name="reinstall_word">Opnieuw installeren</string>
     <string name="changelog_title">Wijzigingslog</string>
-    <string name="own_prefs_header">AOSPMods-instellingen</string>
+    <string name="own_prefs_header">AOSPXpert-instellingen</string>
     <string name="language_title">Taal</string>
     <string name="toggle_dark_apply">(Toggle donker thema om toe te passen)</string>
     <string name="gesture_nav_extra_cat">Extra navigatiebalkgebaren</string>

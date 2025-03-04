@@ -1,7 +1,7 @@
 {
-    "version": "4.1.0",
-    "versionCode": 417,
+    "version": "4.1.1",
+    "versionCode": 424,
     "changelog": "https://raw.githubusercontent.com/siavash79/PixelXpert/stable/MagiskChangelog.md",
-    "zipUrl_Full": "https://github.com/siavash79/PixelXpert/releases/download/v4.1.0/PixelXpert.zip",
-    "zipUrl_Xposed": "https://github.com/siavash79/PixelXpert/releases/download/v4.1.0/PixelXpert.zip"
+    "zipUrl_Full": "https://github.com/siavash79/PixelXpert/releases/download/v4.1.1/PixelXpert.zip",
+    "zipUrl_Xposed": "https://github.com/siavash79/PixelXpert/releases/download/v4.1.1/PixelXpert.zip"
 }

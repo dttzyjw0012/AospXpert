@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Trykk lenge på statuslinjen for å bytte profil</string>
     <string name="statusbar_app_switch_icon">Vis et ikon på statuslinjen når bytte er tilgjengelig</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Låst opp for alle apper via <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Nyt!</string>
+    <string name="settings_cloned_apps_active">Låst opp for alle apper via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Nyt!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Batteri info…</string>
     <string name="power_indication_error">Feil ved henting av ladedata</string>

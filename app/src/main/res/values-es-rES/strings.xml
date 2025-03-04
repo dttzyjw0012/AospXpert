@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Pulsación larga de la barra de estado para cambiar de perfil</string>
     <string name="statusbar_app_switch_icon">Mostrar un icono en la barra de estado cuando el cambio está disponible</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Desbloqueado para todas las aplicaciones a través de <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: ¡Disfruta!</string>
+    <string name="settings_cloned_apps_active">Desbloqueado para todas las aplicaciones a través de <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: ¡Disfruta!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Información de la batería…</string>
     <string name="power_indication_error">Error obteniendo datos de carga</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Actualizaciones de la aplicación</string>
     <string name="monitoring_category_title">Opciones de monitoreo</string>
     <string name="netstat_header">Configuración de estadísticas de red</string>
-    <string name="string_formatter_manual_body_v3">Además del texto normal, las variables dinámicas también están disponibles, como fecha, uso de datos y temperatura:\n\n$G\&lt;format\&gt; : Fecha georgiana, según el formato*\n$P&lt;format&gt; : Fecha persa, según el formato*\n$Nrx : Descargas totales en el período especificado ** ***\n$Ntx: Subidas totales en el período especificado ** ***\n$Nall : Tráfico total en el período especificado Nombre SSID WiFi (si corresponde)\n\n$T\&lt;format\&gt;[interval] : Temperatura; \nformat puede ser b (para batería), c (para cpu), g (para gpu) y s (para piel) \nLastly, hay un número opcional de intervalo de actualización en segundos (predeterminado: 60 segundos) \n\n*for documentación de formato, busque \"Formato de fecha Java\"\n** Puede especificar el período de estadísticas en AOSPMods/Menú misceláneo/Configuración de estadísticas de red\n*** si reemplazas $N con $Nc obtendrás con estadísticas de datos móviles (por ejemplo, $Ncrx en lugar de Nrx)</string>
+    <string name="string_formatter_manual_body_v3">Además del texto normal, las variables dinámicas también están disponibles, como fecha, uso de datos y temperatura:\n\n$G\&lt;format\&gt; : Fecha georgiana, según el formato*\n$P&lt;format&gt; : Fecha persa, según el formato*\n$Nrx : Descargas totales en el período especificado ** ***\n$Ntx: Subidas totales en el período especificado ** ***\n$Nall : Tráfico total en el período especificado Nombre SSID WiFi (si corresponde)\n\n$T\&lt;format\&gt;[interval] : Temperatura; \nformat puede ser b (para batería), c (para cpu), g (para gpu) y s (para piel) \nLastly, hay un número opcional de intervalo de actualización en segundos (predeterminado: 60 segundos) \n\n*for documentación de formato, busque \"Formato de fecha Java\"\n** Puede especificar el período de estadísticas en AOSPXpert/Menú misceláneo/Configuración de estadísticas de red\n*** si reemplazas $N con $Nc obtendrás con estadísticas de datos móviles (por ejemplo, $Ncrx en lugar de Nrx)</string>
     <string name="update_channel_name">Actualizaciones</string>
     <string name="download_channel_name">Descargas</string>
     <string name="assets_download_title">Descargando archivos</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">Cambiar rama</string>
     <string name="reinstall_word">Reinstalar</string>
     <string name="changelog_title">Lista de cambios</string>
-    <string name="own_prefs_header">Configuración de AOSPMods</string>
+    <string name="own_prefs_header">Configuración de AOSPXpert</string>
     <string name="language_title">Idioma</string>
     <string name="toggle_dark_apply">(Alternar tema oscuro para aplicar)</string>
     <string name="gesture_nav_extra_cat">Gestos adicionales de la barra de navegación</string>

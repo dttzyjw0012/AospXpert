@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Натисніть і утримуйте панель стану, щоб переключити профіль</string>
     <string name="statusbar_app_switch_icon">Показувати піктограму на панелі стану, коли доступне перемикання</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Розблоковано для всіх додатків з <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Розважайся!</string>
+    <string name="settings_cloned_apps_active">Розблоковано для всіх додатків з <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Розважайся!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Інформація про акумулятор…</string>
     <string name="power_indication_error">Помилка отримання даних про зарядку</string>

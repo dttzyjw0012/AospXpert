@@ -36,7 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
-import sh.siava.pixelxpert.PixelXpert;
+import sh.siava.pixelxpert.AOSPXpert;
 import sh.siava.pixelxpert.R;
 import sh.siava.pixelxpert.databinding.ViewItemIconPackBinding;
 import sh.siava.pixelxpert.databinding.ViewRecyclerIconsBinding;
@@ -162,13 +162,13 @@ public class IconPackAdapter extends RecyclerView.Adapter<IconPackAdapter.ViewHo
 		@SuppressLint("NonConstantResourceId")
 		public void bind(IconPackUtil.IconPack pack, HashMap<String, ArrayList<IconPackUtil.ReplacementIcon>> replacementMapping, int enabledState) {
 			Context context = itemView.getContext();
-			String name = pack.mName.isEmpty() ? PixelXpert.get().getString(R.string.icon_pack_unknown_name) : pack.mName;
+			String name = pack.mName.isEmpty() ? AOSPXpert.get().getString(R.string.icon_pack_unknown_name) : pack.mName;
 			String author = pack.mAuthor.isEmpty() ?
-					PixelXpert.get().getString(R.string.icon_pack_unknown_author) :
-					String.format(PixelXpert.get().getString(R.string.icon_pack_author), pack.mAuthor);
+					AOSPXpert.get().getString(R.string.icon_pack_unknown_author) :
+					String.format(AOSPXpert.get().getString(R.string.icon_pack_author), pack.mAuthor);
 
 			if (mPackUtil.getEnabledState(pack) == IconPackUtil.ENABLED_PARTIAL) {
-				String partiallyEnabledText = PixelXpert.get().getString(R.string.partially_enabled);
+				String partiallyEnabledText = AOSPXpert.get().getString(R.string.partially_enabled);
 				String fullText = name + " " + partiallyEnabledText;
 				SpannableString spannableString = new SpannableString(fullText);
 

@@ -15,16 +15,16 @@ android {
 		applicationId = "sh.siava.pixelxpert"
 		minSdk = 33
 		targetSdk = 34
-		versionCode = 423
-		versionName = "canary-424"
-		setProperty("archivesBaseName", "PixelXpert.apk")
+		versionCode = 425
+		versionName = "aosp-canary-425"
+		setProperty("archivesBaseName", "AOSPXpert.apk")
 		ndk {
 			//noinspection ChromeOsAbiSupport
-			abiFilters.add("arm64-v8a")
+			abiFilters.add("arm64-v8a x86_64")
 		}
 	}
 
-	val keystorePropertiesFile = rootProject.file("ReleaseKey.properties")
+	val keystorePropertiesFile = rootProject.file("release-keystore.properties")
 	var releaseSigning = signingConfigs.getByName("debug")
 
 	try {
@@ -62,7 +62,7 @@ android {
 		variant.outputs
 			.map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
 			.forEach { output ->
-				val outputFileName = "PixelXpert.apk"
+				val outputFileName = "AOSPXpert.apk"
 				output.outputFileName = outputFileName
 			}
 	}
@@ -151,7 +151,8 @@ dependencies {
 	// Lottie
 	implementation(libs.lottie)
 
-	implementation (libs.prdownloader)
+//	implementation (libs.prdownloader)
+	implementation(files("lib/prdownloader-release.aar"))
 
 	implementation (libs.pytorch.android.lite)
 	implementation (libs.pytorch.android.torchvision.lite)

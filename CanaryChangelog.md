@@ -1,3 +1,9 @@
+**canary-425**
+- Start the development of the AOSP Xpert module for pure AOSP rom
+- Recover the compatibility of pure AOSP rom of magisk module
+- Change the launcher hook to be compatible with AOSP's launcher3
+- Fix some module name text
+
 **canary-424**  
 - improved dashed circle battery drawable colors  
 - Fixed in-call vibration mods  

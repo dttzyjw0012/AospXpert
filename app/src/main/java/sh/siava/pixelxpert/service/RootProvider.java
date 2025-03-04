@@ -22,7 +22,7 @@ public class RootProvider extends RootService {
 	String TAG = getClass().getSimpleName();
 
 	static final String LSPD_DB_PATH = "/data/adb/lspd/config/modules_config.db";
-	static final String SQLITE_BIN = "/data/adb/modules/PixelXpert/sqlite3";
+	static final String SQLITE_BIN = "/data/adb/modules/AOSPXpert/sqlite3";
 
 	@Override
 	public IBinder onBind(@NonNull Intent intent) {

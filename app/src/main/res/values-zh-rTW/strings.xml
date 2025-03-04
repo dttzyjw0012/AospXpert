@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--General strings-->
-    <string name="app_themed_icon_title">啟用替代的 AOSP Mods 主題應用圖示</string>
+    <string name="app_themed_icon_title">啟用替代的 AOSP Xpert 主題應用圖示</string>
     <string name="xposed_desc">針對 Google Pixel 裝置的自定義</string>
     <string name="volume_tile_title">Media Volume</string>
     <string name="app_switch_tile_title">Switch App Profile</string>
@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Long press statusbar to switch profile</string>
     <string name="statusbar_app_switch_icon">Show an icon on statusbar when switching is available</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">透過 <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font> 解鎖所有應用程式: 享受！</string>
+    <string name="settings_cloned_apps_active">透過 <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font> 解鎖所有應用程式: 享受！</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">電池資訊...</string>
     <string name="power_indication_error">取得充電數據時出錯</string>
@@ -450,7 +450,7 @@
     <string name="switch_branches">更換分支</string>
     <string name="reinstall_word">重新安裝</string>
     <string name="changelog_title">Changelog</string>
-    <string name="own_prefs_header">AOSP Mods 設定</string>
+    <string name="own_prefs_header">AOSP Xpert 設定</string>
     <string name="language_title">語言</string>
     <string name="toggle_dark_apply">(切換深色模式以應用)</string>
     <string name="gesture_nav_extra_cat">更多導航欄手勢</string>

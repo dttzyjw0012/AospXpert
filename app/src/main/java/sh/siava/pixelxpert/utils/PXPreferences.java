@@ -5,13 +5,13 @@ import android.content.Context;
 import java.util.List;
 
 import sh.siava.pixelxpert.BuildConfig;
-import sh.siava.pixelxpert.PixelXpert;
+import sh.siava.pixelxpert.AOSPXpert;
 import sh.siava.rangesliderpreference.RangeSliderPreference;
 
 /** @noinspection unused*/
 public class PXPreferences {
 
-	private static final ExtendedSharedPreferences prefs = ExtendedSharedPreferences.from(PixelXpert.get()
+	private static final ExtendedSharedPreferences prefs = ExtendedSharedPreferences.from(AOSPXpert.get()
 			.createDeviceProtectedStorageContext()
 			.getSharedPreferences(BuildConfig.APPLICATION_ID + "_preferences", Context.MODE_PRIVATE));
 	private static final ExtendedSharedPreferences.Editor editor = prefs.edit();

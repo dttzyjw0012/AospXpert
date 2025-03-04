@@ -346,7 +346,7 @@
     <string name="statusbar_long_press_app_switch">Дуго притисните статусну траку да бисте променили профил</string>
     <string name="statusbar_app_switch_icon">Прикажите икону на статусној траци када је пребацивање доступно</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Откључано за све апликације уз <font fgcolor="#FF64A829"><b><u>Pixel Xpert</u></b></font>: Уживајте!</string>
+    <string name="settings_cloned_apps_active">Откључано за све апликације уз <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Уживајте!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Error fetching charging data</string>

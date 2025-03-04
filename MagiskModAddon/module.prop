@@ -1,8 +1,8 @@
 id=AOSPMods
-name=AOSP Mods (Full version)
-version=4.1.0
-versionCode=417
-author=Siavash79 + ElTifo
+name=AOSP Xpert (Full version)
+version=4.1.1
+versionCode=425
+author=Siavash79 + ElTifo + Nameless
 description=Xposed based module for customizations on SystemUI on AOSP based roms. Supports Android 12+
 minMagisk=24200
 updateJson=https://raw.githubusercontent.com/siavash79/AOSPMods/stable/MagiskModuleUpdate_Full.json
