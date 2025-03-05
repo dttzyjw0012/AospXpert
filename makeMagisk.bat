@@ -1,7 +1,7 @@
-cp app\release\PixelXpert.apk MagiskModBase\system\priv-app\PixelXpert
+cp app\release\AOSPXpert.apk MagiskModBase\system\priv-app\AOSPXpert
 
 cd MagiskModBase
 
-zip -r -9 -q ..\PixelXpert.zip *.*
+zip -r -9 -q ..\AOSPXpert.zip *.*
 
-rm -Rf system\priv-app\PixelXpert\PixelXpert.apk
+rm -Rf system\priv-app\AOSPXpert\AOSPXpert.apk

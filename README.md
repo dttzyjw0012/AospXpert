@@ -1,16 +1,20 @@
-### For Pixel Stock Android 12 and 13 (Up to Nov 2022 - AOSP 13R8):  
-[![Latest Release for A12 & A13 up to Nov 2022](https://img.shields.io/badge/Download-v2.4.1-blue)](https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1)  
+[//]: # (### For Pixel Stock Android 12 and 13 &#40;Up to Nov 2022 - AOSP 13R8&#41;:  )
 
+[//]: # ([![Latest Release for A12 & A13 up to Nov 2022]&#40;https://img.shields.io/badge/Download-v2.4.1-blue&#41;]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;  )
+[//]: # ()
 ### For Pixel Stock Android 13 and 14 (starting with Dec 2022 security patch):  
-[![Latest Release](https://img.shields.io/github/v/release/siavash79/PixelXpert?color=green&include_prereleases&label=Download%20Latest%20Stable)](https://github.com/siavash79/PixelXpert/releases/latest)
-[![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/siavash79/PixelXpert/releases/tag/canary_builds)
 
-![Downloads - Stable channel](https://img.shields.io/github/downloads/siavash79/PixelXpert/total?color=red&label=Downloads%20-%20Stable%20Channel)
+[//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/PixelXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/PixelXpert/releases/latest&#41;)
+[![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_425)
 
-### **PixelXpert Support Channels:**
+[//]: # (![Downloads - Stable channel]&#40;https://img.shields.io/github/downloads/siavash79/PixelXpert/total?color=red&label=Downloads%20-%20Stable%20Channel&#41;)
 
-[![XDA URL](https://img.shields.io/twitter/url?label=XDA%20Developers&logo=XDA-Developers&style=social&url=http://XDA.PixelXpert.siava.sh)](http://XDA.PixelXpert.siava.sh)
-[![Telegram URL](https://img.shields.io/badge/Telegram-Join-2CA5E?style=social&logo=telegram)](https://t.me/PixelXpert_Discussion)
+[//]: # (### **PixelXpert Support Channels:**)
+
+[//]: # ()
+[//]: # ([![XDA URL]&#40;https://img.shields.io/twitter/url?label=XDA%20Developers&logo=XDA-Developers&style=social&url=http://XDA.PixelXpert.siava.sh&#41;]&#40;http://XDA.PixelXpert.siava.sh&#41;)
+
+[//]: # ([![Telegram URL]&#40;https://img.shields.io/badge/Telegram-Join-2CA5E?style=social&logo=telegram&#41;]&#40;https://t.me/PixelXpert_Discussion&#41;)
 
 ![Header Image](https://github.com/siavash79/PixelXpert/blob/canary/.github/PixelXpert_Banner_1280.png?raw=true)
 
@@ -18,7 +22,7 @@ This is a mixed Xposed+Magisk module, which is made to allow customizations that
 <hr>
 
 ### **Features:**
-Currently, PixelXpert offers customizations on different aspects of system framework and SystemUI, including:
+Currently, AOSPXpert offers customizations on different aspects of system framework and SystemUI, including:
 - Status bar
 - Quick Settings panel
 - Lock screen
@@ -31,12 +35,13 @@ Currently, PixelXpert offers customizations on different aspects of system frame
 <hr>
 
 ### **Compatibility:**
-PixelXpert is ONLY compatible with pixel stock firmware on Google Pixel devices. Any custom ROM (including PE, PE plus, pixel plus ui and etc) or stock ROM outside stock pixel firmware on Google pixel devices (e.g. OneUI on Samsung, MIUI on Xiaomi and etc) is not supported and may not be fully (or even at all) compatible.
+AOSPXpert is a fork of the PixelXpert with a lot of different things from the original module. It is designed for be compatible with pure AOSP roms(include which port from the AOSP source code or just is an AOSP gsi). Some custom ROM (including YAAP and the Pixel Project and etc) which similar to the pure AOSP maybe can work normally with AOSPXpert, so they will get some limited support by me. Other custom roms(including PE, PE plus, Pixel Plus UI, Lineage OS, CLO based roms just like AOSPA and etc) or stock ROMs (e.g. OneUI on Samsung, MIUI on Xiaomi and etc, even the stock pixel firmware on Google pixel devices, Sony UI and Hello UI) are not supported and may not be fully (or even at all) compatible.
 
 Here is the compatibility chart according to different android versions and QPRs:
 
-- Android 12/12.1: [final version: v2.4.1](https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1).
-- Android 13 stable QPR1 (up until November 2022 firmware): [final version: v.2.4.1](https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1).
+[//]: # (- Android 12/12.1: [final version: v2.4.1]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;.)
+
+[//]: # (- Android 13 stable QPR1 &#40;up until November 2022 firmware&#41;: [final version: v.2.4.1]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;.)
 - Android 13 stable QPR3 (starting from December 2022 firmware till QPR3): [starting with v.2.5](https://github.com/siavash79/PixelXpert/releases/tag/v2.5.0) up until the latest stable/canary versions.
 - Android 14: [starting with v.2.9](https://github.com/siavash79/PixelXpert/releases/tag/v2.9.0) up until the latest stable/canary versions.
 <hr>
@@ -65,7 +70,7 @@ The module is also released in 2 flavors with different manual download and upda
 - Manual Install/Update: through repository's Github release page (link below) AND through in-app updater
 
 <ins>Canary release:</ins>
-- Manual Install/Update: through repository's Actions page and [telegram channel](https://t.me/PixelXpert_Github) (latest version is available from [here](https://github.com/siavash79/PixelXpert/releases/tag/canary_builds) also)
+- Manual Install/Update: through repository's Actions page and [telegram channel]() (latest version is available from [here](https://github.com/siavash79/PixelXpert/releases/) also)
 
 *No matter which flavor you're on, you can always switch to the other one with in-app updater
 <hr>
@@ -84,8 +89,8 @@ This project is open source and free for usage, build or copy. However, if you r
 - @topjohnwu for Magisk
 - @rovo89 for Xposed
 - Team LSPosed
-- apsun@github for remote-preferences
-- @nijel8 for double-tap to wake
+- @siavash79 & @ElTifo for PixelXpert
+- @C3C0 for GravityBox
 
 
 **UI design:**  
@@ -96,5 +101,5 @@ This project is open source and free for usage, build or copy. However, if you r
 - RKBDI@Telegram  (Icon)
 
 **Brought to you by:**
-@siavash79 & @ElTifo
+- nameless(@dttzyjw0012)
 <hr>

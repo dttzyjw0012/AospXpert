@@ -74,68 +74,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="code cleanup">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/prdownloader-release.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="release the first version aosp-canary-425">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CanaryChangelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/CanaryChangelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskChangelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskChangelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModAddon/module.prop" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModAddon/module.prop" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/customize.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagiskModBase/module.prop" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/module.prop" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModuleUpdate.json" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModuleUpdate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModuleUpdate_Full.json" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModuleUpdate_Full.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModuleUpdate_Xposed.json" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModuleUpdate_Xposed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/PixelXpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/AOSPXpert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/Overlays.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/Overlays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/RootProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/RootProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/RootProviderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/RootProviderProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/activities/SplashScreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/activities/SplashScreenActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconPackAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconPackAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconPackCustomizationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconPackCustomizationAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/OwnPrefsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/OwnPrefsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/MiscUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/MiscUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PXPreferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PXPreferences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-af-rZA/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-af-rZA/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar-rSA/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar-rSA/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ca-rES/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ca-rES/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-da-rDK/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-da-rDK/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-de-rDE/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-de-rDE/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-el-rGR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-el-rGR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es-rES/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es-rES/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fa-rIR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fa-rIR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fi-rFI/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fi-rFI/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fr-rFR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fr-rFR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hi-rIN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hi-rIN/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hu-rHU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hu-rHU/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-it-rIT/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-it-rIT/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-iw-rIL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-iw-rIL/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ja-rJP/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ja-rJP/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ko-rKR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ko-rKR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-nl-rNL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-nl-rNL/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-no-rNO/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-no-rNO/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pl-rPL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pl-rPL/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt-rPT/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt-rPT/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ro-rRO/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ro-rRO/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sr-rCS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sr-rCS/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sr-rSP/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sr-rSP/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sv-rSE/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sv-rSE/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-tr-rTR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-tr-rTR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-uk-rUA/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-uk-rUA/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-vi-rVN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-vi-rVN/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-zh-rTW/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-zh-rTW/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/module_scope.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/module_scope.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latestStable.json" beforeDir="false" afterPath="$PROJECT_DIR$/latestStable.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/service.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/service.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makeMagisk.bat" beforeDir="false" afterPath="$PROJECT_DIR$/makeMagisk.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +90,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/home/nameless/.android/avd/Pixel_7_Pro_API_33_2.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/home/nameless/.android/avd/Pixel_7_Pro_API_33.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -401,8 +346,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java>
         <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
@@ -443,15 +386,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723700480365</updated>
       <workItem from="1741086377032" duration="7000" />
-      <workItem from="1741088738729" duration="11272000" />
-    </task>
-    <task id="LOCAL-00102" summary="--">
-      <option name="closed" value="true" />
-      <created>1732103596002</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1732103596002</updated>
+      <workItem from="1741088738729" duration="19341000" />
     </task>
     <task id="LOCAL-00103" summary="CHANGELOG: Added option (theming section) to modify system icons via &quot;Icon Pack&quot;s. Most of the credit goes to @DHD2280 and @Mahmud0808.">
       <option name="closed" value="true" />
@@ -837,7 +772,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735479084064</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="release the first version aosp-canary-425">
+      <option name="closed" value="true" />
+      <created>1741103222744</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1741103222744</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -878,7 +821,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Added reflection helper classes" />
     <MESSAGE value="migrated some mods to new hook code style" />
     <MESSAGE value="finished migration of hooks to new style" />
     <MESSAGE value="CHANGELOG: UI updates" />
@@ -903,7 +845,8 @@
     <MESSAGE value="stable release preparation" />
     <MESSAGE value="diverting the sleep on surface tile to the app" />
     <MESSAGE value="code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
+    <MESSAGE value="release the first version aosp-canary-425" />
+    <option name="LAST_COMMIT_MESSAGE" value="release the first version aosp-canary-425" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

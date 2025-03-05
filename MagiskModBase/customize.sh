@@ -1,5 +1,5 @@
 PKGNAME="sh.siava.pixelxpert"
-PKGPATH="/system/priv-app/PixelXpert/PixelXpert.apk"
+PKGPATH="/system/priv-app/AOSPXpert/AOSPXpert.apk"
 LSPDDBPATH="/data/adb/lspd/config/modules_config.db"
 MAGISKDBPATH="/data/adb/magisk.db"
 
@@ -18,7 +18,7 @@ runSQL(){
 #grant silent root access to given UID
 grantRootUID(){
 	DBPATH=$MAGISKDBPATH
-	
+
 	#new record - older magisk compatibility
 	CMD="insert into policies (uid, package_name, policy, until, logging, notification) values ($1, '$2', 2, 0, 1, 0);" && runSQL
 	#new record
@@ -47,11 +47,11 @@ migratePrefs(){
 
 #activate PKGNAME in Lsposed
 activateModuleLSPD()
-{	
+{
 	DBPATH=$LSPDDBPATH
-	
-	ui_print '- Trying to activate the module in Lsposed...'	
-	
+
+	ui_print '- Trying to activate the module in Lsposed...'
+
 	CMD="select mid from modules where module_pkg_name like \"$PKGNAME\";" && runSQL
 	OLDMID=$(echo $SQLRESULT | xargs)
 
@@ -59,18 +59,18 @@ activateModuleLSPD()
 	if [ $(($OLDMID+0)) -gt 0 ]; then
 		CMD="select mid from modules where mid = $OLDMID and apk_path like \"$PKGPATH\" and enabled = 1;" && runSQL
 		REALMID=$(echo $SQLRESULT | xargs)
-		
+
 		if [ $(($REALMID+0)) = 0 ]; then
 			CMD="delete from scope where mid = $OLDMID;" && runSQL
 			CMD="delete from modules where mid = $OLDMID;" && runSQL
 		fi
 	fi
-	
-#some commands may fail. It's OK if they do	
+
+#some commands may fail. It's OK if they do
 	CMD="insert into modules (\"module_pkg_name\", \"apk_path\", \"enabled\") values (\"$PKGNAME\",\"$PKGPATH\", 1);" && runSQL
-	
+
 	CMD="select mid as ss from modules where module_pkg_name = \"$PKGNAME\";" && runSQL
-	
+
 	NEWMID=$(echo $SQLRESULT | xargs)
 
 	CMD="insert into scope (mid, app_pkg_name, user_id) values ($NEWMID, \"android\",0);" && runSQL
@@ -116,17 +116,17 @@ testKernelSU()
 
 assertPixelRom()
 {
-	PixelTipsPattern="TipsPrebuilt*"
-	PixelTipsParent="/product/priv-app"
+ 	PixelTipsPattern="TipsPrebuilt*"
+ 	PixelTipsParent="/product/priv-app"
 
-  if ! find "$PixelTipsParent" -maxdepth 1 -name "$PixelTipsPattern" -print -quit | grep -q .; then
-  	ui_print 'Device does not seem to be a Pixel phone containing an original ROM.'
-    abort 'Installation aborted due to incompatibility'
-  fi
+   if ! find "$PixelTipsParent" -maxdepth 1 -name "$PixelTipsPattern" -print -quit | grep -q .; then
+   	ui_print 'Device does not seem to be a Pixel phone containing an original ROM.'
+     abort 'Installation aborted due to incompatibility'
+   fi
 }
 
 
-assertPixelRom
+#assertPixelRom
 testKernelSU
 
 prepareSQL
@@ -161,6 +161,6 @@ fi
 	ui_print '  **********************'
 	ui_print '  * Brought to you by: *'
 	ui_print '  *                    *'
-	ui_print '  * PixelXpert team    *'
+	ui_print '  * AOSPXpert team    *'
 	ui_print '  **********************'
 	ui_print ''
