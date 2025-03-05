@@ -2,7 +2,7 @@
 
 [//]: # ([![Latest Release for A12 & A13 up to Nov 2022]&#40;https://img.shields.io/badge/Download-v2.4.1-blue&#41;]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;  )
 [//]: # ()
-### For Pixel Stock Android 13 and 14 (starting with Dec 2022 security patch):  
+### For pure AOSP roms Android 13 and 14 (starting with Dec 2022 security patch):  
 
 [//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/PixelXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/PixelXpert/releases/latest&#41;)
 [![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_425)
@@ -20,7 +20,7 @@
 
 This is a mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP (Android Open Source Project). Please read thorough below before reaching to download links.
 
-The original PixelXpert is good. Thanks to the authors of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the PixelXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and add some tools class and features which the GravityBox has, maybe rewrite it in Kotlin at the same time. And there are some possibilities for the thing that I maybe change the UI framework of the config manager to Flutter in the future. 
+The original PixelXpert is good. Thanks to the authors of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the PixelXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and add some tools class and features which the GravityBox has, maybe rewrite it in Kotlin at the same time. And I maybe change the UI framework of the config manager to Flutter in the future. 
 <hr>
 
 ### **Features:**
