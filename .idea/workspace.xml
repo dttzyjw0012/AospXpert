@@ -74,7 +74,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="add some text in the readme file." />
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="add some text in the readme file.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -339,6 +342,8 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java>
         <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
@@ -379,15 +384,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723700480365</updated>
       <workItem from="1741086377032" duration="7000" />
-      <workItem from="1741088738729" duration="21207000" />
-    </task>
-    <task id="LOCAL-00105" summary="Better handling of statusbar text color changes">
-      <option name="closed" value="true" />
-      <created>1732714597625</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1732714597625</updated>
+      <workItem from="1741088738729" duration="21591000" />
     </task>
     <task id="LOCAL-00106" summary="CHANGELOG: Improved the iconpack apply logic">
       <option name="closed" value="true" />
@@ -773,7 +770,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741206337089</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="fix some text in the readme file.">
+      <option name="closed" value="true" />
+      <created>1741206457380</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1741206457380</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -814,7 +819,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="CHANGELOG: UI updates" />
     <MESSAGE value="continued: migrated missed hooks to new system" />
     <MESSAGE value="--" />
     <MESSAGE value="temp" />
@@ -839,7 +843,8 @@
     <MESSAGE value="release the first version aosp-canary-425" />
     <MESSAGE value="fix magisk build files for AOSP roms. change some text in the readme file." />
     <MESSAGE value="add some text in the readme file." />
-    <option name="LAST_COMMIT_MESSAGE" value="add some text in the readme file." />
+    <MESSAGE value="fix some text in the readme file." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some text in the readme file." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

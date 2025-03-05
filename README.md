@@ -20,7 +20,7 @@
 
 This is a mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP (Android Open Source Project). Please read thorough below before reaching to download links.
 
-The original PixelXpert is good. Thanks to the authors of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the PixelXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and introduce some tools class and features which the GravityBox has, maybe rewrite it in kotlin at the same time. And there are some possibilities that I maybe change the UI of the manager to Flutter in the future. 
+The original PixelXpert is good. Thanks to the authors of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the PixelXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and add some tools class and features which the GravityBox has, maybe rewrite it in Kotlin at the same time. And there are some possibilities for the thing that I maybe change the UI framework of the config manager to Flutter in the future. 
 <hr>
 
 ### **Features:**
