@@ -19,6 +19,8 @@
 ![Header Image](https://github.com/siavash79/PixelXpert/blob/canary/.github/PixelXpert_Banner_1280.png?raw=true)
 
 This is a mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP (Android Open Source Project). Please read thorough below before reaching to download links
+
+The original PixelXpert is good. Thanks to the auther of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the PixelXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and introduce some tools class and features which the GravityBox has, maybe rewrite it in kotlin at the same time. And there are some possibilities that I maybe change the UI of the manager to Flutter in the future. 
 <hr>
 
 ### **Features:**
@@ -35,15 +37,15 @@ Currently, AOSPXpert offers customizations on different aspects of system framew
 <hr>
 
 ### **Compatibility:**
-AOSPXpert is a fork of the PixelXpert with a lot of different things from the original module. It is designed for be compatible with pure AOSP roms(include which port from the AOSP source code or just is an AOSP gsi). Some custom ROM (including YAAP and the Pixel Project and etc) which similar to the pure AOSP maybe can work normally with AOSPXpert, so they will get some limited support by me. Other custom roms(including PE, PE plus, Pixel Plus UI, Lineage OS, CLO based roms just like AOSPA and etc) or stock ROMs (e.g. OneUI on Samsung, MIUI on Xiaomi and etc, even the stock pixel firmware on Google pixel devices, Sony UI and Hello UI) are not supported and may not be fully (or even at all) compatible.
+AOSPXpert is a fork of the PixelXpert with a lot of different things from the original module. It is designed for be compatible with pure AOSP roms(include which are ported rom with the pure AOSP source code or just are AOSP gsi roms). Some custom ROMs (including YAAP and the Pixel Project and etc) which are similar to the pure AOSP maybe can work normally with AOSPXpert, so they will get some limited support by me. Other custom roms(including PE, PE plus, Pixel Plus UI, Lineage OS, CLO based roms just like AOSPA and etc) or stock ROMs (e.g. OneUI on Samsung, MIUI on Xiaomi and etc, even the stock pixel firmware on Google pixel devices, Sony UI and Hello UI) are not supported and may not be fully (or even at all) compatible.
 
 Here is the compatibility chart according to different android versions and QPRs:
 
 [//]: # (- Android 12/12.1: [final version: v2.4.1]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;.)
 
 [//]: # (- Android 13 stable QPR1 &#40;up until November 2022 firmware&#41;: [final version: v.2.4.1]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;.)
-- Android 13 stable QPR3 (starting from December 2022 firmware till QPR3): [starting with v.2.5](https://github.com/siavash79/PixelXpert/releases/tag/v2.5.0) up until the latest stable/canary versions.
-- Android 14: [starting with v.2.9](https://github.com/siavash79/PixelXpert/releases/tag/v2.9.0) up until the latest stable/canary versions.
+- Android 13 stable QPR3 (starting from December 2022 firmware till QPR3): [starting with v.2.5]() up until the latest stable/canary versions.
+- Android 14: [starting with v.2.9]() up until the latest stable/canary versions.
 <hr>
 - Android 15 beta builds: only latest canary version (anytime)
 <hr>
@@ -58,9 +60,9 @@ Here is the compatibility chart according to different android versions and QPRs
 - Download the stable magisk module according to your firmware as mentioned above 
 - Install in magisk/KSU
 - Reboot (no bootloops are expected)
-- Open PixelXpert app and apply changes
+- Open AOSPXpert app and apply changes
 
-P.S. For KSU, there is an extra step of granting root access to PixelXpert as it doesn't request automatically as in Magisk
+P.S. For KSU, there is an extra step of granting root access to AOSPXpert as it doesn't request automatically as in Magisk
 <hr>
 
 ### **Release Variants:**  
@@ -70,7 +72,7 @@ The module is also released in 2 flavors with different manual download and upda
 - Manual Install/Update: through repository's Github release page (link below) AND through in-app updater
 
 <ins>Canary release:</ins>
-- Manual Install/Update: through repository's Actions page and [telegram channel]() (latest version is available from [here](https://github.com/siavash79/PixelXpert/releases/) also)
+- Manual Install/Update: through repository's Actions page and [telegram channel]() (latest version is available from [here](https://github.com/dttzyjw0012/AospXpert/releases/) also)
 
 *No matter which flavor you're on, you can always switch to the other one with in-app updater
 <hr>

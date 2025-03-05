@@ -74,13 +74,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="release the first version aosp-canary-425">
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="fix magisk build files for AOSP roms. change some text in the readme file.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/customize.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/module.prop" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/module.prop" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/service.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/service.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makeMagisk.bat" beforeDir="false" afterPath="$PROJECT_DIR$/makeMagisk.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,15 +382,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723700480365</updated>
       <workItem from="1741086377032" duration="7000" />
-      <workItem from="1741088738729" duration="19341000" />
-    </task>
-    <task id="LOCAL-00103" summary="CHANGELOG: Added option (theming section) to modify system icons via &quot;Icon Pack&quot;s. Most of the credit goes to @DHD2280 and @Mahmud0808.">
-      <option name="closed" value="true" />
-      <created>1732109059517</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1732109059517</updated>
+      <workItem from="1741088738729" duration="20828000" />
     </task>
     <task id="LOCAL-00104" summary="revert java to 17">
       <option name="closed" value="true" />
@@ -780,7 +768,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741103222744</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="fix magisk build files for AOSP roms. change some text in the readme file.">
+      <option name="closed" value="true" />
+      <created>1741204568570</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1741204568570</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -821,7 +817,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="migrated some mods to new hook code style" />
     <MESSAGE value="finished migration of hooks to new style" />
     <MESSAGE value="CHANGELOG: UI updates" />
     <MESSAGE value="continued: migrated missed hooks to new system" />
@@ -846,7 +841,8 @@
     <MESSAGE value="diverting the sleep on surface tile to the app" />
     <MESSAGE value="code cleanup" />
     <MESSAGE value="release the first version aosp-canary-425" />
-    <option name="LAST_COMMIT_MESSAGE" value="release the first version aosp-canary-425" />
+    <MESSAGE value="fix magisk build files for AOSP roms. change some text in the readme file." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix magisk build files for AOSP roms. change some text in the readme file." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
