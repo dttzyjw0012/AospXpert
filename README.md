@@ -4,7 +4,7 @@
 [//]: # ()
 ### For pure AOSP roms Android 13 and 14 (starting with Dec 2022 security patch):  
 
-[//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/PixelXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/AospXpert/releases/latest&#41;)
+[//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/AospXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/AospXpert/releases/latest&#41;)
 [![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_426)
 
 [//]: # (![Downloads - Stable channel]&#40;https://img.shields.io/github/downloads/siavash79/AospXpert/total?color=red&label=Downloads%20-%20Stable%20Channel&#41;)
@@ -16,7 +16,7 @@
 
 [//]: # ([![Telegram URL]&#40;https://img.shields.io/badge/Telegram-Join-2CA5E?style=social&logo=telegram&#41;]&#40;https://t.me/AospXpert_Discussion&#41;)
 
-![Header Image](https://github.com/siavash79/PixelXpert/blob/canary/.github/AospXpert_Banner_1280.png?raw=true)
+![Header Image](https://github.com/siavash79/PixelXpert/blob/canary/.github/PixelXpert_Banner_1280.png?raw=true)
 
 This is a mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP (Android Open Source Project). Please read thorough below before reaching to download links.
 
