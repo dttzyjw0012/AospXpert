@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Actualizări</string>
     <string name="notification_channel_update_desc">Acest canal afișează notificări despre cele mai recente actualizări.</string>
     <string name="new_update_title">Actualizare disponibilă</string>
-    <string name="new_update_desc">O nouă versiune de PixelXpert este disponibilă</string>
+    <string name="new_update_desc">O nouă versiune de AospXpert este disponibilă</string>
     <string name="browser_not_found">Browserul nu a fost găsit</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Actualizare</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefon și tastatură numerică</string>
     <string name="dialer_header_summary">Un mic ajutor pentru apelurile telefonice</string>
     <string name="misc_header">Diverse</string>
-    <string name="misc_header_summary">Orice altceva oferit de PixelXpert</string>
+    <string name="misc_header_summary">Orice altceva oferit de AospXpert</string>
     <string name="qs_panel_category_title">Panoul Setări rapide</string>
     <string name="qs_panel_category_summary">Glisor de luminozitate, nivel lanternă și multe altele</string>
     <string name="theme_customization_category">Tematică</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Păstrează Afișajul ambiental pornit în timp ce dispozitivul se încarcă</string>
     <string name="doze_header">În timp ce ecranul este oprit…</string>
     <string name="custom_themed_icons_title">Pictograme personalizate</string>
-    <string name="px_in_settings_title">Adaugă PixelXpert la elementele Setărilor</string>
+    <string name="px_in_settings_title">Adaugă AospXpert la elementele Setărilor</string>
     <string name="sleep_on_flat_screen_title">Oprește ecranul pe o suprafață plană</string>
     <string name="sleep_on_flat_screen_tile_title">Somn pe suprafață</string>
     <string name="flat_screen_timeout_title">Durată expirare ecran pe suprafața plană</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Actualizări aplicație</string>
     <string name="monitoring_category_title">Opțiuni monitorizare</string>
     <string name="netstat_header">Setări statistici de rețea</string>
-    <string name="string_formatter_manual_body_v3">Pe lângă textul normal, sunt disponibile și variabile dinamice, cum ar fi Data, Utilizarea datelor și Temperatura:\n\n$G\&lt;format\&gt; : Data gregoriană, pe baza formatului*\n$P&lt;format&gt; : Data persană, pe baza formatului*\n$Nrx : Descărcări totale în perioada specificată ** ***\n$Ntx: Încărcări totale în perioada specificată ** ***\n$Nall : Trafic total în perioada specificată ** ***\n$Nssid : Nume SSID WiFi (dacă este cazul)\n\n$T\&lt;format\&gt;[interval] : Temperatura; Formatul \npoate fi b (pentru baterie), c (pentru CPU), g (pentru GPU) și s (pentru piele) \nÎn sfârșit, există un număr OPȚIONAL de interval de actualizare în secunde (implicit: 60 de secunde)\n\n*pentru format documentație, caută „Java Date Format”\n**Poți specifica perioada de statistici în PixelXpert/Meniul Diverse/Setări statistici de rețea\n***Dacă înlocuiești $N cu $Nc , vei obține statistici de date mobile (de ex. $Ncrx în loc de Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Pe lângă textul normal, sunt disponibile și variabile dinamice, cum ar fi Data, Utilizarea datelor și Temperatura:\n\n$G\&lt;format\&gt; : Data gregoriană, pe baza formatului*\n$P&lt;format&gt; : Data persană, pe baza formatului*\n$Nrx : Descărcări totale în perioada specificată ** ***\n$Ntx: Încărcări totale în perioada specificată ** ***\n$Nall : Trafic total în perioada specificată ** ***\n$Nssid : Nume SSID WiFi (dacă este cazul)\n\n$T\&lt;format\&gt;[interval] : Temperatura; Formatul \npoate fi b (pentru baterie), c (pentru CPU), g (pentru GPU) și s (pentru piele) \nÎn sfârșit, există un număr OPȚIONAL de interval de actualizare în secunde (implicit: 60 de secunde)\n\n*pentru format documentație, caută „Java Date Format”\n**Poți specifica perioada de statistici în AospXpert/Meniul Diverse/Setări statistici de rețea\n***Dacă înlocuiești $N cu $Nc , vei obține statistici de date mobile (de ex. $Ncrx în loc de Nrx )</string>
     <string name="update_channel_name">Actualizări</string>
     <string name="download_channel_name">Descărcări</string>
     <string name="assets_download_title">Se descarcă fișierele</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Informații pachet pictograme</string>
     <string name="no_icon_pack_installed">Nu este instalat niciun pachet de pictograme</string>
     <string name="icon_pack_disclaimer_title">Act de renunțare</string>
-    <string name="icon_pack_disclaimer_desc">Pachetele de pictograme nu sunt dezvoltate sau distribuite de PixelXpert. De aceea, echipa PixelXpert nu poate oferi suport pentru pachetele de pictograme. Asistența cu privire la modul în care PixelXpert gestionează pachetele de pictograme va fi furnizată numai dezvoltatorilor de pachete.\n\nPentru instrucțiuni despre cum să compilezi un pachet de pictograme, consultă ghidul de aici: %s</string>
+    <string name="icon_pack_disclaimer_desc">Pachetele de pictograme nu sunt dezvoltate sau distribuite de AospXpert. De aceea, echipa AospXpert nu poate oferi suport pentru pachetele de pictograme. Asistența cu privire la modul în care AospXpert gestionează pachetele de pictograme va fi furnizată numai dezvoltatorilor de pachete.\n\nPentru instrucțiuni despre cum să compilezi un pachet de pictograme, consultă ghidul de aici: %s</string>
 </resources>

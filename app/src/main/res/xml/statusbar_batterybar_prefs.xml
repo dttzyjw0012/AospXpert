@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch">
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch">
 
-	<sh.siava.pixelxpert.ui.preferences.IllustrationPreference
+	<com.yhc.aospxpert.ui.preferences.IllustrationPreference
 		android:key="battery_bar_illustration"
 		app:lottie_rawRes="@raw/battery_bar"
 		search:ignore="true" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialMainSwitchPreference
+	<com.yhc.aospxpert.ui.preferences.MaterialMainSwitchPreference
 		android:defaultValue="false"
 		android:key="BBarEnabled"
 		android:title="@string/BB_enable_title"
 		app:iconSpaceReserved="false" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/sbbb_header"
 		app:iconSpaceReserved="false">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="BBOnlyWhileCharging"
@@ -27,7 +27,7 @@
 			android:title="@string/BB_onlycharging_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="BBOnBottom"
@@ -36,7 +36,7 @@
 			android:title="@string/BB_move_SB_bottom_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="BBarColorful"
@@ -45,7 +45,7 @@
 			android:title="@string/BB_colorful_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:dependency="BBarEnabled"
 			android:key="BBOpacity"
 			android:title="@string/BB_Opacity_title"
@@ -53,7 +53,7 @@
 			app:iconSpaceReserved="false"
 			app:updatesContinuously="true" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:dependency="BBarEnabled"
 			android:key="BBarHeight"
 			android:title="@string/BB_Thickness_title"
@@ -61,7 +61,7 @@
 			app:iconSpaceReserved="false"
 			app:updatesContinuously="true" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="BBSetCentered"
@@ -70,7 +70,7 @@
 			android:title="@string/BB_center_align_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="BBAnimateCharging"
@@ -79,7 +79,7 @@
 			android:title="@string/BB_animate_charging"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="indicateCharging"
@@ -88,14 +88,14 @@
 			android:title="@string/BB_indicate_charging"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialColorPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialColorPreference
 			android:defaultValue="-16711936"
 			android:dependency="BBarEnabled"
 			android:key="batteryChargingColor"
 			android:title="@string/BB_batteryChargingColor"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="indicateFastCharging"
@@ -104,14 +104,14 @@
 			android:title="@string/BB_indicate_fast_charging"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialColorPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialColorPreference
 			android:defaultValue="-16776961"
 			android:dependency="BBarEnabled"
 			android:key="batteryFastChargingColor"
 			android:title="@string/BB_batteryFastChargingColor"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="indicatePowerSave"
@@ -120,14 +120,14 @@
 			android:title="@string/BB_indicate_power_save"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialColorPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialColorPreference
 			android:defaultValue="0xFFFFBF00"
 			android:dependency="BBarEnabled"
 			android:key="batteryPowerSaveColor"
 			android:title="@string/BB_batteryPowerSaveColor"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:dependency="BBarEnabled"
 			android:key="batteryWarningRange"
 			android:summary="@string/BB_warning_tip"
@@ -139,7 +139,7 @@
 			app:tickInterval="1"
 			app:valueCount="2" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:dependency="BBarEnabled"
 			android:key="BBarTransitColors"
@@ -148,19 +148,19 @@
 			android:title="@string/BB_transit_colors"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialColorPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialColorPreference
 			android:defaultValue="-65536"
 			android:dependency="BBarEnabled"
 			android:key="batteryCriticalColor"
 			android:title="@string/BB_batteryCriticalColor"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialColorPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialColorPreference
 			android:defaultValue="-256"
 			android:dependency="BBarEnabled"
 			android:key="batteryWarningColor"
 			android:title="@string/BB_batteryWarningColor"
 			app:iconSpaceReserved="false" />
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
 </PreferenceScreen>

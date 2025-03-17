@@ -15,6 +15,6 @@ dependencyResolutionManagement {
 	}
 }
 
-rootProject.name = "PixelXpert"
+rootProject.name = "AospXpert"
 include(":app")
 include(":Submodules:RangeSliderPreference")

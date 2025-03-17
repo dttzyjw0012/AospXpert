@@ -1,3 +1,9 @@
+**canary-426**
+- Fix the fast charging display of battery icon to be compatible with AOSP
+- Fix the tasker bar feature to be compatible with AOSP
+- Fix the bug in the Volume Dialog below Android 15
+- Fix some module name text
+
 **canary-425**
 - Start the development of the AOSP Xpert module for pure AOSP rom
 - Recover the compatibility of pure AOSP rom of magisk module
@@ -249,7 +255,7 @@
 - Depth wallpaper bug fixes  
   
 **canary-351**  
-- Added: option to remove PixelXpert shortcut from phone settings  
+- Added: option to remove AospXpert shortcut from phone settings  
   
 **canary-350**  
 - Experimental: unlocked depth wallpaper for Android 13  
@@ -400,7 +406,7 @@
 - Improved lockscreen carrier text mod  
   
 **canary-307**  
-- Long-press on settings icon to launch PixelXpert now replaced with an app shortcut in settings page  
+- Long-press on settings icon to launch AospXpert now replaced with an app shortcut in settings page  
 - A14: Cloned apps page: added option to remove the clone profile  
 - A14: Cloned apps: don't show cloned system apps in the app list  
 - Improved transparent fingerprint indicator mod  

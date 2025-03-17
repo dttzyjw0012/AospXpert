@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch">
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch">
 
-	<sh.siava.pixelxpert.ui.preferences.IllustrationPreference
+	<com.yhc.aospxpert.ui.preferences.IllustrationPreference
 		android:key="system_nav_3_button_illustration"
 		app:lottie_rawRes="@raw/lottie_system_nav_3_button"
 		search:ignore="true" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:summary="@string/sysui_restart_needed"
 		android:title="@string/modify_3button_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="ThreeButtonLayoutMod"
 			android:summaryOff="@string/general_off"
@@ -22,7 +22,7 @@
 			android:title="@string/modify_3button_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="back"
 			android:entries="@array/three_button_nav_buttons"
 			android:entryValues="@array/three_button_nav_buttons"
@@ -31,7 +31,7 @@
 			android:title="@string/three_button_left_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="home"
 			android:entries="@array/three_button_nav_buttons"
 			android:entryValues="@array/three_button_nav_buttons"
@@ -40,7 +40,7 @@
 			android:title="@string/three_button_center_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="recent"
 			android:entries="@array/three_button_nav_buttons"
 			android:entryValues="@array/three_button_nav_buttons"
@@ -49,5 +49,5 @@
 			android:title="@string/three_button_right_title"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 </PreferenceScreen>

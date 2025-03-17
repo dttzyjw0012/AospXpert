@@ -19,7 +19,7 @@
     <string name="notification_channel_update">به‌روزرسانی‌ها</string>
     <string name="notification_channel_update_desc">این کانال اطلاع رسانی در مورد آخرین به روز رسانی ها را نشان می دهد.</string>
     <string name="new_update_title">نسخه جدید داریم</string>
-    <string name="new_update_desc">نسخه جدید PixelXpert آماده است</string>
+    <string name="new_update_desc">نسخه جدید AospXpert آماده است</string>
     <string name="browser_not_found">مرورگر یافت نشد</string>
     <string name="settings_general_section_title">عمومی</string>
     <string name="settings_update_section_title">به‌روزرسانی</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">وقتی دستگاه در حال شارژ شدن است، همیشه روشن بماند</string>
     <string name="doze_header">وقتی که صفحه نمایش خاموش است…</string>
     <string name="custom_themed_icons_title">نمادهای با تم سفارشی</string>
-    <string name="px_in_settings_title">PixelXpert را به موارد تنظیمات اضافه کنید</string>
+    <string name="px_in_settings_title">AospXpert را به موارد تنظیمات اضافه کنید</string>
     <string name="sleep_on_flat_screen_title">صفحه نمایش را روی سطح صاف خاموش کنید</string>
     <string name="sleep_on_flat_screen_tile_title">روی سطح بخوابید</string>
     <string name="flat_screen_timeout_title">وقفه زمانی نمایشگر روی سطح صاف</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">به روز رسانی برنامه</string>
     <string name="monitoring_category_title">گزینه های نظارت</string>
     <string name="netstat_header">تنظیمات آمار شبکه</string>
-    <string name="string_formatter_manual_body_v3">علاوه بر متن معمولی، متغیرهای پویا نیز موجود است، مانند تاریخ، مصرف داده و دما:\n\n$G\&lt;format\&gt; : تاریخ میلادی، بر اساس فرمت*\n$P&lt;format&gt; : تاریخ فارسی، بر اساس فرمت*\n$Nrx : کل دانلودها در دوره مشخص شده ** ***\n$Ntx: کل آپلودها در دوره مشخص شده ** ***\n$Nall : کل ترافیک در دوره مشخص شده ** ***\n$Nssid : نام SSID WiFi (در صورت وجود)\n\n$T\&lt;format\&gt;[interval] : درجه حرارت؛ فرمت \nمی تواند b (برای باتری)، c (برای CPU)، g (برای GPU) و s (برای پوست) باشد \nدر نهایت، تعداد اختیاری فاصله به روز رسانی بر حسب ثانیه وجود دارد (پیش فرض: 60 ثانیه)\n\n*برای قالب مستندات، جستجوی \"فرمت تاریخ جاوا\"\n**می توانید دوره آمار را در PixelXpert/منو متفرقه/تنظیمات آمار شبکه\nمشخص کنید ***اگر $N با $Nc جایگزین کنید، آمار داده های تلفن همراه را دریافت خواهید کرد (مثلاً $Ncrx به جای Nrx )</string>
+    <string name="string_formatter_manual_body_v3">علاوه بر متن معمولی، متغیرهای پویا نیز موجود است، مانند تاریخ، مصرف داده و دما:\n\n$G\&lt;format\&gt; : تاریخ میلادی، بر اساس فرمت*\n$P&lt;format&gt; : تاریخ فارسی، بر اساس فرمت*\n$Nrx : کل دانلودها در دوره مشخص شده ** ***\n$Ntx: کل آپلودها در دوره مشخص شده ** ***\n$Nall : کل ترافیک در دوره مشخص شده ** ***\n$Nssid : نام SSID WiFi (در صورت وجود)\n\n$T\&lt;format\&gt;[interval] : درجه حرارت؛ فرمت \nمی تواند b (برای باتری)، c (برای CPU)، g (برای GPU) و s (برای پوست) باشد \nدر نهایت، تعداد اختیاری فاصله به روز رسانی بر حسب ثانیه وجود دارد (پیش فرض: 60 ثانیه)\n\n*برای قالب مستندات، جستجوی \"فرمت تاریخ جاوا\"\n**می توانید دوره آمار را در AospXpert/منو متفرقه/تنظیمات آمار شبکه\nمشخص کنید ***اگر $N با $Nc جایگزین کنید، آمار داده های تلفن همراه را دریافت خواهید کرد (مثلاً $Ncrx به جای Nrx )</string>
     <string name="update_channel_name">به روز رسانی ها</string>
     <string name="download_channel_name">دانلودها</string>
     <string name="assets_download_title">دانلود فایل ها</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">اطلاعات بسته آیکون</string>
     <string name="no_icon_pack_installed">هیچ بسته آیکونی نصب نشده است</string>
     <string name="icon_pack_disclaimer_title">سلب مسئولیت</string>
-    <string name="icon_pack_disclaimer_desc">بسته‌های آیکون توسط PixelXpert توسعه یا توزیع نشده‌اند. به این ترتیب، تیم PixelXpert قادر به ارائه پشتیبانی از بسته‌های آیکون نیست. پشتیبانی در مورد نحوه مدیریت PixelXpert با بسته‌های نماد فقط به توسعه‌دهندگان بسته مربوطه ارائه می‌شود.\n\nبرای دستورالعمل های نحوه کامپایل یک بسته آیکون، لطفاً به راهنمای اینجا مراجعه کنید: %s</string>
+    <string name="icon_pack_disclaimer_desc">بسته‌های آیکون توسط AospXpert توسعه یا توزیع نشده‌اند. به این ترتیب، تیم AospXpert قادر به ارائه پشتیبانی از بسته‌های آیکون نیست. پشتیبانی در مورد نحوه مدیریت AospXpert با بسته‌های نماد فقط به توسعه‌دهندگان بسته مربوطه ارائه می‌شود.\n\nبرای دستورالعمل های نحوه کامپایل یک بسته آیکون، لطفاً به راهنمای اینجا مراجعه کنید: %s</string>
 </resources>

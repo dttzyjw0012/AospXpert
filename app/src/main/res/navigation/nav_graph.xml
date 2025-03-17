@@ -6,7 +6,7 @@
 	app:startDestination="@id/headerFragment">
 	<fragment
 		android:id="@+id/headerFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.HeaderFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.HeaderFragment"
 		android:label="HeaderFragment">
 		<action
 			android:id="@+id/action_headerFragment_to_quickSettingsFragment"
@@ -50,24 +50,24 @@
 	</fragment>
 	<fragment
 		android:id="@+id/updateFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.UpdateFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.UpdateFragment"
 		android:label="update_fragment"
 		app:popUpTo="@+id/headerFragment"
 		tools:layout="@layout/update_fragment" />
 	<fragment
 		android:id="@+id/hooksFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.HooksFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.HooksFragment"
 		android:label="fragment_hooks"
 		app:popUpTo="@+id/headerFragment"
 		tools:layout="@layout/fragment_hooks" />
 	<fragment
 		android:id="@+id/ownPrefsFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.OwnPrefsFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.OwnPrefsFragment"
 		android:label="OwnPrefsFragment"
 		app:popUpTo="@+id/headerFragment" />
 	<fragment
 		android:id="@+id/quickSettingsFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.QuickSettingsFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.QuickSettingsFragment"
 		android:label="QuickSettingsFragment" >
 		<action
 			android:id="@+id/action_quickSettingsFragment_to_QSTileQtyFragment"
@@ -78,11 +78,11 @@
 	</fragment>
 	<fragment
 		android:id="@+id/lockScreenFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.LockScreenFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.LockScreenFragment"
 		android:label="LockScreenFragment" />
 	<fragment
 		android:id="@+id/themingFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.ThemingFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.ThemingFragment"
 		android:label="ThemingFragment" >
 		<action
 			android:id="@+id/action_themingFragment_to_iconPackFragment"
@@ -90,7 +90,7 @@
 	</fragment>
 	<fragment
 		android:id="@+id/statusbarFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.StatusbarFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.StatusbarFragment"
 		android:label="StatusbarFragment" >
 		<action
 			android:id="@+id/action_statusbarFragment_to_SBCFragment"
@@ -107,7 +107,7 @@
 	</fragment>
 	<fragment
 		android:id="@+id/navFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.NavFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.NavFragment"
 		android:label="NavFragment" >
 		<action
 			android:id="@+id/action_navFragment_to_threeButtonNavFragment"
@@ -118,19 +118,19 @@
 	</fragment>
 	<fragment
 		android:id="@+id/dialerFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.DialerFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.DialerFragment"
 		android:label="DialerFragment" />
 	<fragment
 		android:id="@+id/hotSpotFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.HotSpotFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.HotSpotFragment"
 		android:label="HotSpotFragment" />
 	<fragment
 		android:id="@+id/packageManagerFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.PackageManagerFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.PackageManagerFragment"
 		android:label="PackageManagerFragment" />
 	<fragment
 		android:id="@+id/miscFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.MiscFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.MiscFragment"
 		android:label="MiscFragment" >
 		<action
 			android:id="@+id/action_miscFragment_to_physicalButtonRemapFragment"
@@ -144,7 +144,7 @@
 	</fragment>
 	<fragment
 		android:id="@+id/searchPreferenceFragment"
-		android:name="sh.siava.pixelxpert.ui.preferences.preferencesearch.SearchPreferenceFragment"
+		android:name="com.yhc.aospxpert.ui.preferences.preferencesearch.SearchPreferenceFragment"
 		android:label="SearchPreferenceFragment">
 		<action
 			android:id="@+id/action_searchPreferenceFragment_to_ownPrefsFragment"
@@ -212,57 +212,57 @@
 	</fragment>
 	<fragment
 		android:id="@+id/QSTileQtyFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.QSTileQtyFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.QSTileQtyFragment"
 		android:label="QSTileQtyFragment" />
 	<fragment
 		android:id="@+id/networkFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.NetworkFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.NetworkFragment"
 		android:label="NetworkFragment" />
 	<fragment
 		android:id="@+id/SBCFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.SBCFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.SBCFragment"
 		android:label="SBCFragment" />
 	<fragment
 		android:id="@+id/SBBBFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.SBBBFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.SBBBFragment"
 		android:label="SBBBFragment" />
 	<fragment
 		android:id="@+id/SBBIconFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.SBBIconFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.SBBIconFragment"
 		android:label="SBBIconFragment" />
 	<fragment
 		android:id="@+id/threeButtonNavFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.ThreeButtonNavFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.ThreeButtonNavFragment"
 		android:label="ThreeButtonNavFragment" />
 	<fragment
 		android:id="@+id/gestureNavFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.GestureNavFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.GestureNavFragment"
 		android:label="GestureNavFragment" />
 	<fragment
 		android:id="@+id/physicalButtonRemapFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.PhysicalButtonRemapFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.PhysicalButtonRemapFragment"
 		android:label="PhysicalButtonRemapFragment" />
 	<fragment
 		android:id="@+id/networkStatFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.NetworkStatFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.NetworkStatFragment"
 		android:label="NetworkStatFragment" />
 	<fragment
 		android:id="@+id/sleepOnFlatFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.SleepOnFlatFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.SleepOnFlatFragment"
 		android:label="SleepOnFlat" />
 	<fragment
 		android:id="@+id/iconPackFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.iconpack.IconPackFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.iconpack.IconPackFragment"
 		android:label="IconPackFragment" >
 	</fragment>
 	<fragment
 		android:id="@+id/iconPackListFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.iconpack.IconPackListFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.iconpack.IconPackListFragment"
 		android:label="fragment_icon_pack_list"
 		tools:layout="@layout/fragment_icon_pack_list" />
 	<fragment
 		android:id="@+id/iconPackCustomizationFragment"
-		android:name="sh.siava.pixelxpert.ui.fragments.iconpack.IconPackCustomizationFragment"
+		android:name="com.yhc.aospxpert.ui.fragments.iconpack.IconPackCustomizationFragment"
 		android:label="fragment_icon_pack_customization"
 		tools:layout="@layout/fragment_icon_pack_customization" />
 </navigation>

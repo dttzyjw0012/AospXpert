@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: git clone -b ${GITHUB_REF_NAME} --recurse-submodules https://github.com/siavash79/PixelXpert.git .
+      - run: git clone -b ${GITHUB_REF_NAME} --recurse-submodules https://github.com/dttzyjw0012/AospXpert.git .
         name: Grab source code
         
       - name: Setup JDK 18
@@ -42,7 +42,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         name: Upload APK file
         with:
-          name: PixelXpert.apk
+          name: AospXpert.apk
           path: ${{steps.sign_app.outputs.signedReleaseFile}}
 
       - name: Run the zip script
@@ -51,5 +51,5 @@ jobs:
       - name: Upload Zip
         uses: actions/upload-artifact@v2
         with:
-          name: PixelXpert.zip
+          name: AospXpert.zip
           path: output

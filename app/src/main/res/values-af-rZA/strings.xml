@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Opdaterings</string>
     <string name="notification_channel_update_desc">Hierdie kanaal wys kennisgewing oor die jongste opdaterings.</string>
     <string name="new_update_title">Opdatering beskikbaar</string>
-    <string name="new_update_desc">\'n Nuwe weergawe van PixelXpert is beskikbaar</string>
+    <string name="new_update_desc">\'n Nuwe weergawe van AospXpert is beskikbaar</string>
     <string name="browser_not_found">Blaaier nie gevind nie</string>
     <string name="settings_general_section_title">Algemeen</string>
     <string name="settings_update_section_title">Opdateer</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefoon &amp; skakelaar</string>
     <string name="dialer_header_summary">A bit of aid for your phone calls</string>
     <string name="misc_header">Diverse</string>
-    <string name="misc_header_summary">Whatever else offered by PixelXpert</string>
+    <string name="misc_header_summary">Whatever else offered by AospXpert</string>
     <string name="qs_panel_category_title">Vinnige instellingspaneel</string>
     <string name="qs_panel_category_summary">Brightness slider, flashlight level and more</string>
     <string name="theme_customization_category">Temas</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Keep always on display enabled while device is charging</string>
     <string name="doze_header">Terwyl skerm af is…</string>
     <string name="custom_themed_icons_title">Pasgemaakte tema-ikone</string>
-    <string name="px_in_settings_title">Add PixelXpert to settings items</string>
+    <string name="px_in_settings_title">Add AospXpert to settings items</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Opdaterings</string>
     <string name="monitoring_category_title">Moniteringsopsies</string>
     <string name="netstat_header">Netwerkstatistiekinstellings</string>
-    <string name="string_formatter_manual_body_v3">Benewens die normale teks, is dinamiese veranderlikes ook beskikbaar, soos Datum, Datagebruik en Temperatuur:\n\n$G\&lt;format\&gt; : Gregoriaanse datum, gebaseer op formaat*\n$P&lt;format&gt; : Persiese datum, gebaseer op formaat*\n$Nrx : Totale aflaaie in gespesifiseerde tydperk ** ***\n$Ntx: Totale oplaaie in gespesifiseerde tydperk ** ***\n$Nall : Totale verkeer in gespesifiseerde tydperk ** ***\n$Nssid : WiFi SSID naam (indien van toepassing)\n\n$T\&lt;format\&gt;[interval] : Temperatuur; \nformaat kan b (vir battery), c (vir SVE), g (vir GPU) en s (vir vel) wees \nLaastens is daar OPSIONELE aantal opdateringsinterval in sekondes (verstek: 60 sekondes)\n\n*vir formaat dokumentasie, soek vir \"Java Date Format\"\n**Jy kan die statistiekperiode in PixelXpert/Diverse-kieslys/Netwerkstatistiekinstellings spesifiseer\n***As jy $N vervang met $Nc , sal jy met mobiele datastatistieke kry (bv. $Ncrx in plaas van Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Benewens die normale teks, is dinamiese veranderlikes ook beskikbaar, soos Datum, Datagebruik en Temperatuur:\n\n$G\&lt;format\&gt; : Gregoriaanse datum, gebaseer op formaat*\n$P&lt;format&gt; : Persiese datum, gebaseer op formaat*\n$Nrx : Totale aflaaie in gespesifiseerde tydperk ** ***\n$Ntx: Totale oplaaie in gespesifiseerde tydperk ** ***\n$Nall : Totale verkeer in gespesifiseerde tydperk ** ***\n$Nssid : WiFi SSID naam (indien van toepassing)\n\n$T\&lt;format\&gt;[interval] : Temperatuur; \nformaat kan b (vir battery), c (vir SVE), g (vir GPU) en s (vir vel) wees \nLaastens is daar OPSIONELE aantal opdateringsinterval in sekondes (verstek: 60 sekondes)\n\n*vir formaat dokumentasie, soek vir \"Java Date Format\"\n**Jy kan die statistiekperiode in AospXpert/Diverse-kieslys/Netwerkstatistiekinstellings spesifiseer\n***As jy $N vervang met $Nc , sal jy met mobiele datastatistieke kry (bv. $Ncrx in plaas van Nrx )</string>
     <string name="update_channel_name">Opdaterings</string>
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloading Files</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Icon pack info</string>
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by PixelXpert. As such, the PixelXpert team is unable to provide support for icon packs. Support regarding how PixelXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
 </resources>

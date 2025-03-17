@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch"
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch"
 	android:visibility="visible">
 
-	<sh.siava.pixelxpert.ui.preferences.IllustrationPreference
+	<com.yhc.aospxpert.ui.preferences.IllustrationPreference
 		android:key="system_nav_fully_gestural_illustration"
 		app:lottie_rawRes="@raw/lottie_system_nav_fully_gestural"
 		search:ignore="true" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/back_gesture_category_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="true"
 			android:key="BackFromLeft"
 			android:title="@string/back_from_left_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:layout_width="wrap_content"
 			android:key="BackLeftHeight"
 			android:title="@string/back_height_title"
@@ -30,13 +30,13 @@
 			app:minVal="10"
 			app:updatesContinuously="true" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="true"
 			android:key="BackFromRight"
 			android:title="@string/back_from_right_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="BackRightHeight"
 			android:title="@string/back_height_title"
 			app:defaultValue="100"
@@ -45,14 +45,14 @@
 			app:minVal="10"
 			app:updatesContinuously="true" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/gesture_nav_extra_cat"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="FCLongSwipeEnabled"
 			android:summaryOff="@string/general_off"
@@ -60,7 +60,7 @@
 			android:title="@string/gesture_nav_long_swipe_fc_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="-1"
 			android:entries="@array/custom_action_titles"
 			android:entryValues="@array/custom_action_codes"
@@ -69,7 +69,7 @@
 			android:title="@string/gesture_nav_left_swipe_up_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="leftSwipeUpPercentage"
 			android:title="@string/gesture_nav_left_swipe_up_percent"
 			app:defaultValue="25"
@@ -79,7 +79,7 @@
 			app:tickInterval="1"
 			app:valueCount="1" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="-1"
 			android:entries="@array/custom_action_titles"
 			android:entryValues="@array/custom_action_codes"
@@ -88,7 +88,7 @@
 			android:title="@string/gesture_nav_right_swipe_up_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="rightSwipeUpPercentage"
 			android:title="@string/gesture_nav_right_swipe_up_percent"
 			app:defaultValue="25"
@@ -98,7 +98,7 @@
 			app:tickInterval="1"
 			app:valueCount="1" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="None"
 			android:entries="@array/custom_action_titles"
 			android:entryValues="@array/custom_action_codes"
@@ -107,7 +107,7 @@
 			android:title="@string/gesture_nav_two_finger_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="swipeUpPercentage"
 			android:title="@string/gesture_nav_swipe_up_height"
 			app:defaultValue="20"
@@ -117,15 +117,15 @@
 			app:tickInterval="5"
 			app:valueCount="1" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="nav_pill_cat"
 		android:title="@string/gesture_nav_pill_cat"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="navPillColorAccent"
 			android:summaryOff="@string/general_off"
@@ -133,14 +133,14 @@
 			android:title="@string/colorpill"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="GesPillWidthModPos"
 			android:title="@string/gesture_nav_pill_width_title"
 			app:defaultValue="50"
 			app:iconSpaceReserved="false"
 			app:updatesContinuously="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="GesPillHeightFactor"
 			android:title="@string/gesture_nav_pill_height_title"
 			app:defaultValue="100"
@@ -150,15 +150,15 @@
 			app:seekBarIncrement="10"
 			app:updatesContinuously="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="nav_keyboard_height_cat"
 		android:title="@string/reducekeyboard_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="ReduceKeyboardSpaceOverlay"
 			android:summaryOff="@string/general_off"
@@ -166,5 +166,5 @@
 			android:title="@string/reducekeyboard"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 </PreferenceScreen>

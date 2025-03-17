@@ -19,7 +19,7 @@
     <string name="notification_channel_update">التحديثات</string>
     <string name="notification_channel_update_desc">هذه القناة تظهر تنبيهات حول أحدث التحديثات.</string>
     <string name="new_update_title">التحديث متاح</string>
-    <string name="new_update_desc">يتوفر إصدار جديد من PixelXpert</string>
+    <string name="new_update_desc">يتوفر إصدار جديد من AospXpert</string>
     <string name="browser_not_found">المتصفح غير موجود</string>
     <string name="settings_general_section_title">عام</string>
     <string name="settings_update_section_title">تحديث</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">الهاتف &amp; متصل</string>
     <string name="dialer_header_summary">القليل من المساعدة للمكالمات الهاتفية الخاصة بك</string>
     <string name="misc_header">متنوعات</string>
-    <string name="misc_header_summary">أي شيء آخر يقدمه PixelXpert</string>
+    <string name="misc_header_summary">أي شيء آخر يقدمه AospXpert</string>
     <string name="qs_panel_category_title">لوحة الإعدادات السريعة</string>
     <string name="qs_panel_category_summary">شريط تمرير السطوع، مستوى الفلاش والمزيد</string>
     <string name="theme_customization_category">القالب</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">إظهار الوقت والمعلومات دائما أثناء شحن الجهاز</string>
     <string name="doze_header">أثناء إيقاف الشاشة…</string>
     <string name="custom_themed_icons_title">الأيقونات المخصصة للموضوع</string>
-    <string name="px_in_settings_title">إضافة PixelXpert إلى عناصر الإعدادات</string>
+    <string name="px_in_settings_title">إضافة AospXpert إلى عناصر الإعدادات</string>
     <string name="sleep_on_flat_screen_title">إيقاف تشغيل الشاشة على السطح المسطح</string>
     <string name="sleep_on_flat_screen_tile_title">السكون على السطح</string>
     <string name="flat_screen_timeout_title">مهلة الشاشة على السطح المستوي</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">التحديثات</string>
     <string name="monitoring_category_title">خيارات الرصد</string>
     <string name="netstat_header">إعدادات إحصائيات الشبكة</string>
-    <string name="string_formatter_manual_body_v3">وبالإضافة إلى النص العادي، فإن المتغيرات الدينامية متاحة أيضا، مثل التاريخ، استخدام البيانات و درجة الحرارة:\n\n$G\&lt;format\&gt; : تاريخ غريغوري، بناء على تنسيق*\n$P&lt;format&gt; : التاريخ الفارسي، استنادا إلى التنسيق*\n$Nrx : مجموع التنزيلات في فترة محددة **\n$Ntx: مجموع التحميلات في فترة محددة **\n$Nall : مجموع حركة المرور في فترة محددة ** ***\n$Nssid : اسم WiFi SSID (إذا كان ذلك منطبقا)\n\n$T\&lt;format\&gt;[interval] : درجة الحرارة؛ \nيمكن أن يكون التنسيق ب (للبطارية) و ج (للوحدة المعالجة) و غ (للوحدة المعالجة) و ص (للبشرة) \nوأخيرا. هناك عدد من فواصل التحديث بالثواني (الافتراضي: 60 ثانية)\n\n*لنسق الوثائق، البحث عن \"تنسيق تاريخ الجافا\"\n**يمكنك تحديد فترة الإحصاءات في PixelXpert/Miscellaneous menu/Network Statistics إعدادات\n***إذا قمت باستبدال $N ب $Nc ستحصل على إحصاءات بيانات الجوال (e. . $Ncrx بدلا من Nrx)</string>
+    <string name="string_formatter_manual_body_v3">وبالإضافة إلى النص العادي، فإن المتغيرات الدينامية متاحة أيضا، مثل التاريخ، استخدام البيانات و درجة الحرارة:\n\n$G\&lt;format\&gt; : تاريخ غريغوري، بناء على تنسيق*\n$P&lt;format&gt; : التاريخ الفارسي، استنادا إلى التنسيق*\n$Nrx : مجموع التنزيلات في فترة محددة **\n$Ntx: مجموع التحميلات في فترة محددة **\n$Nall : مجموع حركة المرور في فترة محددة ** ***\n$Nssid : اسم WiFi SSID (إذا كان ذلك منطبقا)\n\n$T\&lt;format\&gt;[interval] : درجة الحرارة؛ \nيمكن أن يكون التنسيق ب (للبطارية) و ج (للوحدة المعالجة) و غ (للوحدة المعالجة) و ص (للبشرة) \nوأخيرا. هناك عدد من فواصل التحديث بالثواني (الافتراضي: 60 ثانية)\n\n*لنسق الوثائق، البحث عن \"تنسيق تاريخ الجافا\"\n**يمكنك تحديد فترة الإحصاءات في AospXpert/Miscellaneous menu/Network Statistics إعدادات\n***إذا قمت باستبدال $N ب $Nc ستحصل على إحصاءات بيانات الجوال (e. . $Ncrx بدلا من Nrx)</string>
     <string name="update_channel_name">التحديثات</string>
     <string name="download_channel_name">التنزيلات</string>
     <string name="assets_download_title">تحميل الملفات</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">معلومات حزمة الأيقونات</string>
     <string name="no_icon_pack_installed">لا توجد حزمة أيقونات مثبتة</string>
     <string name="icon_pack_disclaimer_title">إخلاء المسؤولية</string>
-    <string name="icon_pack_disclaimer_desc">لا يتم تطوير حزم الأيقونات أو توزيعها من قبل PixelXpert. وعلى هذا النحو، لا يستطيع فريق PixelXpert تقديم الدعم لحزم الأيقونات الدعم فيما يتعلق بكيفية التعامل مع باقات أيقونات PixelXperts سيتم توفيره فقط لمطوري الباقة المعنيين.\n\nللحصول على تعليمات حول كيفية تجميع حزمة الأيقونات ، يرجى الرجوع إلى الدليل هنا: %s</string>
+    <string name="icon_pack_disclaimer_desc">لا يتم تطوير حزم الأيقونات أو توزيعها من قبل AospXpert. وعلى هذا النحو، لا يستطيع فريق AospXpert تقديم الدعم لحزم الأيقونات الدعم فيما يتعلق بكيفية التعامل مع باقات أيقونات AospXperts سيتم توفيره فقط لمطوري الباقة المعنيين.\n\nللحصول على تعليمات حول كيفية تجميع حزمة الأيقونات ، يرجى الرجوع إلى الدليل هنا: %s</string>
 </resources>

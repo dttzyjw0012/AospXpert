@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Uppdateringar</string>
     <string name="notification_channel_update_desc">Den här kanalen visar meddelanden om de senaste uppdateringarna.</string>
     <string name="new_update_title">Uppdatering tillgänglig</string>
-    <string name="new_update_desc">En ny version av PixelXpert är tillgänglig</string>
+    <string name="new_update_desc">En ny version av AospXpert är tillgänglig</string>
     <string name="browser_not_found">Webbläsaren hittades inte</string>
     <string name="settings_general_section_title">Allmän</string>
     <string name="settings_update_section_title">Uppdatering</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefon &amp; uppringare</string>
     <string name="dialer_header_summary">Lite hjälp för dina telefonsamtal</string>
     <string name="misc_header">Diverse</string>
-    <string name="misc_header_summary">Vad annat som erbjuds av PixelXpert</string>
+    <string name="misc_header_summary">Vad annat som erbjuds av AospXpert</string>
     <string name="qs_panel_category_title">Panel för snabbinställningar</string>
     <string name="qs_panel_category_summary">Reglage för ljusstyrka, ficklampa och mer</string>
     <string name="theme_customization_category">Teman</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Håll alltid på displayen aktiverad medan enheten laddas</string>
     <string name="doze_header">Medan skärmen är avstängd…</string>
     <string name="custom_themed_icons_title">Ikoner med anpassade teman</string>
-    <string name="px_in_settings_title">Lägg till PixelXpert till inställningsobjekt</string>
+    <string name="px_in_settings_title">Lägg till AospXpert till inställningsobjekt</string>
     <string name="sleep_on_flat_screen_title">Stäng av skärmen på plan yta</string>
     <string name="sleep_on_flat_screen_tile_title">Sov på ytan</string>
     <string name="flat_screen_timeout_title">Skärmens tidsgräns på plan yta</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Uppdateringar</string>
     <string name="monitoring_category_title">Övervakningsalternativ</string>
     <string name="netstat_header">Inställningar för nätverksstatistik</string>
-    <string name="string_formatter_manual_body_v3">Utöver den normala texten finns även dynamiska variabler tillgängliga, som datum, dataanvändning och temperatur:\n\n$G\&lt;format\&gt; : gregorianskt datum, baserat på format*\n$P&lt;format&gt; : persiskt datum, baserat på format*\n$Nrx : Totalt antal nedladdningar under angiven period ** ***\n$Ntx: Totalt antal uppladdningar under angiven period ** ***\n$Nall : Total trafik under angiven period ** ***\n$Nssid : WiFi SSID-namn (om tillämpligt)\n\n$T\&lt;format\&gt;[interval] : Temperatur; \nformat kan vara b (för batteri), c (för CPU), g (för GPU) och s (för hud) \nSlutligen finns det VALFRITT antal uppdateringsintervall i sekunder (standard: 60 sekunder)\n\n*för format dokumentation, sök efter \"Java Date Format\"\n**Du kan ange statistikperioden i PixelXpert/Övrigt meny/Nätverksstatistikinställningar\n***Om du ersätter $N med $Nc får du med mobildatastatistik (t.ex. $Ncrx istället för Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Utöver den normala texten finns även dynamiska variabler tillgängliga, som datum, dataanvändning och temperatur:\n\n$G\&lt;format\&gt; : gregorianskt datum, baserat på format*\n$P&lt;format&gt; : persiskt datum, baserat på format*\n$Nrx : Totalt antal nedladdningar under angiven period ** ***\n$Ntx: Totalt antal uppladdningar under angiven period ** ***\n$Nall : Total trafik under angiven period ** ***\n$Nssid : WiFi SSID-namn (om tillämpligt)\n\n$T\&lt;format\&gt;[interval] : Temperatur; \nformat kan vara b (för batteri), c (för CPU), g (för GPU) och s (för hud) \nSlutligen finns det VALFRITT antal uppdateringsintervall i sekunder (standard: 60 sekunder)\n\n*för format dokumentation, sök efter \"Java Date Format\"\n**Du kan ange statistikperioden i AospXpert/Övrigt meny/Nätverksstatistikinställningar\n***Om du ersätter $N med $Nc får du med mobildatastatistik (t.ex. $Ncrx istället för Nrx )</string>
     <string name="update_channel_name">Uppdateringar</string>
     <string name="download_channel_name">Nedladdningar</string>
     <string name="assets_download_title">Laddar ner filer</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Information om ikonpaket</string>
     <string name="no_icon_pack_installed">Inget ikonpaket installerat</string>
     <string name="icon_pack_disclaimer_title">Ansvarsfriskrivning</string>
-    <string name="icon_pack_disclaimer_desc">Ikonpaket utvecklas eller distribueras inte av PixelXpert. Som sådan, PixelXpert laget kan inte ge stöd för ikonpaket. Stöd för hur PixelXpert hanterar ikonpaket kommer endast att tillhandahållas till respektive paketutvecklare.\n\nFör instruktioner om hur man kompilerar ett ikonpaket, se guiden här: %s</string>
+    <string name="icon_pack_disclaimer_desc">Ikonpaket utvecklas eller distribueras inte av AospXpert. Som sådan, AospXpert laget kan inte ge stöd för ikonpaket. Stöd för hur AospXpert hanterar ikonpaket kommer endast att tillhandahållas till respektive paketutvecklare.\n\nFör instruktioner om hur man kompilerar ett ikonpaket, se guiden här: %s</string>
 </resources>

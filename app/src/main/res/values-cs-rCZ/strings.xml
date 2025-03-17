@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Aktualizace</string>
     <string name="notification_channel_update_desc">Tento kanál zobrazuje upozornění na nejnovější aktualizace.</string>
     <string name="new_update_title">Aktualizace k dispozici</string>
-    <string name="new_update_desc">K dispozici je nová verze PixelXpert</string>
+    <string name="new_update_desc">K dispozici je nová verze AospXpert</string>
     <string name="browser_not_found">Prohlížeč nenalezen</string>
     <string name="settings_general_section_title">Všeobecné</string>
     <string name="settings_update_section_title">Aktualizace</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefon &amp;</string>
     <string name="dialer_header_summary">Trochu pomoci pro telefonní hovory</string>
     <string name="misc_header">Smíšený</string>
-    <string name="misc_header_summary">Ať už PixelXpert nabízí cokoli jiného</string>
+    <string name="misc_header_summary">Ať už AospXpert nabízí cokoli jiného</string>
     <string name="qs_panel_category_title">Panel rychlého nastavení</string>
     <string name="qs_panel_category_summary">Posuvník podsvícení, úroveň podsvícení a další</string>
     <string name="theme_customization_category">Theming</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Ponechat vždy zapnutý displej při nabíjení</string>
     <string name="doze_header">Když je obrazovka vypnutá…</string>
     <string name="custom_themed_icons_title">Vlastní tématické ikony</string>
-    <string name="px_in_settings_title">Přidat PixelXpert k položkám nastavení</string>
+    <string name="px_in_settings_title">Přidat AospXpert k položkám nastavení</string>
     <string name="sleep_on_flat_screen_title">Vypnout obrazovku na plochém povrchu</string>
     <string name="sleep_on_flat_screen_tile_title">Spánek na povrchu</string>
     <string name="flat_screen_timeout_title">Časový limit obrazovky na plochém povrchu</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Aktualizace</string>
     <string name="monitoring_category_title">Možnosti sledování</string>
     <string name="netstat_header">Nastavení statistik sítě</string>
-    <string name="string_formatter_manual_body_v3">Kromě normálního textu jsou k dispozici také dynamické proměnné, jako je datum, využití dat a teplota:\n\n$G\&lt;format\&gt; : gregoriánské datum, podle formátu*\n$P&lt;format&gt; : perské datum, podle formátu*\n$Nrx : Celkový počet stažení v určeném období ** ***\n$Ntx: Celkový počet uploadů v určeném období ** ***\n$Nall : Celkový provoz v zadaném období ** ***\n$Nssid : Název WiFi SSID (pokud existuje)\n\n$T\&lt;format\&gt;[interval] : Teplota; \nformát může být b (pro baterii), c (pro CPU), g (pro GPU) a s (pro skin) \nNakonec je zde VOLITELNÝ počet intervalů aktualizace v sekundách (výchozí: 60 sekund)\n\n*pro formát dokumentace, vyhledejte \"Java Date Format\"\n**Období statistiky můžete určit v PixelXpert/Miscellaneous menu/Network Statistics Settings\n***Pokud nahradíte $N za $Nc , dostanete statistiku mobilních dat (např. $Ncrx místo Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Kromě normálního textu jsou k dispozici také dynamické proměnné, jako je datum, využití dat a teplota:\n\n$G\&lt;format\&gt; : gregoriánské datum, podle formátu*\n$P&lt;format&gt; : perské datum, podle formátu*\n$Nrx : Celkový počet stažení v určeném období ** ***\n$Ntx: Celkový počet uploadů v určeném období ** ***\n$Nall : Celkový provoz v zadaném období ** ***\n$Nssid : Název WiFi SSID (pokud existuje)\n\n$T\&lt;format\&gt;[interval] : Teplota; \nformát může být b (pro baterii), c (pro CPU), g (pro GPU) a s (pro skin) \nNakonec je zde VOLITELNÝ počet intervalů aktualizace v sekundách (výchozí: 60 sekund)\n\n*pro formát dokumentace, vyhledejte \"Java Date Format\"\n**Období statistiky můžete určit v AospXpert/Miscellaneous menu/Network Statistics Settings\n***Pokud nahradíte $N za $Nc , dostanete statistiku mobilních dat (např. $Ncrx místo Nrx )</string>
     <string name="update_channel_name">Aktualizace</string>
     <string name="download_channel_name">Stahování</string>
     <string name="assets_download_title">Stahování souborů</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Informace o balíčku ikon</string>
     <string name="no_icon_pack_installed">Není nainstalován žádný balíček ikon</string>
     <string name="icon_pack_disclaimer_title">Odmítnutí odpovědnosti</string>
-    <string name="icon_pack_disclaimer_desc">Balíčky ikon nejsou vyvinuty ani distribuovány PixelXpert. Tým PixelXpert jako takový nemůže poskytnout podporu pro balíčky ikon. Podpora toho, jak bude PixelXpert zpracovávat balíčky ikon pouze příslušným vývojářům balíčků.\n\nPro pokyny, jak zkompilovat balíček ikon, podívejte se prosím na průvodce: %s</string>
+    <string name="icon_pack_disclaimer_desc">Balíčky ikon nejsou vyvinuty ani distribuovány AospXpert. Tým AospXpert jako takový nemůže poskytnout podporu pro balíčky ikon. Podpora toho, jak bude AospXpert zpracovávat balíčky ikon pouze příslušným vývojářům balíčků.\n\nPro pokyny, jak zkompilovat balíček ikon, podívejte se prosím na průvodce: %s</string>
 </resources>

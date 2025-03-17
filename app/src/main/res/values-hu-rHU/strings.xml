@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Frissítések</string>
     <string name="notification_channel_update_desc">Ez a csatorna értesítéseket jelenít meg a legújabb frissítésekről.</string>
     <string name="new_update_title">Frissítés elérhető</string>
-    <string name="new_update_desc">Megjelent a PixelXpert új verziója</string>
+    <string name="new_update_desc">Megjelent a AospXpert új verziója</string>
     <string name="browser_not_found">A böngésző nem található</string>
     <string name="settings_general_section_title">Általános</string>
     <string name="settings_update_section_title">Frissítés</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefon &amp; tárcsázó</string>
     <string name="dialer_header_summary">A bit of aid for your phone calls</string>
     <string name="misc_header">Vegyes</string>
-    <string name="misc_header_summary">Whatever else offered by PixelXpert</string>
+    <string name="misc_header_summary">Whatever else offered by AospXpert</string>
     <string name="qs_panel_category_title">Gyorsbeállítások panel</string>
     <string name="qs_panel_category_summary">Brightness slider, flashlight level and more</string>
     <string name="theme_customization_category">Témázás</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">A \"mindig bekapcsolt\" kijelző engedélyezése, míg a készülék tölt</string>
     <string name="doze_header">Amíg a képernyő ki van kapcsolva,…</string>
     <string name="custom_themed_icons_title">Egyedi témájú ikonok</string>
-    <string name="px_in_settings_title">PixelXpert hozzáadása a beállításokhoz</string>
+    <string name="px_in_settings_title">AospXpert hozzáadása a beállításokhoz</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Frissítések</string>
     <string name="monitoring_category_title">Monitoring lehetőségek</string>
     <string name="netstat_header">Hálózati statisztikai beállítások</string>
-    <string name="string_formatter_manual_body_v3">A normál szövegen kívül dinamikus változók is rendelkezésre állnak, mint a dátum, adathasználat és hőmérséklet:\n\n$G\&lt;format\&gt; : Gergely dátum, formátum alapján*\n$P&lt;format&gt; : perzsa dátum, formátum alapján*\n$Nrx : Letöltések száma meghatározott időszakban ** ***\n$Ntx: Összes feltöltés a megadott időszakban ** ***\n$Nall : Teljes forgalom meghatározott időszakban ** ***\n$Nssid : WiFi SSID neve (ha van)\n\n$T\&lt;format\&gt;[interval] : Hőfok; \nformátum lehet b (akkumulátorhoz), c (CPU-hoz), g (GPU-hoz) és s (bőrhöz) \nVégül OPCIONÁLIS számú frissítési intervallum másodpercben (alapértelmezett: 60 másodperc)\n\n*formátumhoz dokumentáció, keressen $N a \" $Ncrx Date Format\" kifejezésre\n** $Nc statisztikai időszakot a PixelXpert/Egyes menü/\nstatisztika beállítások menüpontban adhatja meg )</string>
+    <string name="string_formatter_manual_body_v3">A normál szövegen kívül dinamikus változók is rendelkezésre állnak, mint a dátum, adathasználat és hőmérséklet:\n\n$G\&lt;format\&gt; : Gergely dátum, formátum alapján*\n$P&lt;format&gt; : perzsa dátum, formátum alapján*\n$Nrx : Letöltések száma meghatározott időszakban ** ***\n$Ntx: Összes feltöltés a megadott időszakban ** ***\n$Nall : Teljes forgalom meghatározott időszakban ** ***\n$Nssid : WiFi SSID neve (ha van)\n\n$T\&lt;format\&gt;[interval] : Hőfok; \nformátum lehet b (akkumulátorhoz), c (CPU-hoz), g (GPU-hoz) és s (bőrhöz) \nVégül OPCIONÁLIS számú frissítési intervallum másodpercben (alapértelmezett: 60 másodperc)\n\n*formátumhoz dokumentáció, keressen $N a \" $Ncrx Date Format\" kifejezésre\n** $Nc statisztikai időszakot a AospXpert/Egyes menü/\nstatisztika beállítások menüpontban adhatja meg )</string>
     <string name="update_channel_name">Frissítések</string>
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloading Files</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Icon pack info</string>
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by PixelXpert. As such, the PixelXpert team is unable to provide support for icon packs. Support regarding how PixelXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
 </resources>

@@ -15,9 +15,9 @@
 
 # Xposed
 -keep class de.robv.android.xposed.**
--keep class sh.siava.pixelxpert.XPEntry
--keepnames class sh.siava.pixelxpert.modpacks.**
--keep class sh.siava.pixelxpert.modpacks.** {
+-keep class com.yhc.aospxpert.APEntry
+-keepnames class com.yhc.aospxpert.modpacks.**
+-keep class com.yhc.aospxpert.modpacks.** {
     <init>(android.content.Context);
 }
 
@@ -41,24 +41,24 @@
 -allowaccessmodification
 
 # Root Service
--keep class sh.siava.pixelxpert.service.RootProviderProxy { *; }
--keep class sh.siava.pixelxpert.IRootProviderProxy { *; }
+-keep class com.yhc.aospxpert.service.RootProviderProxy { *; }
+-keep class com.yhc.aospxpert.IRootProviderProxy { *; }
 
 # Services
 -keep interface **.I* { *; }
 -keep class **.I*$Stub { *; }
 -keep class **.I*$Stub$Proxy { *; }
--keep class sh.siava.pixelxpert.service.*
+-keep class com.yhc.aospxpert.service.*
 
 
 # Keep all inner classes and their names within the specified package
 # but allow optimization of their internal code
--keep class sh.siava.pixelxpert.**$* {
+-keep class com.yhc.aospxpert.**$* {
     public protected private *;
 }
 
 # Allow obfuscation of non-inner class members (fields and methods), but keep class names
--keep class sh.siava.pixelxpert.** { *; }
+-keep class com.yhc.aospxpert.** { *; }
 
 # Allow optimization and shrinking for all classes
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*

@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Updates</string>
     <string name="notification_channel_update_desc">This channel shows notification about the latest updates.</string>
     <string name="new_update_title">Update available</string>
-    <string name="new_update_desc">PixelXpert 新版本現已推出</string>
+    <string name="new_update_desc">AospXpert 新版本現已推出</string>
     <string name="browser_not_found">Browser not found</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Update</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Phone &amp; dialer</string>
     <string name="dialer_header_summary">為通話功能提供一些選項</string>
     <string name="misc_header">雜項</string>
-    <string name="misc_header_summary">PixelXpert提供的更多選項</string>
+    <string name="misc_header_summary">AospXpert提供的更多選項</string>
     <string name="qs_panel_category_title">方塊面板</string>
     <string name="qs_panel_category_summary">狀態列亮度滑桿、手電筒亮度...等</string>
     <string name="theme_customization_category">主題化</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">設備充電時保持始終顯示啟用狀態</string>
     <string name="doze_header">鎖定畫面時</string>
     <string name="custom_themed_icons_title">自訂帶主題的圖示</string>
-    <string name="px_in_settings_title">將 PixelXpert 加入設定選項</string>
+    <string name="px_in_settings_title">將 AospXpert 加入設定選項</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">App 更新</string>
     <string name="monitoring_category_title">監控選項</string>
     <string name="netstat_header">網路統計設定</string>
-    <string name="string_formatter_manual_body_v3">除了普通文字之外，還可以使用動態變量，例如日期、資料使用情況和溫度：\n\n$G\&lt;format\&gt; ：公曆日期，基於格式*\n$P&lt;format&gt; ：波斯日期，基於格式*\n$Nrx ：下載總量指定時間段內的總上傳量** ***\n$Ntx：指定時間內的總上傳量 ** ***\n$Nall ：指定時間內的總流量 ** ***\n$Nssid ：WiFi SSID 名稱（如適用）\n\n$T\&lt;format\&gt;[interval] ： 溫度; \n格式可以是 b（針對電池）、c（針對 CPU）、g（針對 GPU）和 s（針對皮膚） \n最後，還有可選的更新間隔數（以秒為單位）（預設值：60 秒)\n\n*針對格式文檔，搜尋「Java 日期格式」\n**您可以在 PixelXpert/雜項選單/網路統計設定中指定統計週期\n***如果將 $N 替換為 $Nc ，您將獲得移動資料統計信息（例如 $Ncrx 而不是 Nrx ）</string>
+    <string name="string_formatter_manual_body_v3">除了普通文字之外，還可以使用動態變量，例如日期、資料使用情況和溫度：\n\n$G\&lt;format\&gt; ：公曆日期，基於格式*\n$P&lt;format&gt; ：波斯日期，基於格式*\n$Nrx ：下載總量指定時間段內的總上傳量** ***\n$Ntx：指定時間內的總上傳量 ** ***\n$Nall ：指定時間內的總流量 ** ***\n$Nssid ：WiFi SSID 名稱（如適用）\n\n$T\&lt;format\&gt;[interval] ： 溫度; \n格式可以是 b（針對電池）、c（針對 CPU）、g（針對 GPU）和 s（針對皮膚） \n最後，還有可選的更新間隔數（以秒為單位）（預設值：60 秒)\n\n*針對格式文檔，搜尋「Java 日期格式」\n**您可以在 AospXpert/雜項選單/網路統計設定中指定統計週期\n***如果將 $N 替換為 $Nc ，您將獲得移動資料統計信息（例如 $Ncrx 而不是 Nrx ）</string>
     <string name="update_channel_name">更新</string>
     <string name="download_channel_name">下載</string>
     <string name="assets_download_title">檔案下載中</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">圖示包資訊</string>
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by PixelXpert. As such, the PixelXpert team is unable to provide support for icon packs. Support regarding how PixelXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
 </resources>

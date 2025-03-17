@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Actualizaciones</string>
     <string name="notification_channel_update_desc">Este canal muestra notificaciones sobre las últimas actualizaciones.</string>
     <string name="new_update_title">Actualización disponible</string>
-    <string name="new_update_desc">Una nueva versión de PixelXpert está disponible</string>
+    <string name="new_update_desc">Una nueva versión de AospXpert está disponible</string>
     <string name="browser_not_found">Navegador no encontrado</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Actualizar</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Teléfono &amp; Marcador</string>
     <string name="dialer_header_summary">Un poco de ayuda para tus llamadas</string>
     <string name="misc_header">Miscelaneo</string>
-    <string name="misc_header_summary">Cualquier otra cosa ofrecida por PixelXpert</string>
+    <string name="misc_header_summary">Cualquier otra cosa ofrecida por AospXpert</string>
     <string name="qs_panel_category_title">Ajustes rápidos</string>
     <string name="qs_panel_category_summary">Deslizador de brillo, nivel de linterna y más</string>
     <string name="theme_customization_category">Temas</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Mantener siempre activada la pantalla mientras el dispositivo está cargando</string>
     <string name="doze_header">Mientras la pantalla está apagada…</string>
     <string name="custom_themed_icons_title">Iconos temáticos personalizados</string>
-    <string name="px_in_settings_title">Añadir PixelXpert a los elementos de configuración</string>
+    <string name="px_in_settings_title">Añadir AospXpert a los elementos de configuración</string>
     <string name="sleep_on_flat_screen_title">Apagar la pantalla en superficie plana</string>
     <string name="sleep_on_flat_screen_tile_title">Dormir en la superficie</string>
     <string name="flat_screen_timeout_title">Tiempo de espera de pantalla en superficie plana</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Información del pack de iconos</string>
     <string name="no_icon_pack_installed">No hay packs de iconos instalados</string>
     <string name="icon_pack_disclaimer_title">Aviso legal</string>
-    <string name="icon_pack_disclaimer_desc">Los paquetes de iconos no son desarrollados o distribuidos por PixelXpert. Como tal, el equipo de PixelXpert no puede proporcionar soporte para paquetes de iconos. Soporte sobre cómo PixelXpert maneja los paquetes de iconos sólo se proporcionará a los respectivos desarrolladores de paquetes.\n\nPara instrucciones sobre cómo compilar un paquete de iconos, por favor consulte la guía aquí: %s</string>
+    <string name="icon_pack_disclaimer_desc">Los paquetes de iconos no son desarrollados o distribuidos por AospXpert. Como tal, el equipo de AospXpert no puede proporcionar soporte para paquetes de iconos. Soporte sobre cómo AospXpert maneja los paquetes de iconos sólo se proporcionará a los respectivos desarrolladores de paquetes.\n\nPara instrucciones sobre cómo compilar un paquete de iconos, por favor consulte la guía aquí: %s</string>
 </resources>

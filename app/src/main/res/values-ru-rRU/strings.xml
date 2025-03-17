@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Обновления</string>
     <string name="notification_channel_update_desc">На этом канале отображаются уведомления о последних обновлениях.</string>
     <string name="new_update_title">Доступно обновление</string>
-    <string name="new_update_desc">Доступна новая версия PixelXpert</string>
+    <string name="new_update_desc">Доступна новая версия AospXpert</string>
     <string name="browser_not_found">Браузер не найден</string>
     <string name="settings_general_section_title">Общее</string>
     <string name="settings_update_section_title">Обновить</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Телефон</string>
     <string name="dialer_header_summary">Небольшая помощь для телефонных звонков</string>
     <string name="misc_header">Разное</string>
-    <string name="misc_header_summary">Все, что еще предлагает PixelXpert</string>
+    <string name="misc_header_summary">Все, что еще предлагает AospXpert</string>
     <string name="qs_panel_category_title">Панель быстрых настроек</string>
     <string name="qs_panel_category_summary">Ползунок яркости, яркость фонарика и многое другое</string>
     <string name="theme_customization_category">Иконки и стили</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Всегда включать AOD во время зарядки устройства</string>
     <string name="doze_header">Когда экран выключен…</string>
     <string name="custom_themed_icons_title">Пользовательские тематические иконки</string>
-    <string name="px_in_settings_title">Добавить PixelXpert в настройки элементов</string>
+    <string name="px_in_settings_title">Добавить AospXpert в настройки элементов</string>
     <string name="sleep_on_flat_screen_title">Выключить экран на плоской поверхности</string>
     <string name="sleep_on_flat_screen_tile_title">Сон на поверхности</string>
     <string name="flat_screen_timeout_title">Тайм-аут экрана на плоской поверхности</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Обновление приложения</string>
     <string name="monitoring_category_title">Параметры мониторинга</string>
     <string name="netstat_header">Настройки сетевой статистики</string>
-    <string name="string_formatter_manual_body_v3">В дополнение к обычному тексту доступны динамические переменные, такие как дата, использование данных и температура:\n\n$G\&lt;format\&gt; : григорианская дата, основанная на формате*\n$P&lt;format&gt; : персидская дата, основанная на формате*\n$Nrx : Общее количество скачиваний за указанный период ** ***\n$Ntx: Всего загрузок за указанный период ** ***\n$Nall: Общий трафик за указанный период ** ***\n$Nssid: Имя WiFi SSID (если применимо)\n\n$T\&lt;format\&gt;[interval]: Температура; \nформат может быть b (для батареи), c (для CPU), g (для GPU) и s (для кожи)\nИ наконец, есть ОПЦИОНАЛЬНОЕ количество интервалов обновления в секундах (по умолчанию: 60 секунд)\n\n*Для получения документации по формату ищите \"Java Date Format\"\n**Вы можете указать период статистики в PixelXpert/Miscellaneous menu/Network Statistics Settings\n***Если вы замените $N на $Nc, то получите статистику по мобильным данным (например, $Ncrx вместо Nrx)</string>
+    <string name="string_formatter_manual_body_v3">В дополнение к обычному тексту доступны динамические переменные, такие как дата, использование данных и температура:\n\n$G\&lt;format\&gt; : григорианская дата, основанная на формате*\n$P&lt;format&gt; : персидская дата, основанная на формате*\n$Nrx : Общее количество скачиваний за указанный период ** ***\n$Ntx: Всего загрузок за указанный период ** ***\n$Nall: Общий трафик за указанный период ** ***\n$Nssid: Имя WiFi SSID (если применимо)\n\n$T\&lt;format\&gt;[interval]: Температура; \nформат может быть b (для батареи), c (для CPU), g (для GPU) и s (для кожи)\nИ наконец, есть ОПЦИОНАЛЬНОЕ количество интервалов обновления в секундах (по умолчанию: 60 секунд)\n\n*Для получения документации по формату ищите \"Java Date Format\"\n**Вы можете указать период статистики в AospXpert/Miscellaneous menu/Network Statistics Settings\n***Если вы замените $N на $Nc, то получите статистику по мобильным данным (например, $Ncrx вместо Nrx)</string>
     <string name="update_channel_name">Обновления</string>
     <string name="download_channel_name">Загрузки</string>
     <string name="assets_download_title">Загрузка файлов</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Информация о наборе иконок</string>
     <string name="no_icon_pack_installed">Набор иконок не установлен</string>
     <string name="icon_pack_disclaimer_title">Оговорка</string>
-    <string name="icon_pack_disclaimer_desc">Пакеты иконок не разрабатываются и не распространяются PixelXpert, поэтому команда PixelXpert не может обеспечить поддержку наборов иконок. Поддержка того, как PixelXpert обрабатывает наборы значков будет предоставляться только соответствующим разработчикам наборов.\n\nИнструкции по компиляции набора иконок см. в руководстве здесь: %s</string>
+    <string name="icon_pack_disclaimer_desc">Пакеты иконок не разрабатываются и не распространяются AospXpert, поэтому команда AospXpert не может обеспечить поддержку наборов иконок. Поддержка того, как AospXpert обрабатывает наборы значков будет предоставляться только соответствующим разработчикам наборов.\n\nИнструкции по компиляции набора иконок см. в руководстве здесь: %s</string>
 </resources>

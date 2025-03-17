@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch">
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch">
 
-	<sh.siava.pixelxpert.ui.preferences.IllustrationPreference
+	<com.yhc.aospxpert.ui.preferences.IllustrationPreference
 		android:key="phone_sleep_illustration"
 		app:lottie_rawRes="@raw/phone_sleep"
 		search:ignore="true" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialMainSwitchPreference
+	<com.yhc.aospxpert.ui.preferences.MaterialMainSwitchPreference
 		android:key="SleepOnFlatScreen"
 		android:title="@string/sleep_on_flat_screen_title"
 		app:iconSpaceReserved="false" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="sleep_on_surface_category"
 		android:title="@string/sleep_on_flat_screen_tile_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:dependency="SleepOnFlatScreen"
 			android:key="FlatStandbyTime"
 			android:title="@string/flat_screen_timeout_title"
@@ -30,7 +30,7 @@
 			app:tickInterval="5"
 			app:valueCount="1" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="true"
 			android:dependency="SleepOnFlatScreen"
 			android:key="SleepOnFlatRespectWakeLock"
@@ -39,6 +39,6 @@
 			android:title="@string/flat_screen_timeout_respect_wakelock_title"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
 </PreferenceScreen>

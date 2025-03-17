@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Atualizações</string>
     <string name="notification_channel_update_desc">Este canal mostra notificações acerca das últimas atualizações.</string>
     <string name="new_update_title">Atualização disponível</string>
-    <string name="new_update_desc">Está disponível uma nova versão da PixelXpert</string>
+    <string name="new_update_desc">Está disponível uma nova versão da AospXpert</string>
     <string name="browser_not_found">Navegador não encontrado</string>
     <string name="settings_general_section_title">Geral</string>
     <string name="settings_update_section_title">Atualizações</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefone &amp; marcação</string>
     <string name="dialer_header_summary">Um pouco de ajuda para suas chamadas telefônicas</string>
     <string name="misc_header">Diversos</string>
-    <string name="misc_header_summary">Tudo o mais oferecido pelo PixelXpert</string>
+    <string name="misc_header_summary">Tudo o mais oferecido pelo AospXpert</string>
     <string name="qs_panel_category_title">Definições Rápidas</string>
     <string name="qs_panel_category_summary">Slider de brilho, nível de lanterna e mais</string>
     <string name="theme_customization_category">Temas</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Manter o ecrã ligado enquanto o dispositivo carrega</string>
     <string name="doze_header">Enquanto o ecrã está desligado…</string>
     <string name="custom_themed_icons_title">Ícones temáticos personalizados</string>
-    <string name="px_in_settings_title">Adicione PixelXpert aos itens de configuração</string>
+    <string name="px_in_settings_title">Adicione AospXpert aos itens de configuração</string>
     <string name="sleep_on_flat_screen_title">Desligar o ecrã numa superfície plana</string>
     <string name="sleep_on_flat_screen_tile_title">Suspender na superfície</string>
     <string name="flat_screen_timeout_title">Tempo limite do ecrã numa superfície plana</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Atualizações da App</string>
     <string name="monitoring_category_title">Opções de monitorização</string>
     <string name="netstat_header">Definições das estatísticas de rede</string>
-    <string name="string_formatter_manual_body_v3">Além do texto normal, também estão disponíveis variáveis dinâmicas, como Data, Uso de dados e Temperatura:\n\n$G\&lt;format\&gt; : Data gregoriana, com base no formato*\n$P&lt;format&gt; : Data persa, com base no formato*\n$Nrx : Total de downloads no período especificado ** ***\n$Ntx: Total de uploads no período especificado ** ***\n$Nall : Tráfego total no período especificado ** ***\n$Nssid : Nome SSID do WiFi (se aplicável)\n\n$T\&lt;format\&gt;[interval] : Temperatura; \no formato pode ser b (para bateria), c (para CPU), g (para GPU) e s (para skin) \nPor último, há um número OPCIONAL de intervalo de atualização em segundos (padrão: 60 segundos)\n\n*para formato documentação, procure por \"Formato de data Java\"\n**Você pode especificar o período de estatísticas em PixelXpert/menu Diversos/Configurações de estatísticas de rede\n***Se você substituir $N por $Nc , obterá estatísticas de dados móveis (por exemplo, $Ncrx em vez de Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Além do texto normal, também estão disponíveis variáveis dinâmicas, como Data, Uso de dados e Temperatura:\n\n$G\&lt;format\&gt; : Data gregoriana, com base no formato*\n$P&lt;format&gt; : Data persa, com base no formato*\n$Nrx : Total de downloads no período especificado ** ***\n$Ntx: Total de uploads no período especificado ** ***\n$Nall : Tráfego total no período especificado ** ***\n$Nssid : Nome SSID do WiFi (se aplicável)\n\n$T\&lt;format\&gt;[interval] : Temperatura; \no formato pode ser b (para bateria), c (para CPU), g (para GPU) e s (para skin) \nPor último, há um número OPCIONAL de intervalo de atualização em segundos (padrão: 60 segundos)\n\n*para formato documentação, procure por \"Formato de data Java\"\n**Você pode especificar o período de estatísticas em AospXpert/menu Diversos/Configurações de estatísticas de rede\n***Se você substituir $N por $Nc , obterá estatísticas de dados móveis (por exemplo, $Ncrx em vez de Nrx )</string>
     <string name="update_channel_name">Atualizações</string>
     <string name="download_channel_name">Transferências</string>
     <string name="assets_download_title">A transferir ficheiros</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Informações do pacote de ícones</string>
     <string name="no_icon_pack_installed">Nenhum pacote de ícones instalado</string>
     <string name="icon_pack_disclaimer_title">Aviso legal</string>
-    <string name="icon_pack_disclaimer_desc">Os pacotes de ícones não são desenvolvidos ou distribuídos pela PixelXpert. Portanto, a equipa da PixelXpert não consegue fornecer suporte para os pacotes. O suporte sobre como PixelXpert lida com os pacotes será apenas fornecido aos respectivos criadores do pacote.\n\nPara instruções sobre como compilar um pacote de ícones, consulte o guia aqui: %s</string>
+    <string name="icon_pack_disclaimer_desc">Os pacotes de ícones não são desenvolvidos ou distribuídos pela AospXpert. Portanto, a equipa da AospXpert não consegue fornecer suporte para os pacotes. O suporte sobre como AospXpert lida com os pacotes será apenas fornecido aos respectivos criadores do pacote.\n\nPara instruções sobre como compilar um pacote de ícones, consulte o guia aqui: %s</string>
 </resources>

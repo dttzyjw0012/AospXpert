@@ -43,6 +43,11 @@
           <theme>@style/AppTheme.PixelXpert</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/nav_prefs.xml">
+        <config>
+          <theme>@style/AppTheme.PixelXpert</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/own_prefs_header.xml">
         <config>
           <theme>@style/AppTheme.PixelXpert</theme>
@@ -74,9 +79,277 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="fix some text in the readme file.">
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Prepare for the canary 426 release. Add the makeMagisk.sh for linux, and fix the makeMagisk.bat. Change the old PiexlXpert text and folders to AOSPXpert. Add tools from the GravityBox.">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/ModPacks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/BroadcastMediator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/FrameworkManagers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/makeMagisk.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/bumpVersion.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/bumpVersion.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/make_debug_zip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/make_debug_zip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/make_zip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/make_zip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/fullPackageTestBuild.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/fullPackageTestBuild.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/makeCanaryRelease.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/makeCanaryRelease.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/makeRelease.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/makeRelease.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/xposedPackageTestBuild.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/xposedPackageTestBuild.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CanaryChangelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/CanaryChangelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModAddon/module.prop" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModAddon/module.prop" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/customize.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/module.prop" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/module.prop" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/service.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/service.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/system/priv-app/PixelXpert/.placeholder" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/system/priv-app/AOSPXpert/.placeholder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModuleUpdate.json" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModuleUpdate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModuleUpdate_Full.json" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModuleUpdate_Full.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModuleUpdate_Xposed.json" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModuleUpdate_Xposed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PixelXpert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/AospXpert.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submodules/RangeSliderPreference" beforeDir="false" afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submodules/RangeSliderPreference/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submodules/RangeSliderPreference/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/aidl/sh/siava/pixelxpert/IRootProviderProxy.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/aidl/com/yhc/aospxpert/IRootProviderProxy.aidl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/aidl/sh/siava/pixelxpert/IRootProviderService.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/aidl/com/yhc/aospxpert/IRootProviderService.aidl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/xposed_init" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/xposed_init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/AOSPXpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/AOSPXpert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/XPEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/APEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/MiscSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/MiscSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/ModPacks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/ResourceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/XPLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/XPLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/XPrefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/XPrefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/XposedModPack.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/XposedModPack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/allApps/HookTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/allApps/HookTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/allApps/OverScrollDisabler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/allApps/OverScrollDisabler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/BrightnessRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/BrightnessRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/FaceUpScreenSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/FaceUpScreenSleep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/HotSpotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/HotSpotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/PackageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/PackageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/PhoneWindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/PhoneWindowManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/RingerVolSeparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/RingerVolSeparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/ScreenOffKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/ScreenOffKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/ScreenRotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/ScreenRotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/StatusbarSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/StatusbarSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android/SystemScreenRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/android/SystemScreenRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/dialer/RecordingMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/dialer/RecordingMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/ksu/KSUInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/ksu/KSUInjector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/launcher/ClearAllButtonMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/launcher/ClearAllButtonMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/launcher/CustomNavGestures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/launcher/CustomNavGestures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/launcher/FeatureFlags.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/launcher/FeatureFlags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/launcher/LauncherGestureNavbarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/launcher/LauncherGestureNavbarManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/launcher/PixelXpertIconUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/launcher/AospXpertIconUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/launcher/TaskbarActivator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/launcher/TaskbarActivator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/settings/AppCloneEnabler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/settings/AppCloneEnabler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/settings/PXSettingsLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/settings/PXSettingsLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/BatteryDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/BatteryDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/BatteryStyleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/BatteryStyleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/BrightnessSlider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/BrightnessSlider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/DepthWallpaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/DepthWallpaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/EasyUnlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/EasyUnlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/FeatureFlagsMods.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/FeatureFlagsMods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/FingerprintWhileDozing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/FingerprintWhileDozing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/FlashLightLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/FlashLightLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/GestureNavbarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/GestureNavbarManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/IconPacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/IconPacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/KSURootReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/KSURootReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/KeyGuardPinScrambler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/KeyGuardPinScrambler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/KeyguardMods.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/KeyguardMods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/MultiStatusbarRows.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/MultiStatusbarRows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/NotificationExpander.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/NotificationExpander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/NotificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/NotificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/QSFooterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/QSFooterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/QSTileGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/QSTileGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ScreenGestures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ScreenGestures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ScreenRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ScreenRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ScreenshotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ScreenshotManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/StatusbarGestures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/StatusbarGestures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/StatusbarMods.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/StatusbarMods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ThemeManager_13.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ThemeManager_13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ThemeManager_14.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ThemeManager_14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ThermalProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ThermalProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/ThreeButtonNavMods.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/ThreeButtonNavMods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/UDFPSManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/UDFPSManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/VolumeDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/VolumeDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/systemui/VolumeTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/systemui/VolumeTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/telecom/CallVibrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/telecom/CallVibrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/AlphaAndColorBalancedPaint.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/AlphaAndColorBalancedPaint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/BootLoopProtector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/BootLoopProtector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/ExtendedRemotePreferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/ExtendedRemotePreferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/FlexStatusIconContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/FlexStatusIconContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/GoogleMonochromeIconFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/GoogleMonochromeIconFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/ModuleFolderOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/ModuleFolderOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/NetworkTraffic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/NetworkTraffic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/NotificationIconContainerOverride.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/NotificationIconContainerOverride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/Overlays.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/Overlays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/ShyLinearLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/ShyLinearLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/StringFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/StringFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/SystemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/SystemUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/TilePercentageDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/TilePercentageDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/batteryStyles/BatteryBarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/batteryStyles/BatteryBarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/batteryStyles/BatteryDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/batteryStyles/BatteryDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/batteryStyles/CircleBatteryDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/batteryStyles/CircleBatteryDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/batteryStyles/CircleFilledBatteryDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/batteryStyles/CircleFilledBatteryDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/batteryStyles/HiddenBatteryDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/batteryStyles/HiddenBatteryDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/toolkit/ColorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/toolkit/ColorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/toolkit/ObjectTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/toolkit/ObjectTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/toolkit/OverlayTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/toolkit/OverlayTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/toolkit/ReflectedClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/toolkit/ReflectedClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/toolkit/ReflectedMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/toolkit/ReflectedMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/utils/toolkit/ReflectionTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/modpacks/utils/toolkit/ReflectionTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/RootProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/service/RootProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/RootProviderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/service/RootProviderProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/tileServices/AppProfileSwitchTileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/service/tileServices/AppProfileSwitchTileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/tileServices/SleepOnSurfaceTileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/service/tileServices/SleepOnSurfaceTileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/service/tileServices/VolumeTileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/service/tileServices/VolumeTileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/activities/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/activities/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/activities/FakeSplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/activities/FakeSplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/activities/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/activities/SettingsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/activities/SplashScreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/activities/SplashScreenActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/adapter/IconAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconDialogAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/adapter/IconDialogAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconPackAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/adapter/IconPackAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/IconPackCustomizationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/adapter/IconPackCustomizationAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/adapter/ItemChangedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/adapter/ItemChangedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/BaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/BaseFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/DialerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/DialerFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/GestureNavFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/GestureNavFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/HeaderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/HeaderFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/HooksFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/HooksFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/HotSpotFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/HotSpotFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/LockScreenFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/LockScreenFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/MiscFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/MiscFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/NavFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/NavFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/NetworkFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/NetworkFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/NetworkStatFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/NetworkStatFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/OwnPrefsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/OwnPrefsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/PackageManagerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/PackageManagerFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/PhysicalButtonRemapFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/PhysicalButtonRemapFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/QSTileQtyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/QSTileQtyFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/QuickSettingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/QuickSettingsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/SBBBFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/SBBBFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/SBBIconFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/SBBIconFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/SBCFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/SBCFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/SleepOnFlatFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/SleepOnFlatFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/StatusbarFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/StatusbarFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/ThemingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/ThemingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/ThreeButtonNavFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/ThreeButtonNavFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/UpdateFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/UpdateFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/iconpack/IconPackCustomizationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/iconpack/IconPackCustomizationFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/iconpack/IconPackFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/iconpack/IconPackFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/fragments/iconpack/IconPackListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/fragments/iconpack/IconPackListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/models/SearchPreferenceItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/models/SearchPreferenceItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/IllustrationPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/IllustrationPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialColorPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialColorPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialEditTextPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialEditTextPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialListPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialListPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialMainSwitchPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialMainSwitchPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialPreferenceCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialPreferenceCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialPreferenceMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialPreferenceMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialPrimarySwitchPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialPrimarySwitchPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialRangeSliderPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialRangeSliderPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialSwitchPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialSwitchPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialTimePickerPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialTimePickerPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/MaterialTwoTargetPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/MaterialTwoTargetPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/AnimationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/AnimationUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/Breadcrumb.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/Breadcrumb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/HistoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/HistoryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/ListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/ListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/PreferenceItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/PreferenceItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/PreferenceParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/PreferenceParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/RevealAnimationSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/RevealAnimationSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchPreferenceActionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchPreferenceActionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchPreferenceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchPreferenceAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchPreferenceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchPreferenceFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchPreferenceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchPreferenceResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/ui/preferences/preferencesearch/SearchPreferenceResultListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/ui/preferences/preferencesearch/SearchPreferenceResultListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/BootReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/BootReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/ControlledPreferenceFragmentCompat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/ControlledPreferenceFragmentCompat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/ExtendedSharedPreferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/ExtendedSharedPreferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/IconPackUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/IconPackUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/MLKitSegmentor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/MLKitSegmentor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/MiscUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/MiscUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/NTPTimeSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/NTPTimeSyncer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/NavigationExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/NavigationExtension.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PXPreferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/PXPreferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PrefManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/PrefManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PreferenceHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/PreferenceHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PyTorchBackgroundRemover.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/PyTorchBackgroundRemover.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/PyTorchSegmentor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/PyTorchSegmentor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/RemotePrefProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/RemotePrefProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/ThemePackMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/ThemePackMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/TimeSyncScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/TimeSyncScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/TimeSyncWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/TimeSyncWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/UpdateScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/UpdateScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/utils/UpdateWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yhc/aospxpert/utils/UpdateWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-af-rZA/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-af-rZA/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar-rSA/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar-rSA/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-da-rDK/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-da-rDK/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-de-rDE/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-de-rDE/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-el-rGR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-el-rGR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es-rES/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es-rES/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fa-rIR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fa-rIR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fi-rFI/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fi-rFI/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fr-rFR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fr-rFR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hi-rIN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hi-rIN/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hu-rHU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hu-rHU/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-it-rIT/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-it-rIT/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-iw-rIL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-iw-rIL/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ja-rJP/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ja-rJP/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ko-rKR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ko-rKR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-nl-rNL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-nl-rNL/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-no-rNO/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-no-rNO/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pl-rPL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pl-rPL/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt-rPT/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt-rPT/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ro-rRO/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ro-rRO/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sr-rCS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sr-rCS/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sr-rSP/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sr-rSP/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sv-rSE/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sv-rSE/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-tr-rTR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-tr-rTR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-uk-rUA/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-uk-rUA/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-vi-rVN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-vi-rVN/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-zh-rTW/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-zh-rTW/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/dialer_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/dialer_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/gesture_nav_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/gesture_nav_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/header_preferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/header_preferences.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/hotspot_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/hotspot_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/lock_screen_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/lock_screen_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/lsqs_custom_text.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/lsqs_custom_text.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/misc_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/misc_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/nav_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/nav_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/own_prefs_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/own_prefs_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/packagemanger_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/packagemanger_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/physical_buttons_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/physical_buttons_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/qs_tile_qty_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/qs_tile_qty_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/quicksettings_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/quicksettings_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/sbqs_network_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/sbqs_network_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/sleep_on_flat_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/sleep_on_flat_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_batterybar_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_batterybar_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_batteryicon_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_batteryicon_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_clock_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_clock_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/statusbar_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/theming_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/theming_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/three_button_prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/three_button_prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latestStable.json" beforeDir="false" afterPath="$PROJECT_DIR$/latestStable.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makeMagisk.bat" beforeDir="false" afterPath="$PROJECT_DIR$/makeMagisk.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,6 +541,7 @@
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.makeMagisk.sh.executor&quot;: &quot;Run&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.android.tools.idea.streaming.zoom.toolbar.visible&quot;: &quot;false&quot;,
@@ -276,17 +550,17 @@
     &quot;git-widget-placeholder&quot;: &quot;aosp-canary&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nameless/AndroidStudioProjects/AospXpert&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nameless/AndroidStudioProjects/AospXpert/app/lib/api-82-sources.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
     &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vcs.patch.to.clipboard&quot;: &quot;true&quot;,
@@ -310,20 +584,20 @@
       <recent name="sh.siava.pixelxpert.service.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/lib" />
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert" />
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\Submodules\RangeSliderPreference" />
-      <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app" />
-      <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\src\main\java\sh\siava\pixelxpert\service\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\resources" />
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\src\main\java\sh\siava\pixelxpert\utils" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="PixelXpert.app" />
+  <component name="RunManager" selected="Shell Script.makeMagisk.sh">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="AospXpert.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -342,8 +616,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java>
         <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
@@ -366,6 +638,26 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="makeMagisk.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/makeMagisk.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.makeMagisk.sh" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -385,6 +677,13 @@
       <updated>1723700480365</updated>
       <workItem from="1741086377032" duration="7000" />
       <workItem from="1741088738729" duration="21936000" />
+      <workItem from="1741922637353" duration="32010000" />
+      <workItem from="1741990056870" duration="34440000" />
+      <workItem from="1742080779459" duration="1740000" />
+      <workItem from="1742083812658" duration="27421000" />
+      <workItem from="1742174336555" duration="17981000" />
+      <workItem from="1742196728572" duration="309000" />
+      <workItem from="1742197046059" duration="2852000" />
     </task>
     <task id="LOCAL-00107" summary="CHANGELOG: Added search to icons page">
       <option name="closed" value="true" />
@@ -819,8 +1118,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="continued: migrated missed hooks to new system" />
-    <MESSAGE value="--" />
     <MESSAGE value="temp" />
     <MESSAGE value="CHANGELOG: Fixed light theme since canary 411" />
     <MESSAGE value="BatteryDataProvider: matching new constructor changes" />
@@ -844,7 +1141,9 @@
     <MESSAGE value="fix magisk build files for AOSP roms. change some text in the readme file." />
     <MESSAGE value="add some text in the readme file." />
     <MESSAGE value="fix some text in the readme file." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some text in the readme file." />
+    <MESSAGE value="prepare for the canary 426 release. add the makeMagisk.sh for linux, and fix the makeMagisk.bat. change the old PiexlXpert text and folders to AOSPXpert." />
+    <MESSAGE value="Prepare for the canary 426 release. Add the makeMagisk.sh for linux, and fix the makeMagisk.bat. Change the old PiexlXpert text and folders to AOSPXpert. Add tools from the GravityBox." />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare for the canary 426 release. Add the makeMagisk.sh for linux, and fix the makeMagisk.bat. Change the old PiexlXpert text and folders to AOSPXpert. Add tools from the GravityBox." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

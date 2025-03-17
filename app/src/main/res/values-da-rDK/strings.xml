@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Opdateringer</string>
     <string name="notification_channel_update_desc">Denne kanal viser besked om de seneste opdateringer.</string>
     <string name="new_update_title">Opdatering tilgængelig</string>
-    <string name="new_update_desc">En ny version af PixelXpert er tilgængelig</string>
+    <string name="new_update_desc">En ny version af AospXpert er tilgængelig</string>
     <string name="browser_not_found">Browser ikke fundet</string>
     <string name="settings_general_section_title">Generel</string>
     <string name="settings_update_section_title">Opdatering</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefon &amp; opkalder</string>
     <string name="dialer_header_summary">En smule hjælp til dine telefonopkald</string>
     <string name="misc_header">Diverse</string>
-    <string name="misc_header_summary">Uanset hvad PixelXpert tilbyder</string>
+    <string name="misc_header_summary">Uanset hvad AospXpert tilbyder</string>
     <string name="qs_panel_category_title">Hurtige indstillinger panel</string>
     <string name="qs_panel_category_summary">Lysstyrkeskyderen, lygte niveau og meget mere</string>
     <string name="theme_customization_category">Temaer</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Hold altid aktiveret, mens enheden oplades</string>
     <string name="doze_header">Mens skærmen er slukket…</string>
     <string name="custom_themed_icons_title">Brugerdefinerede temaikoner</string>
-    <string name="px_in_settings_title">Tilføj PixelXpert til opsætning af elementer</string>
+    <string name="px_in_settings_title">Tilføj AospXpert til opsætning af elementer</string>
     <string name="sleep_on_flat_screen_title">Slå skærmen fra på den flade overflade</string>
     <string name="sleep_on_flat_screen_tile_title">Søvn på overfladen</string>
     <string name="flat_screen_timeout_title">Skærmens timeout på flad overflade</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Opdateringer</string>
     <string name="monitoring_category_title">Overvågningsmuligheder</string>
     <string name="netstat_header">Indstillinger for netværksstatistik</string>
-    <string name="string_formatter_manual_body_v3">Ud over den normale tekst er dynamiske variabler også tilgængelige, såsom dato, dataforbrug og temperatur:\n\n$G\&lt;format\&gt; : Gregoriansk dato, baseret på format*\n$P&lt;format&gt; : Persisk dato, baseret på format*\n$Nrx : Samlet antal downloads i specificeret periode ** ***\n$Ntx: Total uploads i specificeret periode ** ***\n$Nall : Total trafik i specificeret periode ** ***\n$Nssid : WiFi SSID navn (hvis relevant)\n\n$T\&lt;format\&gt;[interval] : Temperatur; \nformat kan være b (for batteri), c (for CPU), g (for GPU) og s (for skin) \nEndelig er der VALGFRI antal opdateringsinterval i sekunder (standard: 60 sekunder)\n\n*for format dokumentation, søg på \"Java Date Format\"\n**Du kan angive statistikperioden i PixelXpert/Diverse menu/Netværksstatistikindstillinger\n***Hvis du erstatter $N med $Nc får du med mobildatastatistik (f.eks. $Ncrx i stedet for Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Ud over den normale tekst er dynamiske variabler også tilgængelige, såsom dato, dataforbrug og temperatur:\n\n$G\&lt;format\&gt; : Gregoriansk dato, baseret på format*\n$P&lt;format&gt; : Persisk dato, baseret på format*\n$Nrx : Samlet antal downloads i specificeret periode ** ***\n$Ntx: Total uploads i specificeret periode ** ***\n$Nall : Total trafik i specificeret periode ** ***\n$Nssid : WiFi SSID navn (hvis relevant)\n\n$T\&lt;format\&gt;[interval] : Temperatur; \nformat kan være b (for batteri), c (for CPU), g (for GPU) og s (for skin) \nEndelig er der VALGFRI antal opdateringsinterval i sekunder (standard: 60 sekunder)\n\n*for format dokumentation, søg på \"Java Date Format\"\n**Du kan angive statistikperioden i AospXpert/Diverse menu/Netværksstatistikindstillinger\n***Hvis du erstatter $N med $Nc får du med mobildatastatistik (f.eks. $Ncrx i stedet for Nrx )</string>
     <string name="update_channel_name">Opdateringer</string>
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloader Filer</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Ikon pakke info</string>
     <string name="no_icon_pack_installed">Ingen ikonpakke installeret</string>
     <string name="icon_pack_disclaimer_title">Ansvarsfraskrivelse</string>
-    <string name="icon_pack_disclaimer_desc">Ikonpakker er ikke udviklet eller distribueret af PixelXpert. Som sådan kan PixelXpert-holdet ikke yde understøttelse af ikonpakker. Understøttelse af, hvordan PixelXpert håndterer ikonpakker, vil kun blive leveret til de respektive pakkeudviklere.\n\nFor instruktioner om hvordan man udarbejder en ikonpakke, henvises til guiden her: %s</string>
+    <string name="icon_pack_disclaimer_desc">Ikonpakker er ikke udviklet eller distribueret af AospXpert. Som sådan kan AospXpert-holdet ikke yde understøttelse af ikonpakker. Understøttelse af, hvordan AospXpert håndterer ikonpakker, vil kun blive leveret til de respektive pakkeudviklere.\n\nFor instruktioner om hvordan man udarbejder en ikonpakke, henvises til guiden her: %s</string>
 </resources>

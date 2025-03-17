@@ -19,7 +19,7 @@
     <string name="notification_channel_update">アップデート</string>
     <string name="notification_channel_update_desc">このチャンネルには、最新のアップデートに関する通知が表示されます。</string>
     <string name="new_update_title">利用可能なアップデート</string>
-    <string name="new_update_desc">新しいバージョンの PixelXpert が利用可能になりました</string>
+    <string name="new_update_desc">新しいバージョンの AospXpert が利用可能になりました</string>
     <string name="browser_not_found">ブラウザが見つかりません</string>
     <string name="settings_general_section_title">一般的な</string>
     <string name="settings_update_section_title">アップデート</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">電話 &amp; ダイヤラ</string>
     <string name="dialer_header_summary">あなたの電話のための少しの援助。</string>
     <string name="misc_header">その他</string>
-    <string name="misc_header_summary">PixelXpert が提供する他に何でも。</string>
+    <string name="misc_header_summary">AospXpert が提供する他に何でも。</string>
     <string name="qs_panel_category_title">クイック設定パネル</string>
     <string name="qs_panel_category_summary">明るさスライダー、懐中電灯のレベルなど</string>
     <string name="theme_customization_category">テーマ</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">充電中は常に画面をオンにする</string>
     <string name="doze_header">While screen is off…</string>
     <string name="custom_themed_icons_title">カスタムテーマアイコン</string>
-    <string name="px_in_settings_title">PixelXpert を設定画面に追加</string>
+    <string name="px_in_settings_title">AospXpert を設定画面に追加</string>
     <string name="sleep_on_flat_screen_title">平らな面で画面をオフにする</string>
     <string name="sleep_on_flat_screen_tile_title">表面でスリープ</string>
     <string name="flat_screen_timeout_title">フラットサーフェスでの画面タイムアウト</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">アプリのアップデート</string>
     <string name="monitoring_category_title">モニタリングのオプション</string>
     <string name="netstat_header">ネットワーク統計の設定</string>
-    <string name="string_formatter_manual_body_v3">通常のテキストに加えて、日付、データ使用量、温度などの動的変数も使用できます。\n\n$G\&lt;format\&gt; : グレゴリオ暦の日付、形式* に基づく\n$P&lt;format&gt; : ペルシアの日付、形式* に基づく\n$Nrx : 総ダウンロード数指定された期間の ** ***\n$Ntx: 指定された期間の合計アップロード数 ** ***\n$Nall : 指定された期間の合計トラフィック ** ***\n$Nssid : WiFi SSID 名 (該当する場合)\n\n$T\&lt;format\&gt;[interval] ： 温度; \nフォーマットは、b (バッテリー用)、c (CPU 用)、g (GPU 用)、および s (スキン用) です。 \n最後に、オプションの更新間隔の秒数があります (デフォルト: 60 秒)\n\n*フォーマット用ドキュメントで「Java Date Format」を検索してください\n**PixelXpert/その他メニュー/ネットワーク統計設定で統計期間を指定できます\n*** $N $Nc に置き換えると、モバイル データ統計が得られます (例: Nrx の代わりに $Ncrx ) )</string>
+    <string name="string_formatter_manual_body_v3">通常のテキストに加えて、日付、データ使用量、温度などの動的変数も使用できます。\n\n$G\&lt;format\&gt; : グレゴリオ暦の日付、形式* に基づく\n$P&lt;format&gt; : ペルシアの日付、形式* に基づく\n$Nrx : 総ダウンロード数指定された期間の ** ***\n$Ntx: 指定された期間の合計アップロード数 ** ***\n$Nall : 指定された期間の合計トラフィック ** ***\n$Nssid : WiFi SSID 名 (該当する場合)\n\n$T\&lt;format\&gt;[interval] ： 温度; \nフォーマットは、b (バッテリー用)、c (CPU 用)、g (GPU 用)、および s (スキン用) です。 \n最後に、オプションの更新間隔の秒数があります (デフォルト: 60 秒)\n\n*フォーマット用ドキュメントで「Java Date Format」を検索してください\n**AospXpert/その他メニュー/ネットワーク統計設定で統計期間を指定できます\n*** $N $Nc に置き換えると、モバイル データ統計が得られます (例: Nrx の代わりに $Ncrx ) )</string>
     <string name="update_channel_name">アップデート</string>
     <string name="download_channel_name">ダウンロード</string>
     <string name="assets_download_title">ファイルをダウンロード中</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">アイコンパック情報</string>
     <string name="no_icon_pack_installed">アイコンパックがインストールされていません</string>
     <string name="icon_pack_disclaimer_title">免責事項</string>
-    <string name="icon_pack_disclaimer_desc">アイコンパックはPixelXpertによって開発または配布されていないため、PixelXpertチームはアイコンパックのサポートを提供できません。 PixelXpert がアイコンパックを処理する方法に関するサポートは、それぞれのパック開発者にのみ提供されます。\n\nアイコンパックのコンパイル方法については、こちらのガイドを参照してください: %s</string>
+    <string name="icon_pack_disclaimer_desc">アイコンパックはAospXpertによって開発または配布されていないため、AospXpertチームはアイコンパックのサポートを提供できません。 AospXpert がアイコンパックを処理する方法に関するサポートは、それぞれのパック開発者にのみ提供されます。\n\nアイコンパックのコンパイル方法については、こちらのガイドを参照してください: %s</string>
 </resources>

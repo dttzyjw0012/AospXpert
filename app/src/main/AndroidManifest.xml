@@ -16,12 +16,12 @@
 		android:icon="@mipmap/ic_launcher"
 		android:label="AOSP Xpert"
 		android:supportsRtl="true"
-		android:theme="@style/AppTheme.PixelXpert">
+		android:theme="@style/AppTheme.AospXpert">
 		<activity
 			android:name=".ui.activities.FakeSplashActivity"
 			android:exported="true"
 			android:label="@string/title_activity_settings"
-			android:theme="@style/AppTheme.PixelXpert.SplashScreen" >
+			android:theme="@style/AppTheme.AospXpert.SplashScreen" >
 		</activity>
 		<activity
 			android:name=".ui.activities.SplashScreenActivity"
@@ -115,7 +115,7 @@
 
 		<provider
 			android:name=".utils.RemotePrefProvider"
-			android:authorities="sh.siava.pixelxpert"
+			android:authorities="com.yhc.aospxpert"
 			android:directBootAware="true"
 			android:exported="true"
 			tools:ignore="ExportedContentProvider" />

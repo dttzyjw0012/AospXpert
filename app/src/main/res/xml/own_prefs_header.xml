@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch">
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch">
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_general_section_title"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:entries="@array/languages_names"
 			android:entryValues="@array/languages_values"
 			android:icon="@drawable/ic_language"
@@ -15,7 +15,7 @@
 			android:summary="%s"
 			android:title="@string/language_title" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:icon="@drawable/ic_alternative_icon"
 			android:key="AlternativeThemedAppIcon"
@@ -23,20 +23,20 @@
 			android:summaryOn="@string/general_on"
 			android:title="@string/app_themed_icon_title" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_update_section_title"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialPreference
 			android:icon="@drawable/ic_check_update"
 			android:key="CheckForUpdate"
 			android:summary="@string/current_version"
 			android:title="@string/settings_check_for_update_title"
-			app:fragment="sh.siava.pixelxpert.ui.fragments.UpdateFragment" />
+			app:fragment="com.yhc.aospxpert.ui.fragments.UpdateFragment" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:icon="@drawable/ic_auto_update"
 			android:key="AutoUpdate"
@@ -44,7 +44,7 @@
 			android:title="@string/auto_update_title"
 			app:defaultValue="true" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:icon="@drawable/ic_update_over_wifi"
 			android:key="UpdateWifiOnly"
@@ -52,13 +52,13 @@
 			android:title="@string/update_over_wifi_title"
 			app:defaultValue="true" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_misc_section_title"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:icon="@drawable/ic_imperial_unit"
 			android:key="TemperatureUnitF"
@@ -66,37 +66,37 @@
 			android:summaryOn="@string/general_on"
 			android:title="@string/imperial_units_title" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_about_section_title"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialPreference
 			android:icon="@drawable/ic_github"
 			android:key="GitHubRepo"
 			android:summary="@string/github_repo_summary"
 			android:title="@string/github_repo_title" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialPreference
-			android:icon="@drawable/ic_telegram"
-			android:key="TelegramGroup"
-			android:summary="@string/telegram_group_summary"
-			android:title="@string/telegram_group_title" />
+<!--		<com.yhc.aospxpert.ui.preferences.MaterialPreference-->
+<!--			android:icon="@drawable/ic_telegram"-->
+<!--			android:key="TelegramGroup"-->
+<!--			android:summary="@string/telegram_group_summary"-->
+<!--			android:title="@string/telegram_group_title" />-->
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialPreference
 			android:icon="@drawable/ic_crowdin"
 			android:key="CrowdinProject"
 			android:summary="@string/crowdin_summary"
 			android:title="@string/crowdin_title" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialPreference
 			android:icon="@drawable/ic_usage"
 			android:key="UsageWiki"
 			android:summary="@string/usage_summary"
 			android:title="@string/usage_title" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
 	<!--SwitchPreference
 		android:defaultValue="true"

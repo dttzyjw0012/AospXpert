@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Ажурирања</string>
     <string name="notification_channel_update_desc">Овај канал приказује обавештења о најновијим ажурирањима.</string>
     <string name="new_update_title">Доступно је ажурирање</string>
-    <string name="new_update_desc">Доступна је нова верзија PixelXpert-а</string>
+    <string name="new_update_desc">Доступна је нова верзија AospXpert-а</string>
     <string name="browser_not_found">Прегледач није пронађен</string>
     <string name="settings_general_section_title">Опште</string>
     <string name="settings_update_section_title">Ажурирање</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Телефон</string>
     <string name="dialer_header_summary">A bit of aid for your phone calls</string>
     <string name="misc_header">Разно</string>
-    <string name="misc_header_summary">Whatever else offered by PixelXpert</string>
+    <string name="misc_header_summary">Whatever else offered by AospXpert</string>
     <string name="qs_panel_category_title">Панел за брза подешавања</string>
     <string name="qs_panel_category_summary">Brightness slider, flashlight level and more</string>
     <string name="theme_customization_category">Изглед</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Keep always on display enabled while device is charging</string>
     <string name="doze_header">Док је екран искључен…</string>
     <string name="custom_themed_icons_title">Прилагођене тематске иконе</string>
-    <string name="px_in_settings_title">Add PixelXpert to settings items</string>
+    <string name="px_in_settings_title">Add AospXpert to settings items</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Icon pack info</string>
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by PixelXpert. As such, the PixelXpert team is unable to provide support for icon packs. Support regarding how PixelXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
 </resources>

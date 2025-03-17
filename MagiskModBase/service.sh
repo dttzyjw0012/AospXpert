@@ -1,4 +1,4 @@
-PKGNAME="sh.siava.pixelxpert"
+PKGNAME="com.yhc.aospxpert"
 PKGPATH="/system/priv-app/AOSPXpert/AOSPXpert.apk"
 LSPDDBPATH="/data/adb/lspd/config/modules_config.db" 
 MAGISKDBPATH="/data/adb/magisk.db" 

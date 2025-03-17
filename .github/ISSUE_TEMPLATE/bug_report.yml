@@ -44,10 +44,10 @@ body:
         - Android 13 Stable version
         - August Security Patch 
         - Magisk v25.1 Stable
-        - PixelXpert 2.1.0, BetterInternetTiles, [SharedUID] SystemUI, [SharedUID] Termux
-        - PixelXpert 2.1.0 and LSposed 1.8.3
+        - AospXpert 2.1.0, BetterInternetTiles, [SharedUID] SystemUI, [SharedUID] Termux
+        - AospXpert 2.1.0 and LSposed 1.8.3
         - LSposed 1.8.3
-        - Only PixelXpert 2.1.0
+        - Only AospXpert 2.1.0
     validations:
       required: true
   - type: textarea
@@ -57,8 +57,8 @@ body:
         !This part is vital for bugreport! Missing logs will most probably lead in dismissal of the bugreport!
         Please attach LSposed Module log if you are able to. (Open LSPosed, go to module logs, press save button and attach to this bug report)
         To give clear logs, before extracting LSposed logs, follow these steps:
-        - Disable all magisk modules other than PixelXpert and LSposed
-        - Disable all LSposed modules other than PixelXpert
+        - Disable all magisk modules other than AospXpert and LSposed
+        - Disable all LSposed modules other than AospXpert
         - Disable all theming apps (e.g. Substratum, Repainter and etc)
         - Restart and replicate the issue
         - After that extract LSposed logs.

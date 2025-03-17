@@ -1,4 +1,4 @@
-PKGNAME="sh.siava.pixelxpert"
+PKGNAME="com.yhc.aospxpert"
 PKGPATH="/system/priv-app/AOSPXpert/AOSPXpert.apk"
 LSPDDBPATH="/data/adb/lspd/config/modules_config.db"
 MAGISKDBPATH="/data/adb/magisk.db"
@@ -94,7 +94,7 @@ activateModuleLSPD()
 testKernelSU()
 {
 	if [[ $(ksud -V 2>&1 | grep "not found" | wc -c) -eq 0 ]]; then #KSU installed
-    	if [[ $(pm list packages | grep $PKGNAME | wc -c) -eq 0 ]]; then #PixelXpert NOT installed yet
+    	if [[ $(pm list packages | grep $PKGNAME | wc -c) -eq 0 ]]; then #AospXpert NOT installed yet
     		ui_print ''
     		ui_print '*******************************'
     		ui_print 'KernelSU binaries found!'
@@ -153,7 +153,7 @@ else
 	ui_print 'Please:'
 	ui_print '- Install Lsposed'
 	ui_print '- Reboot'
-#	ui_print '- Manually enable PixelXpert in Lsposed'
+#	ui_print '- Manually enable AospXpert in Lsposed'
 #	ui_print '- Reboot'
 fi
 

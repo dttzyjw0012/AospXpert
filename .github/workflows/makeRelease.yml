@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Source Code Download
-        run: git clone --branch stable --single-branch --recurse-submodules https://github.com/siavash79/PixelXpert.git .
+        run: git clone --branch stable --single-branch --recurse-submodules https://github.com/siavash79/AospXpert.git .
 
       - name: Setup JDK 17
         uses: actions/setup-java@v4.1.0
@@ -47,7 +47,7 @@ jobs:
       - name: Upload Zip
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: PixelXpert.zip
+          name: AospXpert.zip
           path: output
 
       - name: Release the binaries
@@ -69,7 +69,7 @@ jobs:
           force-add: 'true'
           files: MagiskModBase/module.prop MagiskModAddon/module.prop app/build.gradle.kts MagiskModuleUpdate.json MagiskModuleUpdate_Full.json MagiskModuleUpdate_Xposed.json latestStable.json MagiskChangelog.md
           name: GitHub
-          email: pixelxpert@siava.sh
+          email: datongtzyjw@gmail.com
 
       - name: Telegram Channel Post
         uses: appleboy/telegram-action@master

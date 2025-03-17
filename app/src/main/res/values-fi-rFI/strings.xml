@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Päivitykset</string>
     <string name="notification_channel_update_desc">Tämä kanava näyttää ilmoituksen viimeisimmistä päivityksistä.</string>
     <string name="new_update_title">Päivitys saatavilla</string>
-    <string name="new_update_desc">Uusi PixelXpert-versio on saatavilla</string>
+    <string name="new_update_desc">Uusi AospXpert-versio on saatavilla</string>
     <string name="browser_not_found">Selainta ei löydy</string>
     <string name="settings_general_section_title">Kenraali</string>
     <string name="settings_update_section_title">Päivittää</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Puhelin &amp; soittaja</string>
     <string name="dialer_header_summary">Vähäinen apu puheluita varten</string>
     <string name="misc_header">Sekalaista</string>
-    <string name="misc_header_summary">Mitä tahansa PixelXpertin tarjoamaa muuta</string>
+    <string name="misc_header_summary">Mitä tahansa AospXpertin tarjoamaa muuta</string>
     <string name="qs_panel_category_title">Pika-asetuspaneeli</string>
     <string name="qs_panel_category_summary">Kirkkauden liukusäädintä, taskulampun taso ja paljon muuta</string>
     <string name="theme_customization_category">Theming</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Pidä aina päällä päällä laitteen latauksen aikana</string>
     <string name="doze_header">Kun näyttö on pois päältä…</string>
     <string name="custom_themed_icons_title">Mukautetut teemakuvakkeet</string>
-    <string name="px_in_settings_title">Lisää PixelXpert asetuskohteisiin</string>
+    <string name="px_in_settings_title">Lisää AospXpert asetuskohteisiin</string>
     <string name="sleep_on_flat_screen_title">Laita näyttö pois päältä tasaisella pinnalla</string>
     <string name="sleep_on_flat_screen_tile_title">Lepotila pinnalla</string>
     <string name="flat_screen_timeout_title">Näytön aikakatkaisu tasaisella pinnalla</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Päivitykset</string>
     <string name="monitoring_category_title">Valvontavaihtoehdot</string>
     <string name="netstat_header">Verkon tilastoasetukset</string>
-    <string name="string_formatter_manual_body_v3">Normaalin tekstin lisäksi saatavilla on myös dynaamisia muuttujia, kuten päivämäärä, tiedon käyttö ja lämpötila:\n\n$G\&lt;format\&gt; : gregoriaaninen päivämäärä muotoon perustuen*\n$P&lt;format&gt; : persialainen päivämäärä muotoon perustuen*\n$Nrx : latauksia yhteensä määrätyllä ajanjaksolla ** ***\n$Ntx: latauksia yhteensä tietyllä ajanjaksolla ** ***\n$Nall : liikenne yhteensä tietyllä ajanjaksolla ** ***\n$Nssid : WiFi SSID:n nimi (jos käytössä)\n\n$T\&lt;format\&gt;[interval] : Lämpötila; \nmuoto voi olla b (akku), c (suoritin), g (grafiikkasuoritin) ja s (skin) \nLopuksi on VALINNAINEN päivitysvälin määrä sekunneissa (oletus: 60 sekuntia)\n\n*muodolle dokumentaatio, hae \"Java Date Format\"\n**Voit määrittää tilastojakson PixelXpert/Sekalaiset-valikossa/Verkkotilastoasetukset\n***Jos korvaat $N :lla $Nc , saat mobiilidatatilastot (esim. $Ncrx Nrx:n sijaan )</string>
+    <string name="string_formatter_manual_body_v3">Normaalin tekstin lisäksi saatavilla on myös dynaamisia muuttujia, kuten päivämäärä, tiedon käyttö ja lämpötila:\n\n$G\&lt;format\&gt; : gregoriaaninen päivämäärä muotoon perustuen*\n$P&lt;format&gt; : persialainen päivämäärä muotoon perustuen*\n$Nrx : latauksia yhteensä määrätyllä ajanjaksolla ** ***\n$Ntx: latauksia yhteensä tietyllä ajanjaksolla ** ***\n$Nall : liikenne yhteensä tietyllä ajanjaksolla ** ***\n$Nssid : WiFi SSID:n nimi (jos käytössä)\n\n$T\&lt;format\&gt;[interval] : Lämpötila; \nmuoto voi olla b (akku), c (suoritin), g (grafiikkasuoritin) ja s (skin) \nLopuksi on VALINNAINEN päivitysvälin määrä sekunneissa (oletus: 60 sekuntia)\n\n*muodolle dokumentaatio, hae \"Java Date Format\"\n**Voit määrittää tilastojakson AospXpert/Sekalaiset-valikossa/Verkkotilastoasetukset\n***Jos korvaat $N :lla $Nc , saat mobiilidatatilastot (esim. $Ncrx Nrx:n sijaan )</string>
     <string name="update_channel_name">Päivitykset</string>
     <string name="download_channel_name">Lataukset</string>
     <string name="assets_download_title">Ladataan Tiedostoja</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Kuvakkeen tiedot</string>
     <string name="no_icon_pack_installed">Kuvakepakettia ei ole asennettu</string>
     <string name="icon_pack_disclaimer_title">Vastuuvapauslauseke</string>
-    <string name="icon_pack_disclaimer_desc">Kuvakepaketit eivät ole PixelXpertin kehittämiä tai jakamia. Näin ollen PixelXpert-tiimi ei pysty tarjoamaan tukea kuvakepaketeille. Tuki siitä, miten PixelXpert käsittelee kuvakepaketteja toimitetaan vain vastaaville pakettikehittäjille.\n\nOhjeet kuvakepaketin kokoamiseen, ole hyvä ja katso opas tästä: %s</string>
+    <string name="icon_pack_disclaimer_desc">Kuvakepaketit eivät ole AospXpertin kehittämiä tai jakamia. Näin ollen AospXpert-tiimi ei pysty tarjoamaan tukea kuvakepaketeille. Tuki siitä, miten AospXpert käsittelee kuvakepaketteja toimitetaan vain vastaaville pakettikehittäjille.\n\nOhjeet kuvakepaketin kokoamiseen, ole hyvä ja katso opas tästä: %s</string>
 </resources>

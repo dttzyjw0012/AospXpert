@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Mises à jour</string>
     <string name="notification_channel_update_desc">Cette chaîne affiche des notifications sur les dernières mises à jour.</string>
     <string name="new_update_title">Mise à jour disponible</string>
-    <string name="new_update_desc">Une nouvelle version de PixelXpert est disponible</string>
+    <string name="new_update_desc">Une nouvelle version de AospXpert est disponible</string>
     <string name="browser_not_found">Navigateur introuvable</string>
     <string name="settings_general_section_title">Général</string>
     <string name="settings_update_section_title">Mise à jour</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Numéroteur du téléphone &amp;</string>
     <string name="dialer_header_summary">Un peu d\'aide pour vos appels téléphoniques</string>
     <string name="misc_header">Divers</string>
-    <string name="misc_header_summary">Quelles que soient les autres offres de PixelXpert</string>
+    <string name="misc_header_summary">Quelles que soient les autres offres de AospXpert</string>
     <string name="qs_panel_category_title">Fenêtre de configuration rapide</string>
     <string name="qs_panel_category_summary">Curseur de luminosité, niveau de lampe de poche et plus encore</string>
     <string name="theme_customization_category">Thèmes et styles</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Garder l\'affichage permanent activé pendant que l\'appareil est en charge</string>
     <string name="doze_header">Quand l’écran est éteint…</string>
     <string name="custom_themed_icons_title">Icônes personnalisés</string>
-    <string name="px_in_settings_title">Ajouter PixelXpert aux paramètres</string>
+    <string name="px_in_settings_title">Ajouter AospXpert aux paramètres</string>
     <string name="sleep_on_flat_screen_title">Éteindre l\'écran sur une surface plate</string>
     <string name="sleep_on_flat_screen_tile_title">Dormir à la surface</string>
     <string name="flat_screen_timeout_title">Délai de mise en veille de l\'écran sur la surface plate</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Mise à jour de l’application</string>
     <string name="monitoring_category_title">Options du moniteur</string>
     <string name="netstat_header">Préférences des statistiques du réseau</string>
-    <string name="string_formatter_manual_body_v3">En plus du texte normal, des variables dynamiques sont également disponibles, comme la date, l\'utilisation des données et la température :\n\n$G\&lt;format\&gt;  : Date grégorienne, basée sur le format*\n$P&lt;format&gt;  : Date persane, basée sur le format*\n$Nrx  : Nombre total de téléchargements dans la période spécifiée ** ***\n$Ntx: Total des envois de données dans la période spécifiée ** ***\n$Nall : Trafic total dans la période spécifiée ** ***\n$Nssid : Nom SSID WiFi (le cas échéant)\n\n$T\&lt;format\&gt;[interval] : Température; \nle format peut être b (pour la batterie), c (pour le CPU), g (pour le GPU) et s (pour le skin) \nEnfin, il existe un nombre OPTIONNEL d\'intervalle de mise à jour en secondes (par défaut : 60 secondes)\n\n*Pour la documentation sur le format, recherchez \"Java Date Format\"\n**Vous pouvez spécifier la période des statistiques dans PixelXpert/Menu Divers/Paramètres des statistiques réseau\n***Si vous remplacez $N par $Nc , vous obtiendrez des statistiques sur les données mobiles (par exemple $Ncrx au lieu de Nrx )</string>
+    <string name="string_formatter_manual_body_v3">En plus du texte normal, des variables dynamiques sont également disponibles, comme la date, l\'utilisation des données et la température :\n\n$G\&lt;format\&gt;  : Date grégorienne, basée sur le format*\n$P&lt;format&gt;  : Date persane, basée sur le format*\n$Nrx  : Nombre total de téléchargements dans la période spécifiée ** ***\n$Ntx: Total des envois de données dans la période spécifiée ** ***\n$Nall : Trafic total dans la période spécifiée ** ***\n$Nssid : Nom SSID WiFi (le cas échéant)\n\n$T\&lt;format\&gt;[interval] : Température; \nle format peut être b (pour la batterie), c (pour le CPU), g (pour le GPU) et s (pour le skin) \nEnfin, il existe un nombre OPTIONNEL d\'intervalle de mise à jour en secondes (par défaut : 60 secondes)\n\n*Pour la documentation sur le format, recherchez \"Java Date Format\"\n**Vous pouvez spécifier la période des statistiques dans AospXpert/Menu Divers/Paramètres des statistiques réseau\n***Si vous remplacez $N par $Nc , vous obtiendrez des statistiques sur les données mobiles (par exemple $Ncrx au lieu de Nrx )</string>
     <string name="update_channel_name">Mises à jour</string>
     <string name="download_channel_name">Téléchargements</string>
     <string name="assets_download_title">Téléchargement des fichiers</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Informations sur le pack d\'icônes</string>
     <string name="no_icon_pack_installed">Aucun pack d\'icônes installé</string>
     <string name="icon_pack_disclaimer_title">Clause de non-responsabilité</string>
-    <string name="icon_pack_disclaimer_desc">Les packs d\'icônes ne sont pas développés ou distribués par PixelXpert. En tant que tel, l\'équipe de PixelXpert ne peut pas fournir de support pour les packs d\'icônes. Prise en charge de la façon dont PixelXpert gère les packs d\'icônes uniquement pour les développeurs de paquets respectifs.\n\nPour des instructions sur la façon de compiler un pack d\'icônes, veuillez vous référer au guide ici : %s</string>
+    <string name="icon_pack_disclaimer_desc">Les packs d\'icônes ne sont pas développés ou distribués par AospXpert. En tant que tel, l\'équipe de AospXpert ne peut pas fournir de support pour les packs d\'icônes. Prise en charge de la façon dont AospXpert gère les packs d\'icônes uniquement pour les développeurs de paquets respectifs.\n\nPour des instructions sur la façon de compiler un pack d\'icônes, veuillez vous référer au guide ici : %s</string>
 </resources>

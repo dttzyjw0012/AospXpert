@@ -8,15 +8,15 @@ plugins {
 
 android {
 
-	namespace = "sh.siava.pixelxpert"
+	namespace = "com.yhc.aospxpert"
 	compileSdk = 35
 
 	defaultConfig {
-		applicationId = "sh.siava.pixelxpert"
+		applicationId = "com.yhc.aospxpert"
 		minSdk = 33
 		targetSdk = 34
-		versionCode = 425
-		versionName = "aosp-canary-425"
+		versionCode = 426
+		versionName = "aosp-canary-426"
 		setProperty("archivesBaseName", "AOSPXpert.apk")
 		ndk {
 			//noinspection ChromeOsAbiSupport

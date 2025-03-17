@@ -19,7 +19,7 @@
     <string name="notification_channel_update">업데이트</string>
     <string name="notification_channel_update_desc">이 채널은 최신 업데이트에 대한 알림을 표시합니다.</string>
     <string name="new_update_title">업데이트 가능</string>
-    <string name="new_update_desc">PixelXpert의 새 버전을 사용할 수 있습니다.</string>
+    <string name="new_update_desc">AospXpert의 새 버전을 사용할 수 있습니다.</string>
     <string name="browser_not_found">브라우저를 찾을 수 없습니다</string>
     <string name="settings_general_section_title">일반적인</string>
     <string name="settings_update_section_title">업데이트</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">전화 &amp; 다이얼</string>
     <string name="dialer_header_summary">A bit of aid for your phone calls</string>
     <string name="misc_header">기타 설정</string>
-    <string name="misc_header_summary">Whatever else offered by PixelXpert</string>
+    <string name="misc_header_summary">Whatever else offered by AospXpert</string>
     <string name="qs_panel_category_title">빠른 설정 화면</string>
     <string name="qs_panel_category_summary">Brightness slider, flashlight level and more</string>
     <string name="theme_customization_category">테마</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Keep always on display enabled while device is charging</string>
     <string name="doze_header">화면이 꺼진 상태에서…</string>
     <string name="custom_themed_icons_title">커스텀 테마 아이콘</string>
-    <string name="px_in_settings_title">Add PixelXpert to settings items</string>
+    <string name="px_in_settings_title">Add AospXpert to settings items</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">앱 업데이트</string>
     <string name="monitoring_category_title">모니터링 설정</string>
     <string name="netstat_header">네트워크 기록 설정</string>
-    <string name="string_formatter_manual_body_v3">일반 텍스트 외에도 날짜, 데이터 사용량 및 온도와 같은 동적 변수도 사용할 수 있습니다.\n\n$G\&lt;format\&gt; : 그레고리력 날짜, 형식 기반*\n$P&lt;format&gt; : 페르시아 날짜, 형식 기반*\n$Nrx : 총 다운로드 수 지정된 기간 ** ***\n$Ntx: 지정된 기간의 총 업로드 ** ***\n$Nall : 지정된 기간의 총 트래픽 ** ***\n$Nssid : WiFi SSID 이름(해당되는 경우)\n\n$T\&lt;format\&gt;[interval] : 온도; \n형식은 b(배터리용), c(CPU용), g(GPU용) 및 s(스킨용)일 수 있습니다. \n마지막으로 초 단위의 업데이트 간격 수(기본값: 60초)가 있습니다\n\n*형식의 경우 설명서에서 \"Java Date Format\"을 검색하세요.\n**PixelXpert/기타 메뉴/네트워크 통계 설정에서 통계 기간을 지정할 수 있습니다.\n*** $N $Nc 로 바꾸면 모바일 데이터 통계가 표시됩니다(예: Nrx 대신 $Ncrx)</string>
+    <string name="string_formatter_manual_body_v3">일반 텍스트 외에도 날짜, 데이터 사용량 및 온도와 같은 동적 변수도 사용할 수 있습니다.\n\n$G\&lt;format\&gt; : 그레고리력 날짜, 형식 기반*\n$P&lt;format&gt; : 페르시아 날짜, 형식 기반*\n$Nrx : 총 다운로드 수 지정된 기간 ** ***\n$Ntx: 지정된 기간의 총 업로드 ** ***\n$Nall : 지정된 기간의 총 트래픽 ** ***\n$Nssid : WiFi SSID 이름(해당되는 경우)\n\n$T\&lt;format\&gt;[interval] : 온도; \n형식은 b(배터리용), c(CPU용), g(GPU용) 및 s(스킨용)일 수 있습니다. \n마지막으로 초 단위의 업데이트 간격 수(기본값: 60초)가 있습니다\n\n*형식의 경우 설명서에서 \"Java Date Format\"을 검색하세요.\n**AospXpert/기타 메뉴/네트워크 통계 설정에서 통계 기간을 지정할 수 있습니다.\n*** $N $Nc 로 바꾸면 모바일 데이터 통계가 표시됩니다(예: Nrx 대신 $Ncrx)</string>
     <string name="update_channel_name">업데이트</string>
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloading Files</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Icon pack info</string>
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by PixelXpert. As such, the PixelXpert team is unable to provide support for icon packs. Support regarding how PixelXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
 </resources>

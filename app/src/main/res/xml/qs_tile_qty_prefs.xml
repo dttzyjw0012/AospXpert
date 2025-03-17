@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch">
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch">
 
-	<sh.siava.pixelxpert.ui.preferences.IllustrationPreference
+	<com.yhc.aospxpert.ui.preferences.IllustrationPreference
 		android:key="qs_tile_illustration"
 		app:lottie_rawRes="@raw/qs_tile"
 		search:ignore="true" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/qs_tile_qty_portrait"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="QSRowQty"
 			android:title="@string/qs_rows_number"
 			app:defaultValue="0"
@@ -22,7 +22,7 @@
 			app:minVal="0"
 			app:updatesContinuously="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="QSColQty"
 			android:title="@string/qs_cols_number"
 			app:defaultValue="1"
@@ -31,7 +31,7 @@
 			app:minVal="1"
 			app:updatesContinuously="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="QQSTileQty"
 			android:title="@string/qqs_tiles_number"
 			app:defaultValue="4"
@@ -40,14 +40,14 @@
 			app:minVal="2"
 			app:updatesContinuously="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/qs_tile_qty_landscape"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="QSRowQtyL"
 			android:title="@string/qs_rows_number"
 			app:defaultValue="0"
@@ -56,7 +56,7 @@
 			app:minVal="0"
 			app:updatesContinuously="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="QSColQtyL"
 			android:title="@string/qs_cols_number"
 			app:defaultValue="1"
@@ -65,7 +65,7 @@
 			app:minVal="1"
 			app:updatesContinuously="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialRangeSliderPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialRangeSliderPreference
 			android:key="QQSTileQtyL"
 			android:title="@string/qqs_tiles_number"
 			app:defaultValue="4"
@@ -74,5 +74,5 @@
 			app:minVal="2"
 			app:updatesContinuously="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 </PreferenceScreen>

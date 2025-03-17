@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Ενημερώσεις</string>
     <string name="notification_channel_update_desc">Αυτό το κανάλι εμφανίζει ειδοποιήσεις για τις πιο πρόσφατες ενημερώσεις.</string>
     <string name="new_update_title">Διαθέσιμη ενημέρωση</string>
-    <string name="new_update_desc">Μια νέα έκδοση του PixelXpert είναι διαθέσιμη</string>
+    <string name="new_update_desc">Μια νέα έκδοση του AospXpert είναι διαθέσιμη</string>
     <string name="browser_not_found">Το πρόγραμμα περιήγησης δεν βρέθηκε</string>
     <string name="settings_general_section_title">Γενικός</string>
     <string name="settings_update_section_title">Εκσυγχρονίζω</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Τηλέφωνο &amp; dialer</string>
     <string name="dialer_header_summary">Ένα κομμάτι βοήθειας για τις κλήσεις σας</string>
     <string name="misc_header">Διάφορα</string>
-    <string name="misc_header_summary">Ό, τι άλλο προσφέρει η PixelXpert</string>
+    <string name="misc_header_summary">Ό, τι άλλο προσφέρει η AospXpert</string>
     <string name="qs_panel_category_title">Πίνακας γρήγορων ρυθμίσεων</string>
     <string name="qs_panel_category_summary">Ρυθμιστικό φωτεινότητας, επίπεδο φακού και πολλά άλλα</string>
     <string name="theme_customization_category">Θέμα</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Να παραμένει πάντα ενεργή η οθόνη κατά τη φόρτιση της συσκευής</string>
     <string name="doze_header">Ενώ η οθόνη είναι απενεργοποιημένη…</string>
     <string name="custom_themed_icons_title">Εικονίδια με προσαρμοσμένο θέμα</string>
-    <string name="px_in_settings_title">Προσθήκη PixelXpert στα στοιχεία ρυθμίσεων</string>
+    <string name="px_in_settings_title">Προσθήκη AospXpert στα στοιχεία ρυθμίσεων</string>
     <string name="sleep_on_flat_screen_title">Απενεργοποιήστε την οθόνη σε επίπεδη επιφάνεια</string>
     <string name="sleep_on_flat_screen_tile_title">Ύπνος στην επιφάνεια</string>
     <string name="flat_screen_timeout_title">Χρονικό όριο οθόνης σε επίπεδη επιφάνεια</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Ενημερώσεις</string>
     <string name="monitoring_category_title">Επιλογές παρακολούθησης</string>
     <string name="netstat_header">Ρυθμίσεις στατιστικών στοιχείων δικτύου</string>
-    <string name="string_formatter_manual_body_v3">Εκτός από το κανονικό κείμενο, είναι επίσης διαθέσιμες δυναμικές μεταβλητές, όπως Ημερομηνία, Χρήση δεδομένων και Θερμοκρασία:\n\n$G\&lt;format\&gt; : Γρηγοριανή ημερομηνία, με βάση τη μορφή*\n$P&lt;format&gt; : περσική ημερομηνία, με βάση τη μορφή*\n$Nrx : Συνολικές λήψεις σε καθορισμένη περίοδο ** ***\n$Ntx: Συνολικές μεταφορτώσεις σε καθορισμένη περίοδο ** ***\n$Nall : Συνολική επισκεψιμότητα σε καθορισμένη περίοδο ** ***\n$Nssid : Όνομα SSID WiFi (εάν υπάρχει)\n\n$T\&lt;format\&gt;[interval] : Θερμοκρασία; Η μορφή \nμπορεί να είναι b (για μπαταρία), c (για CPU), g (για GPU) και s (για δέρμα) \nΤέλος, υπάρχει ΠΡΟΑΙΡΕΤΙΚΟΣ αριθμός διαστήματος ενημέρωσης σε δευτερόλεπτα (προεπιλογή: 60 δευτερόλεπτα)\n\n*για μορφή τεκμηρίωση, αναζήτηση για \"Μορφή ημερομηνίας Java\"\n**Μπορείτε να καθορίσετε την περίοδο στατιστικών στοιχείων στο μενού PixelXpert/Διάφορα/Ρυθμίσεις στατιστικών δικτύου\n***Εάν αντικαταστήσετε $N με $Nc , θα λάβετε στατιστικά δεδομένων κινητής τηλεφωνίας (π.χ. $Ncrx αντί για Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Εκτός από το κανονικό κείμενο, είναι επίσης διαθέσιμες δυναμικές μεταβλητές, όπως Ημερομηνία, Χρήση δεδομένων και Θερμοκρασία:\n\n$G\&lt;format\&gt; : Γρηγοριανή ημερομηνία, με βάση τη μορφή*\n$P&lt;format&gt; : περσική ημερομηνία, με βάση τη μορφή*\n$Nrx : Συνολικές λήψεις σε καθορισμένη περίοδο ** ***\n$Ntx: Συνολικές μεταφορτώσεις σε καθορισμένη περίοδο ** ***\n$Nall : Συνολική επισκεψιμότητα σε καθορισμένη περίοδο ** ***\n$Nssid : Όνομα SSID WiFi (εάν υπάρχει)\n\n$T\&lt;format\&gt;[interval] : Θερμοκρασία; Η μορφή \nμπορεί να είναι b (για μπαταρία), c (για CPU), g (για GPU) και s (για δέρμα) \nΤέλος, υπάρχει ΠΡΟΑΙΡΕΤΙΚΟΣ αριθμός διαστήματος ενημέρωσης σε δευτερόλεπτα (προεπιλογή: 60 δευτερόλεπτα)\n\n*για μορφή τεκμηρίωση, αναζήτηση για \"Μορφή ημερομηνίας Java\"\n**Μπορείτε να καθορίσετε την περίοδο στατιστικών στοιχείων στο μενού AospXpert/Διάφορα/Ρυθμίσεις στατιστικών δικτύου\n***Εάν αντικαταστήσετε $N με $Nc , θα λάβετε στατιστικά δεδομένων κινητής τηλεφωνίας (π.χ. $Ncrx αντί για Nrx )</string>
     <string name="update_channel_name">Ενημερώσεις</string>
     <string name="download_channel_name">Λήψεις</string>
     <string name="assets_download_title">Λήψη Αρχείων</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Πληροφορίες πακέτου εικονιδίων</string>
     <string name="no_icon_pack_installed">Δεν υπάρχει εγκατεστημένο πακέτο εικονιδίων</string>
     <string name="icon_pack_disclaimer_title">Αποποίηση</string>
-    <string name="icon_pack_disclaimer_desc">Τα πακέτα εικονιδίων δεν αναπτύσσονται ή διανέμονται από την PixelXpert. Ως εκ τούτου, η ομάδα PixelXpert δεν μπορεί να παρέχει υποστήριξη για πακέτα εικονιδίων. Υποστήριξη σχετικά με το πώς η PixelXpert χειρίζεται τα πακέτα εικονιδίων θα παρέχεται μόνο στους αντίστοιχους προγραμματιστές πακέτων.\n\nΓια οδηγίες σχετικά με τον τρόπο σύνταξης ενός πακέτου εικονιδίων, παρακαλούμε ανατρέξτε στον οδηγό εδώ: %s</string>
+    <string name="icon_pack_disclaimer_desc">Τα πακέτα εικονιδίων δεν αναπτύσσονται ή διανέμονται από την AospXpert. Ως εκ τούτου, η ομάδα AospXpert δεν μπορεί να παρέχει υποστήριξη για πακέτα εικονιδίων. Υποστήριξη σχετικά με το πώς η AospXpert χειρίζεται τα πακέτα εικονιδίων θα παρέχεται μόνο στους αντίστοιχους προγραμματιστές πακέτων.\n\nΓια οδηγίες σχετικά με τον τρόπο σύνταξης ενός πακέτου εικονιδίων, παρακαλούμε ανατρέξτε στον οδηγό εδώ: %s</string>
 </resources>

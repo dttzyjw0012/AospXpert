@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Updates</string>
     <string name="notification_channel_update_desc">Dit kanaal toont meldingen over de nieuwste updates.</string>
     <string name="new_update_title">Update beschikbaar</string>
-    <string name="new_update_desc">Er is een nieuwe versie van PixelXpert beschikbaar</string>
+    <string name="new_update_desc">Er is een nieuwe versie van AospXpert beschikbaar</string>
     <string name="browser_not_found">Browser niet gevonden</string>
     <string name="settings_general_section_title">Algemeen</string>
     <string name="settings_update_section_title">Update</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefoon &amp; kiezer</string>
     <string name="dialer_header_summary">Een beetje hulp voor je telefoongesprekken</string>
     <string name="misc_header">Diversen</string>
-    <string name="misc_header_summary">Wat voor aanbiedingen er ook van PixelXpert</string>
+    <string name="misc_header_summary">Wat voor aanbiedingen er ook van AospXpert</string>
     <string name="qs_panel_category_title">Paneel Snelle instellingen</string>
     <string name="qs_panel_category_summary">Helderheid slider, zaklamp niveau en meer</string>
     <string name="theme_customization_category">Thema\'s</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Scherm altijd ingeschakeld houden wanneer het apparaat wordt opgeladen</string>
     <string name="doze_header">Terwijl het scherm is uitgeschakeld…</string>
     <string name="custom_themed_icons_title">Aangepaste thema-pictogrammen</string>
-    <string name="px_in_settings_title">Voeg PixelXpert toe aan instellingen items</string>
+    <string name="px_in_settings_title">Voeg AospXpert toe aan instellingen items</string>
     <string name="sleep_on_flat_screen_title">Scherm uitschakelen bij plat oppervlak</string>
     <string name="sleep_on_flat_screen_tile_title">Slaap bij oppervlak</string>
     <string name="flat_screen_timeout_title">Scherm time-out bij platte oppervlak</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">App-updates</string>
     <string name="monitoring_category_title">Bewakingsopties</string>
     <string name="netstat_header">Instellingen voor netwerkstatistieken</string>
-    <string name="string_formatter_manual_body_v3">Naast de normale tekst zijn er ook dynamische variabelen beschikbaar, zoals Datum, Datagebruik en Temperatuur:\n\n$G\&lt;format\&gt; : Gregoriaanse datum, gebaseerd op formaat*\n$P&lt;format&gt; : Perzische datum, gebaseerd op formaat*\n$Nrx : Totaal aantal downloads in gespecificeerde periode ** ***\n$Ntx: Totaal aantal uploads in gespecificeerde periode ** ***\n$Nall : Totaal verkeer in gespecificeerde periode ** ***\n$Nssid : WiFi SSID-naam (indien van toepassing)\n\n$T\&lt;format\&gt;[interval] : Temperatuur; \nHet formaat kan b (voor batterij), c (voor CPU), g (voor GPU) en s (voor skin) zijn \nTen slotte is er een OPTIONEEL aantal update-intervallen in seconden (standaard: 60 seconden)\n\n*voor formaat documentatie, zoek naar \"Java Date Format\"\n**U kunt de statistiekperiode specificeren in PixelXpert/Diversenmenu/Netwerkstatistiekinstellingen\n***Als u $N vervangt door $Nc , krijgt u mobiele datastatistieken (bijv. $Ncrx in plaats van Nrx )</string>
+    <string name="string_formatter_manual_body_v3">Naast de normale tekst zijn er ook dynamische variabelen beschikbaar, zoals Datum, Datagebruik en Temperatuur:\n\n$G\&lt;format\&gt; : Gregoriaanse datum, gebaseerd op formaat*\n$P&lt;format&gt; : Perzische datum, gebaseerd op formaat*\n$Nrx : Totaal aantal downloads in gespecificeerde periode ** ***\n$Ntx: Totaal aantal uploads in gespecificeerde periode ** ***\n$Nall : Totaal verkeer in gespecificeerde periode ** ***\n$Nssid : WiFi SSID-naam (indien van toepassing)\n\n$T\&lt;format\&gt;[interval] : Temperatuur; \nHet formaat kan b (voor batterij), c (voor CPU), g (voor GPU) en s (voor skin) zijn \nTen slotte is er een OPTIONEEL aantal update-intervallen in seconden (standaard: 60 seconden)\n\n*voor formaat documentatie, zoek naar \"Java Date Format\"\n**U kunt de statistiekperiode specificeren in AospXpert/Diversenmenu/Netwerkstatistiekinstellingen\n***Als u $N vervangt door $Nc , krijgt u mobiele datastatistieken (bijv. $Ncrx in plaats van Nrx )</string>
     <string name="update_channel_name">Updates</string>
     <string name="download_channel_name">downloads</string>
     <string name="assets_download_title">Bestanden downloaden</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Pictogram pakket info</string>
     <string name="no_icon_pack_installed">Geen pictogrammenpakket geïnstalleerd</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Pictogrampakketten worden niet ontwikkeld of gedistribueerd door PixelXpert. Het PixelXpert-team kan daarom geen ondersteuning bieden voor pictogrampakketten. Ondersteuning voor hoe PixelXpert met pictogrampakketten omgaat, wordt alleen verstrekt aan de desbetreffende pakketontwikkelaars.\n\nVoor instructies over het compileren van een pictogrammenpakket, raadpleeg de gids hier: %s</string>
+    <string name="icon_pack_disclaimer_desc">Pictogrampakketten worden niet ontwikkeld of gedistribueerd door AospXpert. Het AospXpert-team kan daarom geen ondersteuning bieden voor pictogrampakketten. Ondersteuning voor hoe AospXpert met pictogrampakketten omgaat, wordt alleen verstrekt aan de desbetreffende pakketontwikkelaars.\n\nVoor instructies over het compileren van een pictogrammenpakket, raadpleeg de gids hier: %s</string>
 </resources>

@@ -1,0 +1,11 @@
+// IRootProviderService.aidl
+package com.yhc.aospxpert;
+
+// Declare any non-default types here with import statements
+
+interface IRootProviderService {
+	boolean checkLSPosedDB(String packageName);
+	boolean isPackageInstalled(String packageName);
+	boolean activateInLSPosed(String packageName);
+	IBinder getFileSystemService();
+}

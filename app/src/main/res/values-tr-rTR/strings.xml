@@ -19,7 +19,7 @@
     <string name="notification_channel_update">Güncellemeler</string>
     <string name="notification_channel_update_desc">Bu kanal, en son güncellemeler hakkında bildirim gösterir.</string>
     <string name="new_update_title">Güncelleme mevcut</string>
-    <string name="new_update_desc">PixelXpert\'in yeni bir sürümü mevcut</string>
+    <string name="new_update_desc">AospXpert\'in yeni bir sürümü mevcut</string>
     <string name="browser_not_found">Tarayıcı bulunamadı</string>
     <string name="settings_general_section_title">Genel</string>
     <string name="settings_update_section_title">Güncelleme</string>
@@ -46,7 +46,7 @@
     <string name="dialer_header">Telefon &amp; arama</string>
     <string name="dialer_header_summary">Telefon görüşmeleriniz için biraz yardım</string>
     <string name="misc_header">Çeşitli</string>
-    <string name="misc_header_summary">PixelXpert tarafından sunulan diğer her şey</string>
+    <string name="misc_header_summary">AospXpert tarafından sunulan diğer her şey</string>
     <string name="qs_panel_category_title">Hızlı ayarlar paneli</string>
     <string name="qs_panel_category_summary">Parlaklık kaydırıcısı, el feneri seviyesi ve daha fazlası</string>
     <string name="theme_customization_category">Tema özelleştirme</string>
@@ -309,7 +309,7 @@
     <string name="force_aod_while_charging_summary">Cihaz şarj olurken her zaman açık ekranı etkin tut</string>
     <string name="doze_header">Ekran kapalıyken…</string>
     <string name="custom_themed_icons_title">Özel temalı simgeler</string>
-    <string name="px_in_settings_title">Ayarlar öğelerine PixelXpert ekle</string>
+    <string name="px_in_settings_title">Ayarlar öğelerine AospXpert ekle</string>
     <string name="sleep_on_flat_screen_title">Ekranı düz bir yüzeyde kapatın</string>
     <string name="sleep_on_flat_screen_tile_title">Yüzeyde uyu</string>
     <string name="flat_screen_timeout_title">Düz yüzeyde ekran zaman aşımı</string>
@@ -425,7 +425,7 @@
     <string name="menu_updates">Güncellemeler</string>
     <string name="monitoring_category_title">İzleme seçenekleri</string>
     <string name="netstat_header">Ağ istatistik ayarları</string>
-    <string name="string_formatter_manual_body_v3">Normal metne ek olarak, Tarih, Veri kullanımı ve Sıcaklık gibi dinamik değişkenler de kullanılabilir:\n\n$G&lt;format&gt; : Formatına göre Gregoryen tarih*\n$P&lt;format&gt; : Formatına göre Farsça tarih*\n$Nrx : Belirtilen dönemde Toplam İndirilenler ** ***\n$Ntx: Belirtilen dönemde Toplam Yüklemeler ** ***\n$Nall : Belirtilen dönemde Toplam Trafik ** ***\n$Nssid : WiFi SSID adı (varsa)\n\n$T&lt;format&gt;[interval] : Sıcaklık; \nformat b (pil için), c (CPU için), g (GPU için) ve s (cilt için) olabilir \nSon olarak, saniye cinsinden isteğe bağlı bir güncelleme aralığı (varsayılan: 60 saniye) vardır\n\n*format dokümantasyonu için \"Java Tarih Formatı\" arayın\n**İstatistik süresini PixelXpert/Çeşitli menü/Ağ İstatistik Ayarları bölümünde belirtebilirsiniz\n***$N\'yi $Nc ile değiştirirseniz mobil veri istatistiklerini elde edersiniz (örn. Nrx yerine $Ncrx)</string>
+    <string name="string_formatter_manual_body_v3">Normal metne ek olarak, Tarih, Veri kullanımı ve Sıcaklık gibi dinamik değişkenler de kullanılabilir:\n\n$G&lt;format&gt; : Formatına göre Gregoryen tarih*\n$P&lt;format&gt; : Formatına göre Farsça tarih*\n$Nrx : Belirtilen dönemde Toplam İndirilenler ** ***\n$Ntx: Belirtilen dönemde Toplam Yüklemeler ** ***\n$Nall : Belirtilen dönemde Toplam Trafik ** ***\n$Nssid : WiFi SSID adı (varsa)\n\n$T&lt;format&gt;[interval] : Sıcaklık; \nformat b (pil için), c (CPU için), g (GPU için) ve s (cilt için) olabilir \nSon olarak, saniye cinsinden isteğe bağlı bir güncelleme aralığı (varsayılan: 60 saniye) vardır\n\n*format dokümantasyonu için \"Java Tarih Formatı\" arayın\n**İstatistik süresini AospXpert/Çeşitli menü/Ağ İstatistik Ayarları bölümünde belirtebilirsiniz\n***$N\'yi $Nc ile değiştirirseniz mobil veri istatistiklerini elde edersiniz (örn. Nrx yerine $Ncrx)</string>
     <string name="update_channel_name">Güncellemeler</string>
     <string name="download_channel_name">İndirilenler</string>
     <string name="assets_download_title">Dosyalar indiriliyor</string>
@@ -537,5 +537,5 @@
     <string name="icon_pack_info">Simge paketi bilgisi</string>
     <string name="no_icon_pack_installed">Yüklü simge paketi yok</string>
     <string name="icon_pack_disclaimer_title">Uyarı</string>
-    <string name="icon_pack_disclaimer_desc">Icon paketleri PixelXpert tarafından geliştirilmez veya dağıtılmaz. Bu nedenle, PixelXpert ekibi, icon paketleriyle ilgili destek sağlayamaz. PixelXpert\'in icon paketlerini nasıl ele aldığıyla ilgili destek, yalnızca ilgili paket geliştiricilerine sağlanacaktır.\n\nBir icon paketinin nasıl derleneceğine ilişkin talimatlar için lütfen şu rehbere başvurun: %s</string>
+    <string name="icon_pack_disclaimer_desc">Icon paketleri AospXpert tarafından geliştirilmez veya dağıtılmaz. Bu nedenle, AospXpert ekibi, icon paketleriyle ilgili destek sağlayamaz. AospXpert\'in icon paketlerini nasıl ele aldığıyla ilgili destek, yalnızca ilgili paket geliştiricilerine sağlanacaktır.\n\nBir icon paketinin nasıl derleneceğine ilişkin talimatlar için lütfen şu rehbere başvurun: %s</string>
 </resources>

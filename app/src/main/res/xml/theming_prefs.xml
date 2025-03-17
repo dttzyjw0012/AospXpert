@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:search="http://schemas.android.com/apk/sh.siava.pixelxpert.ui.preferencesearch">
+	xmlns:search="http://schemas.android.com/apk/com.yhc.aospxpert.ui.preferencesearch">
 
-	<sh.siava.pixelxpert.ui.preferences.IllustrationPreference
+	<com.yhc.aospxpert.ui.preferences.IllustrationPreference
 		android:key="theme_illustration"
 		app:lottie_rawRes="@raw/theme"
 		search:ignore="true" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+	<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 		android:defaultValue="false"
 		android:key="LightQSPanel"
 		android:summaryOff="@string/general_off"
@@ -16,7 +16,7 @@
 		android:title="@string/light_qs_title"
 		app:iconSpaceReserved="false" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+	<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 		android:defaultValue="false"
 		android:key="enablePowerMenuTheme"
 		android:summaryOff="@string/general_off"
@@ -24,19 +24,19 @@
 		android:title="@string/power_menu_overlays_title"
 		app:iconSpaceReserved="false" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreference
+	<com.yhc.aospxpert.ui.preferences.MaterialPreference
 		android:key="icon_packs"
 		android:title="@string/icon_packs_title"
-		app:fragment="sh.siava.pixelxpert.ui.fragments.iconpack.IconPackFragment"
+		app:fragment="com.yhc.aospxpert.ui.fragments.iconpack.IconPackFragment"
 		app:iconSpaceReserved="false" />
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="font_dependent"
 		android:title="@string/theme_customization_font_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="enableCustomFonts"
 			android:summaryOff="@string/restart_needed"
@@ -44,7 +44,7 @@
 			android:title="@string/font_overlays_enable_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialSwitchPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="gsans_override"
 			android:summaryOff="@string/restart_needed"
@@ -52,7 +52,7 @@
 			android:title="@string/gsans_override_title"
 			app:iconSpaceReserved="false" />
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="None"
 			android:entries="@array/FontsOverlayEx_names"
 			android:entryValues="@array/FontsOverlayEx"
@@ -61,15 +61,15 @@
 			android:title="@string/theme_customization_font_title"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="icon_style_header"
 		android:title="@string/icons_style_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="None"
 			android:entries="@array/IconPacksOverlayEx_names"
 			android:entryValues="@array/IconPacksOverlayEx"
@@ -78,15 +78,15 @@
 			android:title="@string/icons_style_title"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="icon_shape_header"
 		android:title="@string/icon_shapes_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="None"
 			android:entries="@array/IconShapesOverlayEx_names"
 			android:entryValues="@array/IconShapesOverlayEx"
@@ -95,15 +95,15 @@
 			android:title="@string/icon_shapes_title"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="signal_icon_theme_header"
 		android:title="@string/signal_icons_theme_title"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="None"
 			android:entries="@array/SignalIconsOverlayEx_names"
 			android:entryValues="@array/SignalIconsOverlayEx"
@@ -112,15 +112,15 @@
 			android:title="@string/signal_icons_theme_title"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 
-	<sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:key="dark_theme_styles_header"
 		android:title="@string/dt_styles_category"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
 
-		<sh.siava.pixelxpert.ui.preferences.MaterialListPreference
+		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
 			android:defaultValue="None"
 			android:entries="@array/DTStylesOverlayEx_names"
 			android:entryValues="@array/DTStylesOverlayEx"
@@ -129,5 +129,5 @@
 			android:title="@string/dt_styles"
 			app:iconSpaceReserved="false" />
 
-	</sh.siava.pixelxpert.ui.preferences.MaterialPreferenceCategory>
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 </PreferenceScreen>

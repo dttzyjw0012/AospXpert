@@ -1,26 +1,26 @@
 [//]: # (### For Pixel Stock Android 12 and 13 &#40;Up to Nov 2022 - AOSP 13R8&#41;:  )
 
-[//]: # ([![Latest Release for A12 & A13 up to Nov 2022]&#40;https://img.shields.io/badge/Download-v2.4.1-blue&#41;]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;  )
+[//]: # ([![Latest Release for A12 & A13 up to Nov 2022]&#40;https://img.shields.io/badge/Download-v2.4.1-blue&#41;]&#40;https://github.com/siavash79/AospXpert/releases/tag/v2.4.1&#41;  )
 [//]: # ()
 ### For pure AOSP roms Android 13 and 14 (starting with Dec 2022 security patch):  
 
-[//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/PixelXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/PixelXpert/releases/latest&#41;)
-[![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_425)
+[//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/AospXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/AospXpert/releases/latest&#41;)
+[![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_426)
 
-[//]: # (![Downloads - Stable channel]&#40;https://img.shields.io/github/downloads/siavash79/PixelXpert/total?color=red&label=Downloads%20-%20Stable%20Channel&#41;)
+[//]: # (![Downloads - Stable channel]&#40;https://img.shields.io/github/downloads/siavash79/AospXpert/total?color=red&label=Downloads%20-%20Stable%20Channel&#41;)
 
-[//]: # (### **PixelXpert Support Channels:**)
+[//]: # (### **AospXpert Support Channels:**)
 
 [//]: # ()
-[//]: # ([![XDA URL]&#40;https://img.shields.io/twitter/url?label=XDA%20Developers&logo=XDA-Developers&style=social&url=http://XDA.PixelXpert.siava.sh&#41;]&#40;http://XDA.PixelXpert.siava.sh&#41;)
+[//]: # ([![XDA URL]&#40;https://img.shields.io/twitter/url?label=XDA%20Developers&logo=XDA-Developers&style=social&url=http://XDA.AospXpert.siava.sh&#41;]&#40;http://XDA.AospXpert.siava.sh&#41;)
 
-[//]: # ([![Telegram URL]&#40;https://img.shields.io/badge/Telegram-Join-2CA5E?style=social&logo=telegram&#41;]&#40;https://t.me/PixelXpert_Discussion&#41;)
+[//]: # ([![Telegram URL]&#40;https://img.shields.io/badge/Telegram-Join-2CA5E?style=social&logo=telegram&#41;]&#40;https://t.me/AospXpert_Discussion&#41;)
 
-![Header Image](https://github.com/siavash79/PixelXpert/blob/canary/.github/PixelXpert_Banner_1280.png?raw=true)
+![Header Image](https://github.com/siavash79/AospXpert/blob/canary/.github/AospXpert_Banner_1280.png?raw=true)
 
 This is a mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP (Android Open Source Project). Please read thorough below before reaching to download links.
 
-The original PixelXpert is good. Thanks to the authors of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the PixelXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and add some tools class and features which the GravityBox has, maybe rewrite it in Kotlin at the same time. And I maybe change the UI framework of the config manager to Flutter in the future. 
+The original AospXpert is good. Thanks to the authors of it(@siavash79 and @ElTifo). But I still memory the old days which people can modify very different AOSP roms, just like what @C3CO's GravityBox did. So I fork the AospXpert to create a new GravityBox. In the early period, I will change the hooks and features to be compatible with pure AOSP, and add some tools class and features which the GravityBox has, maybe rewrite it in Kotlin at the same time. And I maybe change the UI framework of the config manager to Flutter in the future. 
 <hr>
 
 ### **Features:**
@@ -37,13 +37,13 @@ Currently, AOSPXpert offers customizations on different aspects of system framew
 <hr>
 
 ### **Compatibility:**
-AOSPXpert is a fork of the PixelXpert with a lot of different things from the original module. It is designed for be compatible with pure AOSP roms(include which are ported rom with the pure AOSP source code or just are AOSP gsi roms). Some custom ROMs (including YAAP and the Pixel Project and etc) which are similar to the pure AOSP maybe can work normally with AOSPXpert, so they will get some limited support by me. Other custom roms(including PE, PE plus, Pixel Plus UI, Lineage OS, CLO based roms just like AOSPA and etc) or stock ROMs (e.g. OneUI on Samsung, MIUI on Xiaomi and etc, even the stock pixel firmware on Google pixel devices, Sony UI and Hello UI) are not supported and may not be fully (or even at all) compatible.
+AOSPXpert is a fork of the AospXpert with a lot of different things from the original module. It is designed for be compatible with pure AOSP roms(include which are ported rom with the pure AOSP source code or just are AOSP gsi roms). Some custom ROMs (including YAAP and the Pixel Project and etc) which are similar to the pure AOSP maybe can work normally with AOSPXpert, so they will get some limited support by me. Other custom roms(including PE, PE plus, Pixel Plus UI, Lineage OS, CLO based roms just like AOSPA and etc) or stock ROMs (e.g. OneUI on Samsung, MIUI on Xiaomi and etc, even the stock pixel firmware on Google pixel devices, Sony UI and Hello UI) are not supported and may not be fully (or even at all) compatible.
 
 Here is the compatibility chart according to different android versions and QPRs:
 
-[//]: # (- Android 12/12.1: [final version: v2.4.1]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;.)
+[//]: # (- Android 12/12.1: [final version: v2.4.1]&#40;https://github.com/siavash79/AospXpert/releases/tag/v2.4.1&#41;.)
 
-[//]: # (- Android 13 stable QPR1 &#40;up until November 2022 firmware&#41;: [final version: v.2.4.1]&#40;https://github.com/siavash79/PixelXpert/releases/tag/v2.4.1&#41;.)
+[//]: # (- Android 13 stable QPR1 &#40;up until November 2022 firmware&#41;: [final version: v.2.4.1]&#40;https://github.com/siavash79/AospXpert/releases/tag/v2.4.1&#41;.)
 - Android 13 stable QPR3 (starting from December 2022 firmware till QPR3): [starting with v.2.5]() up until the latest stable/canary versions.
 - Android 14: [starting with v.2.9]() up until the latest stable/canary versions.
 <hr>
@@ -79,7 +79,7 @@ The module is also released in 2 flavors with different manual download and upda
 
 ### **Translations:**  
 [![Crowdin](https://badges.crowdin.net/aospmods/localized.svg)](https://crowdin.com/project/aospmods)  
-Want to help translate PixelXpert to your language? Visit [Crowdin](https://crowdin.com/project/aospmods)
+Want to help translate AospXpert to your language? Visit [Crowdin](https://crowdin.com/project/aospmods)
 <hr>
 
 ### **Donations:**
@@ -91,7 +91,7 @@ This project is open source and free for usage, build or copy. However, if you r
 - @topjohnwu for Magisk
 - @rovo89 for Xposed
 - Team LSPosed
-- @siavash79 & @ElTifo for PixelXpert
+- @siavash79 & @ElTifo for AospXpert
 - @C3C0 for GravityBox
 
 
