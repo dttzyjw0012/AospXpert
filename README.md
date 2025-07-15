@@ -91,16 +91,16 @@ This project is open source and free for usage, build or copy. However, if you r
 - @topjohnwu for Magisk
 - @rovo89 for Xposed
 - Team LSPosed
-- @siavash79 & @ElTifo for AospXpert
+- @siavash79 & @ElTifo for PixelXpert
 - @C3C0 for GravityBox
 
 
 **UI design:**  
-- @Mahmud0808  
+- @Mahmud0808 for PixelXpert  
 
 **Graphic design:**  
-- JstormZx@Telegram (Icon and Banner) 
-- RKBDI@Telegram  (Icon)
+- JstormZx@Telegram (Icon and Banner) for PixelXpert 
+- RKBDI@Telegram  (Icon) for PixelXpert
 
 **Brought to you by:**
 - nameless(@dttzyjw0012)

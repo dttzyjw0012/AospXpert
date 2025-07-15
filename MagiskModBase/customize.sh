@@ -125,8 +125,31 @@ assertPixelRom()
    fi
 }
 
+assertAospRom()
+{
+  ui_print ''
+  ui_print '*******************************'
+  ui_print 'This is a magisk/ksu module for AOSP-like Android roms'
+  ui_print '(except other no-AOSP-like custom roms just like：'
+  ui_print 'LineageOS, AOSPA and so on;'
+  ui_print 'neither most of the OEM Android OS just like：'
+  ui_print 'OneUI, ColorOS, HyperOS and so on)'
+  ui_print ''
 
-#assertPixelRom
+  ui_print 'And it is a canary build'
+  ui_print 'Please install it very carefully'
+  ui_print 'This module will make your device to a bricked device!'
+  ui_print ''
+
+  ui_print 'So do u still want to install it?'
+  ui_print 'Volume Up: Continue'
+  ui_print 'Volume Down: Abort'
+  if [[ "$(getevent -l | grep -m 1 KEY_VOLUME)" == *"VOLUMEDOWN"* ]]; then
+    abort 'Installation cancelled'
+  fi;
+}
+
+assertAospRom
 testKernelSU
 
 prepareSQL

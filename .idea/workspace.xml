@@ -79,8 +79,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="return to old header image url.">
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="add magisk module files from @DanGLES3's Hide-Navbar">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/tools/arm/keycheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/tools/x86/keycheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/functions.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/customize.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,8 +142,8 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="PUSH_TAGS">
       <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
       </GitPushTagMode>
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -281,7 +291,7 @@
     &quot;git-widget-placeholder&quot;: &quot;aosp-canary&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nameless/AndroidStudioProjects/AospXpert/Submodules/RangeSliderPreference&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nameless/AndroidStudioProjects/AospXpert/MagiskModBase/common&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -315,11 +325,11 @@
       <recent name="sh.siava.pixelxpert.service.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MagiskModBase/common" />
       <recent name="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/lib" />
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert" />
-      <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\Submodules\RangeSliderPreference" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\resources" />
@@ -347,6 +357,8 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java>
         <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
@@ -416,14 +428,6 @@
       <workItem from="1742196728572" duration="309000" />
       <workItem from="1742197046059" duration="10882000" />
       <workItem from="1742261593803" duration="623000" />
-    </task>
-    <task id="LOCAL-00110" summary="CHANGELOG: A15: Fixed taskbar in landscape mode">
-      <option name="closed" value="true" />
-      <created>1733551147174</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1733551147175</updated>
     </task>
     <task id="LOCAL-00111" summary="agp update">
       <option name="closed" value="true" />
@@ -809,7 +813,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742201484080</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="add magisk module files from @DanGLES3's Hide-Navbar">
+      <option name="closed" value="true" />
+      <created>1752511489886</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1752511489886</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -850,7 +862,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="CHANGELOG: Fixed light theme since canary 411" />
     <MESSAGE value="BatteryDataProvider: matching new constructor changes" />
     <MESSAGE value="CHANGELOG: A15QPR2B2: Fixed recents taskbar" />
     <MESSAGE value="CHANGELOG: A15QPR2 and A16: Fixed hiding privacy indicators" />
@@ -875,7 +886,8 @@
     <MESSAGE value="prepare for the canary 426 release. add the makeMagisk.sh for linux, and fix the makeMagisk.bat. change the old PiexlXpert text and folders to AOSPXpert." />
     <MESSAGE value="Prepare for the canary 426 release. Add the makeMagisk.sh for linux, and fix the makeMagisk.bat. Change the old PiexlXpert text and folders to AOSPXpert. Add tools from the GravityBox." />
     <MESSAGE value="return to old header image url." />
-    <option name="LAST_COMMIT_MESSAGE" value="return to old header image url." />
+    <MESSAGE value="add magisk module files from @DanGLES3's Hide-Navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add magisk module files from @DanGLES3's Hide-Navbar" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -884,6 +896,16 @@
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
+        <entry key="com.yhc.aospxpert">
+          <value>
+            <CheckInfo lastCheckTimestamp="1752497247523" />
+          </value>
+        </entry>
+        <entry key="com.yhc.aospxpert.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1752497247521" />
+          </value>
+        </entry>
         <entry key="sh.siava.pixelxpert">
           <value>
             <CheckInfo lastCheckTimestamp="1740752092874" />
@@ -892,6 +914,11 @@
         <entry key="sh.siava.pixelxpert.test">
           <value>
             <CheckInfo lastCheckTimestamp="1740752092953" />
+          </value>
+        </entry>
+        <entry key="sh.siava.rangesliderpreference.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1752497247522" />
           </value>
         </entry>
       </map>
