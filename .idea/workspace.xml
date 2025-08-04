@@ -79,11 +79,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Fix fault of merge.">
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Fix submodule package name.">
       <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/src/main/java/com/yhc/rangesliderpreference/RangeSliderPreference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Submodules/RangeSliderPreference" beforeDir="false" afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference" afterDir="false" />
     </list>
@@ -426,14 +424,6 @@
       <workItem from="1742196728572" duration="309000" />
       <workItem from="1742197046059" duration="10882000" />
       <workItem from="1742261593803" duration="623000" />
-    </task>
-    <task id="LOCAL-00115" summary="CHANGELOG: Added option to sleep when put on flat surface (Misc)">
-      <option name="closed" value="true" />
-      <created>1733748577474</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1733748577474</updated>
     </task>
     <task id="LOCAL-00116" summary="CHANGELOG: Improved the 'sleep on flat surface' feature">
       <option name="closed" value="true" />
@@ -819,7 +809,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754330822606</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Fix submodule package name.">
+      <option name="closed" value="true" />
+      <created>1754331571839</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1754331571839</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -968,8 +966,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="CHANGELOG: A15QPR2 &amp; A16: Fixed hiding privacy indicators" />
-    <MESSAGE value="CHANGELOG: QS Light theme: fixed icon colors during/after longpress" />
     <MESSAGE value="CHANGELOG:" />
     <MESSAGE value="CHANGELOG: Taskbar in normal mode now shows all apps button" />
     <MESSAGE value="QS light theme: changed the way icon color is handled" />
@@ -993,7 +989,9 @@
     <MESSAGE value="Merge the changes from PixelXpert Program(canary 425-446)" />
     <MESSAGE value="Change the desc for LSPosed." />
     <MESSAGE value="Fix fault of merge." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix fault of merge." />
+    <MESSAGE value="Fix submodule package name." />
+    <MESSAGE value="submodule" />
+    <option name="LAST_COMMIT_MESSAGE" value="submodule" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

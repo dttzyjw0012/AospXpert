@@ -1,9 +1,9 @@
 package com.yhc.aospxpert.utils;
 
-import com.yhc.aospxpert.AospXpert;
+import com.yhc.aospxpert.AOSPXpert;
 
 public class DisplayUtils {
 	public static boolean isTablet() {
-		return AospXpert.get().getResources().getConfiguration().smallestScreenWidthDp >= 600;
+		return AOSPXpert.get().getResources().getConfiguration().smallestScreenWidthDp >= 600;
 	}
 }

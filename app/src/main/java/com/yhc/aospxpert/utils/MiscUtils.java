@@ -38,7 +38,7 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.Objects;
 
-import com.yhc.aospxpert.AospXpert;
+import com.yhc.aospxpert.AOSPXpert;
 import com.yhc.aospxpert.R;
 import com.yhc.aospxpert.ui.fragments.iconpack.IconPackFragment;
 
@@ -62,7 +62,7 @@ public class MiscUtils {
 	}
 
 	public static int dpToPx(float dp) {
-		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, AospXpert.get().getResources().getDisplayMetrics());
+		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, AOSPXpert.get().getResources().getDisplayMetrics());
 	}
 
 	@SuppressWarnings("deprecation")

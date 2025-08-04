@@ -59,37 +59,41 @@ public class KSUInjector extends XposedModPack {
         //In case ksu is running already, it won't understand the onCreate intent we send. broadcast it is then
         mContext.registerReceiver(broadcastReceiver, new IntentFilter(Constants.PX_ROOT_EXTRA), RECEIVER_EXPORTED);
 
-		MainActivityClass
-				.after("onCreate")
-				.run(param -> {
-					Intent launchIntent = ((Activity) param.thisObject).getIntent();
-					if (launchIntent.hasExtra(Constants.PX_ROOT_EXTRA)) {
-						new Thread(() -> {
-							try {
-								Object nativeObject = ObjenesisHelper.newInstance(NativesClass.getClazz());
-								int[] rootUIDs = (int[]) callMethod(nativeObject, "getAllowList");
+        MainActivityClass
+                .after("onCreate")
+                .run(param -> {
+                    Intent launchIntent = ((Activity) param.thisObject).getIntent();
+                    if (launchIntent.hasExtra(Constants.PX_ROOT_EXTRA)) {
+                        grantRootToPX(launchIntent);
+                    }
+                });
+    }
 
-								PackageManager packageManager = mContext.getPackageManager();
-								int ownUID = packageManager.getPackageUid(BuildConfig.APPLICATION_ID, PackageManager.GET_ACTIVITIES);
+    private void grantRootToPX(Intent launchIntent) {
+        new Thread(() -> {
+            try {
+                Object nativeObject = ObjenesisHelper.newInstance(NativesClass.getClazz());
+                int[] rootUIDs = (int[]) callMethod(nativeObject, "getAllowList");
 
-								boolean haveRoot = Arrays.stream(rootUIDs).anyMatch(uid -> uid == ownUID);
+                PackageManager packageManager = mContext.getPackageManager();
+                int ownUID = packageManager.getPackageUid(BuildConfig.APPLICATION_ID, PackageManager.GET_ACTIVITIES);
 
-								if (!haveRoot) {
-									Object ownRootProfile = ProfileClass.getClazz().getConstructor(String.class, int.class, boolean.class, boolean.class, String.class, int.class, int.class, List.class, List.class, String.class, int.class, boolean.class, boolean.class, String.class)
-											.newInstance(BuildConfig.APPLICATION_ID, ownUID, true, true, null, 0, 0, new ArrayList<>(), new ArrayList<>(), "u:r:su:s0", 0, true, true, "");
+                boolean haveRoot = Arrays.stream(rootUIDs).anyMatch(uid -> uid == ownUID);
 
-									callMethod(nativeObject, "setAppProfile", ownRootProfile);
+                if (!haveRoot) {
+                    Object ownRootProfile = ProfileClass.getClazz().getConstructor(String.class, int.class, boolean.class, boolean.class, String.class, int.class, int.class, List.class, List.class, String.class, int.class, boolean.class, boolean.class, String.class)
+                            .newInstance(BuildConfig.APPLICATION_ID, ownUID, true, true, null, 0, 0, new ArrayList<>(), new ArrayList<>(), "u:r:su:s0", 0, true, true, "");
 
-									restartPX(launchIntent.hasExtra("launchApp"));
-								}
-								Thread.sleep(2000);
-								SystemUtils.killSelf();
-							} catch (Throwable ignored) {
-							}
-						}).start();
-					}
-				});
-	}
+                    callMethod(nativeObject, "setAppProfile", ownRootProfile);
+
+                    restartPX(launchIntent.hasExtra("launchApp"));
+                }
+                Thread.sleep(2000);
+                SystemUtils.killSelf();
+            } catch (Throwable ignored) {
+            }
+        }).start();
+    }
 
     private void restartPX(boolean launch) throws InterruptedException {
         Shell.cmd("killall " + BuildConfig.APPLICATION_ID).exec();
