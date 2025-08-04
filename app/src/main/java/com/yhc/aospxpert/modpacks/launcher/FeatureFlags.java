@@ -1,12 +1,17 @@
 package com.yhc.aospxpert.modpacks.launcher;
 
+import static de.robv.android.xposed.XposedHelpers.callMethod;
+import static de.robv.android.xposed.XposedHelpers.findFieldIfExists;
 import static de.robv.android.xposed.XposedHelpers.getAdditionalInstanceField;
 import static de.robv.android.xposed.XposedHelpers.getIntField;
+import static de.robv.android.xposed.XposedHelpers.getObjectField;
 import static de.robv.android.xposed.XposedHelpers.setAdditionalInstanceField;
 import static com.yhc.aospxpert.modpacks.XPrefs.Xprefs;
 
 import android.content.Context;
 import android.graphics.drawable.AdaptiveIconDrawable;
+import android.os.Handler;
+import android.os.Looper;
 
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import com.yhc.aospxpert.modpacks.Constants;
@@ -19,6 +24,8 @@ public class FeatureFlags extends XposedModPack {
 	private static final String listenPackage = Constants.LAUNCHER_PACKAGE;
 	private static boolean ForceThemedLauncherIcons = false;
 	private int mIconBitmapSize;
+	private Object mModel;
+	private Object LAS;
 
 	public FeatureFlags(Context context) {
 		super(context);
@@ -27,6 +34,12 @@ public class FeatureFlags extends XposedModPack {
 	@Override
 	public void updatePrefs(String... Key) {
 		ForceThemedLauncherIcons = Xprefs.getBoolean("ForceThemedLauncherIcons", false);
+
+		if (Key.length > 0) {
+            if (Key[0].equals("ForceThemedLauncherIcons")) {
+                reloadIcons();
+            }
+		}
 	}
 
 	@Override
@@ -38,6 +51,11 @@ public class FeatureFlags extends XposedModPack {
 	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
 		try {
 			ReflectedClass BaseIconFactoryClass = ReflectedClass.of("com.android.launcher3.icons.BaseIconFactory");
+			ReflectedClass LauncherAppStateClass = ReflectedClass.of("com.android.launcher3.LauncherAppState");
+
+			LauncherAppStateClass
+					.afterConstruction()
+					.run(param -> LAS = param.thisObject);
 
 			BaseIconFactoryClass
 					.afterConstruction()
@@ -49,9 +67,10 @@ public class FeatureFlags extends XposedModPack {
 						try {
 							if(param.getResult() == null && ForceThemedLauncherIcons)
 							{
-								if(new Throwable().getStackTrace()[4].getMethodName().toLowerCase().contains("override")) //It's from com.android.launcher3.icons.IconProvider.getIconWithOverrides. Monochrome is included
-								{
-									return;
+								for (StackTraceElement stackTraceElement : Thread.currentThread().getStackTrace()) {
+									if (stackTraceElement.getMethodName().equals("getIcon")) {
+										return;
+									}
 								}
 
 								GoogleMonochromeIconFactory mono = (GoogleMonochromeIconFactory) getAdditionalInstanceField(param.thisObject, "mMonoFactoryPX");
@@ -67,5 +86,31 @@ public class FeatureFlags extends XposedModPack {
 					});
 		}
 		catch (Throwable ignored){} //Android 13
+	}
+
+	private void reloadIcons() {
+		Object iconCache = getObjectField(LAS, "mIconCache");
+
+		boolean isA16 = (findFieldIfExists(iconCache.getClass(), "cache") != null);
+
+		Object cache = isA16
+				? getObjectField(iconCache, "cache")
+				: getObjectField(iconCache, "mCache");
+
+		Object iconDb = isA16
+				? getObjectField(iconCache, "iconDb")
+				: getObjectField(iconCache, "mIconDb");
+
+		mModel = getObjectField(LAS, "mModel"); //A15-
+		if(mModel == null)
+		{
+			mModel = getObjectField(LAS, "model"); //A16+
+		}
+
+		new Handler(Looper.getMainLooper()).post(() -> {
+			callMethod(cache, "clear");
+			callMethod(iconDb, "clear");
+			callMethod(mModel, "forceReload");
+		});
 	}
 }

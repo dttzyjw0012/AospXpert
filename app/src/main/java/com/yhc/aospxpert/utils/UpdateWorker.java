@@ -25,6 +25,7 @@ import com.topjohnwu.superuser.Shell;
 
 import com.yhc.aospxpert.BuildConfig;
 import com.yhc.aospxpert.R;
+import com.yhc.aospxpert.receivers.NotificationActionHandler;
 import com.yhc.aospxpert.ui.activities.SettingsActivity;
 import com.yhc.aospxpert.ui.fragments.UpdateFragment;
 
@@ -44,10 +45,10 @@ public class UpdateWorker extends ListenableWorker {
 		ConnectivityManager connectivityManager = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.getActiveNetwork());
 
-		boolean isGoodNetwork =
-				capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+		boolean isGoodNetwork = capabilities != null &&
+				(capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
 						&& !UpdateWifiOnly
-						|| capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_NOT_METERED);
+						|| capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_NOT_METERED));
 
 		if(isGoodNetwork)
 			checkForUpdates();
@@ -62,18 +63,30 @@ public class UpdateWorker extends ListenableWorker {
 		new UpdateFragment.updateChecker(onCheckedCallback).start();
 	}
 
-	private void showUpdateNotification() {
+	private void showUpdateNotification(int latestVersionCode) {
+		int ignoredVersion = PXPreferences.getInt("updateVersionIgnored", BuildConfig.VERSION_CODE);
+		if (latestVersionCode == ignoredVersion) {
+			Log.d("UpdateWorker", "Update ignored for version: " + latestVersionCode);
+			return;
+		}
+
 		Intent notificationIntent = new Intent(mContext, SettingsActivity.class);
 		notificationIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		notificationIntent.putExtra("newUpdate", true);
 
 		PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, notificationIntent, PendingIntent.FLAG_MUTABLE);
 
+		Intent actionIntent = new Intent(mContext, NotificationActionHandler.class);
+		actionIntent.putExtra("updateVersionIgnored", latestVersionCode);
+		actionIntent.putExtra("notificationId", UPDATE_AVAILABLE_ID);
+		PendingIntent actionPendingIntent = PendingIntent.getBroadcast(mContext, 1, actionIntent, PendingIntent.FLAG_MUTABLE);
+
 		NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(mContext, mContext.getString(R.string.notification_channel_update))
 				.setSmallIcon(R.drawable.ic_notification_foreground)
 				.setContentTitle(mContext.getString(R.string.new_update_title))
 				.setContentText(mContext.getString(R.string.new_update_desc))
 				.setContentIntent(pendingIntent)
+				.addAction(0, mContext.getString(R.string.skip_this_update), actionPendingIntent)
 				.setOnlyAlertOnce(true)
 				.setAutoCancel(true);
 
@@ -95,7 +108,7 @@ public class UpdateWorker extends ListenableWorker {
 			Shell.cmd(String.format("pm grant %s android.permission.POST_NOTIFICATIONS", BuildConfig.APPLICATION_ID)).exec();
 
 			if (latestVersionCode != null && latestVersionCode > currentVersionCode) {
-				showUpdateNotification();
+				showUpdateNotification(latestVersionCode);
 			}
 		} catch (Exception e) {
 			Log.e("AospXpert", "Error while checking for updates", e);

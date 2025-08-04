@@ -1,10 +1,11 @@
 package com.yhc.aospxpert.ui.preferences;
 
+import static com.yhc.aospxpert.ui.preferences.Utils.setBackgroundResource;
+import static com.yhc.aospxpert.ui.preferences.Utils.setFirstAndLastItemMargin;
 import static com.yhc.aospxpert.utils.MiscUtils.dpToPx;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -43,18 +44,7 @@ public class MaterialEditTextPreference extends EditTextPreference {
 	public void onBindViewHolder(@NonNull PreferenceViewHolder holder) {
 		super.onBindViewHolder(holder);
 
-		if (holder.getBindingAdapterPosition() == 0) {
-			ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) holder.itemView.getLayoutParams();
-			layoutParams.topMargin = dpToPx(12);
-			holder.itemView.setLayoutParams(layoutParams);
-		} else {
-			if (holder.getBindingAdapter() != null) {
-				if (holder.getBindingAdapterPosition() == holder.getBindingAdapter().getItemCount() - 1) {
-					ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) holder.itemView.getLayoutParams();
-					layoutParams.bottomMargin = dpToPx(0);
-					holder.itemView.setLayoutParams(layoutParams);
-				}
-			}
-		}
+		setFirstAndLastItemMargin(holder);
+		setBackgroundResource(this, holder);
 	}
 }

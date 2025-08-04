@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">Acest canal afișează notificări despre cele mai recente actualizări.</string>
     <string name="new_update_title">Actualizare disponibilă</string>
     <string name="new_update_desc">O nouă versiune de AospXpert este disponibilă</string>
+    <string name="skip_this_update">Omite această actualizare</string>
     <string name="browser_not_found">Browserul nu a fost găsit</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Actualizare</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Deschide pagina wiki</string>
     <string name="crowdin_title">Tradu în limba ta</string>
     <string name="crowdin_summary">Ajută-ne să traducem %s în limba ta</string>
+    <string name="nothing_to_show">Nimic de afișat</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Ecran de blocare</string>
     <string name="lockscreen_header_summary">Schimbă aspectul pe gustul tău</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Soluție pentru problemele de conectivitate hotspot</string>
     <string name="hotspot_disable_approval_summary">Permite clienților care nu sunt „pre-aprobați” să se conecteze fără probleme</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Fundal cu efect de adâncime</string>
     <string name="depth_wallpaper_title">Fundal cu efect de adâncime</string>
     <string name="depth_wallpaper_summary">Integrare dinamică a imaginii de fundal cu ceasul</string>
     <string name="depth_wallpaper_ai_model_title">Modelul AI preferat</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Dezactivează animația de indiciu a deblocării</string>
     <string name="ls_general_options">Opțiuni pentru ecranul de blocare</string>
     <string name="hide_avatar_title">Elimină avatarul utilizatorului (mod utilizatori multipli)</string>
+    <string name="fingerprint_options">Amprentă</string>
     <string name="transparent_fingerprint_circle">Elimină cercul de fundal a amprentei de sub afișaj</string>
     <string name="transparent_fingerprint_circle_off">Cercul în jurul pictogramei amprentei este activat</string>
     <string name="transparent_fingerprint_circle_on">Cercul din jurul imaginii amprentei va fi ascuns</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Astăzi</string>
     <string name="nt_stat_mode_week">Săptămâna aceasta</string>
     <string name="nt_stat_mode_month">Luna curentă</string>
+    <string name="sb_ignored_icons_category">Pictograme ignorate în bara de stare</string>
+    <string name="sb_ignored_icons">Bara de stare</string>
+    <string name="sb_ignored_icons_statusbar">Selectează ce pictograme vor fi ascunse în bara de stare</string>
+    <string name="sb_kg_ignored_icons">Ecran de blocare</string>
+    <string name="sb_ignored_icons_kg">Selectează ce pictograme vor fi ascunse în bara de stare a ecranului de blocare</string>
+    <string name="sb_qs_ignored_icons">Setări rapide</string>
+    <string name="sb_ignored_icons_qs">Selectează ce pictograme vor fi ascunse în setările rapide</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">Fără apeluri</string>
+    <string name="status_bar_call_strength">Puterea apelului</string>
+    <string name="status_bar_alarm_clock">Alarmă</string>
+    <string name="status_bar_rotate">Rotire automată</string>
+    <string name="status_bar_headset">Căști conectate</string>
+    <string name="status_bar_data_saver">Economizor de date</string>
+    <string name="status_bar_ime">Metodă de introducere</string>
+    <string name="status_bar_sync_failing">Sincronizare eșuată</string>
+    <string name="status_bar_sync_active">Sincronizare activă</string>
+    <string name="status_bar_nfc">NFC activ</string>
+    <string name="status_bar_tty">Mod TTY</string>
+    <string name="status_bar_speakerphone">Difuzor pornit</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Conexiune de date</string>
+    <string name="status_bar_phone_evdo_signal">EVDO</string>
+    <string name="status_bar_phone_signal">Semnal telefon</string>
+    <string name="status_bar_secure">Mod securizat</string>
+    <string name="status_bar_managed_profile">Gestionare profil</string>
+    <string name="status_bar_connected_display">Afișaj conectat</string>
+    <string name="status_bar_vpn">VPN activ</string>
+    <string name="status_bar_bluetooth">Bluetooth conectat</string>
+    <string name="status_bar_camera">Camera foto în uz</string>
+    <string name="status_bar_microphone">Microfon în uz</string>
+    <string name="status_bar_location">Locație activă</string>
+    <string name="status_bar_mute">Sunet oprit</string>
+    <string name="status_bar_volume">Nivel volum</string>
+    <string name="status_bar_zen">Nu deranjați</string>
+    <string name="status_bar_screen_record">Înregistrare ecran</string>
+    <string name="status_bar_cast">Proiectare</string>
+    <string name="status_bar_ethernet">Ethernet conectat</string>
+    <string name="status_bar_oem_satellite">Conexiune prin satelit</string>
+    <string name="status_bar_wifi">Wi-Fi conectat</string>
+    <string name="status_bar_hotspot">Hotspot activ</string>
+    <string name="status_bar_mobile">Date mobile</string>
+    <string name="status_bar_airplane">Mod avion</string>
+    <string name="status_bar_battery">Nivel bateriei</string>
+    <string name="status_bar_sensors_off">Senzori dezactivați</string>
+    <string name="status_bar_clock">Ceas</string>
     <string name="sunday">Duminică</string>
     <string name="monday">Luni</string>
     <string name="tuesday">Marți</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Lățime comparată cu dimensiunea standard</string>
     <string name="gesture_nav_pill_height_title">Înălțimea comparată cu dimensiunea standard</string>
     <string name="threebutton_header_title">Navigare cu 3 butoane</string>
+    <string name="taskbar_header_title">Navigare cu bară de activități</string>
     <string name="modify_3button_title">Modifică ordinea butoanelor</string>
     <string name="three_button_left_title">Butonul din stânga</string>
     <string name="three_button_center_title">Butonul de mijloc</string>
     <string name="three_button_right_title">Butonul din dreapta</string>
     <string name="hide_navbar_title">Ascunde bara de navigare</string>
-    <string name="taskbar_as_recents_title">Convertește bara de activități în bara de recente</string>
+    <string name="taskbar_as_recents_title">Convertește bara de activități în bara de recente AospXpert</string>
+    <string name="taskbar_hide_allapps_title">Ascunde butonul Toate Aplicațiile</string>
+    <string name="taskbar_enable_google_recents">Activează Recente Android pe bara de activități</string>
     <string name="taskbar_height_title">Înălțime bară de activități</string>
     <string name="taskbar_radius_title">Curba colțului barei de activități</string>
     <string name="colorpill">Bara de navigare nuanțată</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Activată forțat</string>
     <string name="taskbar_force_disable_title">Dezactivată forțat</string>
     <string name="taskbar_transient_title">Ascundere automată</string>
+    <string name="taskbar_on_launcher_title">Afișare pe pagina principală</string>
     <string name="remap_physical_buttons_title">Realocare butoane fizice</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Ignoră verificarea semnăturii pachetului</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">Va ignora, de asemenea, butonul plutitor de rotație manuală</string>
     <string name="force_no_cutout">Ignoră decuparea camerei</string>
     <string name="clear_all_reposition_title">Adăugați un buton accesibil de ștergere toate la pagina de recente</string>
-    <string name="force_themed_icons_title">Auto-generare pictograme tematice lipsă (doar lansatorul Pixel)</string>
-    <string name="reapply_themed_config">Reactivează pictogramele tematice pentru aplicare</string>
+    <string name="force_themed_icons_title">Generează automat pictogramele tematice lipsă</string>
+    <string name="force_themed_icons_summary">Doar lansator Pixel</string>
     <string name="volume_button_step_title">Pași volum (0 la 100%)</string>
     <string name="display_resolution_switch_title">Modifică rezoluția afișajului</string>
     <string name="display_resolution_switch_summary">Înainte de a activa, asigură-te că resetezi toate modificările dimensiunii afișajului/dpi la cele implicite</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">În timp ce ecranul este oprit…</string>
     <string name="custom_themed_icons_title">Pictograme personalizate</string>
     <string name="px_in_settings_title">Adaugă AospXpert la elementele Setărilor</string>
+    <string name="advanced_power_menu_title">Meniu de alimentare avansat</string>
     <string name="sleep_on_flat_screen_title">Oprește ecranul pe o suprafață plană</string>
     <string name="sleep_on_flat_screen_tile_title">Somn pe suprafață</string>
     <string name="flat_screen_timeout_title">Durată expirare ecran pe suprafața plană</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Apasă lung pe bara de stare pentru a schimba profilul</string>
     <string name="statusbar_app_switch_icon">Arată o pictogramă pe bara de stare atunci când comutarea este disponibilă</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Deblocat pentru toate aplicațiile prin <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Bucură-te!</string>
+    <string name="settings_cloned_apps_active">Deblocat pentru toate aplicațiile prin <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Bucură-te!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Informații baterie…</string>
     <string name="power_indication_error">Eroare la preluarea datelor de încărcare</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Descărcări</string>
     <string name="assets_download_title">Se descarcă fișierele</string>
     <string name="assets_download_body">Se descarcă fișierele companion</string>
+    <string name="assets_download_size_body">Progres: %s</string>
     <string name="update_notification_title">Actualizare descărcată</string>
     <string name="update_notification_text">Atinge aici pentru instalare</string>
     <string name="download_failed">Nu s-a putut descărca actualizarea</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">Comutare ramură</string>
     <string name="reinstall_word">Reinstalare</string>
     <string name="changelog_title">Jurnalul modificărilor</string>
-    <string name="own_prefs_header">Setări AOSPXpert</string>
+    <string name="own_prefs_header">Setări AOSPMods</string>
     <string name="language_title">Limbă</string>
     <string name="toggle_dark_apply">(Comută tema întunecată pentru a aplica)</string>
     <string name="gesture_nav_extra_cat">Gesturi suplimentare bară de navigare</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">Nu este instalat niciun pachet de pictograme</string>
     <string name="icon_pack_disclaimer_title">Act de renunțare</string>
     <string name="icon_pack_disclaimer_desc">Pachetele de pictograme nu sunt dezvoltate sau distribuite de AospXpert. De aceea, echipa AospXpert nu poate oferi suport pentru pachetele de pictograme. Asistența cu privire la modul în care AospXpert gestionează pachetele de pictograme va fi furnizată numai dezvoltatorilor de pachete.\n\nPentru instrucțiuni despre cum să compilezi un pachet de pictograme, consultă ghidul de aici: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Avansat…</string>
+    <string name="reboot_bootloader_title">Repornire în Bootloader</string>
+    <string name="soft_reboot_title">Repornire rapidă</string>
+    <string name="restart_systemui_title">Repornire SystemUI</string>
 </resources>

@@ -6,6 +6,8 @@
     android:baselineAligned="false"
     android:clickable="true"
     android:focusable="true"
+    android:layout_marginHorizontal="@dimen/ui_container_margin_side"
+    android:layout_marginBottom="2dp"
     android:foreground="?android:selectableItemBackgroundBorderless"
     android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
@@ -32,20 +34,29 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/title"
-            style="@style/TextAppearance.Material3.TitleMedium"
+            style="@style/TextAppearance.Preference.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/text_color_primary" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/summary"
-            style="@style/TextAppearance.Material3.BodyMedium"
+            style="@style/TextAppearance.Preference.Summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"
             android:textColor="@color/text_color_secondary" />
 
     </RelativeLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="4dp"
+        android:alpha="0.8"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_arrow_right"
+        app:tint="?attr/colorOnSurface" />
 
     <include layout="@layout/custom_preference_two_target_divider" />
 

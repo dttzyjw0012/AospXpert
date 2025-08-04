@@ -31,6 +31,8 @@ public class PXSettingsLauncher extends XposedModPack {
 
 	private boolean mNewSettings = true;
 
+	private boolean mExpressiveTheme = false;
+
 	public PXSettingsLauncher(Context context) {
 		super(context);
 	}
@@ -54,6 +56,12 @@ public class PXSettingsLauncher extends XposedModPack {
 		ReflectedClass PreferenceCategoryClass = ReflectedClass.ofIfPossible("androidx.preference.PreferenceCategory");
 		ReflectedClass PreferenceManagerClass = ReflectedClass.ofIfPossible("androidx.preference.PreferenceManager");
 
+		try { //A16 expressive theme needs a different icon of PX
+			ReflectedClass SettingsThemeHelperClass = ReflectedClass.of("com.android.settingslib.widget.SettingsThemeHelper");
+			mExpressiveTheme = (boolean) SettingsThemeHelperClass.callStaticMethod("isExpressiveTheme", mContext);
+		}
+		catch (Throwable ignored){}
+
 		TopLevelSettingsClass
 				.after("getPreferenceScreenResId")
 				.run(param -> {
@@ -73,7 +81,9 @@ public class PXSettingsLauncher extends XposedModPack {
 
 						callMethod(PXPreference, "setIcon",
 								ResourcesCompat.getDrawable(ResourceManager.modRes,
-										R.drawable.ic_notification_foreground,
+										mExpressiveTheme
+												? R.mipmap.ic_launcher
+												: R.drawable.ic_notification_foreground,
 										mContext.getTheme()));
 						callMethod(PXPreference, "setTitle", ResourceManager.modRes.getString(R.string.app_name));
 

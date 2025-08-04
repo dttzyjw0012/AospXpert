@@ -1,5 +1,5 @@
 [submodule "Submodules/RangeSliderPreference"]
 	path = Submodules/RangeSliderPreference
-	url = https://github.com/siavash79/rangesliderpreference.git
+	url = https://github.com/dttzyjw0012/rangesliderpreference.git
 	branch = main
 	update = rebase

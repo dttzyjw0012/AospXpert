@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 
+import com.downloader.PRDownloader;
+import com.downloader.PRDownloaderConfig;
 import com.google.android.material.color.DynamicColors;
 import com.topjohnwu.superuser.Shell;
 import com.topjohnwu.superuser.ipc.RootService;
@@ -34,6 +36,12 @@ public class AOSPXpert extends Application {
 	public void onCreate() {
 		super.onCreate();
 		instance = this;
+
+		PRDownloaderConfig config = PRDownloaderConfig.newBuilder()
+				.setReadTimeout(30_000)
+				.setConnectTimeout(30_000)
+				.build();
+		PRDownloader.initialize(getApplicationContext(), config);
 
 		tryConnectRootService();
 		DynamicColors.applyToActivitiesIfAvailable(this);

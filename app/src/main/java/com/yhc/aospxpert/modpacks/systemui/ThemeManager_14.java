@@ -30,9 +30,11 @@ import android.widget.TextView;
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 
+import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Pattern;
+import java.util.stream.IntStream;
 
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import com.yhc.aospxpert.modpacks.Constants;
@@ -41,6 +43,7 @@ import com.yhc.aospxpert.modpacks.XposedModPack;
 import com.yhc.aospxpert.modpacks.utils.SystemUtils;
 import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass;
 import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass.ReflectionConsumer;
+import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedMethod;
 
 @SuppressWarnings("RedundantThrows")
 public class ThemeManager_14 extends XposedModPack {
@@ -177,11 +180,23 @@ public class ThemeManager_14 extends XposedModPack {
 		}
 
 		try { //A14 Compose implementation of QS Footer actions
-//			ReflectedClass FooterActionsButtonViewModelClass = ReflectedClass.of("com.android.systemui.qs.footer.ui.viewmodel.FooterActionsButtonViewModel");
+			ReflectedClass FooterActionsButtonViewModelClass = ReflectedClass.of("com.android.systemui.qs.footer.ui.viewmodel.FooterActionsButtonViewModel");
 			ReflectedClass FooterActionsViewModelClass = ReflectedClass.of("com.android.systemui.qs.footer.ui.viewmodel.FooterActionsViewModel");
 //			ReflectedClass FooterActionsKtClass = ReflectedClass.of("com.android.systemui.qs.footer.ui.compose.FooterActionsKt");
 			ReflectedClass ThemeColorKtClass = ReflectedClass.of("com.android.compose.theme.ColorKt");
 			ReflectedClass ExpandableControllerImplClass = ReflectedClass.of("com.android.compose.animation.ExpandableControllerImpl");
+
+
+			FooterActionsButtonViewModelClass
+					.afterConstruction()
+					.run(param -> { //A16 power button
+						Resources res = mContext.getResources();
+						if(getIntField(param.thisObject, "id") == res.getIdentifier("pm_lite", "id", mContext.getPackageName()))
+						{
+							setObjectField(param.thisObject, "backgroundColor", PM_LITE_BACKGROUND_CODE);
+							setObjectField(param.thisObject, "iconTint", colorInactive);
+						}
+					});
 
 			ExpandableControllerImplClass
 					.beforeConstruction()
@@ -192,12 +207,15 @@ public class ThemeManager_14 extends XposedModPack {
 						}
 					});
 
+			Parameter[] colorAttrsParams = ReflectedMethod.findMethod(ThemeColorKtClass.getClazz(), "colorAttr").getParameters();
+			int residIndex = IntStream.range(0, colorAttrsParams.length).filter(i -> (colorAttrsParams[i].getType().equals(int.class))).findFirst().orElse(0);
+
 			ThemeColorKtClass
 					.before("colorAttr")
 					.run(param -> {
 						if (isDark) return;
 
-						int code = (int) param.args[0];
+						int code = (int) param.args[residIndex];
 
 						int result = 0;
 
@@ -230,8 +248,11 @@ public class ThemeManager_14 extends XposedModPack {
 
 						//power button
 						Object power = getObjectField(param.thisObject, "power");
-						setObjectField(power, "iconTint", colorInactive);
-						setObjectField(power, "backgroundColor", PM_LITE_BACKGROUND_CODE);
+						try { //A15 and lower. On 16 we directly set things on
+							setObjectField(power, "iconTint", colorInactive);
+							setObjectField(power, "backgroundColor", PM_LITE_BACKGROUND_CODE);
+						}
+						catch (Throwable ignored){}
 
 						//settings button
 						setObjectField(

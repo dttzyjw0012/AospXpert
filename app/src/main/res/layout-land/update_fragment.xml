@@ -11,12 +11,12 @@
 		android:id="@+id/nestedScrollView"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:fillViewport="true"
 		app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:fillViewport="true"
 			android:paddingHorizontal="48dp"
 			android:paddingVertical="24dp">
 
@@ -189,6 +189,12 @@
 						android:textColor="?attr/colorOnSurface"
 						android:textSize="16sp"
 						android:textStyle="bold" />
+
+					<com.google.android.material.progressindicator.LinearProgressIndicator
+						android:id="@+id/progressBar"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:indeterminate="true" />
 
 					<androidx.core.widget.NestedScrollView
 						android:id="@+id/changelogScrollView"

@@ -4,6 +4,28 @@
 	<color name="error">#FF5052</color>
 	<color name="success">#00C479</color>
 
+	<!-- Home Preferences Icon Color -->
+	<color name="main_preference_color_1">#67d4ff</color>
+	<color name="main_preference_on_color_1">#004d68</color>
+	<color name="main_preference_color_2">#a1c9ff</color>
+	<color name="main_preference_on_color_2">#04409f</color>
+	<color name="main_preference_color_3">#ffaee4</color>
+	<color name="main_preference_on_color_3">#8d0053</color>
+	<color name="main_preference_color_4">#ffb683</color>
+	<color name="main_preference_on_color_4">#753403</color>
+	<color name="main_preference_color_5">#fcbd00</color>
+	<color name="main_preference_on_color_5">#6d3a01</color>
+	<color name="main_preference_color_6">#80da88</color>
+	<color name="main_preference_on_color_6">#00522c</color>
+	<color name="main_preference_color_7">#c7c7c7</color>
+	<color name="main_preference_on_color_7">#474747</color>
+	<color name="main_preference_color_8">#60d5f3</color>
+	<color name="main_preference_on_color_8">#004e5d</color>
+	<color name="main_preference_color_9">#ffb3ae</color>
+	<color name="main_preference_on_color_9">#8a1a16</color>
+	<color name="main_preference_color_10">#d9bafd</color>
+	<color name="main_preference_on_color_10">#5629a4</color>
+
 	<!-- Launcher icon -->
 	<color name="launcher_fg">@android:color/system_neutral2_100</color>
 	<color name="launcher_bg">@android:color/background_dark</color>

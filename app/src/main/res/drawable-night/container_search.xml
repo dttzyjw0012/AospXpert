@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-	android:color="@color/color_accent_0_10_overlay">
+	android:color="?attr/colorControlHighlight">
 	<item>
 		<shape android:shape="rectangle">
 			<solid android:color="?attr/colorSurfaceBright" />
-			<corners android:radius="120dp" />
+			<corners android:radius="40dp" />
 			<stroke
 				android:width="1dp"
-				android:color="?attr/colorSurfaceContainerHigh" />
+				android:color="@android:color/system_neutral2_700" />
 		</shape>
 	</item>
 </ripple>

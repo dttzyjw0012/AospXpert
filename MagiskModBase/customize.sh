@@ -88,6 +88,8 @@ activateModuleLSPD()
 
 	CMD="insert into scope (mid, app_pkg_name, user_id) values ($NEWMID, \"me.weishu.kernelsu\",0);" && runSQL
 
+	CMD="insert into scope (mid, app_pkg_name, user_id) values ($NEWMID, \"com.rifsxd.ksunext\",0);" && runSQL
+
 	CMD="insert into scope (mid, app_pkg_name, user_id) values ($NEWMID, \"$PKGNAME\",0);" && runSQL
 }
 
@@ -101,7 +103,7 @@ testKernelSU()
     		ui_print ''
     		ui_print '                CAUTION!:'
     		ui_print 'Before installation, you MUST disable'
-    		ui_print '"Unmount modules by default"'
+    		ui_print '"Umount modules by default"'
     		ui_print 'Otherwise, your device will fall into BOOTLOOP!'
     		ui_print ''
     		ui_print 'Do you wish to continue?'
@@ -116,13 +118,13 @@ testKernelSU()
 
 assertPixelRom()
 {
- 	PixelTipsPattern="TipsPrebuilt*"
- 	PixelTipsParent="/product/priv-app"
+	PixelTipsPattern="TipsPrebuilt*"
+	PixelTipsParent="/product/priv-app"
 
-   if ! find "$PixelTipsParent" -maxdepth 1 -name "$PixelTipsPattern" -print -quit | grep -q .; then
-   	ui_print 'Device does not seem to be a Pixel phone containing an original ROM.'
-     abort 'Installation aborted due to incompatibility'
-   fi
+  if ! find "$PixelTipsParent" -maxdepth 1 -name "$PixelTipsPattern" -print -quit | grep -q .; then
+  	ui_print 'Device does not seem to be a Pixel phone containing an original ROM.'
+    abort 'Installation aborted due to incompatibility'
+  fi
 }
 
 assertAospRom()

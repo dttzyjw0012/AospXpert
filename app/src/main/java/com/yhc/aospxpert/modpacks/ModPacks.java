@@ -44,11 +44,13 @@ import com.yhc.aospxpert.modpacks.systemui.KeyguardMods;
 import com.yhc.aospxpert.modpacks.systemui.MultiStatusbarRows;
 import com.yhc.aospxpert.modpacks.systemui.NotificationExpander;
 import com.yhc.aospxpert.modpacks.systemui.NotificationManager;
+import com.yhc.aospxpert.modpacks.systemui.PowerMenu;
 import com.yhc.aospxpert.modpacks.systemui.QSFooterManager;
 import com.yhc.aospxpert.modpacks.systemui.QSTileGrid;
 import com.yhc.aospxpert.modpacks.systemui.ScreenGestures;
 import com.yhc.aospxpert.modpacks.systemui.ScreenRecord;
 import com.yhc.aospxpert.modpacks.systemui.ScreenshotManager;
+import com.yhc.aospxpert.modpacks.systemui.StatusIconTuner;
 import com.yhc.aospxpert.modpacks.systemui.StatusbarGestures;
 import com.yhc.aospxpert.modpacks.systemui.StatusbarMods;
 import com.yhc.aospxpert.modpacks.systemui.ThemeManager_13;
@@ -134,6 +136,8 @@ public class ModPacks {
 					modPacks.add(VolumeDialog.class);
 					modPacks.add(DepthWallpaper.class);
 					modPacks.add(KSURootReceiver.class);
+					modPacks.add(PowerMenu.class);
+					modPacks.add(StatusIconTuner.class);
 				}
 				break;
 
@@ -163,6 +167,7 @@ public class ModPacks {
 				break;
 
 			case Constants.KSU_PACKAGE:
+			case Constants.KSU_NEXT_PACKAGE:
 				modPacks.add(KSUInjector.class);
 				break;
 		}

@@ -1,5 +1,8 @@
 package com.yhc.aospxpert.ui.preferences;
 
+import static com.yhc.aospxpert.ui.preferences.Utils.setBackgroundResource;
+import static com.yhc.aospxpert.ui.preferences.Utils.setFirstAndLastItemMargin;
+
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -55,6 +58,9 @@ public class MaterialTwoTargetPreference extends MaterialPreference {
         if (widgetFrame != null) {
             widgetFrame.setVisibility(shouldHideSecondTarget ? View.GONE : View.VISIBLE);
         }
+
+        setFirstAndLastItemMargin(holder);
+        setBackgroundResource(this, holder);
     }
 
     protected boolean shouldHideSecondTarget() {

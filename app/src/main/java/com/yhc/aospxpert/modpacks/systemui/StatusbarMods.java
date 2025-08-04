@@ -202,7 +202,7 @@ public class StatusbarMods extends XposedModPack {
 	public static final String ICON_HIDE_LIST = "icon_blacklist";
 	//endregion
 	//region app profile switch
-	private static final String APP_SWITCH_SLOT = "app_switch";
+	public static final String APP_SWITCH_SLOT = "app_switch";
 	private Object mAppSwitchStatusbarIconHolder = null;
 
 	private static boolean StatusbarAppSwitchIconEnabled = false;

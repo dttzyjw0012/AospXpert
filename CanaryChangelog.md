@@ -1,3 +1,7 @@
+**canary-427**
+- Add AOSP rom check in magisk module
+- Merge the changes from AospXpert Program(canary 425-446)
+
 **canary-426**
 - Fix the fast charging display of battery icon to be compatible with AOSP
 - Fix the tasker bar feature to be compatible with AOSP

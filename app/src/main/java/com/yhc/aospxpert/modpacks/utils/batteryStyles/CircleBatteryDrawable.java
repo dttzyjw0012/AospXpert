@@ -5,7 +5,6 @@ import static android.graphics.Paint.ANTI_ALIAS_FLAG;
 import static android.graphics.Paint.Align.CENTER;
 import static android.graphics.Paint.Style.STROKE;
 import static android.graphics.Typeface.BOLD;
-import static de.robv.android.xposed.XposedBridge.log;
 import static java.lang.Math.round;
 import static com.yhc.aospxpert.modpacks.systemui.BatteryDataProvider.getCurrentLevel;
 import static com.yhc.aospxpert.modpacks.systemui.BatteryDataProvider.isBatteryDefender;

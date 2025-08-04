@@ -26,7 +26,8 @@
 		<activity
 			android:name=".ui.activities.SplashScreenActivity"
 			android:exported="true"
-			android:label="@string/title_activity_settings" />
+			android:label="@string/title_activity_settings"
+			android:theme="@style/AppTheme.AospXpert" />
 
 		<activity-alias
 			android:name=".FakeSplashActivityAlternateIcon"
@@ -112,6 +113,10 @@
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 			</intent-filter>
 		</receiver>
+
+		<receiver android:name=".receivers.NotificationActionHandler"
+			android:exported="true"
+            tools:ignore="ExportedReceiver" />
 
 		<provider
 			android:name=".utils.RemotePrefProvider"

@@ -23,13 +23,13 @@
 			app:iconSpaceReserved="false" />
 
 		<!--SeekBarPreference
-			android:layout_width="wrap_content"
-			android:defaultValue="50"
-			android:key="centerAreaFineTune"
-			app:maxVal="70"
-			android:title="@string/sb_center_fine_tune"
-			app:minVal="30"
-			app:updatesContinuously="true" /-->
+            android:layout_width="wrap_content"
+            android:defaultValue="50"
+            android:key="centerAreaFineTune"
+            app:maxVal="70"
+            android:title="@string/sb_center_fine_tune"
+            app:minVal="30"
+            app:updatesContinuously="true" /-->
 
 		<com.yhc.aospxpert.ui.preferences.MaterialPreference
 			android:key="sbc_header"
@@ -51,11 +51,11 @@
 			app:iconSpaceReserved="false" />
 
 		<!--com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
-			android:defaultValue="false"
-			android:key="SBshowVibrationIcon"
-			android:summaryOff="@string/general_off"
-			android:summaryOn="@string/general_on"
-			android:title="@string/sb_vibration_switch_title" /-->
+            android:defaultValue="false"
+            android:key="SBshowVibrationIcon"
+            android:summaryOff="@string/general_off"
+            android:summaryOn="@string/general_on"
+            android:title="@string/sb_vibration_switch_title" /-->
 
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
@@ -212,4 +212,35 @@
 
 		</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
 	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
+
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
+		android:title="@string/sb_ignored_icons_category"
+		app:iconSpaceReserved="false">
+
+		<com.yhc.aospxpert.ui.preferences.MaterialMultiSelectListPreference
+			android:entries="@array/ignored_icons_entries"
+			android:entryValues="@array/ignored_icons_values"
+			android:key="SBIgnoredIcons"
+			android:summary="@string/sb_ignored_icons_statusbar"
+			android:title="@string/sb_ignored_icons"
+			app:iconSpaceReserved="false" />
+
+		<com.yhc.aospxpert.ui.preferences.MaterialMultiSelectListPreference
+			android:entries="@array/ignored_icons_entries"
+			android:entryValues="@array/ignored_icons_values"
+			android:key="KGIgnoredIcons"
+			android:summary="@string/sb_ignored_icons_kg"
+			android:title="@string/sb_kg_ignored_icons"
+			app:iconSpaceReserved="false" />
+
+		<com.yhc.aospxpert.ui.preferences.MaterialMultiSelectListPreference
+			android:entries="@array/ignored_icons_entries"
+			android:entryValues="@array/ignored_icons_values"
+			android:key="QSIgnoredIcons"
+			android:summary="@string/sb_ignored_icons_qs"
+			android:title="@string/sb_qs_ignored_icons"
+			app:iconSpaceReserved="false" />
+
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
+
 </PreferenceScreen>

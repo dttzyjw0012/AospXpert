@@ -1,31 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="horizontal"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:clipChildren="false"
-	android:fillViewport="true"
-	android:orientation="vertical"
-	tools:context=".ui.activities.SettingsActivity">
+	tools:context=".ui.activities.SettingsActivity"
+	tools:ignore="UselessParent">
+
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="?attr/colorSurfaceContainerHighest">
+
+		<com.google.android.material.navigationrail.NavigationRailView
+			android:id="@+id/navigationRailView"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="start"
+			android:background="?attr/colorSurfaceContainerHighest"
+			android:visibility="gone"
+			app:labelVisibilityMode="selected"
+			app:menu="@menu/bottom_nav_menu"
+			app:menuGravity="center" />
+
+	</FrameLayout>
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="2"
+		android:clipChildren="false"
+		android:fillViewport="true"
+		android:orientation="vertical">
+
+		<androidx.fragment.app.FragmentContainerView
+			android:id="@+id/mainFragmentContainerView"
+			android:name="androidx.navigation.fragment.NavHostFragment"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_above="@+id/bottomNavigationView"
+			app:defaultNavHost="true" />
+
+		<com.google.android.material.bottomnavigation.BottomNavigationView
+			android:id="@+id/bottomNavigationView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_gravity="bottom"
+			android:background="?attr/colorSurfaceContainerHighest"
+			app:labelVisibilityMode="auto"
+			app:menu="@menu/bottom_nav_menu" />
+
+	</RelativeLayout>
 
 	<androidx.fragment.app.FragmentContainerView
-		android:id="@+id/fragmentContainerView"
+		android:id="@+id/detailFragmentContainerView"
 		android:name="androidx.navigation.fragment.NavHostFragment"
-		android:layout_width="match_parent"
+		android:layout_width="0dp"
 		android:layout_height="match_parent"
-		android:layout_above="@+id/bottomNavigationView"
-		app:defaultNavHost="true"
-		app:navGraph="@navigation/nav_graph" />
+		android:layout_weight="3"
+		android:visibility="gone"
+		app:navGraph="@navigation/nav_graph_tablet_details" />
 
-	<com.google.android.material.bottomnavigation.BottomNavigationView
-		android:id="@+id/bottomNavigationView"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_gravity="bottom"
-		android:background="?attr/colorSurfaceContainerHighest"
-		app:labelVisibilityMode="auto"
-		app:menu="@menu/bottom_nav_menu" />
-
-</RelativeLayout>
+</LinearLayout>

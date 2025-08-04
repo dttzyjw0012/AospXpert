@@ -113,6 +113,11 @@ public class ReflectedClass
 		return XposedHelpers.callStaticMethod(clazz, methodName, args);
 	}
 
+	public Set<Method> findMethods(Pattern namePattern)
+	{
+		return findMethods(clazz, namePattern);
+	}
+
 	private static class MethodData
 	{
 		String methodName;
@@ -127,8 +132,14 @@ public class ReflectedClass
 			this.method = method;
 		}
 
-		@SuppressLint("DefaultLocale")
 		protected Set<XC_MethodHook.Unhook> runBefore(ReflectionConsumer consumer)
+		{
+			return runBefore(consumer, false);
+		}
+
+		/** @noinspection SameParameterValue*/
+		@SuppressLint("DefaultLocale")
+		protected Set<XC_MethodHook.Unhook> runBefore(ReflectionConsumer consumer, boolean log)
 		{
 			if(clazz == null) return new ArraySet<>();
 
@@ -138,15 +149,19 @@ public class ReflectedClass
 				unhooks = hookAllConstructors(clazz, new XC_MethodHook() {
 					@Override
 					protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+						if(log)
+						{
+							log(param.method.getName() + " called");
+						}
 						consumer.run(param);
 					}
 				});
 
-				if(FLAG_DEBUG_HOOKS)
+				if(log || FLAG_DEBUG_HOOKS)
 				{
-					Throwable throwable = new Throwable();
-					String callingClassName = throwable.getStackTrace()[2].getClassName();
-					int lineNumber = throwable.getStackTrace()[2].getLineNumber();
+					StackTraceElement element = Thread.currentThread().getStackTrace()[2];
+					String callingClassName = element.getClassName();
+					int lineNumber = element.getLineNumber();
 					log(String.format("%s line %d: Hook to before constructor of %s size = %d", callingClassName,lineNumber, clazz.getName(), unhooks.size()));
 				}
 			}
@@ -155,15 +170,19 @@ public class ReflectedClass
 				unhooks = Collections.singleton(hookMethod(method, new XC_MethodHook() {
 					@Override
 					protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+						if(log)
+						{
+							log(param.method.getName() + " called");
+						}
 						consumer.run(param);
 					}
 				}));
 
-				if(FLAG_DEBUG_HOOKS)
+				if(log || FLAG_DEBUG_HOOKS)
 				{
-					Throwable throwable = new Throwable();
-					String callingClassName = throwable.getStackTrace()[2].getClassName();
-					int lineNumber = throwable.getStackTrace()[2].getLineNumber();
+					StackTraceElement element = Thread.currentThread().getStackTrace()[2];
+					String callingClassName = element.getClassName();
+					int lineNumber = element.getLineNumber();
 					log(String.format("%s line %d: Hook to %s before method %s size = %d", callingClassName,lineNumber, clazz.getName(), method.getName(), unhooks.size()));
 				}
 			}
@@ -172,23 +191,31 @@ public class ReflectedClass
 				unhooks = hookAllMethods(clazz, methodName, new XC_MethodHook() {
 					@Override
 					protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+						if(log)
+						{
+							log(param.method.getName() + " called");
+						}
 						consumer.run(param);
 					}
 				});
 
-				if(FLAG_DEBUG_HOOKS)
+				if(log || FLAG_DEBUG_HOOKS)
 				{
-					Throwable throwable = new Throwable();
-					String callingClassName = throwable.getStackTrace()[2].getClassName();
-					int lineNumber = throwable.getStackTrace()[2].getLineNumber();
-					log(String.format("%s line %d: Hook to %s before method %s size = %d", callingClassName,lineNumber, clazz.getName(), methodName, unhooks.size()));
+					StackTraceElement element = Thread.currentThread().getStackTrace()[2];
+					String callingClassName = element.getClassName();
+					int lineNumber = element.getLineNumber();
+					log(String.format("%s line %d: Hook to %s before method %s size = %d", callingClassName,lineNumber, clazz.getName(), method.getName(), unhooks.size()));
 				}
 			}
 			return unhooks;
 		}
 
-		@SuppressLint("DefaultLocale")
 		protected Set<XC_MethodHook.Unhook> runAfter(ReflectionConsumer consumer)
+		{
+			return runAfter(consumer ,false);
+		}
+		@SuppressLint("DefaultLocale")
+		protected Set<XC_MethodHook.Unhook> runAfter(ReflectionConsumer consumer, boolean log)
 		{
 			if(clazz == null) return new ArraySet<>();
 
@@ -198,33 +225,40 @@ public class ReflectedClass
 				unhooks = hookAllConstructors(clazz, new XC_MethodHook() {
 					@Override
 					protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+						if(log)
+						{
+							log(param.method.getName() + " called");
+						}
 						consumer.run(param);
 					}
 				});
 
-				if(FLAG_DEBUG_HOOKS)
+				if(log || FLAG_DEBUG_HOOKS)
 				{
-					Throwable throwable = new Throwable();
-					String callingClassName = throwable.getStackTrace()[2].getClassName();
-					int lineNumber = throwable.getStackTrace()[2].getLineNumber();
+					StackTraceElement element = Thread.currentThread().getStackTrace()[2];
+					String callingClassName = element.getClassName();
+					int lineNumber = element.getLineNumber();
 					log(String.format("%s line %d: Hook to after constructor of %s size = %d", callingClassName,lineNumber, clazz.getName(), unhooks.size()));
 				}
-
 			}
 			else if(method != null)
 			{
 				unhooks = Collections.singleton(hookMethod(method, new XC_MethodHook() {
 					@Override
 					protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+						if(log)
+						{
+							log(param.method.getName() + " called");
+						}
 						consumer.run(param);
 					}
 				}));
 
-				if(FLAG_DEBUG_HOOKS)
+				if(log || FLAG_DEBUG_HOOKS)
 				{
-					Throwable throwable = new Throwable();
-					String callingClassName = throwable.getStackTrace()[2].getClassName();
-					int lineNumber = throwable.getStackTrace()[2].getLineNumber();
+					StackTraceElement element = Thread.currentThread().getStackTrace()[2];
+					String callingClassName = element.getClassName();
+					int lineNumber = element.getLineNumber();
 					log(String.format("%s line %d: Hook to %s after method %s size = %d", callingClassName,lineNumber, clazz.getName(), method.getName(), unhooks.size()));
 				}
 			}
@@ -233,18 +267,21 @@ public class ReflectedClass
 				unhooks = hookAllMethods(clazz, methodName, new XC_MethodHook() {
 					@Override
 					protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+						if(log)
+						{
+							log(param.method.getName() + " called");
+						}
 						consumer.run(param);
 					}
 				});
 
-				if(FLAG_DEBUG_HOOKS)
+				if(log || FLAG_DEBUG_HOOKS)
 				{
-					Throwable throwable = new Throwable();
-					String callingClassName = throwable.getStackTrace()[2].getClassName();
-					int lineNumber = throwable.getStackTrace()[2].getLineNumber();
+					StackTraceElement element = Thread.currentThread().getStackTrace()[2];
+					String callingClassName = element.getClassName();
+					int lineNumber = element.getLineNumber();
 					log(String.format("%s line %d: Hook to %s after method %s size = %d", callingClassName,lineNumber, clazz.getName(), methodName, unhooks.size()));
 				}
-
 			}
 			return unhooks;
 		}
@@ -259,7 +296,12 @@ public class ReflectedClass
 
 		public Set<XC_MethodHook.Unhook> run(ReflectionConsumer consumer)
 		{
-			return runBefore(consumer);
+			return runBefore(consumer, false);
+		}
+
+		public Set<XC_MethodHook.Unhook> run(ReflectionConsumer consumer, boolean log)
+		{
+			return runBefore(consumer, log);
 		}
 	}
 
@@ -299,7 +341,7 @@ public class ReflectedClass
 	{
 		Set<Method> result = new ArraySet<>();
 
-		Method[] methods = clazz.getMethods();
+		Method[] methods = clazz.getDeclaredMethods();
 
 		for(Method method : methods)
 		{
@@ -320,7 +362,12 @@ public class ReflectedClass
 
 		public Set<XC_MethodHook.Unhook> run(ReflectionConsumer consumer)
 		{
-			return runAfter(consumer);
+			return runAfter(consumer, false);
+		}
+
+		public Set<XC_MethodHook.Unhook> run(ReflectionConsumer consumer, boolean log)
+		{
+			return runAfter(consumer, log);
 		}
 	}
 

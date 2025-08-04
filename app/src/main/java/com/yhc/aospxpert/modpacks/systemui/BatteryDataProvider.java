@@ -1,16 +1,14 @@
 package com.yhc.aospxpert.modpacks.systemui;
 
+import static de.robv.android.xposed.XposedHelpers.*;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_InitPackageResources;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import com.yhc.aospxpert.modpacks.Constants;
@@ -18,8 +16,6 @@ import com.yhc.aospxpert.modpacks.ResourceManager;
 import com.yhc.aospxpert.modpacks.XPLauncher;
 import com.yhc.aospxpert.modpacks.XposedModPack;
 import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass;
-
-import static de.robv.android.xposed.XposedHelpers.*;
 
 /**
  * @noinspection RedundantThrows
@@ -63,8 +59,6 @@ public class BatteryDataProvider extends XposedModPack {
 		XC_InitPackageResources.InitPackageResourcesParam resparam = ResourceManager.resparams.get(lpParam.packageName);
 		ReflectedClass BatteryStatusClass = ReflectedClass.of("com.android.settingslib.fuelgauge.BatteryStatus");
 		ReflectedClass BatteryControllerImplClass = ReflectedClass.of("com.android.systemui.statusbar.policy.BatteryControllerImpl");
-		ReflectedClass KeyguardUpdateMonitorClass = ReflectedClass.of("com.android.keyguard.KeyguardUpdateMonitor");
-		ReflectedClass KeyguardIndicationControllerClass = ReflectedClass.of("com.android.systemui.statusbar.KeyguardIndicationController");
 
 		final int slowThreshold = resparam.res.getIdentifier(
 				"config_chargingSlowlyThreshold", "values", "com.android.settingslib");

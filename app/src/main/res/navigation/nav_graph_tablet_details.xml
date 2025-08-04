@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_phone"
+    app:startDestination="@id/headerFragment">
+    <fragment
+        android:id="@+id/headerFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.BlankFragment"
+        tools:layout="@layout/fragment_blank">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_quickSettingsFragment"
+            app:destination="@id/quickSettingsFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_lockScreenFragment"
+            app:destination="@id/lockScreenFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_themingFragment"
+            app:destination="@id/themingFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_statusbarFragment"
+            app:destination="@id/statusbarFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_navFragment"
+            app:destination="@id/navFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_dialerFragment"
+            app:destination="@id/dialerFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_hotSpotFragment"
+            app:destination="@id/hotSpotFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_packageManagerFragment"
+            app:destination="@id/packageManagerFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_miscFragment"
+            app:destination="@id/miscFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_ownPrefsFragment"
+            app:destination="@id/ownPrefsFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_hooksFragment"
+            app:destination="@id/hooksFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_QSTileQtyFragment"
+            app:destination="@id/QSTileQtyFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_networkFragment"
+            app:destination="@id/networkFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_SBCFragment2"
+            app:destination="@id/SBCFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_SBBBFragment"
+            app:destination="@id/SBBBFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_SBBIconFragment"
+            app:destination="@id/SBBIconFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_threeButtonNavFragment"
+            app:destination="@id/threeButtonNavFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_taskbarNavFragment"
+            app:destination="@id/taskbarNavFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_gestureNavFragment"
+            app:destination="@id/gestureNavFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_physicalButtonRemapFragment"
+            app:destination="@id/physicalButtonRemapFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_networkStatFragment"
+            app:destination="@id/networkStatFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_headerFragment"
+            app:destination="@id/headerFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_sleepOnFlatFragment"
+            app:destination="@id/sleepOnFlatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.UpdateFragment"
+        app:popUpTo="@+id/headerFragment"
+        tools:layout="@layout/update_fragment" />
+    <fragment
+        android:id="@+id/hooksFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.HooksFragment"
+        app:popUpTo="@+id/headerFragment"
+        tools:layout="@layout/fragment_hooks" />
+    <fragment
+        android:id="@+id/ownPrefsFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.OwnPrefsFragment"
+        app:popUpTo="@+id/headerFragment" />
+    <fragment
+        android:id="@+id/quickSettingsFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.QuickSettingsFragment">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_quickSettingsFragment_to_QSTileQtyFragment"
+            app:destination="@id/QSTileQtyFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_quickSettingsFragment_to_networkFragment"
+            app:destination="@id/networkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lockScreenFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.LockScreenFragment" />
+    <fragment
+        android:id="@+id/themingFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.ThemingFragment">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_themingFragment_to_iconPackFragment"
+            app:destination="@id/iconPackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusbarFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.StatusbarFragment">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_statusbarFragment_to_SBCFragment"
+            app:destination="@id/SBCFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_statusbarFragment_to_SBBBFragment"
+            app:destination="@id/SBBBFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_statusbarFragment_to_SBBIconFragment"
+            app:destination="@id/SBBIconFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_statusbarFragment_to_networkFragment"
+            app:destination="@id/networkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.NavFragment">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_navFragment_to_threeButtonNavFragment"
+            app:destination="@id/threeButtonNavFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_navFragment_to_gestureNavFragment"
+            app:destination="@id/gestureNavFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_navFragment_to_taskbarNavFragment"
+            app:destination="@id/taskbarNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialerFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.DialerFragment" />
+    <fragment
+        android:id="@+id/hotSpotFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.HotSpotFragment" />
+    <fragment
+        android:id="@+id/packageManagerFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.PackageManagerFragment" />
+    <fragment
+        android:id="@+id/miscFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.MiscFragment">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_miscFragment_to_physicalButtonRemapFragment"
+            app:destination="@id/physicalButtonRemapFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_miscFragment_to_networkStatFragment"
+            app:destination="@id/networkStatFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_miscFragment_to_sleepOnFlatFragment"
+            app:destination="@id/sleepOnFlatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QSTileQtyFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.QSTileQtyFragment" />
+    <fragment
+        android:id="@+id/networkFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.NetworkFragment" />
+    <fragment
+        android:id="@+id/SBCFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.SBCFragment" />
+    <fragment
+        android:id="@+id/SBBBFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.SBBBFragment" />
+    <fragment
+        android:id="@+id/SBBIconFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.SBBIconFragment" />
+    <fragment
+        android:id="@+id/threeButtonNavFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.ThreeButtonNavFragment" />
+    <fragment
+        android:id="@+id/taskbarNavFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.TaskbarNavFragment" />
+    <fragment
+        android:id="@+id/gestureNavFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.GestureNavFragment" />
+    <fragment
+        android:id="@+id/physicalButtonRemapFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.PhysicalButtonRemapFragment" />
+    <fragment
+        android:id="@+id/networkStatFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.NetworkStatFragment" />
+    <fragment
+        android:id="@+id/sleepOnFlatFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.SleepOnFlatFragment" />
+    <fragment
+        android:id="@+id/iconPackFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.iconpack.IconPackFragment" />
+    <fragment
+        android:id="@+id/iconPackListFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.iconpack.IconPackListFragment"
+        tools:layout="@layout/fragment_icon_pack_list" />
+    <fragment
+        android:id="@+id/iconPackCustomizationFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.iconpack.IconPackCustomizationFragment"
+        tools:layout="@layout/fragment_icon_pack_customization" />
+</navigation>

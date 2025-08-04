@@ -1,7 +1,7 @@
 # Kotlin
 -assumenosideeffects class kotlin.jvm.internal.Intrinsics {
-	public static void check*(...);
-	public static void throw*(...);
+    public static void check*(...);
+    public static void throw*(...);
 }
 -assumenosideeffects class java.util.Objects {
     public static ** requireNonNull(...);
@@ -15,7 +15,7 @@
 
 # Xposed
 -keep class de.robv.android.xposed.**
--keep class com.yhc.aospxpert.APEntry
+-keep class com.yhc.aospxpert.XPEntry
 -keepnames class com.yhc.aospxpert.modpacks.**
 -keep class com.yhc.aospxpert.modpacks.** {
     <init>(android.content.Context);
@@ -36,10 +36,6 @@
     public static final ** CREATOR;
 }
 
-# Obfuscation
--repackageclasses ''
--allowaccessmodification
-
 # Root Service
 -keep class com.yhc.aospxpert.service.RootProviderProxy { *; }
 -keep class com.yhc.aospxpert.IRootProviderProxy { *; }
@@ -57,13 +53,9 @@
     public protected private *;
 }
 
-# Allow obfuscation of non-inner class members (fields and methods), but keep class names
--keep class com.yhc.aospxpert.** { *; }
-
 # Allow optimization and shrinking for all classes
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,*Annotation*,EnclosingMethod,SourceFile,LineNumberTable
--renamesourcefileattribute SourceFile
 
 # Keep all native method names
 -keepclasseswithmembernames class * {

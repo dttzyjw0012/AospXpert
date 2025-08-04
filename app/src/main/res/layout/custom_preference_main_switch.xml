@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:layout_marginHorizontal="@dimen/preference_padding_horizontal"
-	android:layout_marginVertical="16dp"
+	android:layout_marginHorizontal="@dimen/ui_container_margin_side"
+	android:layout_marginVertical="@dimen/preference_padding_vertical"
 	android:background="@drawable/main_switch_background"
+	android:clipToOutline="true"
+	android:foreground="?attr/selectableItemBackgroundBorderless"
 	android:clickable="true"
 	android:focusable="true"
 	android:minHeight="?android:attr/listPreferredItemHeightSmall"
-	android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
-	android:paddingRight="?android:attr/listPreferredItemPaddingRight"
-	tools:ignore="RtlHardcoded">
+	android:paddingHorizontal="@dimen/preference_padding_horizontal"
+	android:paddingVertical="@dimen/preference_padding_vertical">
 
 	<ImageView
 		android:id="@android:id/icon"
@@ -29,21 +29,17 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_centerVertical="true"
-		android:layout_marginVertical="28dp"
 		android:layout_toStartOf="@android:id/widget_frame"
 		android:layout_toEndOf="@android:id/icon"
 		android:orientation="vertical">
 
 		<com.google.android.material.textview.MaterialTextView
 			android:id="@android:id/title"
-			style="@style/TextAppearance.Material3.TitleMedium"
+			style="@style/TextAppearance.Preference.Title"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:fontFamily="sans-serif"
-			android:lineHeight="28sp"
 			android:textColor="?attr/colorOnPrimaryContainer"
-			android:textSize="20sp"
-			android:textStyle="normal" />
+			android:textStyle="bold" />
 
 	</RelativeLayout>
 

@@ -1,0 +1,7 @@
+{
+    "version": "canary-427",
+    "versionCode": 427,
+    "zipUrl_Xposed": "https://github.com/siavash79/AospXpert/releases/download/canary_builds/AospXpert.zip",
+    "zipUrl_Full": "https://github.com/siavash79/AospXpert/releases/download/canary_builds/AospXpert.zip",
+    "changelog": "https://raw.githubusercontent.com/siavash79/AospXpert/canary/CanaryChangelog.md"
+}

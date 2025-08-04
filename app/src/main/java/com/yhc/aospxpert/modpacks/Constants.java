@@ -29,6 +29,7 @@ public final class Constants {
 	public static final String SETTINGS_PACKAGE = "com.android.settings";
 	public static final String DIALER_PACKAGE = "com.google.android.dialer";
 	public static final String KSU_PACKAGE = "me.weishu.kernelsu";
+	public static final String KSU_NEXT_PACKAGE = "com.rifsxd.ksunext";
 
 	public static final String PX_ROOT_EXTRA = "EXTRA_PX_ROOT";
 

@@ -20,8 +20,9 @@ public class NotificationIconContainerOverride {
 	private static final int MAX_DOTS = 1;
 	private static final int NO_VALUE = Integer.MIN_VALUE;
 	public static final int LEGACY_MAX_ICONS = 4;
+	private static Class<?> xTranslationFieldType;
 
-	public static void calculateIconXTranslations(XC_MethodHook.MethodHookParam param) { //A13
+	public static void calculateIconXTranslations(XC_MethodHook.MethodHookParam param) throws Throwable {//A13
 		ViewGroup thisObject = (ViewGroup) param.thisObject;
 
 		String xTranslationField = null;
@@ -44,6 +45,8 @@ public class NotificationIconContainerOverride {
 				xTranslationField = (findFieldIfExists(iconState.getClass().getSuperclass(), "mXTranslation") == null)
 						? "xTranslation"
 						: "mXTranslation";
+					xTranslationFieldType = iconState.getClass().getField(xTranslationField).getType();
+
 			}
 
 			if (getFloatField(iconState, "iconAppearAmount") == 1.0f) {
@@ -141,7 +144,11 @@ public class NotificationIconContainerOverride {
 			for (int i = 0; i < childCount; i++) {
 				View view = thisObject.getChildAt(i);
 				Object iconState = callMethod(mIconStates, "get", view);
-				setObjectField(iconState, xTranslationField, thisObject.getWidth() - getIntField(iconState, xTranslationField) - view.getWidth());
+				int xTranslation = xTranslationFieldType.equals(float.class)
+						? Math.round(getFloatField(iconState, xTranslationField))
+						: getIntField(iconState, xTranslationField);
+
+				setObjectField(iconState, xTranslationField, thisObject.getWidth() - xTranslation - view.getWidth());
 			}
 		}
 		Object mIsolatedIcon = getObjectField(thisObject, "mIsolatedIcon");

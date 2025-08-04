@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_tablet_main"
+    app:startDestination="@id/headerFragment">
+    <fragment
+        android:id="@+id/headerFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.HeaderFragment">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_headerFragment_to_searchPreferenceFragment"
+            app:destination="@id/searchPreferenceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.UpdateFragment"
+        app:popUpTo="@+id/headerFragment"
+        tools:layout="@layout/update_fragment" />
+    <fragment
+        android:id="@+id/hooksFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.HooksFragment"
+        app:popUpTo="@+id/headerFragment"
+        tools:layout="@layout/fragment_hooks" />
+    <fragment
+        android:id="@+id/ownPrefsFragment"
+        android:name="com.yhc.aospxpert.ui.fragments.OwnPrefsFragment"
+        app:popUpTo="@+id/headerFragment" />
+    <fragment
+        android:id="@+id/searchPreferenceFragment"
+        android:name="com.yhc.aospxpert.ui.preferences.preferencesearch.SearchPreferenceFragment" />
+</navigation>

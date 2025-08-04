@@ -201,7 +201,7 @@ public class GestureNavbarManager extends XposedModPack {
 				.after("onDraw")
 				.run(param -> {
 					if (mRadius.get() > 0) {
-						setObjectField(param.thisObject, "mRadius", mRadius);
+						setObjectField(param.thisObject, "mRadius", mRadius.get() * 1f);
 					}
 				});
 

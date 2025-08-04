@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".ui.fragments.BlankFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hyphenationFrequency="normalFast"
+        android:lineBreakWordStyle="phrase"
+        android:maxLines="4"
+        android:text="@string/nothing_to_show"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="?attr/colorOnSurface" />
+
+</LinearLayout>

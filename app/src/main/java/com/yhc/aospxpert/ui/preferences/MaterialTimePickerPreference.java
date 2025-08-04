@@ -5,6 +5,9 @@ package com.yhc.aospxpert.ui.preferences;
  * Credits: etidoUP
  */
 
+import static com.yhc.aospxpert.ui.preferences.Utils.setBackgroundResource;
+import static com.yhc.aospxpert.ui.preferences.Utils.setFirstAndLastItemMargin;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.text.format.DateFormat;
@@ -62,6 +65,9 @@ public class MaterialTimePickerPreference extends Preference {
 		super.onBindViewHolder(holder);
 		TextView timeTextView = (TextView) holder.findViewById(R.id.time_stamp);
 		timeTextView.setText(timeValue);
+
+		setFirstAndLastItemMargin(holder);
+		setBackgroundResource(this, holder);
 	}
 
 	@Override

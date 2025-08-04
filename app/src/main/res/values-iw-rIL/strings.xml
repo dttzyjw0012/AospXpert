@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--General strings-->
-    <string name="app_themed_icon_title">הפעל סמל אפליקציה חלופי עם ערכות נושא של AOSP Xpert</string>
+    <string name="app_themed_icon_title">הפעל סמל אפליקציה חלופי עם ערכות נושא של AOSP Mods</string>
     <string name="xposed_desc">Customizations for Google Pixel devices</string>
     <string name="volume_tile_title">עוצמת קול של מדיה</string>
     <string name="app_switch_tile_title">החלף פרופיל אפליקציה</string>
@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">הערוץ הזה מציג התראות על העדכונים האחרונים.</string>
     <string name="new_update_title">קיימים עדכונים זמינים</string>
     <string name="new_update_desc">גרסה חדשה של AospXpert זמינה</string>
+    <string name="skip_this_update">Skip this update</string>
     <string name="browser_not_found">הדפדפן לא נמצא</string>
     <string name="settings_general_section_title">הגדרות כלליות</string>
     <string name="settings_update_section_title">עדכון</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">פתח דף ויקי</string>
     <string name="crowdin_title">Translate to your language</string>
     <string name="crowdin_summary">Help us in translating %s into your own language</string>
+    <string name="nothing_to_show">Nothing to show</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">מסך נעילה</string>
     <string name="lockscreen_header_summary">Change your keyguard to match your taste</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Hotspot connectivity issues workaround</string>
     <string name="hotspot_disable_approval_summary">Allow non-\"pre-approved\" clients to connect seamlessly</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Depth effect wallpaper</string>
     <string name="depth_wallpaper_title">Depth effect wallpaper</string>
     <string name="depth_wallpaper_summary">Dynamically integrate wallpaper\'s foreground with the clock</string>
     <string name="depth_wallpaper_ai_model_title">Preferred AI model</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">השבת את הנפשת הרמז לביטול הנעילה</string>
     <string name="ls_general_options">אפשרויות מסך נעילה</string>
     <string name="hide_avatar_title">הסרת דמות משתמש (מצב ריבוי משתמשים)</string>
+    <string name="fingerprint_options">Fingerprint</string>
     <string name="transparent_fingerprint_circle">הסר את עיגול הרקע מטביעת האצבע מתחת לתצוגה</string>
     <string name="transparent_fingerprint_circle_off">מעגל סביב סמל טביעת האצבע פעיל</string>
     <string name="transparent_fingerprint_circle_on">מעגל סביב סמל טביעת האצבע יוסתר</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">היום</string>
     <string name="nt_stat_mode_week">השבוע הנוכחי</string>
     <string name="nt_stat_mode_month">החודש הנוכחי</string>
+    <string name="sb_ignored_icons_category">Status Bar ignored icons</string>
+    <string name="sb_ignored_icons">Status Bar</string>
+    <string name="sb_ignored_icons_statusbar">Select which icon will be hidden in statusbar</string>
+    <string name="sb_kg_ignored_icons">Lockscreen</string>
+    <string name="sb_ignored_icons_kg">Select which icon will be hidden in keyguard statusbar</string>
+    <string name="sb_qs_ignored_icons">Quick Settings</string>
+    <string name="sb_ignored_icons_qs">Select which icon will be hidden in quick settings</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">No Calling</string>
+    <string name="status_bar_call_strength">Call Strength</string>
+    <string name="status_bar_alarm_clock">Alarm Clock</string>
+    <string name="status_bar_rotate">Auto Rotate</string>
+    <string name="status_bar_headset">Headset Connected</string>
+    <string name="status_bar_data_saver">Data Saver</string>
+    <string name="status_bar_ime">Input Method</string>
+    <string name="status_bar_sync_failing">Sync Failing</string>
+    <string name="status_bar_sync_active">Sync Active</string>
+    <string name="status_bar_nfc">NFC Active</string>
+    <string name="status_bar_tty">TTY Mode</string>
+    <string name="status_bar_speakerphone">Speakerphone On</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Data Connection</string>
+    <string name="status_bar_phone_evdo_signal">EVDO Signal</string>
+    <string name="status_bar_phone_signal">Phone Signal</string>
+    <string name="status_bar_secure">Secure Mode</string>
+    <string name="status_bar_managed_profile">Managed Profile</string>
+    <string name="status_bar_connected_display">Connected Display</string>
+    <string name="status_bar_vpn">VPN Active</string>
+    <string name="status_bar_bluetooth">Bluetooth Connected</string>
+    <string name="status_bar_camera">Camera In Use</string>
+    <string name="status_bar_microphone">Microphone In Use</string>
+    <string name="status_bar_location">Location Active</string>
+    <string name="status_bar_mute">Muted</string>
+    <string name="status_bar_volume">Volume Level</string>
+    <string name="status_bar_zen">Do Not Disturb</string>
+    <string name="status_bar_screen_record">Screen Recording</string>
+    <string name="status_bar_cast">Casting</string>
+    <string name="status_bar_ethernet">Ethernet Connected</string>
+    <string name="status_bar_oem_satellite">Satellite Connection</string>
+    <string name="status_bar_wifi">Wi-Fi Connected</string>
+    <string name="status_bar_hotspot">Hotspot Active</string>
+    <string name="status_bar_mobile">Mobile Data</string>
+    <string name="status_bar_airplane">Airplane Mode</string>
+    <string name="status_bar_battery">Battery Level</string>
+    <string name="status_bar_sensors_off">Sensors Off</string>
+    <string name="status_bar_clock">Clock</string>
     <string name="sunday">יוֹם רִאשׁוֹן</string>
     <string name="monday">יוֹם שֵׁנִי</string>
     <string name="tuesday">יוֹם שְׁלִישִׁי</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">רוחב בהשוואה לגודל סטנדרטי</string>
     <string name="gesture_nav_pill_height_title">גובה בהשוואה לגודל סטנדרטי</string>
     <string name="threebutton_header_title">ניווט באמצעות 3 לחצנים</string>
+    <string name="taskbar_header_title">Taskbar navigation</string>
     <string name="modify_3button_title">שנה את סדר הכפתורים</string>
     <string name="three_button_left_title">כפתור שמאל</string>
     <string name="three_button_center_title">כפתור מרכז</string>
     <string name="three_button_right_title">כפתור ימני</string>
     <string name="hide_navbar_title">הסתר את סרגל הניווט</string>
-    <string name="taskbar_as_recents_title">המר את שורת המשימות לשורת האחרונה</string>
+    <string name="taskbar_as_recents_title">Convert Taskbar to AospXpert recents bar</string>
+    <string name="taskbar_hide_allapps_title">Hide All apps button</string>
+    <string name="taskbar_enable_google_recents">Enable Android recents on the Taskbar</string>
     <string name="taskbar_height_title">גובה שורת המשימות</string>
     <string name="taskbar_radius_title">עקומת פינת שורת המשימות</string>
     <string name="colorpill">גלולת מחוות בצבע מבטא</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">כוח מופעל</string>
     <string name="taskbar_force_disable_title">כפה מושבת</string>
     <string name="taskbar_transient_title">הסתרה אוטומטית</string>
+    <string name="taskbar_on_launcher_title">Show on home</string>
     <string name="remap_physical_buttons_title">Remap physical buttons</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">עוקף את בדיקת חתימת החבילה</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">יתעלם גם כפתור צף מסיבוב ידני</string>
     <string name="force_no_cutout">התעלם מגזרת המצלמה</string>
     <string name="clear_all_reposition_title">הוסף לחצן \'ניקוי הכל\', נגיש לעמוד האחרון</string>
-    <string name="force_themed_icons_title">Auto-generate missing themed icons (Pixel launcher only)</string>
-    <string name="reapply_themed_config">הפעל מחדש סמלים עם נושא ליישום</string>
+    <string name="force_themed_icons_title">Auto-generate missing themed icons</string>
+    <string name="force_themed_icons_summary">Pixel launcher only</string>
     <string name="volume_button_step_title">צעדי עוצמת הקול (0 עד 100%)</string>
     <string name="display_resolution_switch_title">Modify display resolution</string>
     <string name="display_resolution_switch_summary">Before enabling this, make sure to reset all display size/dpi changes to default</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">בזמן שהמסך כבוי…</string>
     <string name="custom_themed_icons_title">סמלים מותאמים אישית</string>
     <string name="px_in_settings_title">Add AospXpert to settings items</string>
+    <string name="advanced_power_menu_title">Advanced power menu</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">לחץ לחיצה ארוכה על שורת המצב כדי להחליף פרופיל</string>
     <string name="statusbar_app_switch_icon">הצג סמל בשורת המצב כאשר המעבר זמין</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Unlocked for all apps via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Enjoy!</string>
+    <string name="settings_cloned_apps_active">Unlocked for all apps via <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Enjoy!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Error fetching charging data</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloading Files</string>
     <string name="assets_download_body">Downloading companion files</string>
+    <string name="assets_download_size_body">Progress: %s</string>
     <string name="update_notification_title">העדכון הורד</string>
     <string name="update_notification_text">הקש כאן כדי להתקין</string>
     <string name="download_failed">הורדת העדכון נכשלה</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">החלף סניף</string>
     <string name="reinstall_word">התקן מחדש</string>
     <string name="changelog_title">יומן שינויים</string>
-    <string name="own_prefs_header">הגדרות AOSPXpert</string>
+    <string name="own_prefs_header">הגדרות AOSPMods</string>
     <string name="language_title">שפה</string>
     <string name="toggle_dark_apply">(החלף ערכת נושא כהה ליישום)</string>
     <string name="gesture_nav_extra_cat">מחוות סרגל ניווט נוספות</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
     <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Advanced…</string>
+    <string name="reboot_bootloader_title">Reboot to Bootloader</string>
+    <string name="soft_reboot_title">Soft Reboot</string>
+    <string name="restart_systemui_title">Restart SystemUI</string>
 </resources>

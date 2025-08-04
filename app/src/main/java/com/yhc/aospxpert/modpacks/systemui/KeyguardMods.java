@@ -23,6 +23,7 @@ import android.graphics.ColorFilter;
 import android.graphics.Outline;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.util.TypedValue;
 import android.view.View;
@@ -120,6 +121,7 @@ public class KeyguardMods extends XposedModPack {
 	private LinearLayout mComposeSmartSpaceContainer;
 	//endregion
 
+	private static boolean AnimateFlashlight = false;
 
 	public KeyguardMods(Context context) {
 		super(context);
@@ -153,6 +155,7 @@ public class KeyguardMods extends XposedModPack {
 
 		transparentBGcolor = Xprefs.getBoolean("KeyguardBottomButtonsTransparent", false);
 
+		AnimateFlashlight = Xprefs.getBoolean("AnimateFlashlight", false);
 
 		if (Key.length > 0) {
 			switch (Key[0]) {
@@ -185,7 +188,7 @@ public class KeyguardMods extends XposedModPack {
 	@Override
 	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
 		ReflectedClass CarrierTextControllerClass = ReflectedClass.of("com.android.keyguard.CarrierTextController");
-		ReflectedClass KeyguardClockSwitchClass = ReflectedClass.of("com.android.keyguard.KeyguardClockSwitch");
+		ReflectedClass KeyguardClockSwitchClass = ReflectedClass.ofIfPossible("com.android.keyguard.KeyguardClockSwitch");
 		ReflectedClass KeyguardIndicationControllerClass = ReflectedClass.of("com.android.systemui.statusbar.KeyguardIndicationController");
 		ReflectedClass ScrimControllerClass = ReflectedClass.of("com.android.systemui.statusbar.phone.ScrimController");
 		ReflectedClass ScrimStateEnum = ReflectedClass.of("com.android.systemui.statusbar.phone.ScrimState");
@@ -201,10 +204,18 @@ public class KeyguardMods extends XposedModPack {
 		ReflectedClass AmbientDisplayConfigurationClass = ReflectedClass.of("android.hardware.display.AmbientDisplayConfiguration");
 		ReflectedClass AssistManagerClass = ReflectedClass.ofIfPossible("com.android.systemui.assist.AssistManager");
 		ReflectedClass DefaultShortcutsSectionClass = ReflectedClass.ofIfPossible("com.android.systemui.keyguard.ui.view.layout.sections.DefaultShortcutsSection");
+
 		if(AssistManagerClass.getClazz() == null)
 		{
 			AssistManagerClass = ReflectedClass.of("com.google.android.systemui.assist.AssistManagerGoogle");
 		}
+
+		ReflectedClass.of(CameraManager.class)
+				.before("setTorchMode")
+				.run(param -> {
+					SystemUtils.setFlash((Boolean) param.args[1], AnimateFlashlight);
+					param.setResult(null);
+				});
 
 		DefaultShortcutsSectionClass
 				.after("addViews")
@@ -236,7 +247,13 @@ public class KeyguardMods extends XposedModPack {
 						mComposeKGMiddleCustomTextView.setLetterSpacing(.03f);
 						mComposeKGMiddleCustomTextView.setId(View.generateViewId());
 
-						mComposeSmartSpaceContainer = (LinearLayout) getObjectField(param.thisObject, "dateWeatherView");
+						try {
+							mComposeSmartSpaceContainer = (LinearLayout) getObjectField(param.thisObject, "dateView"); //A16
+						}
+						catch (Throwable ignored) {
+							mComposeSmartSpaceContainer = (LinearLayout) getObjectField(param.thisObject, "dateWeatherView"); //A15-
+						}
+
 						mComposeSmartSpaceContainer.setOrientation(LinearLayout.VERTICAL);
 
 						LinearLayout l = new LinearLayout(mContext);
@@ -619,7 +636,7 @@ public class KeyguardMods extends XposedModPack {
 	}
 
 	private void toggleFlash() {
-		SystemUtils.toggleFlash();
+		SystemUtils.toggleFlash(false);
 	}
 
 	private void toggleZen()

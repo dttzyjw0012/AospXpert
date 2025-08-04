@@ -3,7 +3,13 @@ package com.yhc.aospxpert.modpacks.utils;
 import static android.net.ConnectivityManager.TYPE_MOBILE;
 import static android.net.ConnectivityManager.TYPE_WIFI;
 import static android.net.wifi.WifiManager.UNKNOWN_SSID;
+import static java.util.Calendar.DAY_OF_MONTH;
+import static java.util.Calendar.DAY_OF_WEEK;
 import static de.robv.android.xposed.XposedBridge.log;
+import static com.yhc.aospxpert.modpacks.systemui.ThermalProvider.BATTERY;
+import static com.yhc.aospxpert.modpacks.systemui.ThermalProvider.CPU;
+import static com.yhc.aospxpert.modpacks.systemui.ThermalProvider.GPU;
+import static com.yhc.aospxpert.modpacks.systemui.ThermalProvider.SKIN;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -181,21 +187,14 @@ public class StringFormatter {
 	}
 
 	private CharSequence valueOf(String match) {
-		switch (match.substring(0,1))
-		{
-			case "G":
-				return georgianDateOf(match.substring(1));
-			case "H":
-				return hijrahDateOf(match.substring(1));
-			case "P":
-				return persianDateOf(match.substring(1));
-			case "N":
-				return networkStatOf(match.substring(1));
-			case "T":
-				return temperatureOf(match.substring(1));
-			default:
-				return "$" + match;
-		}
+		return switch (match.substring(0, 1)) {
+			case "G" -> georgianDateOf(match.substring(1));
+			case "H" -> hijrahDateOf(match.substring(1));
+			case "P" -> persianDateOf(match.substring(1));
+			case "N" -> networkStatOf(match.substring(1));
+			case "T" -> temperatureOf(match.substring(1));
+			default -> "$" + match;
+		};
 	}
 
 	private CharSequence networkStatOf(String variable) {
@@ -236,17 +235,12 @@ public class StringFormatter {
 	}
 
 	private long getStartTime() {
-		switch (NetStatStartBase)
-		{
-			case NET_STAT_TYPE_DAY:
-				return getStartTime(NetStatsStartTime);
-			case NET_STAT_TYPE_WEEK:
-				return getStartTime(Calendar.DAY_OF_WEEK, NetStatsDayOf);
-			case NET_STAT_TYPE_MONTH:
-				return getStartTime(Calendar.DAY_OF_MONTH, NetStatsDayOf);
-			default:
-				return -1;
-		}
+		return switch (NetStatStartBase) {
+			case NET_STAT_TYPE_DAY -> getStartTime(NetStatsStartTime);
+			case NET_STAT_TYPE_WEEK -> getStartTime(DAY_OF_WEEK, NetStatsDayOf);
+			case NET_STAT_TYPE_MONTH -> getStartTime(DAY_OF_MONTH, NetStatsDayOf);
+			default -> -1;
+		};
 	}
 
 	@SuppressLint("MissingPermission")
@@ -339,15 +333,15 @@ public class StringFormatter {
 
 		switch (dayType)
 		{
-			case Calendar.DAY_OF_MONTH:
-				startTimeCalendar.set(Calendar.DAY_OF_MONTH, dayOf);
+			case DAY_OF_MONTH:
+				startTimeCalendar.set(DAY_OF_MONTH, dayOf);
 				if(startTimeCalendar.after(Calendar.getInstance()))
 				{
 					startTimeCalendar.add(Calendar.MONTH, -1);
 				}
 				break;
-			case Calendar.DAY_OF_WEEK:
-				startTimeCalendar.set(Calendar.DAY_OF_WEEK, dayOf);
+			case DAY_OF_WEEK:
+				startTimeCalendar.set(DAY_OF_WEEK, dayOf);
 				if(startTimeCalendar.after(Calendar.getInstance()))
 				{
 					startTimeCalendar.add(Calendar.DATE, -7);
@@ -401,26 +395,16 @@ public class StringFormatter {
 
 			nextUpdate *= 1000L;
 
-			int type;
+			//noinspection DataFlowIssue
+			int type = switch (typeStr.toLowerCase()) {
+				case "b" -> BATTERY;
+				case "c" -> CPU;
+				case "g" -> GPU;
+				case "s" -> SKIN;
+				default -> throw new Exception();
+			};
 
 			//noinspection ConstantConditions
-			switch (typeStr.toLowerCase())
-			{
-				case "b":
-					type = ThermalProvider.BATTERY;
-					break;
-				case "c":
-					type = ThermalProvider.CPU;
-					break;
-				case "g":
-					type = ThermalProvider.GPU;
-					break;
-				case "s":
-					type = ThermalProvider.SKIN;
-					break;
-				default:
-					throw new Exception();
-			}
 
 			int temperature = ThermalProvider.getTemperatureMaxInt(type);
 
@@ -467,7 +451,7 @@ public class StringFormatter {
 			return String.copyValueOf(bytes);
 		} catch (Exception ignored) {
 			return "$H" + format;
-		}		
+		}
 	}
 
 	private CharSequence persianDateOf(String format) {

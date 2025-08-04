@@ -1,5 +1,8 @@
 package com.yhc.aospxpert.ui.preferences;
 
+import static com.yhc.aospxpert.ui.preferences.Utils.setBackgroundResource;
+import static com.yhc.aospxpert.ui.preferences.Utils.setFirstAndLastItemMargin;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -53,7 +56,9 @@ public class MaterialPrimarySwitchPreference extends MaterialTwoTargetPreference
     @Override
     public void onBindViewHolder(@NonNull PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+
         mSwitch = (MaterialSwitch) holder.findViewById(R.id.switchWidget);
+
         if (mSwitch != null) {
             mSwitch.setOnClickListener(v -> {
                 if (mSwitch != null && !mSwitch.isEnabled()) {
@@ -66,14 +71,15 @@ public class MaterialPrimarySwitchPreference extends MaterialTwoTargetPreference
             });
 
             // Consumes move events to ignore drag actions.
-            mSwitch.setOnTouchListener((v, event) -> {
-                return event.getActionMasked() == MotionEvent.ACTION_MOVE;
-            });
+            mSwitch.setOnTouchListener((v, event) -> event.getActionMasked() == MotionEvent.ACTION_MOVE);
 
             mSwitch.setContentDescription(getTitle());
             mSwitch.setChecked(mChecked);
             mSwitch.setEnabled(mEnableSwitch);
         }
+
+        setFirstAndLastItemMargin(holder);
+        setBackgroundResource(this, holder);
     }
 
     public boolean isChecked() {
