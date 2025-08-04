@@ -1,7 +1,0 @@
-{
-    "version": "4.1.1",
-    "versionCode": 424,
-    "changelog": "https://raw.githubusercontent.com/siavash79/AospXpert/stable/MagiskChangelog.md",
-    "zipUrl_Full": "https://github.com/siavash79/AospXpert/releases/download/v4.1.1/AospXpert.zip",
-    "zipUrl_Xposed": "https://github.com/siavash79/AospXpert/releases/download/v4.1.1/AospXpert.zip"
-}

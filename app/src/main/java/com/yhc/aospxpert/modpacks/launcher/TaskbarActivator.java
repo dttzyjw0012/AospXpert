@@ -30,7 +30,9 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Consumer;
+import java.util.regex.Pattern;
 
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
@@ -41,7 +43,6 @@ import com.yhc.aospxpert.modpacks.XposedModPack;
 import com.yhc.aospxpert.modpacks.utils.SystemUtils;
 import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass;
 import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass.ReflectionConsumer;
-import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectionTools;
 
 /**
  * @noinspection RedundantCast, JavaReflectionMemberAccess
@@ -64,17 +65,23 @@ public class TaskbarActivator extends XposedModPack {
 	private Object recentTasksList;
 	private static boolean TaskbarAsRecents = false;
 	private static boolean TaskbarTransient = false;
+	private static boolean TaskbarOnLauncher = false;
+	private static boolean GoogleRecents = false;
 	private boolean refreshing = false;
 	private static float taskbarHeightOverride = 1f;
 	private static float TaskbarRadiusOverride = 1f;
 
-	private static boolean TaskbarHideAllAppsIcon = false;
 	private Object model;
 	String mTasksFieldName = null; // in case the code was obfuscated
 	boolean mTasksIsList = false;
 	private Object TaskbarModelCallbacks;
 	private int mItemsLength = 0;
 	private int mUpdateHotseatParams = 2;
+	private String mUpdateItemsMethodName = "updateHotseatItems";
+
+	private boolean ThreeButtonLayoutMod;
+	private String ThreeButtonLeft, ThreeButtonCenter, ThreeButtonRight;
+	private boolean mIsA16Plus = false;
 
 	public TaskbarActivator(Context context) {
 		super(context);
@@ -83,13 +90,42 @@ public class TaskbarActivator extends XposedModPack {
 	@Override
 	public void updatePrefs(String... Key) {
 
+		//3button nav has moved to taskbar since 15QPR2
+		ThreeButtonLayoutMod = Xprefs.getBoolean("ThreeButtonLayoutMod", false);
+		ThreeButtonLeft = Xprefs.getString("ThreeButtonLeft", "back").replace("recent", "recent_apps");
+		ThreeButtonCenter = Xprefs.getString("ThreeButtonCenter", "home").replace("recent", "recent_apps");
+		ThreeButtonRight = Xprefs.getString("ThreeButtonRight", "recent").replace("recent", "recent_apps");
+
+		boolean noToggle = false;
+		try
+		{
+			//noinspection ResultOfMethodCallIgnored
+			Set.of(ThreeButtonLeft, ThreeButtonCenter, ThreeButtonRight);
+		}
+		catch (Throwable ignored){
+			noToggle = true;
+			ThreeButtonLayoutMod = false;
+		}
+
+		List<String> darkToggleKeys = Arrays.asList(
+				"ThreeButtonLayoutMod",
+				"ThreeButtonLeft",
+				"ThreeButtonCenter",
+				"ThreeButtonRight");
+
+		if (Key.length > 0 && !noToggle && darkToggleKeys.contains(Key[0])) {
+			SystemUtils.doubleToggleDarkMode();
+		}
+
+
 		List<String> restartKeys = Arrays.asList(
 				"taskBarMode",
 				"TaskbarAsRecents",
 				"TaskbarTransient",
 				"taskbarHeightOverride",
 				"TaskbarRadiusOverride",
-				"TaskbarHideAllAppsIcon");
+				"TaskbarHideAllAppsIcon",
+				"EnableGoogleRecents");
 
 		if (Key.length > 0 && restartKeys.contains(Key[0])) {
 			SystemUtils.killSelf();
@@ -98,7 +134,6 @@ public class TaskbarActivator extends XposedModPack {
 		taskbarMode = Integer.parseInt(Xprefs.getString("taskBarMode", String.valueOf(TASKBAR_DEFAULT)));
 
 		TaskbarAsRecents = Xprefs.getBoolean("TaskbarAsRecents", false);
-		TaskbarHideAllAppsIcon = true;//Xprefs.getBoolean("TaskbarHideAllAppsIcon", false);
 
 		TaskbarRadiusOverride = Xprefs.getSliderFloat("TaskbarRadiusOverride", 1f);
 
@@ -108,6 +143,9 @@ public class TaskbarActivator extends XposedModPack {
 
 		TaskbarTransient = Xprefs.getBoolean("TaskbarTransient", false);
 
+		TaskbarOnLauncher = Xprefs.getBoolean("TaskbarOnLauncher", false);
+
+		GoogleRecents = Xprefs.getBoolean("EnableGoogleRecents", false);
 	}
 
 	@Override
@@ -118,21 +156,37 @@ public class TaskbarActivator extends XposedModPack {
 	@SuppressLint("DiscouragedApi")
 	@Override
 	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
-
-		ReflectedClass RecentTasksListClass = ReflectedClass.of("com.android.quickstep.RecentTasksList");
-		ReflectedClass AppInfoClass = ReflectedClass.of("com.android.launcher3.model.data.AppInfo");
-		ReflectedClass TaskbarViewClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarView");
-		ReflectedClass ItemInfoClass = ReflectedClass.of("com.android.launcher3.model.data.ItemInfo");
-		ReflectedClass TaskbarModelCallbacksClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarModelCallbacks");
 		ReflectedClass DeviceProfileClass = ReflectedClass.of("com.android.launcher3.DeviceProfile");
-		ReflectedClass ActivityManagerWrapperClass = ReflectedClass.of("com.android.systemui.shared.system.ActivityManagerWrapper");
 		ReflectedClass TaskbarActivityContextClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarActivityContext");
 		ReflectedClass LauncherModelClass = ReflectedClass.of("com.android.launcher3.LauncherModel");
-		ReflectedClass BaseDraggingActivityClass = ReflectedClass.of("com.android.launcher3.BaseDraggingActivity");
+		ReflectedClass BaseActivityClass = ReflectedClass.of("com.android.launcher3.BaseActivity");
 		ReflectedClass DisplayControllerClass = ReflectedClass.of("com.android.launcher3.util.DisplayController");
 		ReflectedClass DisplayControllerInfoClass = ReflectedClass.of("com.android.launcher3.util.DisplayController$Info");
-		Method commitItemsToUIMethod = findMethodExact(TaskbarModelCallbacksClass.getClazz(), "commitItemsToUI");
+		ReflectedClass StateControllerClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarLauncherStateController");
+		ReflectedClass AbstractNavButtonLayoutterClass = ReflectedClass.of("com.android.launcher3.taskbar.navbutton.AbstractNavButtonLayoutter");
+		ReflectedClass RecentAppsControllerClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarRecentAppsController");
 
+		mIsA16Plus = !RecentAppsControllerClass.findMethods(Pattern.compile("computeShownRecentTasks")).isEmpty();
+
+		//3 button nav order on A15+
+		AbstractNavButtonLayoutterClass
+				.afterConstruction()
+				.run(param -> {
+					if(!ThreeButtonLayoutMod) return;
+
+					ViewGroup navButtonContainer = (ViewGroup) getObjectField(param.thisObject, "navButtonContainer");
+					Resources res = mContext.getResources();
+
+					int backButtonId = res.getIdentifier( ThreeButtonLeft, "id", mContext.getPackageName());
+					int centerButtonId = res.getIdentifier( ThreeButtonCenter, "id", mContext.getPackageName());
+					int rightButtonId = res.getIdentifier( ThreeButtonRight, "id", mContext.getPackageName());
+
+					setObjectField(param.thisObject, "backButton", navButtonContainer.findViewById(backButtonId));
+					setObjectField(param.thisObject, "homeButton", navButtonContainer.findViewById(centerButtonId));
+					setObjectField(param.thisObject, "recentsButton", navButtonContainer.findViewById(rightButtonId));
+				});
+
+		//enable taskbar
 		DisplayControllerInfoClass
 				.before("isTablet")
 				.run(param -> {
@@ -141,6 +195,7 @@ public class TaskbarActivator extends XposedModPack {
 					param.setResult(taskbarMode == TASKBAR_ON);
 				});
 
+		//auto hide
 		DisplayControllerClass
 				.before("isTransientTaskbar")
 				.run(param -> {
@@ -148,7 +203,11 @@ public class TaskbarActivator extends XposedModPack {
 						param.setResult(TaskbarTransient);
 				});
 
-		BaseDraggingActivityClass
+		LauncherModelClass
+				.afterConstruction()
+				.run(param -> model = param.thisObject);
+
+		BaseActivityClass
 				.after("onResume")
 				.run(param -> {
 					if (taskbarMode == TASKBAR_ON && model != null) {
@@ -156,12 +215,17 @@ public class TaskbarActivator extends XposedModPack {
 					}
 				});
 
-		LauncherModelClass
-				.afterConstruction()
-				.run(param -> model = param.thisObject);
+		//hide on home screen
+		StateControllerClass
+				.before("isInLauncher")
+				.run(param -> {
+					if (TaskbarOnLauncher) {
+						param.setResult(false);
+					}
+				});
+
 
 		//region taskbar corner radius
-
 		ReflectionConsumer cornerRadiusConsumer = param -> {
 			if (taskbarMode == TASKBAR_ON && TaskbarRadiusOverride != 1f) {
 				param.setResult(
@@ -173,21 +237,7 @@ public class TaskbarActivator extends XposedModPack {
 		TaskbarActivityContextClass.after("getRightCornerRadius").run(cornerRadiusConsumer);
 		//endregion
 
-		//region recentbar
-		UID = (int) callMethod(Process.myUserHandle(), "getIdentifier");
-
-		View.OnClickListener listener = view -> {
-			try {
-				int id = (int) getAdditionalInstanceField(view.getTag(), "taskId");
-				callMethod(
-						getStaticObjectField(ActivityManagerWrapperClass.getClazz(), "sInstance"),
-						"startActivityFromRecents",
-						id,
-						null);
-			} catch (Throwable ignored) {
-			}
-		};
-
+		//region taskbar size
 		String taskbarHeightField = findFieldIfExists(DeviceProfileClass.getClazz(), "taskbarSize") != null
 				? "taskbarSize" //pre 13 QPR3
 				: "taskbarHeight"; //13 QPR3
@@ -195,7 +245,9 @@ public class TaskbarActivator extends XposedModPack {
 		String stashedTaskbarHeightField = findFieldIfExists(DeviceProfileClass.getClazz(), "stashedTaskbarSize") != null
 				? "stashedTaskbarSize" //pre 13 QPR3
 				: "stashedTaskbarHeight"; //13 QPR3
+		//endregion
 
+		//region recentbar
 		DeviceProfileClass
 				.afterConstruction()
 				.run(param -> {
@@ -206,10 +258,7 @@ public class TaskbarActivator extends XposedModPack {
 //				setObjectField(param.thisObject, "isTaskbarPresent", taskbarEnabled);
 
 					if (taskbarEnabled) {
-						numShownHotseatIcons = getIntField(param.thisObject, "numShownHotseatIcons") +
-								(TaskbarHideAllAppsIcon
-										? 1
-										: 0);
+						numShownHotseatIcons = getIntField(param.thisObject, "numShownHotseatIcons");
 
 						Resources res = mContext.getResources();
 
@@ -221,6 +270,60 @@ public class TaskbarActivator extends XposedModPack {
 						}
 					}
 				});
+
+
+		RecentAppsControllerClass.afterConstruction().run(param -> {
+			if (GoogleRecents || (taskbarMode == TASKBAR_ON && TaskbarAsRecents && mIsA16Plus)) { //on 16+ we use the builtin recent tasks
+				RecentAppsControllerClass.findMethods(
+						Pattern.compile("setCanShowRecentApps")).stream().findFirst().get()
+						.invoke(param.thisObject, true);
+			}
+		});
+
+		//A16+
+		RecentAppsControllerClass
+				.before("computeShownRecentTasks")
+				.run(param -> {
+					if(taskbarMode == TASKBAR_ON && TaskbarAsRecents) {
+						List<?> allRecentTasks = (List<?>) getObjectField(param.thisObject, "allRecentTasks");
+
+						if (allRecentTasks.size() < 2) //there's nothing to show as recent
+						{
+							return;
+						}
+
+						List<?> shownHotseatItems = (List<?>) getObjectField(param.thisObject, "shownHotseatItems");
+						if (!shownHotseatItems.isEmpty()) {
+							shownHotseatItems.clear();
+						}
+
+						//we control the list ourselves to remove all suggestions
+						param.setResult(allRecentTasks.subList(Math.max(0, allRecentTasks.size() - numShownHotseatIcons - 1), Math.max(allRecentTasks.size() - 1, 0)));
+					}
+				});
+
+		if(mIsA16Plus) return; //from this point on, only A15- devices will be targeted
+
+		ReflectedClass RecentTasksListClass = ReflectedClass.of("com.android.quickstep.RecentTasksList");
+		ReflectedClass AppInfoClass = ReflectedClass.of("com.android.launcher3.model.data.AppInfo");
+		ReflectedClass TaskbarViewClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarView");
+		ReflectedClass ItemInfoClass = ReflectedClass.of("com.android.launcher3.model.data.ItemInfo");
+		ReflectedClass ActivityManagerWrapperClass = ReflectedClass.of("com.android.systemui.shared.system.ActivityManagerWrapper");
+		ReflectedClass TaskbarModelCallbacksClass = ReflectedClass.of("com.android.launcher3.taskbar.TaskbarModelCallbacks");
+		Method commitItemsToUIMethod = findMethodExact(TaskbarModelCallbacksClass.getClazz(), "commitItemsToUI");
+
+		UID = (int) callMethod(Process.myUserHandle(), "getIdentifier");
+
+		View.OnClickListener listener = view -> {
+			try {
+				int id = (int) getAdditionalInstanceField(view.getTag(), "taskId");
+				callMethod(
+						getStaticObjectField(ActivityManagerWrapperClass.getClazz(), "sInstance"),
+						"startActivityFromRecents",
+						id,
+						null);
+			} catch (Throwable ignored) {}
+		};
 
 		TaskbarViewClass
 				.after("setClickAndLongClickListenersForIcon")
@@ -234,16 +337,7 @@ public class TaskbarActivator extends XposedModPack {
 
 		TaskbarViewClass
 				.afterConstruction()
-				.run(param -> {
-					mTaskBarViews.add((ViewGroup) param.thisObject);
-
-					try { //Since A15QPR1 button is now a container and can't be null anymore. removing it manually only from recents
-						if (taskbarMode == TASKBAR_ON && TaskbarHideAllAppsIcon) {
-							mTaskBarViews.forEach(view -> setObjectField(view, "mAllAppsButton", null));
-						}
-					} catch (Throwable ignored) {
-					}
-				});
+				.run(param -> mTaskBarViews.add((ViewGroup) param.thisObject));
 
 		Method updateHotseatItemsMethod = XposedHelpers.findMethodExact(
 				TaskbarViewClass.getClazz(),
@@ -251,22 +345,10 @@ public class TaskbarActivator extends XposedModPack {
 				"com.android.launcher3.model.data.ItemInfo[]"
 		);
 		mUpdateHotseatParams = updateHotseatItemsMethod == null ? 2 : 1;
-		RecentTasksListClass.afterConstruction().run(param -> recentTasksList = param.thisObject);
 
-		TaskbarViewClass
-				.after("updateHotseatItems")
-				.run(param -> {
-					if(TaskbarAsRecents) {
-						try {
-							View container = (View) getObjectField(param.thisObject, "mAllAppsButtonContainer");
-							ViewGroup taskbarView = (ViewGroup) param.thisObject;
-							taskbarView.removeView(container);
-
-							container = (View) getObjectField(param.thisObject, "mTaskbarDividerContainer");
-							taskbarView.removeView(container);
-						} catch (Throwable ignored) {}
-					}
-				});
+		RecentTasksListClass
+				.afterConstruction()
+				.run(param -> recentTasksList = param.thisObject);
 
 		RecentTasksListClass
 				.before("onRecentTasksChanged")
@@ -299,9 +381,14 @@ public class TaskbarActivator extends XposedModPack {
 								}
 								if (mTasksFieldName == null) {
 									for (Field f : recentTaskList.get(0).getClass().getDeclaredFields()) {
-										if (f.getType().getName().contains("List")) {
-											mTasksFieldName = f.getName();
-											mTasksIsList = true;
+										if (f.getType().getName().contains("List"))
+										{
+											//noinspection unchecked
+											List<Object> list = (List<Object>) f.get(recentTaskList.get(0));
+											if(list != null && findFieldIfExists(list.get(0).getClass(), "isFocused") != null) {
+												mTasksFieldName = f.getName();
+												mTasksIsList = true;
+											}
 										}
 									}
 								}
@@ -350,12 +437,13 @@ public class TaskbarActivator extends XposedModPack {
 
 								if (mUpdateHotseatParams == 2) //A15QPR1
 								{
-									callMethod(taskBarView, "updateHotseatItems", itemInfos, new ArrayList<>());
+									callMethod(taskBarView, mUpdateItemsMethodName, itemInfos, new ArrayList<>());
 								} else { //Older
-									callMethod(taskBarView, "updateHotseatItems", new Object[]{itemInfos});
-							}
+									callMethod(taskBarView, mUpdateItemsMethodName, new Object[]{itemInfos});
+								}
 
-								int startPoint = taskBarView.getChildAt(0).getClass().getName().endsWith("SearchDelegateView") ? 1 : 0;
+								int firstAppIcon = 2;
+								int startPoint = taskBarView.getChildAt(firstAppIcon).getClass().getName().endsWith("SearchDelegateView") ? firstAppIcon + 1 : firstAppIcon;
 
 								for (int i = 0; i < itemInfos.length; i++) {
 									View iconView = taskBarView.getChildAt(i + startPoint);
@@ -364,8 +452,7 @@ public class TaskbarActivator extends XposedModPack {
 										if (getAdditionalInstanceField(iconView, "taskId")
 												.equals(getAdditionalInstanceField(itemInfos[itemInfos.length - i - 1], "taskId")))
 											continue;
-									} catch (Throwable ignored) {
-									}
+									} catch (Throwable ignored) {}
 
 									setAdditionalInstanceField(iconView, "taskId", getAdditionalInstanceField(itemInfos[itemInfos.length - i - 1], "taskId"));
 									callMethod(iconView, "applyFromApplicationInfo", itemInfos[itemInfos.length - i - 1]);
@@ -375,7 +462,6 @@ public class TaskbarActivator extends XposedModPack {
 						refreshing = false;
 					}).start();
 				});
-
 
 		TaskbarModelCallbacksClass
 				.afterConstruction()
@@ -421,8 +507,7 @@ public class TaskbarActivator extends XposedModPack {
 				if (thisOne != null) {
 					try {
 						action.accept(thisOne);
-					} catch (Throwable ignored) {
-					}
+					} catch (Throwable ignored) {}
 				}
 			}
 		}

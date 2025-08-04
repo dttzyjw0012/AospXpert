@@ -285,7 +285,7 @@ public class ScreenGestures extends XposedModPack {
 							turnedByTTT = true;
 
 							callMethod(SystemUtils.PowerManager(), "wakeUp", uptimeMillis());
-							SystemUtils.setFlash(true);
+							SystemUtils.setFlash(true, false);
 							SystemUtils.vibrate(EFFECT_TICK, USAGE_ACCESSIBILITY);
 
 							new Thread(() -> { //if keyguard is dismissed for any reason (face or udfps touch), then:
@@ -333,6 +333,6 @@ public class ScreenGestures extends XposedModPack {
 	private void turnOffTTT() {
 		turnedByTTT = false;
 
-		SystemUtils.setFlash(false);
+		SystemUtils.setFlash(false, false);
 	}
 }

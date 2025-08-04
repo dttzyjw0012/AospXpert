@@ -29,14 +29,13 @@
 		<item name="android:fontFamily">sans-serif</item>
 	</style>
 
-	<style name="Toolbar.SubTitleText.Expanded" parent="TextAppearance.Material3.BodyMedium" />
+	<style name="Toolbar.SubTitleText.Expanded" parent="TextAppearance.Preference.Summary" />
 
 	<style name="TextAppearance.App.ListItem.Title" parent="TextAppearance.AppCompat.Subhead">
 		<item name="android:textSize">19sp</item> <!-- A12 B2: 20sp -->
 	</style>
 
 	<style name="Material3.SeekBar" parent="Widget.AppCompat.SeekBar">
-		<item name="android:progressBackgroundTint">@color/color_accent_0_80_overlay</item>
 		<item name="android:progressTint">?attr/colorPrimary</item>
 		<item name="android:thumbTint">@null</item>
 		<item name="android:layout_width">match_parent</item>
@@ -122,6 +121,15 @@
 		<item name="android:paddingVertical">12dp</item>
 		<item name="android:textSize">15sp</item>
 		<item name="textAllCaps">false</item>
+	</style>
+
+	<style name="TextAppearance.Preference.Title" parent="TextAppearance.Material3.TitleMedium">
+		<item name="lineHeight">20sp</item>
+	</style>
+
+	<style name="TextAppearance.Preference.Summary" parent="TextAppearance.Material3.BodyMedium">
+		<item name="lineHeight">18sp</item>
+		<item name="android:layout_marginTop">2dp</item>
 	</style>
 
 </resources>

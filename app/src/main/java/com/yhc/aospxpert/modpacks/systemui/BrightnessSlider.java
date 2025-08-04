@@ -160,6 +160,16 @@ public class BrightnessSlider extends XposedModPack {
 					}
 				});
 
+		QSPanelClass
+				.after("switchToParent")
+				.run(param -> { //mitigating iconify ruining our slider placement. No other reason
+					try {
+						setQSVisibility();
+						setQQSVisibility();
+					}
+					catch (Throwable ignored){}
+				});
+
 		BrightnessSliderViewClass
 				.after("onFinishInflate")
 				.run(param -> {

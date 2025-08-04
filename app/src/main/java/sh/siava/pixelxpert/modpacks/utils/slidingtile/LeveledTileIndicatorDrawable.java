@@ -1,4 +1,4 @@
-package com.yhc.aospxpert.modpacks.utils;
+package com.yhc.aospxpert.modpacks.utils.slidingtile;
 
 import static android.graphics.Bitmap.createBitmap;
 import static java.lang.Math.round;
@@ -16,12 +16,12 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class TilePercentageDrawable extends Drawable {
+public class LeveledTileIndicatorDrawable extends Drawable {
 	final Drawable shape;
 	private int currentPct = 0;
 
 	@SuppressLint({"UseCompatLoadingForDrawables", "DiscouragedApi"})
-	public TilePercentageDrawable(Context context) {
+	public LeveledTileIndicatorDrawable(Context context) {
 		shape = context.getDrawable(context.getResources().getIdentifier("qs_tile_background_shape", "drawable", context.getPackageName()));
 	}
 
@@ -31,7 +31,7 @@ public class TilePercentageDrawable extends Drawable {
 	}
 
 	@Override
-	public void setBounds(Rect bounds) {
+	public void setBounds(@NonNull Rect bounds) {
 		shape.setBounds(bounds);
 	}
 

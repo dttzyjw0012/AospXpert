@@ -5,6 +5,8 @@
 	android:layout_height="wrap_content"
 	android:clickable="true"
 	android:focusable="true"
+	android:layout_marginHorizontal="@dimen/ui_container_margin_side"
+	android:layout_marginBottom="2dp"
 	android:foreground="?android:selectableItemBackgroundBorderless"
 	android:minHeight="?android:attr/listPreferredItemHeight"
 	android:paddingHorizontal="@dimen/preference_padding_horizontal"
@@ -31,14 +33,14 @@
 
 		<com.google.android.material.textview.MaterialTextView
 			android:id="@android:id/title"
-			style="@style/TextAppearance.Material3.TitleMedium"
+			style="@style/TextAppearance.Preference.Title"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textColor="@color/text_color_primary" />
 
 		<com.google.android.material.textview.MaterialTextView
 			android:id="@android:id/summary"
-			style="@style/TextAppearance.Material3.BodyMedium"
+			style="@style/TextAppearance.Preference.Summary"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_below="@android:id/title"
@@ -46,7 +48,7 @@
 
 		<com.google.android.material.textview.MaterialTextView
 			android:id="@+id/seekbar_value"
-			style="@style/TextAppearance.Material3.BodyMedium"
+			style="@style/TextAppearance.Preference.Summary"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_below="@android:id/summary"

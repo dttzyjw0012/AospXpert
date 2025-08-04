@@ -11,31 +11,15 @@
 
 	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:layout="@layout/custom_preference_category"
-		android:title="@string/ls_general_options"
+		android:title="@string/depth_wallpaper_options"
 		app:iconSpaceReserved="false"
 		search:ignore="true">
-
-		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
-			android:defaultValue="false"
-			android:key="DoubleTapSleepLockscreen"
-			android:summaryOff="@string/general_off"
-			android:summaryOn="@string/general_on"
-			android:title="@string/double_tap_sleep_title"
-			app:iconSpaceReserved="false" />
-
-		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
-			android:defaultValue="false"
-			android:key="holdScreenTorchEnabled"
-			android:summary="@string/so_taptaptorch_summary"
-			android:title="@string/so_taptaptorch_title"
-			app:iconSpaceReserved="false" />
 
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="DWallpaperEnabled"
 			android:summary="@string/depth_wallpaper_summary"
 			android:title="@string/depth_wallpaper_title"
-			app:allowDividerAbove="true"
 			app:iconSpaceReserved="false" />
 
 		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
@@ -63,13 +47,20 @@
 			android:title="@string/depth_wallpaper_aod_title"
 			app:iconSpaceReserved="false" />
 
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
+
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
+		android:layout="@layout/custom_preference_category"
+		android:title="@string/fingerprint_options"
+		app:iconSpaceReserved="false"
+		search:ignore="true">
+
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="fingerprint_circle_hide"
 			android:summaryOff="@string/transparent_fingerprint_circle_off"
 			android:summaryOn="@string/transparent_fingerprint_circle_on"
 			android:title="@string/transparent_fingerprint_circle"
-			app:allowDividerAbove="true"
 			app:iconSpaceReserved="false" />
 
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
@@ -80,13 +71,35 @@
 			android:title="@string/fingerprint_icon"
 			app:iconSpaceReserved="false" />
 
+	</com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory>
+
+	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
+		android:layout="@layout/custom_preference_category"
+		android:title="@string/ls_general_options"
+		app:iconSpaceReserved="false"
+		search:ignore="true">
+
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
+			android:defaultValue="false"
+			android:key="DoubleTapSleepLockscreen"
+			android:summaryOff="@string/general_off"
+			android:summaryOn="@string/general_on"
+			android:title="@string/double_tap_sleep_title"
+			app:iconSpaceReserved="false" />
+
+		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
+			android:defaultValue="false"
+			android:key="holdScreenTorchEnabled"
+			android:summary="@string/so_taptaptorch_summary"
+			android:title="@string/so_taptaptorch_title"
+			app:iconSpaceReserved="false" />
+
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
 			android:defaultValue="false"
 			android:key="DisableUnlockHintAnimation"
 			android:summaryOff="@string/general_off"
 			android:summaryOn="@string/general_on"
 			android:title="@string/disable_unlock_hint_title"
-			app:allowDividerAbove="true"
 			app:iconSpaceReserved="false" />
 
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference

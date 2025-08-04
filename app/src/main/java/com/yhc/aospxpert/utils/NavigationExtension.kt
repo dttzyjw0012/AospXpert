@@ -18,7 +18,7 @@ fun NavController.navigateTo(@IdRes id: Int): Boolean {
 fun NavController.navigateTo(@IdRes id: Int, bundle: Bundle? = null): Boolean {
     val builder = NavOptions.Builder().setLaunchSingleTop(true).setRestoreState(true)
 
-    if (currentDestination!!.parent!!.findNode(id) is ActivityNavigator.Destination) {
+    if (currentDestination?.parent?.findNode(id) is ActivityNavigator.Destination) {
         builder
             .setEnterAnim(R.anim.nav_default_enter_anim)
             .setExitAnim(R.anim.nav_default_exit_anim)

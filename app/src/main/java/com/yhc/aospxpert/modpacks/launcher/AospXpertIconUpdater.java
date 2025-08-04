@@ -30,9 +30,9 @@ public class AospXpertIconUpdater extends XposedModPack {
 	@Override
 	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
 		ReflectedClass LauncherModelClass = ReflectedClass.of("com.android.launcher3.LauncherModel");
-		ReflectedClass BaseDraggingActivityClass = ReflectedClass.of("com.android.launcher3.BaseDraggingActivity");
+		ReflectedClass BaseActivityClass = ReflectedClass.of("com.android.launcher3.BaseActivity");
 
-		BaseDraggingActivityClass
+		BaseActivityClass
 				.after("onResume")
 				.run(param -> {
 					try {

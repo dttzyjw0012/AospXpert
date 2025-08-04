@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">Cette chaîne affiche des notifications sur les dernières mises à jour.</string>
     <string name="new_update_title">Mise à jour disponible</string>
     <string name="new_update_desc">Une nouvelle version de AospXpert est disponible</string>
+    <string name="skip_this_update">Ignorer cette mise à jour</string>
     <string name="browser_not_found">Navigateur introuvable</string>
     <string name="settings_general_section_title">Général</string>
     <string name="settings_update_section_title">Mise à jour</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Ouvrir la page wiki</string>
     <string name="crowdin_title">Traduire dans votre langue</string>
     <string name="crowdin_summary">Aidez-nous à traduire %s dans votre propre langue</string>
+    <string name="nothing_to_show">Nothing to show</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Écran de verrouillage</string>
     <string name="lockscreen_header_summary">Changez votre déverrouillage pour qu\'il corresponde à votre goût</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Solution aux problèmes de connectivité du hotspot</string>
     <string name="hotspot_disable_approval_summary">Permettre aux clients non \"pré-approuvés\" de se connecter de manière transparente</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Effet de profondeur du fond d\'écran</string>
     <string name="depth_wallpaper_title">Effet de profondeur du fond d\'écran</string>
     <string name="depth_wallpaper_summary">Intégration dynamique du fond d\'écran avec l\'horloge</string>
     <string name="depth_wallpaper_ai_model_title">Modèle IA préféré</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Désactiver l\'animation des indices de déverrouillage</string>
     <string name="ls_general_options">Options de l\'écran de verrouillage</string>
     <string name="hide_avatar_title">Retirer l’avatar d’utilisateur (mode utilisateurs multiples)</string>
+    <string name="fingerprint_options">Empreinte digitale</string>
     <string name="transparent_fingerprint_circle">Retirer le disque autour du détecteur d’empreintes</string>
     <string name="transparent_fingerprint_circle_off">Le disque autour du détecteur d’empreintes est visible</string>
     <string name="transparent_fingerprint_circle_on">Le disque autour du détecteur d’empreintes est caché</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Aujourd\'hui</string>
     <string name="nt_stat_mode_week">Cette semaine</string>
     <string name="nt_stat_mode_month">Mois en cours</string>
+    <string name="sb_ignored_icons_category">Icônes de la barre d\'état ignorées</string>
+    <string name="sb_ignored_icons">Barre d\'État</string>
+    <string name="sb_ignored_icons_statusbar">Sélectionnez l\'icône qui sera masquée dans la barre d\'état</string>
+    <string name="sb_kg_ignored_icons">Écran de verrouillage</string>
+    <string name="sb_ignored_icons_kg">Sélectionnez l\'icône qui sera masquée dans la barre d\'état keyguard</string>
+    <string name="sb_qs_ignored_icons">Paramètres rapides</string>
+    <string name="sb_ignored_icons_qs">Sélectionnez l\'icône qui sera masquée dans les paramètres rapides</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">Aucun appel</string>
+    <string name="status_bar_call_strength">Puissance du réseau</string>
+    <string name="status_bar_alarm_clock">Horloge d\'alarme</string>
+    <string name="status_bar_rotate">Rotation automatique</string>
+    <string name="status_bar_headset">Casque connecté</string>
+    <string name="status_bar_data_saver">Économiseur de données</string>
+    <string name="status_bar_ime">Mode de saisie</string>
+    <string name="status_bar_sync_failing">Échec de la synchronisation</string>
+    <string name="status_bar_sync_active">Synchronisation active</string>
+    <string name="status_bar_nfc">NFC Actif</string>
+    <string name="status_bar_tty">Mode TTY</string>
+    <string name="status_bar_speakerphone">Haut-parleur Activé</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Connexion aux données mobiles</string>
+    <string name="status_bar_phone_evdo_signal">Signal EVDO</string>
+    <string name="status_bar_phone_signal">Signal téléphonique</string>
+    <string name="status_bar_secure">Mode sécurisé</string>
+    <string name="status_bar_managed_profile">Gérer votre profil</string>
+    <string name="status_bar_connected_display">Affichage connecté</string>
+    <string name="status_bar_vpn">Réseau virtuel privé (VPN) actif</string>
+    <string name="status_bar_bluetooth">Bluetooth connecté</string>
+    <string name="status_bar_camera">Caméra en cours d\'utilisation</string>
+    <string name="status_bar_microphone">Microphone en cours d\'utilisation</string>
+    <string name="status_bar_location">Localisation active</string>
+    <string name="status_bar_mute">En sourdine</string>
+    <string name="status_bar_volume">Niveau du volume</string>
+    <string name="status_bar_zen">Ne Pas Déranger</string>
+    <string name="status_bar_screen_record">Enregistrement de l\'écran</string>
+    <string name="status_bar_cast">Diffusion</string>
+    <string name="status_bar_ethernet">Ethernet connecté</string>
+    <string name="status_bar_oem_satellite">Connexion Satellite</string>
+    <string name="status_bar_wifi">Wi-Fi connecté</string>
+    <string name="status_bar_hotspot">Point d\'accès actif</string>
+    <string name="status_bar_mobile">Données mobiles</string>
+    <string name="status_bar_airplane">Mode Avion</string>
+    <string name="status_bar_battery">Niveau de la batterie</string>
+    <string name="status_bar_sensors_off">Capteurs désactivés</string>
+    <string name="status_bar_clock">Horloge</string>
     <string name="sunday">Dimanche</string>
     <string name="monday">Lundi</string>
     <string name="tuesday">Mardi</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Largeur par rapport à la taille standard</string>
     <string name="gesture_nav_pill_height_title">Hauteur par rapport à la taille standard</string>
     <string name="threebutton_header_title">Navigation à trois boutons</string>
+    <string name="taskbar_header_title">Taskbar navigation</string>
     <string name="modify_3button_title">Changer l’ordre des boutons</string>
     <string name="three_button_left_title">Bouton gauche</string>
     <string name="three_button_center_title">Bouton central</string>
     <string name="three_button_right_title">Bouton droit</string>
     <string name="hide_navbar_title">Cacher la barre de navigation</string>
-    <string name="taskbar_as_recents_title">Transformer la TaskBar en applications récentes</string>
+    <string name="taskbar_as_recents_title">Convertir la barre des tâches en barre de récents AospXpert</string>
+    <string name="taskbar_hide_allapps_title">Masquer le bouton \"toutes les applications\"</string>
+    <string name="taskbar_enable_google_recents">Activer les applications récentes Android dans la barre des tâches</string>
     <string name="taskbar_height_title">Hauteur de la TaskBar</string>
     <string name="taskbar_radius_title">Courbure des angles de la TaskBar</string>
     <string name="colorpill">Trait coloré avec la couleur secondaire</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Forcer l’activation</string>
     <string name="taskbar_force_disable_title">Forcer la désactivation</string>
     <string name="taskbar_transient_title">Masquage automatique</string>
+    <string name="taskbar_on_launcher_title">Afficher sur la page d\'accueil</string>
     <string name="remap_physical_buttons_title">Redéfinir les boutons physiques</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Contourner la vérification des signatures des paquets</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">Ignorera le bouton de changement d’orientation</string>
     <string name="force_no_cutout">Ne pas prendre en compte l’encoche de l’appareil photo</string>
     <string name="clear_all_reposition_title">Ajouter un bouton pour retirer toutes les applications récentes facilement</string>
-    <string name="force_themed_icons_title">Générer automatiquement les icônes thématiques manquantes (lanceur Pixel seulement)</string>
-    <string name="reapply_themed_config">Réactiver les icônes thématiques à appliquer</string>
+    <string name="force_themed_icons_title">Générer automatiquement les icônes de thème manquantes</string>
+    <string name="force_themed_icons_summary">Pixel Launcher uniquement</string>
     <string name="volume_button_step_title">Pas du volume (0% à 100%)</string>
     <string name="display_resolution_switch_title">Modifier la résolution d\'affichage</string>
     <string name="display_resolution_switch_summary">Avant de l\'activer, assurez-vous de réinitialiser toutes les modifications de taille d\'affichage/dpi par défaut</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">Quand l’écran est éteint…</string>
     <string name="custom_themed_icons_title">Icônes personnalisés</string>
     <string name="px_in_settings_title">Ajouter AospXpert aux paramètres</string>
+    <string name="advanced_power_menu_title">Menu Marche/Arrêt avancé</string>
     <string name="sleep_on_flat_screen_title">Éteindre l\'écran sur une surface plate</string>
     <string name="sleep_on_flat_screen_tile_title">Dormir à la surface</string>
     <string name="flat_screen_timeout_title">Délai de mise en veille de l\'écran sur la surface plate</string>
@@ -328,7 +384,7 @@
     <string name="overscroll_on_summary">Important : les applications dans lesquelles l’effet sera actif sont celles activées dans LSPosed</string>
     <string name="control_flashlight_with_volume_keys">Contrôlez la lampe de poche avec les boutons de volume</string>
     <string name="milliseconds">Millisecondes</string>
-    <string name="duration_seconds">%d Seconds</string>
+    <string name="duration_seconds">%d Secondes</string>
     <string name="hours">Heures</string>
     <string name="system_time_title">Heure du système</string>
     <string name="sync_ntp_time_title">Utiliser NTP pour synchroniser l\'heure</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Appuyez longuement sur la barre d\'état pour changer de profil</string>
     <string name="statusbar_app_switch_icon">Afficher une icône sur la barre d\'état lorsque la commutation est disponible</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Déverrouillé pour toutes les applications via <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Profitez !</string>
+    <string name="settings_cloned_apps_active">Déverrouillé pour toutes les applications via <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Profitez !</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Informations sur la batterie…</string>
     <string name="power_indication_error">Erreur de récupération des données de chargement</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Téléchargements</string>
     <string name="assets_download_title">Téléchargement des fichiers</string>
     <string name="assets_download_body">Téléchargement des fichiers compagnons</string>
+    <string name="assets_download_size_body">Progression : %s</string>
     <string name="update_notification_title">Mise à jour téléchargée</string>
     <string name="update_notification_text">Installer</string>
     <string name="download_failed">Échec du téléchargement de la mise à jour</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">Changer de branche</string>
     <string name="reinstall_word">Réinstaller</string>
     <string name="changelog_title">Journal des modifications</string>
-    <string name="own_prefs_header">Paramètre d’AOSPXpert</string>
+    <string name="own_prefs_header">Paramètre d’AOSPMods</string>
     <string name="language_title">Langues</string>
     <string name="toggle_dark_apply">(désactiver puis réactiver le thème sombre pour appliquer)</string>
     <string name="gesture_nav_extra_cat">Plus de gestes pour la barre de navigation</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">Aucun pack d\'icônes installé</string>
     <string name="icon_pack_disclaimer_title">Clause de non-responsabilité</string>
     <string name="icon_pack_disclaimer_desc">Les packs d\'icônes ne sont pas développés ou distribués par AospXpert. En tant que tel, l\'équipe de AospXpert ne peut pas fournir de support pour les packs d\'icônes. Prise en charge de la façon dont AospXpert gère les packs d\'icônes uniquement pour les développeurs de paquets respectifs.\n\nPour des instructions sur la façon de compiler un pack d\'icônes, veuillez vous référer au guide ici : %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Avancé…</string>
+    <string name="reboot_bootloader_title">Redémarrer dans le Bootloader</string>
+    <string name="soft_reboot_title">Redémarrage logiciel</string>
+    <string name="restart_systemui_title">Redémarrer l’interface système</string>
 </resources>

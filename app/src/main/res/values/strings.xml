@@ -21,6 +21,7 @@
     <string name="notification_channel_update_desc">This channel shows notification about the latest updates.</string>
     <string name="new_update_title">Update available</string>
     <string name="new_update_desc">A new version of AospXpert is available</string>
+    <string name="skip_this_update">Skip this update</string>
     <string name="browser_not_found">Browser not found</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Update</string>
@@ -39,6 +40,8 @@
     <string name="usage_summary">Open wiki page</string>
     <string name="crowdin_title">Translate to your language</string>
     <string name="crowdin_summary">Help us in translating %s into your own language</string>
+    <string name="nothing_to_show">Nothing to show</string>
+    <string name="shrug" translatable="false">¯\\_(シ)_/¯</string>
 
     <!--Category titles-->
     <string name="lockscreen_header_title">Lock screen</string>
@@ -68,6 +71,7 @@
     <string name="hotspot_disable_approval_summary">Allow non-\"pre-approved\" clients to connect seamlessly</string>
 
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Depth effect wallpaper</string>
     <string name="depth_wallpaper_title">Depth effect wallpaper</string>
     <string name="depth_wallpaper_summary">Dynamically integrate wallpaper\'s foreground with the clock</string>
     <string name="depth_wallpaper_ai_model_title">Preferred AI model</string>
@@ -78,6 +82,7 @@
     <string name="disable_unlock_hint_title">Disable the unlock hint animation</string>
     <string name="ls_general_options">Lock screen options</string>
     <string name="hide_avatar_title">Remove user avatar (multi user mode)</string>
+    <string name="fingerprint_options">Fingerprint</string>
     <string name="transparent_fingerprint_circle">Remove background circle from under-display fingerprint</string>
     <string name="transparent_fingerprint_circle_off">Circle around fingerprint icon is active</string>
     <string name="transparent_fingerprint_circle_on">Circle around fingerprint icon will be hidden</string>
@@ -207,6 +212,54 @@
     <string name="nt_stat_mode_week">Current week</string>
     <string name="nt_stat_mode_month">Current month</string>
 
+    <string name="sb_ignored_icons_category">Status Bar ignored icons</string>
+    <string name="sb_ignored_icons">Status Bar</string>
+    <string name="sb_ignored_icons_statusbar">Select which icon will be hidden in statusbar</string>
+    <string name="sb_kg_ignored_icons">Lockscreen</string>
+    <string name="sb_ignored_icons_kg">Select which icon will be hidden in keyguard statusbar</string>
+    <string name="sb_qs_ignored_icons">Quick Settings</string>
+    <string name="sb_ignored_icons_qs">Select which icon will be hidden in quick settings</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">No Calling</string>
+    <string name="status_bar_call_strength">Call Strength</string>
+    <string name="status_bar_alarm_clock">Alarm Clock</string>
+    <string name="status_bar_rotate">Auto Rotate</string>
+    <string name="status_bar_headset">Headset Connected</string>
+    <string name="status_bar_data_saver">Data Saver</string>
+    <string name="status_bar_ime">Input Method</string>
+    <string name="status_bar_sync_failing">Sync Failing</string>
+    <string name="status_bar_sync_active">Sync Active</string>
+    <string name="status_bar_nfc">NFC Active</string>
+    <string name="status_bar_tty">TTY Mode</string>
+    <string name="status_bar_speakerphone">Speakerphone On</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Data Connection</string>
+    <string name="status_bar_phone_evdo_signal">EVDO Signal</string>
+    <string name="status_bar_phone_signal">Phone Signal</string>
+    <string name="status_bar_secure">Secure Mode</string>
+    <string name="status_bar_managed_profile">Managed Profile</string>
+    <string name="status_bar_connected_display">Connected Display</string>
+    <string name="status_bar_vpn">VPN Active</string>
+    <string name="status_bar_bluetooth">Bluetooth Connected</string>
+    <string name="status_bar_camera">Camera In Use</string>
+    <string name="status_bar_microphone">Microphone In Use</string>
+    <string name="status_bar_location">Location Active</string>
+    <string name="status_bar_mute">Muted</string>
+    <string name="status_bar_volume">Volume Level</string>
+    <string name="status_bar_zen">Do Not Disturb</string>
+    <string name="status_bar_screen_record">Screen Recording</string>
+    <string name="status_bar_cast">Casting</string>
+    <string name="status_bar_ethernet">Ethernet Connected</string>
+    <string name="status_bar_oem_satellite">Satellite Connection</string>
+    <string name="status_bar_wifi">Wi-Fi Connected</string>
+    <string name="status_bar_hotspot">Hotspot Active</string>
+    <string name="status_bar_mobile">Mobile Data</string>
+    <string name="status_bar_airplane">Airplane Mode</string>
+    <string name="status_bar_battery">Battery Level</string>
+    <string name="status_bar_sensors_off">Sensors Off</string>
+    <string name="status_bar_clock">Clock</string>
+
     <string name="sunday">Sunday</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
@@ -285,13 +338,16 @@
     <string name="gesture_nav_pill_width_title">Width compared to standard size</string>
     <string name="gesture_nav_pill_height_title">Height compared to standard size</string>
     <string name="threebutton_header_title">3-Button navigation</string>
+    <string name="taskbar_header_title">Taskbar navigation</string>
     <string name="modify_3button_title">Modify the buttons order</string>
     <string name="three_button_left_title">Left button</string>
     <string name="three_button_center_title">Center button</string>
     <string name="three_button_right_title">Right button</string>
     <string name="pill_width_summary" translatable="false">@string/percent_of_default_size</string>
     <string name="hide_navbar_title">Hide navigation bar</string>
-    <string name="taskbar_as_recents_title">Convert Taskbar to recents bar</string>
+    <string name="taskbar_as_recents_title">Convert Taskbar to AospXpert recents bar</string>
+    <string name="taskbar_hide_allapps_title">Hide All apps button</string>
+    <string name="taskbar_enable_google_recents">Enable Android recents on the Taskbar</string>
     <string name="taskbar_height_title">Taskbar height</string>
     <string name="taskbar_radius_title">Taskbar corner curve</string>
     <string name="colorpill">Accent colored gesture pill</string>
@@ -301,6 +357,7 @@
     <string name="taskbar_force_enable_title">Force Enabled</string>
     <string name="taskbar_force_disable_title">Force Disabled</string>
     <string name="taskbar_transient_title">Auto hide</string>
+    <string name="taskbar_on_launcher_title">Show on home</string>
     <string name="remap_physical_buttons_title">Remap physical buttons</string>
 
     <!-- Package manager -->
@@ -319,8 +376,8 @@
     <string name="allow_all_screen_rotations_summary">Will also ignore manual rotation floating button</string>
     <string name="force_no_cutout">Ignore the camera cutout</string>
     <string name="clear_all_reposition_title">Add an accessible clear-all button to recents page</string>
-    <string name="force_themed_icons_title">Auto-generate missing themed icons (Pixel launcher only)</string>
-    <string name="reapply_themed_config">Re-enable themed icons to apply</string>
+    <string name="force_themed_icons_title">Auto-generate missing themed icons</string>
+    <string name="force_themed_icons_summary">Aosp launcher only</string>
     <string name="volume_button_step_title">Volume steps (0 to 100%)</string>
 
     <string name="display_resolution_switch_title">Modify display resolution</string>
@@ -348,6 +405,7 @@
     <string name="doze_header">While screen is off…</string>
     <string name="custom_themed_icons_title">Custom themed icons</string>
     <string name="px_in_settings_title">Add AospXpert to settings items</string>
+    <string name="advanced_power_menu_title">Advanced power menu</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -365,6 +423,7 @@
     <string name="disable_overscroll">Disable elastic overscroll effect</string>
     <string name="overscroll_on_summary">Important: you MUST enable the apps you want to disable overscroll for within LSPosed</string>
     <string name="control_flashlight_with_volume_keys">Control flashlight with volume buttons</string>
+    <string name="flashlight_fade_effect">Flashlight fade effect</string>
     <string name="milliseconds">Milliseconds</string>
     <string name="duration_seconds">%d Seconds</string>
     <string name="hours">Hours</string>
@@ -500,6 +559,7 @@
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloading Files</string>
     <string name="assets_download_body">Downloading companion files</string>
+    <string name="assets_download_size_body">Progress: %s</string>
     <string name="update_notification_title">Update downloaded</string>
     <string name="update_notification_text">Tap here to install</string>
     <string name="download_failed">Failed to download the update</string>
@@ -621,5 +681,11 @@
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
     <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Advanced…</string>
+    <string name="reboot_bootloader_title">Reboot to Bootloader</string>
+    <string name="soft_reboot_title">Soft Reboot</string>
+    <string name="restart_systemui_title">Restart SystemUI</string>
 
 </resources>

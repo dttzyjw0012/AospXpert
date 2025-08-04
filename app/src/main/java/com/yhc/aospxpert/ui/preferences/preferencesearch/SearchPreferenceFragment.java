@@ -27,6 +27,8 @@ package com.yhc.aospxpert.ui.preferences.preferencesearch;
  *
  */
 
+import static com.yhc.aospxpert.utils.MiscUtils.setupToolbar;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -44,9 +46,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -167,18 +167,7 @@ public class SearchPreferenceFragment extends Fragment implements SearchPreferen
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 
-		AppCompatActivity baseContext = (AppCompatActivity) getContext();
-		Toolbar toolbar = view.findViewById(R.id.toolbar);
-
-		if (baseContext != null) {
-			if (toolbar != null) {
-				baseContext.setSupportActionBar(toolbar);
-				toolbar.setTitle(R.string.searchpreference_title);
-			}
-			if (baseContext.getSupportActionBar() != null) {
-				baseContext.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-			}
-		}
+		setupToolbar(this, view, getString(R.string.searchpreference_title), true);
 	}
 
 	private void loadHistory() {

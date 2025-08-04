@@ -49,7 +49,7 @@ public class QSTileGrid extends XposedModPack {
 	private static int labelSizeUnit = -1, secondaryLabelSizeUnit = -1;
 
 	private static float QSLabelScaleFactor = 1, QSSecondaryLabelScaleFactor = 1;
-	protected static boolean QSHapticEnabled = false;
+	private static boolean QSHapticEnabled = false;
 	private static boolean VerticalQSTile = false;
 
 	private int updateFontSizeMethodType = 0;
@@ -58,6 +58,10 @@ public class QSTileGrid extends XposedModPack {
 		super(context);
 	}
 
+	public static boolean isQSHapticEnabled()
+	{
+		return QSHapticEnabled;
+	}
 	@Override
 	public void updatePrefs(String... Key) {
 		if (Xprefs == null) return;

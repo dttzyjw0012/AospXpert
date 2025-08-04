@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--General strings-->
-    <string name="app_themed_icon_title">啟用替代的 AOSP Xpert 主題應用圖示</string>
+    <string name="app_themed_icon_title">啟用替代的 AOSP Mods 主題應用圖示</string>
     <string name="xposed_desc">針對 Google Pixel 裝置的自定義</string>
     <string name="volume_tile_title">Media Volume</string>
     <string name="app_switch_tile_title">Switch App Profile</string>
@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">This channel shows notification about the latest updates.</string>
     <string name="new_update_title">Update available</string>
     <string name="new_update_desc">AospXpert 新版本現已推出</string>
+    <string name="skip_this_update">跳過此更新</string>
     <string name="browser_not_found">Browser not found</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Update</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Open wiki page</string>
     <string name="crowdin_title">翻譯成你的語言</string>
     <string name="crowdin_summary">幫助我們將 %s 翻譯成自己的語言</string>
+    <string name="nothing_to_show">Nothing to show</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">鎖定畫面</string>
     <string name="lockscreen_header_summary">自訂鎖定螢幕風格</string>
@@ -60,8 +62,9 @@
     <string name="hotspot_inactivity_timeout_title">自動關閉時間</string>
     <string name="hotspot_max_client_title">最大接入數</string>
     <string name="hotspot_disable_approval_title">Hotspot 連線問題的解決方法</string>
-    <string name="hotspot_disable_approval_summary">允許非\"預先批准\"的客戶端無縫連接</string>
+    <string name="hotspot_disable_approval_summary">允許非「預先批准」客戶端無縫連線</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">深度效果的壁紙</string>
     <string name="depth_wallpaper_title">深度效果壁紙</string>
     <string name="depth_wallpaper_summary">動態整合壁紙前景與時鐘</string>
     <string name="depth_wallpaper_ai_model_title">首選的AI模型</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Disable the unlock hint animation</string>
     <string name="ls_general_options">自定鎖定畫面</string>
     <string name="hide_avatar_title">隱藏使用者頭像(多使用者模式)</string>
+    <string name="fingerprint_options">指紋</string>
     <string name="transparent_fingerprint_circle">隱藏螢幕下指紋背景圓</string>
     <string name="transparent_fingerprint_circle_off">指紋圖示背景被啟用</string>
     <string name="transparent_fingerprint_circle_on">指紋圖示背景被隱藏</string>
@@ -171,7 +175,7 @@
     <string name="status_bar_height">狀態高度</string>
     <string name="sb_padding_title">狀態列內邊距</string>
     <string name="sb_padding_summary">最小/最大 等同於裝置預設值</string>
-    <string name="sbbb_header_title">Battery Bar</string>
+    <string name="sbbb_header_title">電量條</string>
     <string name="sbbb_header">電池條設定</string>
     <string name="sbbIcon_header">電池圖示設定</string>
     <string name="BB_enable_title">啟用電池條</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Today</string>
     <string name="nt_stat_mode_week">Current week</string>
     <string name="nt_stat_mode_month">Current month</string>
+    <string name="sb_ignored_icons_category">狀態列忽略圖示</string>
+    <string name="sb_ignored_icons">狀態列​​​​​​​</string>
+    <string name="sb_ignored_icons_statusbar">選擇在狀態列隱藏哪個圖示</string>
+    <string name="sb_kg_ignored_icons">鎖定畫面</string>
+    <string name="sb_ignored_icons_kg">選擇在鎖定畫面狀態列隱藏哪個圖示</string>
+    <string name="sb_qs_ignored_icons">快速設定</string>
+    <string name="sb_ignored_icons_qs">選擇在快速設定中隱藏哪個圖示</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">沒有來電</string>
+    <string name="status_bar_call_strength">通話強度</string>
+    <string name="status_bar_alarm_clock">鬧鐘</string>
+    <string name="status_bar_rotate">自動旋轉</string>
+    <string name="status_bar_headset">耳機已連線</string>
+    <string name="status_bar_data_saver">低流量模式</string>
+    <string name="status_bar_ime">輸入法</string>
+    <string name="status_bar_sync_failing">同步失敗</string>
+    <string name="status_bar_sync_active">正在同步</string>
+    <string name="status_bar_nfc">NFC 已啟用</string>
+    <string name="status_bar_tty">TTY 模式</string>
+    <string name="status_bar_speakerphone">揚聲器開啟</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">資料連線</string>
+    <string name="status_bar_phone_evdo_signal">EVDO 訊號</string>
+    <string name="status_bar_phone_signal">手機訊號</string>
+    <string name="status_bar_secure">安全模式</string>
+    <string name="status_bar_managed_profile">管理資料</string>
+    <string name="status_bar_connected_display">已連線顯示器</string>
+    <string name="status_bar_vpn">VPN 已啟用</string>
+    <string name="status_bar_bluetooth">藍芽已連線</string>
+    <string name="status_bar_camera">相機正在使用中</string>
+    <string name="status_bar_microphone">麥克風正在使用中</string>
+    <string name="status_bar_location">定位服務正在使用中</string>
+    <string name="status_bar_mute">已靜音</string>
+    <string name="status_bar_volume">音量大小</string>
+    <string name="status_bar_zen">勿擾模式</string>
+    <string name="status_bar_screen_record">螢幕錄製</string>
+    <string name="status_bar_cast">投屏中</string>
+    <string name="status_bar_ethernet">乙太網已連線</string>
+    <string name="status_bar_oem_satellite">衛星連線</string>
+    <string name="status_bar_wifi">Wi-Fi 已連線</string>
+    <string name="status_bar_hotspot">無線基地台已開啟</string>
+    <string name="status_bar_mobile">移動資料</string>
+    <string name="status_bar_airplane">飛航模式</string>
+    <string name="status_bar_battery">電池電量</string>
+    <string name="status_bar_sensors_off">感測器已關閉</string>
+    <string name="status_bar_clock">時鐘</string>
     <string name="sunday">Sunday</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">對比標準大小的寬度</string>
     <string name="gesture_nav_pill_height_title">對比標準大小的高度</string>
     <string name="threebutton_header_title">3 個虛擬導航鍵</string>
+    <string name="taskbar_header_title">Taskbar navigation</string>
     <string name="modify_3button_title">更改按鈕順序</string>
     <string name="three_button_left_title">左按鈕</string>
     <string name="three_button_center_title">中按鈕</string>
     <string name="three_button_right_title">右按鈕</string>
     <string name="hide_navbar_title">隱藏小白條</string>
     <string name="taskbar_as_recents_title">將工作列替換為最近工作列</string>
+    <string name="taskbar_hide_allapps_title">隱藏所有應用按鈕</string>
+    <string name="taskbar_enable_google_recents">在工作列上啟用 Android 最近任務</string>
     <string name="taskbar_height_title">工作列高度</string>
     <string name="taskbar_radius_title">工作列圓角</string>
     <string name="colorpill">小白條強調色</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">強制開啟</string>
     <string name="taskbar_force_disable_title">強制關閉</string>
     <string name="taskbar_transient_title">Auto hide</string>
+    <string name="taskbar_on_launcher_title">在首頁顯示</string>
     <string name="remap_physical_buttons_title">重新映射物理按鍵</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">繞過應用簽名檢查</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">將同時無視手動旋轉懸浮鈕</string>
     <string name="force_no_cutout">無視螢幕開孔</string>
     <string name="clear_all_reposition_title">在最近任務右側「清除所有」按鈕</string>
-    <string name="force_themed_icons_title">自動產生缺少的主題圖示（僅限 Pixel 啟動器）</string>
-    <string name="reapply_themed_config">Re-enable themed icons to apply</string>
+    <string name="force_themed_icons_title">自動生成缺少的主題圖示</string>
+    <string name="force_themed_icons_summary">僅 Pixel 啟動器</string>
     <string name="volume_button_step_title">音量步進 (0至100%)</string>
     <string name="display_resolution_switch_title">修改顯示分辨率</string>
     <string name="display_resolution_switch_summary">啟用此功能之前，請確保將所有顯示尺寸/dpi 變更重設為預設值</string>
@@ -294,7 +349,7 @@
     <string name="brightness_range_title">顯示亮度限制</string>
     <string name="brightness_range_not_linear">這個範圍不是線性的,有時一個小的差異會導致相當大的變化</string>
     <string name="separate_ring_notif_vol_title">Individual volume for Ringer and Notification</string>
-    <string name="show_vol_level_title">Volume percentage on volume panel</string>
+    <string name="show_vol_level_title">音量面板上顯示百分比</string>
     <string name="so_power_longpress_torch_title">長按電源開啟手電筒</string>
     <string name="so_taptaptorch_title">鎖定畫面雙擊開啟手電筒</string>
     <string name="so_taptaptorch_summary">鎖定畫面時 雙擊+長按開啟手電筒</string>
@@ -310,10 +365,11 @@
     <string name="doze_header">鎖定畫面時</string>
     <string name="custom_themed_icons_title">自訂帶主題的圖示</string>
     <string name="px_in_settings_title">將 AospXpert 加入設定選項</string>
-    <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
-    <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
-    <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
-    <string name="flat_screen_timeout_respect_wakelock_title">Respect wake locks</string>
+    <string name="advanced_power_menu_title">進階電源選單</string>
+    <string name="sleep_on_flat_screen_title">在平坦表面上時關閉螢幕</string>
+    <string name="sleep_on_flat_screen_tile_title">在平坦表面休眠</string>
+    <string name="flat_screen_timeout_title">在平坦表面時的螢幕超時時間</string>
+    <string name="flat_screen_timeout_respect_wakelock_title">遵從喚醒鎖</string>
     <string name="custom_themed_icons_off">自訂圖示已禁用</string>
     <string name="custom_themed_icons_on">自訂圖示已啟用</string>
     <string name="so_vol_longpress_skip">長按音量鍵跳過歌曲</string>
@@ -328,7 +384,7 @@
     <string name="overscroll_on_summary">重要:你必須在 LSPosed 作用域中勾選你要禁用的應用程式</string>
     <string name="control_flashlight_with_volume_keys">使用音量按鍵控制手電筒</string>
     <string name="milliseconds">毫秒</string>
-    <string name="duration_seconds">%d Seconds</string>
+    <string name="duration_seconds">%d 秒</string>
     <string name="hours">小時</string>
     <string name="system_time_title">系統時間</string>
     <string name="sync_ntp_time_title">使用 NTP 同步時間 (網路時間協議)</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Long press statusbar to switch profile</string>
     <string name="statusbar_app_switch_icon">Show an icon on statusbar when switching is available</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">透過 <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font> 解鎖所有應用程式: 享受！</string>
+    <string name="settings_cloned_apps_active">透過 <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font> 解鎖所有應用程式: 享受！</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">電池資訊...</string>
     <string name="power_indication_error">取得充電數據時出錯</string>
@@ -429,7 +485,8 @@
     <string name="update_channel_name">更新</string>
     <string name="download_channel_name">下載</string>
     <string name="assets_download_title">檔案下載中</string>
-    <string name="assets_download_body">Downloading companion files</string>
+    <string name="assets_download_body">正在下載配套檔案</string>
+    <string name="assets_download_size_body">進度：%s</string>
     <string name="update_notification_title">已下載更新</string>
     <string name="update_notification_text">點此安裝</string>
     <string name="download_failed">Failed to download the update</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">更換分支</string>
     <string name="reinstall_word">重新安裝</string>
     <string name="changelog_title">Changelog</string>
-    <string name="own_prefs_header">AOSP Xpert 設定</string>
+    <string name="own_prefs_header">AOSP Mods 設定</string>
     <string name="language_title">語言</string>
     <string name="toggle_dark_apply">(切換深色模式以應用)</string>
     <string name="gesture_nav_extra_cat">更多導航欄手勢</string>
@@ -486,9 +543,9 @@
     <string name="package_activated">Package successfully activated</string>
     <string name="package_activation_failed">Package activation failed</string>
     <string name="activate_in_lsposed">Activate in LSPosed</string>
-    <string name="package_not_hook_enabled_info">The app is installed, but LSPosed is not configured to hook into it. Enable it by clicking \'%s\'.</string>
-    <string name="package_hook_bootlooped_info">The hook for the app caused a bootloop, so it has been disabled to prevent further issues.</string>
-    <string name="package_hook_no_response_info">The app is not responding to the hook status. It may not be actively running, or it\'s possible that it\'s not hooked to our connection.</string>
+    <string name="package_not_hook_enabled_info">應用已安裝，但 LSPosed 中沒有啟用 hook。點選\'%s \'啟用。</string>
+    <string name="package_hook_bootlooped_info">應用的 hook 導致啟動迴圈，因此它已被停用，以防產生更多問題。</string>
+    <string name="package_hook_no_response_info">該應用沒有響應 hook 狀態。它可能沒有執行，或者可能沒有 hook 到我們的連線。</string>
     <string name="whats_wrong">遇到了什麼問題嗎？</string>
     <string name="package_not_launchable">應用包無法啟動</string>
     <string name="menu_launch_app">啟動應用</string>
@@ -522,20 +579,25 @@
     <string name="skip_media_prev">媒體控制 - 上一項</string>
     <!-- Icon Packs -->
     <string name="icon_packs_title">圖示包</string>
-    <string name="icon_pack_selection_title">Select pack</string>
+    <string name="icon_pack_selection_title">選擇圖示包</string>
     <string name="icon_pack_customization_title">自訂圖示</string>
     <string name="menu_more_info">更多資訊</string>
     <string name="menu_show_icons">顯示圖示</string>
     <string name="select_replacement_icon">選擇替換圖示</string>
     <string name="icon_default">預設</string>
-    <string name="partially_enabled">(Partially enabled)</string>
+    <string name="partially_enabled">(部分啟用)</string>
     <string name="icon_pack_icon_disabled">已停用</string>
-    <string name="icon_pack_author">by %s</string>
+    <string name="icon_pack_author">作者：%s</string>
     <string name="icon_pack_unknown_author">未知的作者</string>
     <string name="icon_pack_unknown_name">未知的圖示包</string>
     <string name="icon_pack_pack_reset">重設圖示</string>
     <string name="icon_pack_info">圖示包資訊</string>
-    <string name="no_icon_pack_installed">No icon pack installed</string>
-    <string name="icon_pack_disclaimer_title">Disclaimer</string>
-    <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <string name="no_icon_pack_installed">沒有已安裝的圖示包</string>
+    <string name="icon_pack_disclaimer_title">免責聲明</string>
+    <string name="icon_pack_disclaimer_desc">圖示包不是由 AospXpert 開發或分發的。因此，AospXpert 團隊無法為圖示包提供支援。有關 AospXpert 如何處理圖示包的支援將僅提供給相應的包開發人員。\n\n關於如何編譯圖示包的說明，請參閱這裡的指南： %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">進階…</string>
+    <string name="reboot_bootloader_title">重啟到 BootLoader</string>
+    <string name="soft_reboot_title">軟重啟</string>
+    <string name="restart_systemui_title">重啟系統介面</string>
 </resources>

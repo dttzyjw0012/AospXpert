@@ -68,6 +68,7 @@ public class ScreenOffKeys extends XposedModPack {
 	private static int doublePressPowerButtonScreenOn = 0;
 	private static int longPressVolumeUpButtonScreenOff = 0;
 	private static int longPressVolumeDownButtonScreenOff = 0;
+	private static boolean AnimateFlashlight = false;
 
 	private static boolean controlFlashWithVolKeys = false;
 
@@ -99,6 +100,8 @@ public class ScreenOffKeys extends XposedModPack {
 			longPressVolumeDownButtonScreenOff = Integer.parseInt(Xprefs.getString("longPressVolumeDownButtonScreenOff", "0"));
 
 			controlFlashWithVolKeys = Xprefs.getBoolean("controlFlashWithVolKeys", false);
+
+			AnimateFlashlight = Xprefs.getBoolean("AnimateFlashlight", false);
 			//noinspection ResultOfMethodCallIgnored
 			CameraManager(); //init CameraManager to listen to flash status
 		} catch (Throwable ignored) {
@@ -233,7 +236,7 @@ public class ScreenOffKeys extends XposedModPack {
 		float step = (keyCode == KEYCODE_VOLUME_UP ? 1f : -1f)
 				/ SystemProperties.getInt("ro.config.media_vol_steps", () -> 10);
 
-		SystemUtils.setFlash(true, SystemUtils.getFlashlightLevel(getFlashStrengthPCT() + step));
+		SystemUtils.setFlash(true, SystemUtils.getFlashlightLevel(getFlashStrengthPCT() + step), false);
 	}
 
 	private int resolveAction(int keyCode, boolean screenIsOn) {
@@ -293,7 +296,7 @@ public class ScreenOffKeys extends XposedModPack {
 					handled = true;
 					break;
 				case PHYSICAL_ACTION_TORCH:
-					toggleFlash();
+					toggleFlash(AnimateFlashlight);
 					handled = true;
 					break;
 				case PHYSICAL_ACTION_CAMERA:

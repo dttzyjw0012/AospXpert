@@ -43,8 +43,17 @@ public class NotificationManager extends XposedModPack {
 			applyDurations();
 		};
 
-		ReflectedClass HeadsUpManagerClass = ReflectedClass.of("com.android.systemui.statusbar.policy.HeadsUpManager");
-		HeadsUpManagerClass.afterConstruction().run(headsupFinder); //interface in 14QPR2, class in older
+		try
+		{ //A15 QPR2
+			ReflectedClass HeadsUpManagerClass = ReflectedClass.of("com.android.systemui.statusbar.notification.headsup.HeadsUpManagerImpl");
+			HeadsUpManagerClass.afterConstruction().run(headsupFinder);
+		}
+		catch (Throwable ignored){}
+
+		try { //A15 QPR1 and older
+			ReflectedClass HeadsUpManagerClass = ReflectedClass.of("com.android.systemui.statusbar.policy.HeadsUpManager");
+			HeadsUpManagerClass.afterConstruction().run(headsupFinder); //interface in 14QPR2, class in older
+		} catch (Throwable ignored){}
 
 		try //A14 QPR2
 		{
@@ -65,7 +74,13 @@ public class NotificationManager extends XposedModPack {
 	private void applyDurations() {
 		if(HeadsUpManager != null && HeadupAutoDismissNotificationDecay > 0)
 		{
-			setObjectField(HeadsUpManager, "mMinimumDisplayTime", Math.round(HeadupAutoDismissNotificationDecay/2.5f));
+			try { //A16
+				setObjectField(HeadsUpManager, "mMinimumDisplayTimeDefault", Math.round(HeadupAutoDismissNotificationDecay / 2.5f));
+			}
+			catch (Throwable ignored) { //Older
+				setObjectField(HeadsUpManager, "mMinimumDisplayTime", Math.round(HeadupAutoDismissNotificationDecay / 2.5f));
+			}
+
 
 			try //A14 QPR2B3
 			{

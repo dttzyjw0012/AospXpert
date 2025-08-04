@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--General strings-->
-    <string name="app_themed_icon_title">Abilita l\'icona dell\'app a tema AOSP Xpert alternativa</string>
+    <string name="app_themed_icon_title">Abilita l\'icona dell\'app a tema AOSP Mods alternativa</string>
     <string name="xposed_desc">Personalizzazioni per dispositivi Google Pixel</string>
     <string name="volume_tile_title">Volume multimedia</string>
     <string name="app_switch_tile_title">Cambia profilo dell\'app</string>
@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">Questo canale mostra le notifiche sugli ultimi aggiornamenti.</string>
     <string name="new_update_title">Aggiornamento disponibile</string>
     <string name="new_update_desc">È disponibile una nuova versione di AospXpert</string>
+    <string name="skip_this_update">Salta questo aggiornamento</string>
     <string name="browser_not_found">Non è stata trovata un\'app per navigare in Internet</string>
     <string name="settings_general_section_title">Generale</string>
     <string name="settings_update_section_title">Aggiornamento</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Apri la pagina wiki</string>
     <string name="crowdin_title">Traduci nella tua lingua</string>
     <string name="crowdin_summary">Aiutaci a tradurre %s nella tua lingua</string>
+    <string name="nothing_to_show">Niente da mostrare</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Blocco schermo</string>
     <string name="lockscreen_header_summary">Cambia il tuo keyguard in base al tuo gusto</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Problemi di connettività hotspot</string>
     <string name="hotspot_disable_approval_summary">Consenti ai client non \"pre-approvati\" di connettersi senza problemi</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Sfondo con effetto profondità</string>
     <string name="depth_wallpaper_title">Sfondo effetto profondità</string>
     <string name="depth_wallpaper_summary">Integra dinamicamente il primo piano dello sfondo con l\'orologio</string>
     <string name="depth_wallpaper_ai_model_title">Modello AI preferito</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Disabilita animazione suggerimento di sblocco</string>
     <string name="ls_general_options">Opzioni schermata di blocco</string>
     <string name="hide_avatar_title">Rimuovi avatar utente (modalità multiutente)</string>
+    <string name="fingerprint_options">Impronta digitale</string>
     <string name="transparent_fingerprint_circle">Rimuovi il background dall\'icona del sensore d\'impronte sotto il display</string>
     <string name="transparent_fingerprint_circle_off">Background icona sensore d\'impronte attivo</string>
     <string name="transparent_fingerprint_circle_on">Background icona sensore d\'impronte disattivo</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Oggi</string>
     <string name="nt_stat_mode_week">Settimana corrente</string>
     <string name="nt_stat_mode_month">Corrente mese</string>
+    <string name="sb_ignored_icons_category">Icone ignorate nella barra di stato</string>
+    <string name="sb_ignored_icons">Barra di stato</string>
+    <string name="sb_ignored_icons_statusbar">Seleziona quale icona verrà nascosta nella barra di stato</string>
+    <string name="sb_kg_ignored_icons">Blocco schermo</string>
+    <string name="sb_ignored_icons_kg">Seleziona quale icona sarà nascosta nella barra di stato del keyguard</string>
+    <string name="sb_qs_ignored_icons">Impostazioni rapide</string>
+    <string name="sb_ignored_icons_qs">Seleziona quale icona sarà nascosta nelle impostazioni rapide</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">Nessuna chiamata</string>
+    <string name="status_bar_call_strength">Intensità chiamata</string>
+    <string name="status_bar_alarm_clock">Sveglia</string>
+    <string name="status_bar_rotate">Rotazione automatica</string>
+    <string name="status_bar_headset">Cuffie collegate</string>
+    <string name="status_bar_data_saver">Risparmio dati</string>
+    <string name="status_bar_ime">Metodo di immissione</string>
+    <string name="status_bar_sync_failing">Sincronizzazione fallita</string>
+    <string name="status_bar_sync_active">Sincronizzazione attiva</string>
+    <string name="status_bar_nfc">NFC attivo</string>
+    <string name="status_bar_tty">Modalità TTY</string>
+    <string name="status_bar_speakerphone">Altoparlante Attivo</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Connessione dati</string>
+    <string name="status_bar_phone_evdo_signal">Segnale EVDO</string>
+    <string name="status_bar_phone_signal">Segnale telefonico</string>
+    <string name="status_bar_secure">Modalità sicura</string>
+    <string name="status_bar_managed_profile">Profilo gestito</string>
+    <string name="status_bar_connected_display">Display connesso</string>
+    <string name="status_bar_vpn">VPN attiva</string>
+    <string name="status_bar_bluetooth">Bluetooth connesso</string>
+    <string name="status_bar_camera">Fotocamera in uso</string>
+    <string name="status_bar_microphone">Microfono in uso</string>
+    <string name="status_bar_location">Posizione attiva</string>
+    <string name="status_bar_mute">Silenziato</string>
+    <string name="status_bar_volume">Livello volume</string>
+    <string name="status_bar_zen">Non disturbare</string>
+    <string name="status_bar_screen_record">Registrazione schermo</string>
+    <string name="status_bar_cast">Casting</string>
+    <string name="status_bar_ethernet">Ethernet connesso</string>
+    <string name="status_bar_oem_satellite">Connessione satellitare</string>
+    <string name="status_bar_wifi">Wi-Fi connesso</string>
+    <string name="status_bar_hotspot">Hotspot attivo</string>
+    <string name="status_bar_mobile">Dati mobili</string>
+    <string name="status_bar_airplane">Modalità aereo</string>
+    <string name="status_bar_battery">Livello batteria</string>
+    <string name="status_bar_sensors_off">Sensori disattivati</string>
+    <string name="status_bar_clock">Orologio</string>
     <string name="sunday">Domenica</string>
     <string name="monday">Lunedi</string>
     <string name="tuesday">Martedì</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Larghezza rispetto alla misura standard</string>
     <string name="gesture_nav_pill_height_title">Altezza rispetto alla misura standard</string>
     <string name="threebutton_header_title">Navigazione 3-Pulsanti</string>
+    <string name="taskbar_header_title">Navigazione taskbar</string>
     <string name="modify_3button_title">Modifica l\'ordine dei pulsanti</string>
     <string name="three_button_left_title">Pulsante sinistro</string>
     <string name="three_button_center_title">Pulsante centrale</string>
     <string name="three_button_right_title">Pulsante destro</string>
     <string name="hide_navbar_title">Nascondi NavBar</string>
-    <string name="taskbar_as_recents_title">Converti taskbar in barra app recenti</string>
+    <string name="taskbar_as_recents_title">Converti la barra delle applicazioni nella barra delle applicazioni recenti AospXpert</string>
+    <string name="taskbar_hide_allapps_title">Nascondi il pulsante Tutte le app</string>
+    <string name="taskbar_enable_google_recents">Abilita i recenti di Android sulla barra delle applicazioni</string>
     <string name="taskbar_height_title">Altezza taskbar</string>
     <string name="taskbar_radius_title">Angolo curvatura taskbar</string>
     <string name="colorpill">Pillola con colore accento</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Forza abilitata</string>
     <string name="taskbar_force_disable_title">Forza disabilitata</string>
     <string name="taskbar_transient_title">Nascondi automaticamente</string>
+    <string name="taskbar_on_launcher_title">Mostra nella home</string>
     <string name="remap_physical_buttons_title">Rimappa pulsanti fisici</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Ignora controllo firma pacchetto</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">Ignorerà anche il pulsante per rotazione manuale</string>
     <string name="force_no_cutout">Ignora foro fotocamera</string>
     <string name="clear_all_reposition_title">Aggiungi il pulsante cancella tutto sulla schermata app recenti</string>
-    <string name="force_themed_icons_title">Genera automaticamente icone a tema mancanti (solo Pixel Launcher)</string>
-    <string name="reapply_themed_config">Riattiva le icone a tema da applicare</string>
+    <string name="force_themed_icons_title">Generazione automatica di icone a tema mancanti</string>
+    <string name="force_themed_icons_summary">Solo Pixel launcher</string>
     <string name="volume_button_step_title">Step volume (0 – 100%)</string>
     <string name="display_resolution_switch_title">Modifica risoluzione del display</string>
     <string name="display_resolution_switch_summary">Prima di abilitare, assicurati di reimpostare a default tutte le modifiche alle dimensioni del display/dpi</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">Mentre lo schermo è spento…</string>
     <string name="custom_themed_icons_title">Icone a tema personalizzate</string>
     <string name="px_in_settings_title">Aggiungi AospXpert agli elementi delle impostazioni</string>
+    <string name="advanced_power_menu_title">Menù di spegnimento avanzato</string>
     <string name="sleep_on_flat_screen_title">Spegni lo schermo su una superficie piana</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep sulla superficie</string>
     <string name="flat_screen_timeout_title">Timeout schermo su superficie piana</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Premi a lungo la barra di stato per cambiare profilo</string>
     <string name="statusbar_app_switch_icon">Mostra un\'icona sulla barra di stato quando è disponibile il passaggio</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Sbloccato per tutte le app tramite <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Goditelo!</string>
+    <string name="settings_cloned_apps_active">Sbloccato per tutte le app tramite <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Goditelo!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Informazioni batteria…</string>
     <string name="power_indication_error">Errore nel recupero dei dati della ricarica</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Download</string>
     <string name="assets_download_title">Download files in corso</string>
     <string name="assets_download_body">Download file compagni in corso</string>
+    <string name="assets_download_size_body">Avanzamento: %s</string>
     <string name="update_notification_title">Aggiornamento scaricato</string>
     <string name="update_notification_text">Tocca qui per installare</string>
     <string name="download_failed">Errore download aggiornamento</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">Cambia branch</string>
     <string name="reinstall_word">Reinstalla</string>
     <string name="changelog_title">Registro delle modifiche</string>
-    <string name="own_prefs_header">Impostazioni AOSPXpert</string>
+    <string name="own_prefs_header">Impostazioni AOSPMods</string>
     <string name="language_title">Lingua</string>
     <string name="toggle_dark_apply">(Attiva/disattiva tema scuro per applicare)</string>
     <string name="gesture_nav_extra_cat">Extra gestures NavBar</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">Nessun pacchetto icone installato</string>
     <string name="icon_pack_disclaimer_title">Dichiarazione di non responsabilità</string>
     <string name="icon_pack_disclaimer_desc">I pacchetti di icone non sono sviluppati o distribuiti da AospXpert. In quanto tale, il team di AospXpert non è in grado di fornire supporto ai pacchetti di icone. Supporto per quanto riguarda il modo in cui AospXpert gestisce i pacchetti di icone sarà fornito solo ai rispettivi sviluppatori di pacchetti.\n\nPer istruzioni su come compilare un pacchetto di icone, consultare la guida qui: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Avanzate…</string>
+    <string name="reboot_bootloader_title">Riavvia in Bootloader</string>
+    <string name="soft_reboot_title">Riavvio veloce</string>
+    <string name="restart_systemui_title">Riavvia SystemUI</string>
 </resources>

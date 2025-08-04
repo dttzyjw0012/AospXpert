@@ -3,7 +3,8 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:id="@+id/search_card"
 	android:layout_width="match_parent"
-	android:layout_height="?android:listPreferredItemHeight"
+	android:layout_height="wrap_content"
+	android:minHeight="72dp"
 	android:layout_gravity="center"
 	android:background="@drawable/container_search"
 	android:foregroundGravity="center_vertical"
@@ -30,9 +31,12 @@
 		android:autofillHints="preferenceSearch"
 		android:background="@null"
 		android:hint="@string/searchpreference_search"
+		android:fontFamily="sans-serif-medium"
 		android:inputType="textNoSuggestions"
 		android:textColor="?attr/colorOnSurface"
-		android:textSize="16sp" />
+		android:lineHeight="24sp"
+		android:textColorHint="@color/text_color_primary"
+		android:textSize="18sp" />
 
 	<ImageView
 		android:id="@+id/clear"

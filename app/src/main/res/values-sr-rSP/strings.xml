@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">Овај канал приказује обавештења о најновијим ажурирањима.</string>
     <string name="new_update_title">Доступно је ажурирање</string>
     <string name="new_update_desc">Доступна је нова верзија AospXpert-а</string>
+    <string name="skip_this_update">Skip this update</string>
     <string name="browser_not_found">Прегледач није пронађен</string>
     <string name="settings_general_section_title">Опште</string>
     <string name="settings_update_section_title">Ажурирање</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Отвара вики страницу</string>
     <string name="crowdin_title">Translate to your language</string>
     <string name="crowdin_summary">Help us in translating %s into your own language</string>
+    <string name="nothing_to_show">Nothing to show</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Закључани екран</string>
     <string name="lockscreen_header_summary">Change your keyguard to match your taste</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Hotspot connectivity issues workaround</string>
     <string name="hotspot_disable_approval_summary">Allow non-\"pre-approved\" clients to connect seamlessly</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Depth effect wallpaper</string>
     <string name="depth_wallpaper_title">Depth effect wallpaper</string>
     <string name="depth_wallpaper_summary">Dynamically integrate wallpaper\'s foreground with the clock</string>
     <string name="depth_wallpaper_ai_model_title">Preferred AI model</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Онемогући анимацију савета за откључавање</string>
     <string name="ls_general_options">Опције закључаног екрана</string>
     <string name="hide_avatar_title">Уклони аватар корисника (режим за више корисника)</string>
+    <string name="fingerprint_options">Fingerprint</string>
     <string name="transparent_fingerprint_circle">Уклони позадински круг са сензора отиска прста</string>
     <string name="transparent_fingerprint_circle_off">Круг око иконе отиска прста је активан</string>
     <string name="transparent_fingerprint_circle_on">Круг око иконе отиска прста ће бити скривен</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Данас</string>
     <string name="nt_stat_mode_week">Тренутна седмица</string>
     <string name="nt_stat_mode_month">Текући месец</string>
+    <string name="sb_ignored_icons_category">Status Bar ignored icons</string>
+    <string name="sb_ignored_icons">Status Bar</string>
+    <string name="sb_ignored_icons_statusbar">Select which icon will be hidden in statusbar</string>
+    <string name="sb_kg_ignored_icons">Lockscreen</string>
+    <string name="sb_ignored_icons_kg">Select which icon will be hidden in keyguard statusbar</string>
+    <string name="sb_qs_ignored_icons">Quick Settings</string>
+    <string name="sb_ignored_icons_qs">Select which icon will be hidden in quick settings</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">No Calling</string>
+    <string name="status_bar_call_strength">Call Strength</string>
+    <string name="status_bar_alarm_clock">Alarm Clock</string>
+    <string name="status_bar_rotate">Auto Rotate</string>
+    <string name="status_bar_headset">Headset Connected</string>
+    <string name="status_bar_data_saver">Data Saver</string>
+    <string name="status_bar_ime">Input Method</string>
+    <string name="status_bar_sync_failing">Sync Failing</string>
+    <string name="status_bar_sync_active">Sync Active</string>
+    <string name="status_bar_nfc">NFC Active</string>
+    <string name="status_bar_tty">TTY Mode</string>
+    <string name="status_bar_speakerphone">Speakerphone On</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Data Connection</string>
+    <string name="status_bar_phone_evdo_signal">EVDO Signal</string>
+    <string name="status_bar_phone_signal">Phone Signal</string>
+    <string name="status_bar_secure">Secure Mode</string>
+    <string name="status_bar_managed_profile">Managed Profile</string>
+    <string name="status_bar_connected_display">Connected Display</string>
+    <string name="status_bar_vpn">VPN Active</string>
+    <string name="status_bar_bluetooth">Bluetooth Connected</string>
+    <string name="status_bar_camera">Camera In Use</string>
+    <string name="status_bar_microphone">Microphone In Use</string>
+    <string name="status_bar_location">Location Active</string>
+    <string name="status_bar_mute">Muted</string>
+    <string name="status_bar_volume">Volume Level</string>
+    <string name="status_bar_zen">Do Not Disturb</string>
+    <string name="status_bar_screen_record">Screen Recording</string>
+    <string name="status_bar_cast">Casting</string>
+    <string name="status_bar_ethernet">Ethernet Connected</string>
+    <string name="status_bar_oem_satellite">Satellite Connection</string>
+    <string name="status_bar_wifi">Wi-Fi Connected</string>
+    <string name="status_bar_hotspot">Hotspot Active</string>
+    <string name="status_bar_mobile">Mobile Data</string>
+    <string name="status_bar_airplane">Airplane Mode</string>
+    <string name="status_bar_battery">Battery Level</string>
+    <string name="status_bar_sensors_off">Sensors Off</string>
+    <string name="status_bar_clock">Clock</string>
     <string name="sunday">недеља</string>
     <string name="monday">Понедељак</string>
     <string name="tuesday">уторак</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Ширина у поређењу са стандардном величином</string>
     <string name="gesture_nav_pill_height_title">Висина у поређењу са стандардном величином</string>
     <string name="threebutton_header_title">Навигација са 3 дугмета</string>
+    <string name="taskbar_header_title">Taskbar navigation</string>
     <string name="modify_3button_title">Промените редослед дугмади</string>
     <string name="three_button_left_title">Лево дугме</string>
     <string name="three_button_center_title">Централно дугме</string>
     <string name="three_button_right_title">Десно дугме</string>
     <string name="hide_navbar_title">Сакриј траку за навигацију</string>
-    <string name="taskbar_as_recents_title">Претворите траку задатака у траку недавно</string>
+    <string name="taskbar_as_recents_title">Convert Taskbar to AospXpert recents bar</string>
+    <string name="taskbar_hide_allapps_title">Hide All apps button</string>
+    <string name="taskbar_enable_google_recents">Enable Android recents on the Taskbar</string>
     <string name="taskbar_height_title">Висина траке задатака</string>
     <string name="taskbar_radius_title">Угаона крива траке задатака</string>
     <string name="colorpill">Пилула за гесте у боји акцента</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Форце Енаблед</string>
     <string name="taskbar_force_disable_title">Форце Дисаблед</string>
     <string name="taskbar_transient_title">Аутоматско сакривање</string>
+    <string name="taskbar_on_launcher_title">Show on home</string>
     <string name="remap_physical_buttons_title">Remap physical buttons</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Заобиђите проверу потписа пакета</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">Такође ће игнорисати плутајуће дугме за ручно ротирање</string>
     <string name="force_no_cutout">Занемарите изрез камере</string>
     <string name="clear_all_reposition_title">Додајте доступно дугме за брисање свега на страницу са најновијим информацијама</string>
-    <string name="force_themed_icons_title">Аутоматски генериши тематске иконе које недостају (само на Pixel Launcher-у)</string>
-    <string name="reapply_themed_config">Поново омогућите тематске иконе за примену</string>
+    <string name="force_themed_icons_title">Auto-generate missing themed icons</string>
+    <string name="force_themed_icons_summary">Pixel launcher only</string>
     <string name="volume_button_step_title">Кораци јачине звука (0 до 100%)</string>
     <string name="display_resolution_switch_title">Modify display resolution</string>
     <string name="display_resolution_switch_summary">Before enabling this, make sure to reset all display size/dpi changes to default</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">Док је екран искључен…</string>
     <string name="custom_themed_icons_title">Прилагођене тематске иконе</string>
     <string name="px_in_settings_title">Add AospXpert to settings items</string>
+    <string name="advanced_power_menu_title">Advanced power menu</string>
     <string name="sleep_on_flat_screen_title">Turn off the screen on flat surface</string>
     <string name="sleep_on_flat_screen_tile_title">Sleep on surface</string>
     <string name="flat_screen_timeout_title">Screen timeout on flat surface</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Дуго притисните статусну траку да бисте променили профил</string>
     <string name="statusbar_app_switch_icon">Прикажите икону на статусној траци када је пребацивање доступно</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Откључано за све апликације уз <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Уживајте!</string>
+    <string name="settings_cloned_apps_active">Откључано за све апликације уз <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Уживајте!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Battery info…</string>
     <string name="power_indication_error">Error fetching charging data</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Downloads</string>
     <string name="assets_download_title">Downloading Files</string>
     <string name="assets_download_body">Downloading companion files</string>
+    <string name="assets_download_size_body">Progress: %s</string>
     <string name="update_notification_title">Ажурирање је преузето</string>
     <string name="update_notification_text">Додирните овде да бисте инсталирали</string>
     <string name="download_failed">Преузимање ажурирања није успело</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">No icon pack installed</string>
     <string name="icon_pack_disclaimer_title">Disclaimer</string>
     <string name="icon_pack_disclaimer_desc">Icon packs are not developed or distributed by AospXpert. As such, the AospXpert team is unable to provide support for icon packs. Support regarding how AospXpert handles icon packs will only be provided to the respective pack developers.\n\nFor instructions on how to compile an icon pack, please refer to the guide here: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Advanced…</string>
+    <string name="reboot_bootloader_title">Reboot to Bootloader</string>
+    <string name="soft_reboot_title">Soft Reboot</string>
+    <string name="restart_systemui_title">Restart SystemUI</string>
 </resources>

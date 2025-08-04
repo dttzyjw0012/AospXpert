@@ -35,7 +35,7 @@
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/header_preferences.xml">
         <config>
-          <theme>@style/AppTheme.PixelXpert</theme>
+          <theme>@style/AppTheme.AospXpert</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/misc_prefs.xml">
@@ -70,7 +70,7 @@
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/theming_prefs.xml">
         <config>
-          <theme>@style/AppTheme.PixelXpert</theme>
+          <theme>@style/AppTheme.AospXpert</theme>
         </config>
       </layout>
     </layouts>
@@ -79,18 +79,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="add magisk module files from @DanGLES3's Hide-Navbar">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/tools/arm/keycheck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/addon/Volume-Key-Selector/tools/x86/keycheck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/functions.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/common/install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagiskModBase/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/customize.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Merge the changes from AospXpert Program(canary 425-446)">
+      <change beforePath="$PROJECT_DIR$/latestCanary.json" beforeDir="false" afterPath="$PROJECT_DIR$/latestCanary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latestVersion.json" beforeDir="false" afterPath="$PROJECT_DIR$/latestVersion.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +240,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/.gradle/caches/8.10.2/transforms/5ab34855bcc0c92a1b7769ff1008a389/transformed/core-1.13.0/res/values/values.xml" root0="SKIP_INSPECTION" />
   </component>
+  <component name="KotlinScriptingSettings">
+    <scriptDefinition className="org.jetbrains.kotlin.scripting.resolve.KotlinScriptDefinitionFromAnnotatedTemplate" definitionName="KotlinBuildScript">
+      <order>2147483647</order>
+    </scriptDefinition>
+  </component>
   <component name="NamedScopeManager">
     <order>
       <scope name="PX XPosed" />
@@ -265,6 +261,7 @@
   <component name="ProjectId" id="2kgLsUftOUSxPZRyiLtqDSpRNc0" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="compactDirectories" value="true" />
@@ -428,14 +425,6 @@
       <workItem from="1742196728572" duration="309000" />
       <workItem from="1742197046059" duration="10882000" />
       <workItem from="1742261593803" duration="623000" />
-    </task>
-    <task id="LOCAL-00111" summary="agp update">
-      <option name="closed" value="true" />
-      <created>1733551173426</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1733551173426</updated>
     </task>
     <task id="LOCAL-00112" summary="resolved conflicts and added support for A15 compose type view">
       <option name="closed" value="true" />
@@ -821,7 +810,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752511489886</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="Merge the changes from AospXpert Program(canary 425-446)">
+      <option name="closed" value="true" />
+      <created>1754319138252</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1754319138252</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -838,8 +835,91 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="2b6661bb-5b79-479d-91c2-cf335c62a7c9" value="TOOL_WINDOW" />
+        <entry key="d62c6696-4d44-42fd-9c2c-5b8a59940992" value="TOOL_WINDOW" />
+        <entry key="9e76f9fd-c50f-4a7a-906e-8ad494c88882" value="TOOL_WINDOW" />
+        <entry key="892d9780-c367-47b5-bd94-79973966956c" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="2b6661bb-5b79-479d-91c2-cf335c62a7c9">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/nameless/AndroidStudioProjects/AospXpert/app/src/main/res/layout" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="892d9780-c367-47b5-bd94-79973966956c">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$/Submodules/RangeSliderPreference" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="9e76f9fd-c50f-4a7a-906e-8ad494c88882">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/nameless/AndroidStudioProjects/AospXpert/app/src/main/res/xml" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -848,7 +928,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="pixelxpert-canary" />
                       </list>
                     </value>
                   </entry>
@@ -857,12 +937,36 @@
             </State>
           </value>
         </entry>
+        <entry key="d62c6696-4d44-42fd-9c2c-5b8a59940992">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/nameless/AndroidStudioProjects/AospXpert/app/src/main/res" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="BatteryDataProvider: matching new constructor changes" />
     <MESSAGE value="CHANGELOG: A15QPR2B2: Fixed recents taskbar" />
     <MESSAGE value="CHANGELOG: A15QPR2 and A16: Fixed hiding privacy indicators" />
     <MESSAGE value="CHANGELOG: Fixed random preferences shown on the app" />
@@ -887,7 +991,8 @@
     <MESSAGE value="Prepare for the canary 426 release. Add the makeMagisk.sh for linux, and fix the makeMagisk.bat. Change the old PiexlXpert text and folders to AOSPXpert. Add tools from the GravityBox." />
     <MESSAGE value="return to old header image url." />
     <MESSAGE value="add magisk module files from @DanGLES3's Hide-Navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add magisk module files from @DanGLES3's Hide-Navbar" />
+    <MESSAGE value="Merge the changes from AospXpert Program(canary 425-446)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge the changes from AospXpert Program(canary 425-446)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -898,12 +1003,12 @@
       <map>
         <entry key="com.yhc.aospxpert">
           <value>
-            <CheckInfo lastCheckTimestamp="1752497247523" />
+            <CheckInfo lastCheckTimestamp="1754315425263" />
           </value>
         </entry>
         <entry key="com.yhc.aospxpert.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1752497247521" />
+            <CheckInfo lastCheckTimestamp="1754315425263" />
           </value>
         </entry>
         <entry key="sh.siava.pixelxpert">

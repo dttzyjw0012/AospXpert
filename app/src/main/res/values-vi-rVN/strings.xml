@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">Kênh này hiển thị thông báo về các bản cập nhật mới nhất.</string>
     <string name="new_update_title">Đã có bản cập nhật</string>
     <string name="new_update_desc">Đã có phiên bản AospXpert mới</string>
+    <string name="skip_this_update">Bỏ qua bản cập nhật này</string>
     <string name="browser_not_found">Không tìm thấy trình duyệt</string>
     <string name="settings_general_section_title">Tổng quan</string>
     <string name="settings_update_section_title">Cập nhật</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Mở trang wiki</string>
     <string name="crowdin_title">Dịch sang ngôn ngữ của bạn</string>
     <string name="crowdin_summary">Hãy giúp chúng tôi dịch %s sang ngôn ngữ của bạn</string>
+    <string name="nothing_to_show">Không có gì để hiển thị</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Màn hình khóa</string>
     <string name="lockscreen_header_summary">Cài đặt màn hình khóa theo sở thích của bạn</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Giải quyết tạm vấn đề kết nối điểm phát sóng</string>
     <string name="hotspot_disable_approval_summary">Cho phép máy khách \"chưa được phê duyệt trước\" kết nối liền mạch</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Hình nền hiệu ứng chiều sâu</string>
     <string name="depth_wallpaper_title">Hình nền hiệu ứng chiều sâu</string>
     <string name="depth_wallpaper_summary">Tích hợp động hình nền với đồng hồ</string>
     <string name="depth_wallpaper_ai_model_title">Chọn mô hình AI theo sở thích</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Tắt hoạt ảnh gợi ý mở khóa</string>
     <string name="ls_general_options">Tùy chọn màn hình khóa</string>
     <string name="hide_avatar_title">Xóa hình đại diện người dùng (chế độ nhiều người dùng)</string>
+    <string name="fingerprint_options">Vân tay</string>
     <string name="transparent_fingerprint_circle">Ẩn vòng tròn dấu vân tay dưới màn hình</string>
     <string name="transparent_fingerprint_circle_off">Biểu tượng vòng tròn dấu vân tay đang hoạt động</string>
     <string name="transparent_fingerprint_circle_on">Biểu tượng vòng tròn dấu vân tay sẽ bị ẩn</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Hôm nay</string>
     <string name="nt_stat_mode_week">Tuần này</string>
     <string name="nt_stat_mode_month">Tháng này</string>
+    <string name="sb_ignored_icons_category">Các biểu tượng bỏ qua trên thanh Trạng Thái</string>
+    <string name="sb_ignored_icons">Thanh Trạng thái</string>
+    <string name="sb_ignored_icons_statusbar">Chọn biểu tượng sẽ bị ẩn trên thanh trạng thái</string>
+    <string name="sb_kg_ignored_icons">Màn hình khoá</string>
+    <string name="sb_ignored_icons_kg">Chọn biểu tượng sẽ bị ẩn trên thanh trạng thái bảo vệ</string>
+    <string name="sb_qs_ignored_icons">Cài đặt Nhanh</string>
+    <string name="sb_ignored_icons_qs">Chọn biểu tượng sẽ bị ẩn trên bảng Cài đặt nhanh</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">Không cuộc gọi</string>
+    <string name="status_bar_call_strength">Cường độ cuộc gọi</string>
+    <string name="status_bar_alarm_clock">Đồng hồ báo thức</string>
+    <string name="status_bar_rotate">Tự động xoay</string>
+    <string name="status_bar_headset">Đã kết nối tai nghe</string>
+    <string name="status_bar_data_saver">Trình tiết kiệm dữ liệu</string>
+    <string name="status_bar_ime">Phương thức nhập</string>
+    <string name="status_bar_sync_failing">Đồng bộ hóa không thành công</string>
+    <string name="status_bar_sync_active">Đồng bộ hóa đang hoạt động</string>
+    <string name="status_bar_nfc">NFC đang hoạt động</string>
+    <string name="status_bar_tty">Chế độ TTY</string>
+    <string name="status_bar_speakerphone">Loa ngoài bật</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Kết nối Dữ liệu</string>
+    <string name="status_bar_phone_evdo_signal">Tín hiệu EVDO</string>
+    <string name="status_bar_phone_signal">Tín hiệu điện thoại</string>
+    <string name="status_bar_secure">Chế độ bảo mật</string>
+    <string name="status_bar_managed_profile">Quản lý hồ sơ</string>
+    <string name="status_bar_connected_display">Màn hình đã kết nối</string>
+    <string name="status_bar_vpn">Kích hoạt VPN</string>
+    <string name="status_bar_bluetooth">Đã kết nối Bluetooth</string>
+    <string name="status_bar_camera">Máy ảnh đang sử dụng</string>
+    <string name="status_bar_microphone">Micrô đang sử dụng</string>
+    <string name="status_bar_location">Vị trí Hoạt động</string>
+    <string name="status_bar_mute">Đã tắt âm</string>
+    <string name="status_bar_volume">Mức âm lượng</string>
+    <string name="status_bar_zen">Không làm phiền</string>
+    <string name="status_bar_screen_record">Ghi màn hình</string>
+    <string name="status_bar_cast">Truyền</string>
+    <string name="status_bar_ethernet">Ethernet đã kết nối</string>
+    <string name="status_bar_oem_satellite">Kết nối vệ tinh</string>
+    <string name="status_bar_wifi">Đã kết nối Wi-Fi</string>
+    <string name="status_bar_hotspot">Điểm phát sóng đang hoạt động</string>
+    <string name="status_bar_mobile">Dữ liệu di động</string>
+    <string name="status_bar_airplane">Chế độ trên máy bay</string>
+    <string name="status_bar_battery">Mức pin</string>
+    <string name="status_bar_sensors_off">Tắt các cảm biến</string>
+    <string name="status_bar_clock">Đồng hồ</string>
     <string name="sunday">Chủ nhật</string>
     <string name="monday">Thứ hai</string>
     <string name="tuesday">Thứ ba</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Chiều rộng so với kích thước tiêu chuẩn</string>
     <string name="gesture_nav_pill_height_title">Chiều cao so với kích thước tiêu chuẩn</string>
     <string name="threebutton_header_title">Điều hướng 3 nút</string>
+    <string name="taskbar_header_title">Thanh điều hướng</string>
     <string name="modify_3button_title">Đổi thứ tự phím điều hướng</string>
     <string name="three_button_left_title">Phím bên trái</string>
     <string name="three_button_center_title">Phím trung tâm</string>
     <string name="three_button_right_title">Phím bên phải</string>
     <string name="hide_navbar_title">Ẩn thanh điều hướng</string>
-    <string name="taskbar_as_recents_title">Chuyển đổi Thanh tác vụ thành Thanh gần đây</string>
+    <string name="taskbar_as_recents_title">Chuyển đổi Thanh tác vụ thành Thanh gần đây AospXpert</string>
+    <string name="taskbar_hide_allapps_title">Ẩn nút Tất cả ứng dụng</string>
+    <string name="taskbar_enable_google_recents">Bật ứng dụng gần đây trên Thanh tác vụ</string>
     <string name="taskbar_height_title">Chiều cao thanh tác vụ</string>
     <string name="taskbar_radius_title">Đường cong góc của thanh tác vụ</string>
     <string name="colorpill">Thanh điều hướng có màu nhấn</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Bật</string>
     <string name="taskbar_force_disable_title">Tắt</string>
     <string name="taskbar_transient_title">Tự động ẩn</string>
+    <string name="taskbar_on_launcher_title">Hiển thị trên trang chính</string>
     <string name="remap_physical_buttons_title">Sửa lại các nút vật lý</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Bỏ qua kiểm tra chữ ký gói</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">Bỏ qua nút nổi xoay thủ công</string>
     <string name="force_no_cutout">Bỏ qua phần cắt máy ảnh (với các thiết bị có màn hình đục lỗ)</string>
     <string name="clear_all_reposition_title">Thêm nút \"Xóa tất cả\" vào cuối trang ứng dụng gần đây</string>
-    <string name="force_themed_icons_title">Tự động tạo các biểu tượng thiếu theo chủ đề (chỉ dành cho Pixel launcher)</string>
-    <string name="reapply_themed_config">Kích hoạt lại các biểu tượng theo chủ đề để áp dụng</string>
+    <string name="force_themed_icons_title">Tự động tổ chức các biểu tượng theo chủ đề bị thiếu</string>
+    <string name="force_themed_icons_summary">Chỉ cho Pixel launcher</string>
     <string name="volume_button_step_title">Tăng mức âm lượng (0 đến 100%)</string>
     <string name="display_resolution_switch_title">Tinh chỉnh độ phân giải màn hình</string>
     <string name="display_resolution_switch_summary">Trước khi kích hoạt, hãy chắc chắn đã lại tất cả các thay đổi về kích cỡ/dpi về mặc định</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">Khi màn hình tắt…</string>
     <string name="custom_themed_icons_title">Biểu tượng theo chủ đề tùy chỉnh</string>
     <string name="px_in_settings_title">Thêm AospXpert tới menu Cài Đặt</string>
+    <string name="advanced_power_menu_title">Menu nguồn nâng cao</string>
     <string name="sleep_on_flat_screen_title">Tắt màn hình trên bề mặt phẳng</string>
     <string name="sleep_on_flat_screen_tile_title">Ngủ trên bề mặt</string>
     <string name="flat_screen_timeout_title">Hết thời gian chờ màn hình trên bề mặt phẳng</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Nhấn và giữ thanh trạng thái để chuyển hồ sơ</string>
     <string name="statusbar_app_switch_icon">Hiển thị biểu tượng trên thanh trạng thái khi có thể chuyển đổi</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Mở khóa toàn bộ tại <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Hãy tận hưởng!</string>
+    <string name="settings_cloned_apps_active">Mở khóa toàn bộ tại <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Hãy tận hưởng!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Thông tin pin…</string>
     <string name="power_indication_error">Lỗi khi tải về dữ liệu sạc</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Tải xuống</string>
     <string name="assets_download_title">Các tệp đang tải xuống</string>
     <string name="assets_download_body">Đồng hành tải xuống các tệp tin</string>
+    <string name="assets_download_size_body">Tiến trình: %s</string>
     <string name="update_notification_title">Đã tải xuống cập nhật</string>
     <string name="update_notification_text">Nhấn vào đây để cài đặt</string>
     <string name="download_failed">Không thể tải xuống bản cập nhật</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">Đổi kênh cập nhật</string>
     <string name="reinstall_word">Cài đặt lại</string>
     <string name="changelog_title">Nhật ký thay đổi</string>
-    <string name="own_prefs_header">Cài đặt AOSPXpert</string>
+    <string name="own_prefs_header">Cài đặt AOSPMods</string>
     <string name="language_title">Ngôn ngữ</string>
     <string name="toggle_dark_apply">(Chuyển đổi chủ đề tối để áp dụng)</string>
     <string name="gesture_nav_extra_cat">Cử chỉ bổ sung cho thanh điều hướng</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">Không có gói biểu tượng nào được cài đặt</string>
     <string name="icon_pack_disclaimer_title">Tuyên bố miễn trừ trách nhiệm</string>
     <string name="icon_pack_disclaimer_desc">Gói biểu tượng không được AospXpert phát triển hoặc phân phối. Do đó, nhóm AospXpert không thể cung cấp hỗ trợ cho gói biểu tượng. Hỗ trợ về cách AospXpert xử lý các gói biểu tượng sẽ chỉ được cung cấp cho các nhà phát triển gói tương ứng.\n\nĐể biết hướng dẫn về cách biên dịch gói biểu tượng, vui lòng tham khảo hướng dẫn tại đây: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Nâng cao…</string>
+    <string name="reboot_bootloader_title">Khởi động lại vào Bootloader</string>
+    <string name="soft_reboot_title">Khởi động mềm</string>
+    <string name="restart_systemui_title">Khởi động lại SystemUI</string>
 </resources>

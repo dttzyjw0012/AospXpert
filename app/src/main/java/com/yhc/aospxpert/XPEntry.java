@@ -9,7 +9,7 @@ import com.yhc.aospxpert.modpacks.ResourceManager;
 import com.yhc.aospxpert.modpacks.XPLauncher;
 import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass;
 
-public class APEntry implements IXposedHookZygoteInit, IXposedHookInitPackageResources, IXposedHookLoadPackage {
+public class XPEntry implements IXposedHookZygoteInit, IXposedHookInitPackageResources, IXposedHookLoadPackage {
 	ResourceManager ResourceManager = new ResourceManager();
 	XPLauncher XPLauncher = new XPLauncher();
 	@Override

@@ -1,57 +1,52 @@
 package com.yhc.aospxpert.ui.activities;
 
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.view.ViewGroup;
-import android.view.Window;
+import static androidx.preference.PreferenceManager.getDefaultSharedPreferences;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.LocaleList;
+
+import androidx.activity.EdgeToEdge;
+import androidx.activity.SystemBarStyle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.shape.MaterialShapeDrawable;
-
-import com.yhc.aospxpert.R;
+import java.util.Locale;
 
 public class BaseActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
+		EdgeToEdge.enable(
+				this,
+				SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),
+				SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT)
+		);
 		super.onCreate(savedInstanceState);
-
-		setupEdgeToEdge();
 	}
 
-	private void setupEdgeToEdge() {
-		try {
-			((AppBarLayout) findViewById(R.id.appBarLayout)).setStatusBarForeground(MaterialShapeDrawable.createWithElevationOverlay(getApplicationContext()));
-		} catch (Exception ignored) {
-		}
+	@Override
+	protected void attachBaseContext(Context newBase) {
+		super.attachBaseContext(newBase);
 
-		Window window = getWindow();
-		WindowCompat.setDecorFitsSystemWindows(window, false);
+		SharedPreferences prefs = getDefaultSharedPreferences(newBase.createDeviceProtectedStorageContext());
 
-		if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-			ViewGroup viewGroup = getWindow().getDecorView().findViewById(android.R.id.content);
-			ViewCompat.setOnApplyWindowInsetsListener(viewGroup, (v, windowInsets) -> {
-				Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+		String localeCode = prefs.getString("appLanguage", "");
+		Locale locale = !localeCode.isEmpty() ? Locale.forLanguageTag(localeCode) : Locale.getDefault();
 
-				ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
-				v.setPadding(
-						params.leftMargin + insets.left,
-						0,
-						params.rightMargin + insets.right,
-						0
-				);
-				params.bottomMargin = 0;
-				v.setLayoutParams(params);
+		Resources res = newBase.getResources();
+		Configuration configuration = res.getConfiguration();
 
-				return windowInsets;
-			});
-		}
+		configuration.setLocale(locale);
+
+		LocaleList localeList = new LocaleList(locale);
+		LocaleList.setDefault(localeList);
+		configuration.setLocales(localeList);
+
+		applyOverrideConfiguration(configuration);
 	}
 }

@@ -3,48 +3,37 @@ package com.yhc.aospxpert.ui.activities;
 import static android.app.NotificationManager.IMPORTANCE_DEFAULT;
 import static androidx.preference.PreferenceManager.getDefaultSharedPreferences;
 import static com.yhc.aospxpert.R.string.update_channel_name;
-import static com.yhc.aospxpert.ui.Constants.PX_ICON_PACK_REPO;
 import static com.yhc.aospxpert.ui.Constants.UPDATES_CHANNEL_ID;
 import static com.yhc.aospxpert.utils.AppUtils.isLikelyPixelBuild;
+import static com.yhc.aospxpert.utils.MiscUtils.REQUEST_EXPORT;
+import static com.yhc.aospxpert.utils.MiscUtils.REQUEST_IMPORT;
 import static com.yhc.aospxpert.utils.NavigationExtensionKt.navigateTo;
 
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.LocaleList;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
-import android.text.util.Linkify;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.NavController;
+import androidx.navigation.NavGraph;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
-import androidx.transition.Slide;
-import androidx.transition.TransitionManager;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import java.util.Locale;
 import java.util.Objects;
 
 import com.yhc.aospxpert.BuildConfig;
@@ -56,17 +45,18 @@ import com.yhc.aospxpert.ui.fragments.UpdateFragment;
 import com.yhc.aospxpert.ui.preferences.preferencesearch.SearchPreferenceResult;
 import com.yhc.aospxpert.ui.preferences.preferencesearch.SearchPreferenceResultListener;
 import com.yhc.aospxpert.utils.AppUtils;
+import com.yhc.aospxpert.utils.DisplayUtils;
 import com.yhc.aospxpert.utils.ExtendedSharedPreferences;
 import com.yhc.aospxpert.utils.PrefManager;
 import com.yhc.aospxpert.utils.PreferenceHelper;
 
 public class SettingsActivity extends BaseActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback, SearchPreferenceResultListener {
 
-	private static final int REQUEST_IMPORT = 7;
-	private static final int REQUEST_EXPORT = 9;
 	private SettingsActivityBinding binding;
 	private HeaderFragment headerFragment;
-	private NavController navController;
+	private NavController navControllerMain;
+	private NavController navControllerDetails;
+	private final boolean isTabletDevice = DisplayUtils.isTablet();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +65,7 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 		setContentView(binding.getRoot());
 
 		createNotificationChannel();
-		setupBottomNavigationView();
+		setupNavigation(savedInstanceState);
 
 		PreferenceHelper.init(ExtendedSharedPreferences.from(getDefaultSharedPreferences(createDeviceProtectedStorageContext())));
 
@@ -87,29 +77,30 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 				bundle.putString("filePath", intent.getStringExtra("filePath"));
 				UpdateFragment updateFragment = new UpdateFragment();
 				updateFragment.setArguments(bundle);
-				navigateTo(navController, R.id.updateFragment, bundle);
+				navigateTo(navControllerMain, R.id.updateFragment, bundle);
 			} else if ("true".equals(getIntent().getStringExtra("migratePrefs"))) {
 				Intent intent = getIntent();
 				Bundle bundle = new Bundle();
 				bundle.putString("migratePrefs", intent.getStringExtra("migratePrefs"));
 				UpdateFragment updateFragment = new UpdateFragment();
 				updateFragment.setArguments(bundle);
-				navigateTo(navController, R.id.updateFragment, bundle);
+				navigateTo(navControllerMain, R.id.updateFragment, bundle);
 			} else if (getIntent().getBooleanExtra("newUpdate", false)) {
-				navigateTo(navController, R.id.updateFragment);
+				navigateTo(navControllerMain, R.id.updateFragment);
 			} else if (getIntent().hasExtra(Intent.EXTRA_COMPONENT_NAME)) {
 				ComponentName callerComponentName = getIntent().getParcelableExtra(Intent.EXTRA_COMPONENT_NAME, ComponentName.class);
 				if(callerComponentName != null) {
 					String callerClassName = callerComponentName.getClassName();
-					if(SleepOnSurfaceTileService.class.getName().equals(callerClassName))
-					{
+					if (SleepOnSurfaceTileService.class.getName().equals(callerClassName)) {
+						NavController navController = isTabletDevice ? navControllerDetails : navControllerMain;
 						navigateTo(navController, R.id.sleepOnFlatFragment);
 					}
 				}
 			}
 		}
 
-		if (!isLikelyPixelBuild() && !BuildConfig.DEBUG) {
+		//noinspection ConstantValue
+		if (!isLikelyPixelBuild() && !BuildConfig.VERSION_NAME.contains("canary")) {
 			new MaterialAlertDialogBuilder(this, R.style.MaterialComponents_MaterialAlertDialog)
 					.setTitle(R.string.incompatible_alert_title)
 					.setMessage(R.string.incompatible_alert_body)
@@ -119,143 +110,88 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 	}
 
 	@SuppressLint({"RestrictedApi", "NonConstantResourceId"})
-	private void setupBottomNavigationView() {
-		NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
-		navController = Objects.requireNonNull(navHostFragment).getNavController();
+	private void setupNavigation(Bundle savedInstanceState) {
+		NavHostFragment navHostFragmentMain = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.mainFragmentContainerView);
+		navControllerMain = Objects.requireNonNull(navHostFragmentMain).getNavController();
 
-		NavigationUI.setupWithNavController(binding.bottomNavigationView, navController);
+		NavHostFragment navHostFragmentDetails = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.detailFragmentContainerView);
+		navControllerDetails = Objects.requireNonNull(navHostFragmentDetails).getNavController();
 
-		binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-			if (item.getItemId() == R.id.headerFragment) {
-				return navController.popBackStack(R.id.headerFragment, false);
-			} else if (item.getItemId() == R.id.updateFragment) {
-				navController.popBackStack(R.id.headerFragment, false);
-				return navigateTo(navController, R.id.updateFragment);
-			} else if (item.getItemId() == R.id.hooksFragment) {
-				navController.popBackStack(R.id.headerFragment, false);
-				return navigateTo(navController, R.id.hooksFragment);
-			} else if (item.getItemId() == R.id.ownPrefsFragment) {
-				navController.popBackStack(R.id.headerFragment, false);
-				return navigateTo(navController, R.id.ownPrefsFragment);
+		NavGraph navGraphMain = navControllerMain.getNavInflater().inflate(isTabletDevice ? R.navigation.nav_graph_tablet_main : R.navigation.nav_graph_phone);
+		navControllerMain.setGraph(navGraphMain, savedInstanceState);
+
+		binding.detailFragmentContainerView.setVisibility(isTabletDevice ? View.VISIBLE : View.GONE);
+
+		if (isTabletDevice) {
+			binding.bottomNavigationView.setVisibility(View.GONE);
+			binding.navigationRailView.setVisibility(View.VISIBLE);
+			binding.navigationRailView.setOnItemSelectedListener(this::setupOnItemSelectedListener);
+			binding.navigationRailView.setOnItemReselectedListener(this::setupOnItemReselectedListener);
+			NavigationUI.setupWithNavController(binding.navigationRailView, navControllerMain);
+		} else {
+			binding.navigationRailView.setVisibility(View.GONE);
+			binding.bottomNavigationView.setVisibility(View.VISIBLE);
+			binding.bottomNavigationView.setOnItemSelectedListener(this::setupOnItemSelectedListener);
+			binding.bottomNavigationView.setOnItemReselectedListener(this::setupOnItemReselectedListener);
+			NavigationUI.setupWithNavController(binding.bottomNavigationView, navControllerMain);
+		}
+
+		ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (view, windowInsets) -> {
+			Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.displayCutout());
+			boolean isRtl = view.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
+
+			if (insets.left > 0 || insets.right > 0) {
+				int startInset = isRtl ? insets.right : insets.left;
+
+				((ViewGroup) binding.navigationRailView.getParent()).setPaddingRelative(
+						startInset + binding.navigationRailView.getPaddingStart(),
+						0, 0, 0
+				);
 			}
-			return false;
-		});
 
-		binding.bottomNavigationView.setOnItemReselectedListener(item -> {
-			if (item.getItemId() == R.id.headerFragment) {
-				navController.popBackStack(R.id.headerFragment, false);
-			} else if (item.getItemId() == R.id.updateFragment) {
-				navController.popBackStack(R.id.updateFragment, false);
-			} else if (item.getItemId() == R.id.hooksFragment) {
-				navController.popBackStack(R.id.hooksFragment, false);
-			} else if (item.getItemId() == R.id.ownPrefsFragment) {
-				navController.popBackStack(R.id.ownPrefsFragment, false);
-			}
+			return windowInsets;
 		});
+	}
+
+	private boolean setupOnItemSelectedListener(MenuItem item) {
+		if (item.getItemId() == R.id.headerFragment) {
+			return navControllerMain.popBackStack(R.id.headerFragment, false);
+		} else if (item.getItemId() == R.id.updateFragment) {
+			navControllerMain.popBackStack(R.id.headerFragment, false);
+			return navigateTo(navControllerMain, R.id.updateFragment);
+		} else if (item.getItemId() == R.id.hooksFragment) {
+			navControllerMain.popBackStack(R.id.headerFragment, false);
+			return navigateTo(navControllerMain, R.id.hooksFragment);
+		} else if (item.getItemId() == R.id.ownPrefsFragment) {
+			navControllerMain.popBackStack(R.id.headerFragment, false);
+			return navigateTo(navControllerMain, R.id.ownPrefsFragment);
+		}
+		return false;
+	}
+
+	private void setupOnItemReselectedListener(MenuItem item) {
+		if (item.getItemId() == R.id.headerFragment) {
+			navControllerMain.popBackStack(R.id.headerFragment, false);
+		} else if (item.getItemId() == R.id.updateFragment) {
+			navControllerMain.popBackStack(R.id.updateFragment, false);
+		} else if (item.getItemId() == R.id.hooksFragment) {
+			navControllerMain.popBackStack(R.id.hooksFragment, false);
+		} else if (item.getItemId() == R.id.ownPrefsFragment) {
+			navControllerMain.popBackStack(R.id.ownPrefsFragment, false);
+		}
 	}
 
 	@Override
 	public void onSearchResultClicked(@NonNull final SearchPreferenceResult result, NavController navController) {
 		headerFragment = new HeaderFragment();
-		new Handler(getMainLooper()).post(() -> headerFragment.onSearchResultClicked(result, navController));
-	}
-
-	@Override
-	protected void attachBaseContext(Context newBase) {
-		SharedPreferences prefs = getDefaultSharedPreferences(newBase.createDeviceProtectedStorageContext());
-
-		String localeCode = prefs.getString("appLanguage", "");
-		Locale locale = !localeCode.isEmpty() ? Locale.forLanguageTag(localeCode) : Locale.getDefault();
-
-		Resources res = newBase.getResources();
-		Configuration configuration = res.getConfiguration();
-
-		configuration.setLocale(locale);
-
-		LocaleList localeList = new LocaleList(locale);
-		LocaleList.setDefault(localeList);
-		configuration.setLocales(localeList);
-
-		super.attachBaseContext(newBase.createConfigurationContext(configuration));
+		NavController myNavController = isTabletDevice ? navControllerDetails : navController;
+		new Handler(getMainLooper()).post(() -> headerFragment.onSearchResultClicked(result, myNavController, this));
 	}
 
 	private void createNotificationChannel() {
 		NotificationManager notificationManager = getSystemService(NotificationManager.class);
 
 		notificationManager.createNotificationChannel(new NotificationChannel(UPDATES_CHANNEL_ID, getString(update_channel_name), IMPORTANCE_DEFAULT));
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		SharedPreferences prefs = getDefaultSharedPreferences(createDeviceProtectedStorageContext());
-
-		int itemID = item.getItemId();
-
-		if (itemID == android.R.id.home) {
-			navController.navigateUp();
-		} else if (itemID == R.id.menu_clearPrefs) {
-			PrefManager.clearPrefs(prefs);
-			AppUtils.Restart("systemui");
-		} else if (itemID == R.id.menu_exportPrefs) {
-			importExportSettings(true);
-		} else if (itemID == R.id.menu_importPrefs) {
-			importExportSettings(false);
-		} else if (itemID == R.id.menu_restart) {
-			AppUtils.Restart("system");
-		} else if (itemID == R.id.menu_restartSysUI) {
-			AppUtils.Restart("systemui");
-		} else if (itemID == R.id.menu_soft_restart) {
-			AppUtils.Restart("zygote");
-		} else if (itemID == R.id.icon_pack_info) {
-			AlertDialog alertDialog = new MaterialAlertDialogBuilder(this, R.style.MaterialComponents_MaterialAlertDialog)
-					.setTitle(getString(R.string.icon_pack_disclaimer_title))
-					.setMessage(getClickableText(getString(R.string.icon_pack_disclaimer_desc, PX_ICON_PACK_REPO), PX_ICON_PACK_REPO))
-					.setPositiveButton(R.string.okay, (dialog, which) -> dialog.dismiss())
-					.show();
-
-			TextView messageTextView = alertDialog.findViewById(android.R.id.message);
-			if (messageTextView != null) {
-				messageTextView.setMovementMethod(LinkMovementMethod.getInstance());
-			}
-		} else if (itemID == R.id.icon_pack_search) {
-			TransitionManager.beginDelayedTransition(findViewById(R.id.toolbar), new Slide(Gravity.START));
-		}
-
-		return true;
-	}
-
-	/** @noinspection SameParameterValue*/
-	@NonNull
-	private SpannableString getClickableText(String message, String link) {
-		SpannableString spannableMessage = new SpannableString(message);
-
-		int start = message.indexOf(link);
-		int end = start + link.length();
-
-		spannableMessage.setSpan(new ClickableSpan() {
-			@Override
-			public void onClick(@NonNull View widget) {
-				try {
-					Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-					startActivity(intent);
-				} catch (Exception exception) {
-					Log.e("IconPackRepo", "Browser not found");
-				}
-			}
-		}, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-		Linkify.addLinks(spannableMessage, Linkify.WEB_URLS);
-
-		return spannableMessage;
-	}
-
-	@SuppressWarnings("deprecation")
-	private void importExportSettings(boolean export) {
-		Intent fileIntent = new Intent();
-		fileIntent.setAction(export ? Intent.ACTION_CREATE_DOCUMENT : Intent.ACTION_GET_CONTENT);
-		fileIntent.setType("*/*");
-		fileIntent.putExtra(Intent.EXTRA_TITLE, "AospXpert_Config" + ".bin");
-		startActivityForResult(fileIntent, export ? REQUEST_EXPORT : REQUEST_IMPORT);
 	}
 
 	@Override
@@ -270,7 +206,7 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 				try {
 					//noinspection DataFlowIssue
 					PrefManager.importPath(prefs, getContentResolver().openInputStream(data.getData()));
-					AppUtils.Restart("systemui");
+					AppUtils.restart("systemui");
 				} catch (Exception ignored) {
 				}
 				break;
@@ -289,28 +225,52 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 		String key = pref.getKey();
 		if (key == null) return false;
 
+		NavController navController = isTabletDevice ? navControllerDetails : navControllerMain;
+
 		return switch (key) {
-			case "quicksettings_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_quickSettingsFragment);
-			case "lockscreen_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_lockScreenFragment);
-			case "theming_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_themingFragment);
-			case "statusbar_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_statusbarFragment);
-			case "nav_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_navFragment);
-			case "dialer_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_dialerFragment);
-			case "hotspot_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_hotSpotFragment);
-			case "pm_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_packageManagerFragment);
-			case "misc_header" ->
-					navigateTo(navController, R.id.action_headerFragment_to_miscFragment);
+			case "quicksettings_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_quickSettingsFragment);
+			}
+			case "lockscreen_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_lockScreenFragment);
+			}
+			case "theming_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_themingFragment);
+			}
+			case "statusbar_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_statusbarFragment);
+			}
+			case "nav_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_navFragment);
+			}
+			case "dialer_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_dialerFragment);
+			}
+			case "hotspot_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_hotSpotFragment);
+			}
+			case "pm_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_packageManagerFragment);
+			}
+			case "misc_header" -> {
+				if (isTabletDevice) navController.popBackStack(R.id.headerFragment, false);
+				yield navigateTo(navController, R.id.action_headerFragment_to_miscFragment);
+			}
 			case "CheckForUpdate" -> {
-				navController.popBackStack(R.id.headerFragment, false);
-				yield navigateTo(navController, R.id.action_headerFragment_to_updateFragment);
+				if (isTabletDevice) {
+					binding.navigationRailView.setSelectedItemId(R.id.updateFragment);
+				} else {
+					binding.bottomNavigationView.setSelectedItemId(R.id.updateFragment);
+				}
+				yield true;
 			}
 			case "qs_tile_qty" ->
 					navigateTo(navController, R.id.action_quickSettingsFragment_to_QSTileQtyFragment);
@@ -326,6 +286,8 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 					navigateTo(navController, R.id.action_statusbarFragment_to_networkFragment);
 			case "threebutton_header" ->
 					navigateTo(navController, R.id.action_navFragment_to_threeButtonNavFragment);
+			case "taskbar_header" ->
+					navigateTo(navController, R.id.action_navFragment_to_taskbarNavFragment);
 			case "gesturenav_header" ->
 					navigateTo(navController, R.id.action_navFragment_to_gestureNavFragment);
 			case "remap_physical_buttons" ->
@@ -338,7 +300,6 @@ public class SettingsActivity extends BaseActivity implements PreferenceFragment
 					navigateTo(navController, R.id.action_themingFragment_to_iconPackFragment);
 			default -> false;
 		};
-
 	}
 
 	@Override

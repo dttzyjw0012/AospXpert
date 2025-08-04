@@ -12,9 +12,7 @@
 
 	<PreferenceCategory
 		android:key="top_level_category"
-		android:layout="@layout/settingslib_preference_category_no_title"
-		app:allowDividerAbove="false"
-		app:allowDividerBelow="false">
+		android:layout="@layout/settingslib_preference_category_no_title">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialPreferenceMain
 			android:layout="@layout/custom_preference"
@@ -47,9 +45,7 @@
 
 	<PreferenceCategory
 		android:key="mid_level_category"
-		android:layout="@layout/settingslib_preference_category_no_title"
-		app:allowDividerAbove="false"
-		app:allowDividerBelow="false">
+		android:layout="@layout/settingslib_preference_category_no_title">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialPreferenceMain
 			android:layout="@layout/custom_preference"
@@ -73,9 +69,7 @@
 
 	<PreferenceCategory
 		android:key="bottom_level_category"
-		android:layout="@layout/settingslib_preference_category_no_title"
-		app:allowDividerAbove="false"
-		app:allowDividerBelow="false">
+		android:layout="@layout/settingslib_preference_category_no_title">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialPreferenceMain
 			android:layout="@layout/custom_preference"
@@ -118,7 +112,7 @@
 	<!--	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceMain-->
 	<!--		android:layout="@layout/custom_preference"-->
 	<!--		app:fragment="com.yhc.aospxpert.ui.fragments.OwnPrefsFragment"-->
-	<!--		app:icon="@drawable/ic_settings_"-->
+	<!--		app:icon="@drawable/ic_settings_aospxpert"-->
 	<!--		app:key="own_header"-->
 	<!--		app:title="@string/own_prefs_header"-->
 	<!--		search:ignore="true" />-->

@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">На этом канале отображаются уведомления о последних обновлениях.</string>
     <string name="new_update_title">Доступно обновление</string>
     <string name="new_update_desc">Доступна новая версия AospXpert</string>
+    <string name="skip_this_update">Пропустить это обновление</string>
     <string name="browser_not_found">Браузер не найден</string>
     <string name="settings_general_section_title">Общее</string>
     <string name="settings_update_section_title">Обновить</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Открыть wiki страницу</string>
     <string name="crowdin_title">Помогите с переводом</string>
     <string name="crowdin_summary">Помогите нам в переводе %s на ваш язык</string>
+    <string name="nothing_to_show">Нечего показывать</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Экран блокировки</string>
     <string name="lockscreen_header_summary">Изменить клавиатуру по своему вкусу</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Проблемы подключения к точке доступа</string>
     <string name="hotspot_disable_approval_summary">Разрешить не \"предварительно одобренные\" клиенты для бесшовного подключения</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Обои с эффектом глубины</string>
     <string name="depth_wallpaper_title">Обои с эффектом глубины</string>
     <string name="depth_wallpaper_summary">Динамическая интеграция переднего плана обоев с часами</string>
     <string name="depth_wallpaper_ai_model_title">Предпочтительная модель ИИ</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Отключить анимацию подсказки разблокировки </string>
     <string name="ls_general_options">Опции экрана блокировки </string>
     <string name="hide_avatar_title">Удалить аватар пользователя (многопользовательский режим)</string>
+    <string name="fingerprint_options">Отпечаток пальца</string>
     <string name="transparent_fingerprint_circle">Скрыть фон под индикатором отпечатков пальцев</string>
     <string name="transparent_fingerprint_circle_off">Круг вокруг значка отпечатка пальца активен</string>
     <string name="transparent_fingerprint_circle_on">Круг вокруг значка отпечатка пальца будет скрыт</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Сегодня</string>
     <string name="nt_stat_mode_week">Текущая неделя </string>
     <string name="nt_stat_mode_month">Текущий месяц </string>
+    <string name="sb_ignored_icons_category">Игнорируемые значки строки состояния</string>
+    <string name="sb_ignored_icons">Строка состояния</string>
+    <string name="sb_ignored_icons_statusbar">Выберите, какие значки будут скрыты в строке состояния</string>
+    <string name="sb_kg_ignored_icons">Экран блокировки</string>
+    <string name="sb_ignored_icons_kg">Выберите, какие иконки будут скрыты в строке состояния</string>
+    <string name="sb_qs_ignored_icons">Быстрые настройки</string>
+    <string name="sb_ignored_icons_qs">Выберите, какие иконки будут скрыты в строке состояния</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">Нет сигнала</string>
+    <string name="status_bar_call_strength">Уровень сигнала</string>
+    <string name="status_bar_alarm_clock">Будильник</string>
+    <string name="status_bar_rotate">Автоповорот</string>
+    <string name="status_bar_headset">Гарнитура</string>
+    <string name="status_bar_data_saver">Экономия трафика</string>
+    <string name="status_bar_ime">Метод ввода</string>
+    <string name="status_bar_sync_failing">Сбой синхронизации</string>
+    <string name="status_bar_sync_active">Синхронизация активна</string>
+    <string name="status_bar_nfc">NFC активен</string>
+    <string name="status_bar_tty">Режим TTY</string>
+    <string name="status_bar_speakerphone">Динамик включен</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Передача данных</string>
+    <string name="status_bar_phone_evdo_signal">Сигнал EVDO</string>
+    <string name="status_bar_phone_signal">Телефонный сигнал</string>
+    <string name="status_bar_secure">Безопасный режим</string>
+    <string name="status_bar_managed_profile">Управление профилем</string>
+    <string name="status_bar_connected_display">Подключенный дисплей</string>
+    <string name="status_bar_vpn">VPN активен</string>
+    <string name="status_bar_bluetooth">Bluetooth подключен</string>
+    <string name="status_bar_camera">Камера используется</string>
+    <string name="status_bar_microphone">Микрофон используется</string>
+    <string name="status_bar_location">Местоположение активно</string>
+    <string name="status_bar_mute">Без звука</string>
+    <string name="status_bar_volume">Уровень громкости</string>
+    <string name="status_bar_zen">Не беспокоить</string>
+    <string name="status_bar_screen_record">Запись экрана</string>
+    <string name="status_bar_cast">Трансляция</string>
+    <string name="status_bar_ethernet">Ethernet подключен</string>
+    <string name="status_bar_oem_satellite">Спутниковое соединение</string>
+    <string name="status_bar_wifi">Wi-Fi подключен</string>
+    <string name="status_bar_hotspot">Точка доступа активна</string>
+    <string name="status_bar_mobile">Мобильные данные</string>
+    <string name="status_bar_airplane">Режим полета</string>
+    <string name="status_bar_battery">Уровень заряда батареи</string>
+    <string name="status_bar_sensors_off">Датчики отключены</string>
+    <string name="status_bar_clock">Часы</string>
     <string name="sunday">Воскресенье</string>
     <string name="monday">Понедельник</string>
     <string name="tuesday">Вторник</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Ширина по сравнению со стандартным размером</string>
     <string name="gesture_nav_pill_height_title">Высота по сравнению со стандартным размером</string>
     <string name="threebutton_header_title">Навигация с помощью трех кнопок</string>
+    <string name="taskbar_header_title">Навигация по панели задач</string>
     <string name="modify_3button_title">Изменить порядок кнопок</string>
     <string name="three_button_left_title">Левая кнопка</string>
     <string name="three_button_center_title">Центральная кнопка</string>
     <string name="three_button_right_title">Правая кнопка</string>
     <string name="hide_navbar_title">Скрыть панель жестов</string>
-    <string name="taskbar_as_recents_title">Превращать панель задач в список запущенных приложений</string>
+    <string name="taskbar_as_recents_title">Преобразование панели задач в панель недавних AospXpert</string>
+    <string name="taskbar_hide_allapps_title">Скрыть кнопку Все приложения</string>
+    <string name="taskbar_enable_google_recents">Использовать недавние приложения Android на панели задач</string>
     <string name="taskbar_height_title">Высота панели задач</string>
     <string name="taskbar_radius_title">Угловой угол панели задач</string>
     <string name="colorpill">Панель жестов с акцентом темы</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Принудительно включена</string>
     <string name="taskbar_force_disable_title">Принудительно отключена</string>
     <string name="taskbar_transient_title">Автоматическое скрытие</string>
+    <string name="taskbar_on_launcher_title">Показывать на домашнем экране</string>
     <string name="remap_physical_buttons_title">Переназначение физических кнопок</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Обход проверки подписи пакета</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">Будет игнорировать плавающую кнопку ручного вращения</string>
     <string name="force_no_cutout">Игнорировать вырез камеры</string>
     <string name="clear_all_reposition_title">Добавить кнопку для очистки приложений внизу панель задач</string>
-    <string name="force_themed_icons_title">Автоматическая генерация недостающих тематических значков (только Pixel launcher)</string>
-    <string name="reapply_themed_config">Повторное включение тематических значков для применения</string>
+    <string name="force_themed_icons_title">Автоматическия генерация недостающих тематических значков</string>
+    <string name="force_themed_icons_summary">Только Pixel лаунчер</string>
     <string name="volume_button_step_title">Шаг громкости (от 0 до 100%)</string>
     <string name="display_resolution_switch_title">Изменить разрешение экрана</string>
     <string name="display_resolution_switch_summary">Перед включением убедитесь, что все изменения размера экрана/dpi были сброшены до значений умолчанию</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">Когда экран выключен…</string>
     <string name="custom_themed_icons_title">Пользовательские тематические иконки</string>
     <string name="px_in_settings_title">Добавить AospXpert в настройки элементов</string>
+    <string name="advanced_power_menu_title">Расширенное меню питания</string>
     <string name="sleep_on_flat_screen_title">Выключить экран на плоской поверхности</string>
     <string name="sleep_on_flat_screen_tile_title">Сон на поверхности</string>
     <string name="flat_screen_timeout_title">Тайм-аут экрана на плоской поверхности</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Длительное нажатие на строке состояния для переключения профиля</string>
     <string name="statusbar_app_switch_icon">Показывать значок в строке состояния, когда переключение доступно</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Разблокировано для всех приложений через <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: Наслаждайтесь!</string>
+    <string name="settings_cloned_apps_active">Разблокировано для всех приложений через <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: Наслаждайтесь!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Информация о батарее…</string>
     <string name="power_indication_error">Ошибка при получении данных о зарядке</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">Загрузки</string>
     <string name="assets_download_title">Загрузка файлов</string>
     <string name="assets_download_body">Загрузка сопутствующих файлов</string>
+    <string name="assets_download_size_body">Прогресс: %s</string>
     <string name="update_notification_title">Обновление загружено</string>
     <string name="update_notification_text">Нажмите здесь, чтобы установить</string>
     <string name="download_failed">Не удалось загрузить обновление </string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">Набор иконок не установлен</string>
     <string name="icon_pack_disclaimer_title">Оговорка</string>
     <string name="icon_pack_disclaimer_desc">Пакеты иконок не разрабатываются и не распространяются AospXpert, поэтому команда AospXpert не может обеспечить поддержку наборов иконок. Поддержка того, как AospXpert обрабатывает наборы значков будет предоставляться только соответствующим разработчикам наборов.\n\nИнструкции по компиляции набора иконок см. в руководстве здесь: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Дополнительно…</string>
+    <string name="reboot_bootloader_title">Перезагрузить в Bootloader</string>
+    <string name="soft_reboot_title">Мягкая перезагрузка</string>
+    <string name="restart_systemui_title">Перезагрузка SystemUI</string>
 </resources>

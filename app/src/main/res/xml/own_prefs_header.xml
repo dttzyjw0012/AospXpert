@@ -5,6 +5,7 @@
 
 	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_general_section_title"
+		app:iconSpaceReserved="false"
 		search:ignore="true">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialListPreference
@@ -27,6 +28,7 @@
 
 	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_update_section_title"
+		app:iconSpaceReserved="false"
 		search:ignore="true">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialPreference
@@ -56,6 +58,7 @@
 
 	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_misc_section_title"
+		app:iconSpaceReserved="false"
 		search:ignore="true">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialSwitchPreference
@@ -70,6 +73,7 @@
 
 	<com.yhc.aospxpert.ui.preferences.MaterialPreferenceCategory
 		android:title="@string/settings_about_section_title"
+		app:iconSpaceReserved="false"
 		search:ignore="true">
 
 		<com.yhc.aospxpert.ui.preferences.MaterialPreference

@@ -1,6 +1,7 @@
 package com.yhc.aospxpert.modpacks.launcher;
 
 import static de.robv.android.xposed.XposedHelpers.callMethod;
+import static de.robv.android.xposed.XposedHelpers.findFieldIfExists;
 import static de.robv.android.xposed.XposedHelpers.getBooleanField;
 import static de.robv.android.xposed.XposedHelpers.getObjectField;
 import static de.robv.android.xposed.XposedHelpers.setObjectField;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import de.robv.android.xposed.XC_MethodHook;
@@ -60,6 +62,7 @@ public class CustomNavGestures extends XposedModPack {
 	private static int leftSwipeUpAction = NO_ACTION, rightSwipeUpAction = NO_ACTION, twoFingerSwipeUpAction = NO_ACTION;
 	private Object mSysUiProxy;
 	private Object currentFocusedTask = null;
+	private boolean mTasksIsList = false;
 
 	public CustomNavGestures(Context context) {
 		super(context);
@@ -96,10 +99,10 @@ public class CustomNavGestures extends XposedModPack {
 		ReflectedClass SystemUiProxyClass = ReflectedClass.of("com.android.quickstep.SystemUiProxy");
 		ReflectedClass RecentTasksListClass = ReflectedClass.of("com.android.quickstep.RecentTasksList");
 
+		//noinspection DataFlowIssue
 		Rect displayBounds = SystemUtils.WindowManager().getMaximumWindowMetrics().getBounds();
 		displayW = Math.min(displayBounds.width(), displayBounds.height());
 		displayH = Math.max(displayBounds.width(), displayBounds.height());
-
 
 		RecentTasksListClass
 				.afterConstruction()
@@ -219,24 +222,42 @@ public class CustomNavGestures extends XposedModPack {
 
 			if(recentTaskList.isEmpty()) return;
 
-			if(mTasksFieldName == null)
-			{
-				for(Field f : recentTaskList.get(0).getClass().getDeclaredFields())
-				{
-					if(f.getType().getName().contains("RecentTaskInfo"))
-					{
+			if (mTasksFieldName == null) {
+				for (Field f : recentTaskList.get(0).getClass().getDeclaredFields()) {
+					if (f.getType().getName().contains("RecentTaskInfo")) {
 						mTasksFieldName = f.getName();
+					}
+				}
+			}
+			if (mTasksFieldName == null) {
+				for (Field f : recentTaskList.get(0).getClass().getDeclaredFields()) {
+					if (f.getType().getName().contains("List"))
+					{
+						if(!f.isAccessible()) {
+							f.setAccessible(true);
+						}
+						//noinspection unchecked
+						List<Object> list = (List<Object>) f.get(recentTaskList.get(0));
+						if(list != null && findFieldIfExists(list.get(0).getClass(), "isFocused") != null) {
+							mTasksFieldName = f.getName();
+							mTasksIsList = true;
+						}
 					}
 				}
 			}
 
 			Optional<?> focusedTask = recentTaskList.stream().filter(recentTask ->
 					(boolean) getObjectField(
-							((Object[]) getObjectField(recentTask, mTasksFieldName))[0],
+							mTasksIsList
+									? ((List<?>) getObjectField(recentTask, mTasksFieldName)).get(0)
+									: ((Object[]) getObjectField(recentTask, mTasksFieldName))[0],
 							"isFocused"
 					)).findFirst();
 
-			currentFocusedTask = focusedTask.map(o -> ((Object[]) getObjectField(o, mTasksFieldName))[0]).orElse(null);
+			currentFocusedTask = focusedTask.map(o -> mTasksIsList
+					? ((List<?>) getObjectField(o, mTasksFieldName)).get(0)
+					: ((Object[]) getObjectField(o, mTasksFieldName))[0])
+					.orElse(null);
 		}
 		catch (Throwable ignored){}
 	}

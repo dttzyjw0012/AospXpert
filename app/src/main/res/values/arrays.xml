@@ -582,4 +582,90 @@
 		<item>location</item>
 	</string-array>
 
+	<string-array name="ignored_icons_values">
+		<item>volte</item>
+		<item>vowifi</item>
+		<item>no_calling</item>
+		<item>call_strength</item>
+		<item>alarm_clock</item>
+		<item>rotate</item>
+		<item>headset</item>
+		<item>data_saver</item>
+		<item>ime</item>
+		<item>sync_failing</item>
+		<item>sync_active</item>
+		<item>nfc</item>
+		<item>tty</item>
+		<item>speakerphone</item>
+		<item>cdma_eri</item>
+		<item>data_connection</item>
+		<item>phone_evdo_signal</item>
+		<item>phone_signal</item>
+		<item>secure</item>
+		<item>managed_profile</item>
+		<item>connected_display</item>
+		<item>vpn</item>
+		<item>bluetooth</item>
+		<item>camera</item>
+		<item>microphone</item>
+		<item>location</item>
+		<item>mute</item>
+		<item>volume</item>
+		<item>zen</item>
+		<item>screen_record</item>
+		<item>cast</item>
+		<item>ethernet</item>
+		<item>satellite</item>
+		<item>wifi</item>
+		<item>hotspot</item>
+		<item>mobile</item>
+		<item>airplane</item>
+		<item>battery</item>
+		<item>sensors_off</item>
+		<!--item>clock</item-->
+	</string-array>
+
+	<string-array name="ignored_icons_entries">
+		<item>@string/status_bar_volte</item>
+		<item>@string/status_bar_vowifi</item>
+		<item>@string/status_bar_no_calling</item>
+		<item>@string/status_bar_call_strength</item>
+		<item>@string/status_bar_alarm_clock</item>
+		<item>@string/status_bar_rotate</item>
+		<item>@string/status_bar_headset</item>
+		<item>@string/status_bar_data_saver</item>
+		<item>@string/status_bar_ime</item>
+		<item>@string/status_bar_sync_failing</item>
+		<item>@string/status_bar_sync_active</item>
+		<item>@string/status_bar_nfc</item>
+		<item>@string/status_bar_tty</item>
+		<item>@string/status_bar_speakerphone</item>
+		<item>@string/status_bar_cdma_eri</item>
+		<item>@string/status_bar_data_connection</item>
+		<item>@string/status_bar_phone_evdo_signal</item>
+		<item>@string/status_bar_phone_signal</item>
+		<item>@string/status_bar_secure</item>
+		<item>@string/status_bar_managed_profile</item>
+		<item>@string/status_bar_connected_display</item>
+		<item>@string/status_bar_vpn</item>
+		<item>@string/status_bar_bluetooth</item>
+		<item>@string/status_bar_camera</item>
+		<item>@string/status_bar_microphone</item>
+		<item>@string/status_bar_location</item>
+		<item>@string/status_bar_mute</item>
+		<item>@string/status_bar_volume</item>
+		<item>@string/status_bar_zen</item>
+		<item>@string/status_bar_screen_record</item>
+		<item>@string/status_bar_cast</item>
+		<item>@string/status_bar_ethernet</item>
+		<item>@string/status_bar_oem_satellite</item>
+		<item>@string/status_bar_wifi</item>
+		<item>@string/status_bar_hotspot</item>
+		<item>@string/status_bar_mobile</item>
+		<item>@string/status_bar_airplane</item>
+		<item>@string/status_bar_battery</item>
+		<item>@string/status_bar_sensors_off</item>
+		<!--item>@string/status_bar_clock</item-->
+	</string-array>
+
 </resources>

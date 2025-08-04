@@ -1,182 +1,101 @@
 package com.yhc.aospxpert.modpacks.systemui;
 
-import static android.service.quicksettings.Tile.STATE_ACTIVE;
-import static de.robv.android.xposed.XposedHelpers.getAdditionalInstanceField;
-import static de.robv.android.xposed.XposedHelpers.getObjectField;
-import static de.robv.android.xposed.XposedHelpers.setAdditionalInstanceField;
 import static com.yhc.aospxpert.modpacks.XPrefs.Xprefs;
 import static com.yhc.aospxpert.modpacks.utils.SystemUtils.getFlashlightLevel;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LayerDrawable;
-import android.os.VibrationAttributes;
-import android.os.VibrationEffect;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import de.robv.android.xposed.callbacks.XC_LoadPackage;
-import com.yhc.aospxpert.modpacks.Constants;
-import com.yhc.aospxpert.modpacks.XPLauncher;
-import com.yhc.aospxpert.modpacks.XposedModPack;
 import com.yhc.aospxpert.modpacks.utils.SystemUtils;
-import com.yhc.aospxpert.modpacks.utils.TilePercentageDrawable;
-import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass;
+import com.yhc.aospxpert.modpacks.utils.slidingtile.SlidingTile;
 
-@SuppressWarnings("RedundantThrows")
-public class FlashLightLevel extends XposedModPack {
-	public static final String listenPackage = Constants.SYSTEM_UI_PACKAGE;
+public class FlashLightLevel extends SlidingTile {
 	private static boolean leveledFlashTile = false;
-	private float currentPct = .5f;
-	private static boolean lightQSHeaderEnabled = false;
-	TilePercentageDrawable mFlashPercentageDrawable = null;
+	private static boolean AnimateFlashlight = false;
+
 
 	public FlashLightLevel(Context context) {
 		super(context);
 	}
 
 	@Override
-	public void updatePrefs(String... Key) {
+	public void updatePrefs(String... Key)
+	{
+		super.updatePrefs(Key);
 		leveledFlashTile = Xprefs.getBoolean("leveledFlashTile", false);
-		lightQSHeaderEnabled = Xprefs.getBoolean("LightQSPanel", false);
+		AnimateFlashlight = Xprefs.getBoolean("AnimateFlashlight", false);
+
+		if(Key.length > 0 && Key[0].equals("leveledFlashTile"))
+		{
+			refreshAllTiles();
+		}
+	}
+
+	@SuppressLint("DiscouragedApi")
+	@Override
+	public String getTextForLevel(int level) {
+		Resources res = mContext.getResources();
+		return String.format("%s - %s%%",
+				res.getText(
+						res.getIdentifier(
+								"quick_settings_flashlight_label",
+								"string", mContext.getPackageName())),
+				level
+		);
 	}
 
 	@Override
-	public boolean listensTo(String packageName) {
-		return listenPackage.equals(packageName) && !XPLauncher.isChildProcess;
+	public boolean shallControlTiles() {
+		return leveledFlashTile && SystemUtils.supportsFlashLevels();
 	}
 
-	@SuppressLint("ClickableViewAccessibility")
 	@Override
-	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
-		if (!lpParam.packageName.equals(listenPackage)) return;
+	public void init() {}
 
-		mFlashPercentageDrawable = new TilePercentageDrawable(mContext);
-		mFlashPercentageDrawable.setAlpha(64);
-
-		ReflectedClass QSTileViewImplClass = ReflectedClass.of("com.android.systemui.qs.tileimpl.QSTileViewImpl");
-
-		QSTileViewImplClass
-				.after("handleStateChanged")
-				.run(param -> {
-					if (!leveledFlashTile || !SystemUtils.supportsFlashLevels()) return;
-
-					try {
-						Object state = param.args[0];
-						if (getObjectField(state, "spec").equals("flashlight")) {
-
-							SystemUtils.ChangeListener listener = (SystemUtils.ChangeListener) getAdditionalInstanceField(param.thisObject, "flashlightLevelListener");
-
-							LinearLayout tileView = (LinearLayout) param.thisObject;
-
-							if (listener == null) {
-								listener = level -> {
-									Resources res = mContext.getResources();
-
-									TextView label = (TextView) getObjectField(tileView, "label");
-
-									@SuppressLint("DiscouragedApi")
-									String newLabel = String.format("%s - %s%%",
-											res.getText(
-													res.getIdentifier(
-															"quick_settings_flashlight_label",
-															"string", mContext.getPackageName())),
-											level
-									);
-
-									label.setText(newLabel);
-								};
-
-								setAdditionalInstanceField(param.thisObject, "flashlightLevelListener", listener);
-
-								SystemUtils.registerFlashlightLevelListener(listener);
-
-								setPct(Xprefs.getFloat("flashPCT", 0.5f));
-
-							}
-							tileView.setOnTouchListener(new View.OnTouchListener() {
-								float initX = 0;
-								float initPct = 0;
-								boolean moved = false;
-
-								@SuppressLint({"DiscouragedApi", "ClickableViewAccessibility"})
-								@Override
-								public boolean onTouch(View view, MotionEvent motionEvent) {
-									if (!SystemUtils.supportsFlashLevels() || !leveledFlashTile)
-										return false;
-
-									switch (motionEvent.getAction()) {
-										case MotionEvent.ACTION_DOWN: {
-											initX = motionEvent.getX();
-											initPct = initX / view.getWidth();
-											return true;
-										}
-										case MotionEvent.ACTION_MOVE: {
-											float deltaMove = Math.abs(initX - motionEvent.getX()) / view.getWidth();
-
-											if (deltaMove > .03f) {
-												int newLevel = getFlashlightLevel(motionEvent.getX() / view.getWidth());
-
-												view.getParent().requestDisallowInterceptTouchEvent(true);
-												moved = true;
-												setPct(newLevel * 1f / SystemUtils.getMaxFlashLevel());
-												handleFlashLightClick(false, newLevel);
-												SystemUtils.setFlashlightLevel(Math.round(currentPct * 100f));
-											}
-											return true;
-										}
-										case MotionEvent.ACTION_UP: {
-											if (moved) {
-												moved = false;
-												Xprefs.edit().putFloat("flashPCT", currentPct).apply();
-											} else {
-												handleFlashLightClick(true, getFlashlightLevel(currentPct));
-												if (QSTileGrid.QSHapticEnabled)
-													SystemUtils.vibrate(VibrationEffect.EFFECT_CLICK, VibrationAttributes.USAGE_TOUCH);
-											}
-											return true;
-										}
-									}
-									return true;
-								}
-							});
-
-
-
-							setPct(Xprefs.getFloat("flashPCT", 0.5f));
-
-							SystemUtils.setFlashlightLevel(Math.round(currentPct * 100f));
-
-							mFlashPercentageDrawable.setTint(
-									(SystemUtils.isDarkMode() || !lightQSHeaderEnabled) && !getObjectField(state, "state").equals(STATE_ACTIVE)
-											? Color.WHITE
-											: Color.BLACK);
-
-							LayerDrawable layerDrawable;
-							try { //A14 AP11
-								layerDrawable = new LayerDrawable(new Drawable[]{(Drawable) getObjectField(tileView, "backgroundDrawable"), mFlashPercentageDrawable});
-							} catch (Throwable ignored) { //Older
-								layerDrawable = new LayerDrawable(new Drawable[]{(Drawable) getObjectField(tileView, "colorBackgroundDrawable"), mFlashPercentageDrawable});
-							}
-							if(layerDrawable == null) return; //something is wrong
-
-							tileView.setBackground(layerDrawable);
-						}
-					}catch (Throwable ignored){}
-				});
+	@Override
+	public boolean isStateControlledByMod() {
+		return false;
 	}
 
-	private void setPct(float newVal) {
-		currentPct = newVal;
-		mFlashPercentageDrawable.setPct(Math.round(newVal * 100));
+	@Override
+	public int getInitialValue() {
+		try
+		{
+			return Xprefs.getInt("flashPCT", 50);
+		}
+		catch (Throwable ignored){}
+		return 50;
 	}
 
-	private void handleFlashLightClick(boolean toggle, int level) {
-		SystemUtils.setFlash(toggle ^ SystemUtils.isFlashOn(), level);
+	@Override
+	public int getInitialState() {
+		return STATE_NO_CHANGE;
+	}
+
+	@Override
+	public int clampToLevelSteps(int value) {
+		return Math.round(100f * getFlashlightLevel(value/100f) / SystemUtils.getMaxFlashLevel());
+	}
+
+	@Override
+	public void saveCurrentState(int currentState, int currentValue) {
+		Xprefs.edit().putInt("flashPCT", currentValue).apply();
+	}
+
+	@Override
+	public void handleClick(int currentValue) {
+		SystemUtils.setFlash(!SystemUtils.isFlashOn(), getFlashlightLevel(currentValue/100f), AnimateFlashlight);
+	}
+
+	@Override
+	public int handleValueChange(int newValue) {
+		SystemUtils.setFlash(SystemUtils.isFlashOn(), getFlashlightLevel(newValue/100f), false);
+		return STATE_NO_CHANGE;
+	}
+
+	@Override
+	public String getTargetSpec() {
+		return "flashlight";
 	}
 }

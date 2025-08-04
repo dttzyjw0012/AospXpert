@@ -14,9 +14,9 @@ android {
 	defaultConfig {
 		applicationId = "com.yhc.aospxpert"
 		minSdk = 33
-		targetSdk = 34
-		versionCode = 426
-		versionName = "aosp-canary-426"
+		targetSdk = 35
+		versionCode = 427
+		versionName = "aosp-canary-427"
 		setProperty("archivesBaseName", "AOSPXpert.apk")
 		ndk {
 			//noinspection ChromeOsAbiSupport
@@ -74,6 +74,8 @@ android {
 	}
 
 	compileOptions {
+		isCoreLibraryDesugaringEnabled = true
+
 		sourceCompatibility = JavaVersion.VERSION_17
 		targetCompatibility = JavaVersion.VERSION_17
 	}
@@ -84,12 +86,12 @@ android {
 		jniLibs.excludes += setOf(
 			"**/libpytorch_jni_lite.so"
 		)
-
-		jniLibs.useLegacyPackaging = true
 	}
 }
 
 dependencies {
+
+	coreLibraryDesugaring(libs.desugar.jdk.libs)
 
 	compileOnly(files("lib/api-82.jar"))
 	compileOnly(files("lib/api-82-sources.jar"))
@@ -142,9 +144,6 @@ dependencies {
 	implementation (libs.play.services.mlkit.subject.segmentation)
 	implementation (libs.play.services.base)
 
-  // Collapsing Toolbar with subtitle
-	implementation (libs.collapsingtoolbarlayout.subtitle)
-
 	// Splash screen
 	implementation (libs.androidx.core.splashscreen)
 
@@ -152,7 +151,7 @@ dependencies {
 	implementation(libs.lottie)
 
 //	implementation (libs.prdownloader)
-	implementation(files("lib/prdownloader-release.aar"))
+	implementation(files("lib/PRDownloader-1.0.2.aar"))
 
 	implementation (libs.pytorch.android.lite)
 	implementation (libs.pytorch.android.torchvision.lite)

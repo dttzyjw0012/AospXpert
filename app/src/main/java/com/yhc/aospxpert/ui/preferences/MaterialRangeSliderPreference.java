@@ -1,5 +1,8 @@
 package com.yhc.aospxpert.ui.preferences;
 
+import static com.yhc.aospxpert.ui.preferences.Utils.setBackgroundResource;
+import static com.yhc.aospxpert.ui.preferences.Utils.setFirstAndLastItemMargin;
+
 import android.content.Context;
 import android.util.AttributeSet;
 
@@ -22,6 +25,9 @@ public class MaterialRangeSliderPreference extends RangeSliderPreference {
 
 		holder.setDividerAllowedAbove(false);
 		holder.setDividerAllowedBelow(false);
+
+		setFirstAndLastItemMargin(holder);
+		setBackgroundResource(this, holder);
 	}
 
 	private void initResource() {

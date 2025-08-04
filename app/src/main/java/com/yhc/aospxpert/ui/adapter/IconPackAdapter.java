@@ -89,28 +89,30 @@ public class IconPackAdapter extends RecyclerView.Adapter<IconPackAdapter.ViewHo
 	}
 
 	private void setLayoutBackground(ViewHolder holder, int position, int enabledState) {
+		Context context = holder.itemView.getContext();
+
 		LayerDrawable cardBackground = switch (getItemViewType(position)) {
 			case VIEW_TYPE_TOP ->
-					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_top_selected, null);
+					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_top_selected, context.getTheme());
 			case VIEW_TYPE_MIDDLE ->
-					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_mid_selected, null);
+					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_mid_selected, context.getTheme());
 			case VIEW_TYPE_BOTTOM ->
-					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_bottom_selected, null);
+					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_bottom_selected, context.getTheme());
 			default ->
-					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_single_selected, null);
+					(LayerDrawable) ResourcesCompat.getDrawable(holder.itemView.getResources(), R.drawable.container_single_selected, context.getTheme());
 		};
 
 		if (cardBackground != null) {
 			Drawable drawable = cardBackground.getDrawable(1);
 			switch (enabledState) {
 				case IconPackUtil.ENABLED_FULL:
-					drawable.setTint(getColorFromAttribute(holder.itemView.getContext(), R.attr.colorPrimary));
+					drawable.setTint(getColorFromAttribute(context, R.attr.colorPrimary));
 					break;
 				case IconPackUtil.ENABLED_PARTIAL:
-					drawable.setTint(getColorWithHalfOpacity(getColorFromAttribute(holder.itemView.getContext(), R.attr.colorPrimary)));
+					drawable.setTint(getColorWithHalfOpacity(getColorFromAttribute(context, R.attr.colorPrimary)));
 					break;
 				default:
-					drawable.setTint(getColorFromAttribute(holder.itemView.getContext(), isNightMode(holder.itemView.getContext()) ? R.attr.colorSurfaceBright : R.attr.colorSurface));
+					drawable.setTint(getColorFromAttribute(context, isNightMode(context) ? R.attr.colorSurfaceBright : R.attr.colorSurface));
 					break;
 			}
 			drawable.mutate();

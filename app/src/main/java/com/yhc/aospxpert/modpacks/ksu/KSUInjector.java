@@ -1,10 +1,13 @@
 package com.yhc.aospxpert.modpacks.ksu;
 
+import static android.content.Context.RECEIVER_EXPORTED;
 import static de.robv.android.xposed.XposedHelpers.callMethod;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 
 import com.topjohnwu.superuser.Shell;
@@ -26,22 +29,35 @@ import com.yhc.aospxpert.modpacks.utils.toolkit.ReflectedClass;
  * @noinspection RedundantThrows
  */
 public class KSUInjector extends XposedModPack {
-	private static final String listenPackage = Constants.KSU_PACKAGE;
+    private static final String listenPackage1 = Constants.KSU_PACKAGE;
+    private static final String listenPackage2 = Constants.KSU_NEXT_PACKAGE;
+    private static final String listenPackage = Constants.KSU_PACKAGE;
+    private ReflectedClass NativesClass;
+    private ReflectedClass ProfileClass;
 
-	public KSUInjector(Context context) {
-		super(context);
-	}
+    public KSUInjector(Context context) {
+        super(context);
+    }
 
-	@Override
-	public void updatePrefs(String... Key) {
+    @Override
+    public void updatePrefs(String... Key) {}
 
-	}
+    @Override
+    public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
+        String packageName = lpParam.packageName; // Can be KSU or KSU Next
+        ReflectedClass MainActivityClass = ReflectedClass.of(packageName + ".ui.MainActivity");
+        NativesClass = ReflectedClass.of(packageName + ".Natives");
+        ProfileClass = ReflectedClass.of(packageName + ".Natives$Profile");
 
-	@Override
-	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpParam) throws Throwable {
-		ReflectedClass MainActivityClass = ReflectedClass.of("me.weishu.kernelsu.ui.MainActivity");
-		ReflectedClass NativesClass = ReflectedClass.of("me.weishu.kernelsu.Natives");
-		ReflectedClass ProfileClass = ReflectedClass.of("me.weishu.kernelsu.Natives$Profile");
+        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                grantRootToPX(intent);
+            }
+        };
+
+        //In case ksu is running already, it won't understand the onCreate intent we send. broadcast it is then
+        mContext.registerReceiver(broadcastReceiver, new IntentFilter(Constants.PX_ROOT_EXTRA), RECEIVER_EXPORTED);
 
 		MainActivityClass
 				.after("onCreate")
@@ -75,21 +91,22 @@ public class KSUInjector extends XposedModPack {
 				});
 	}
 
-	private void restartPX(boolean launch) throws InterruptedException {
-		Shell.cmd("killall " + BuildConfig.APPLICATION_ID).exec();
+    private void restartPX(boolean launch) throws InterruptedException {
+        Shell.cmd("killall " + BuildConfig.APPLICATION_ID).exec();
 
-		if (launch) {
-			Thread.sleep(1000);
-			mContext.startActivity(
-					mContext
-							.getPackageManager()
-							.getLaunchIntentForPackage(BuildConfig.APPLICATION_ID)
-							.putExtra("FromKSU", 1));
-		}
-	}
+        if (launch) {
+            Thread.sleep(1000);
+            //noinspection DataFlowIssue
+            mContext.startActivity(
+                    mContext
+                            .getPackageManager()
+                            .getLaunchIntentForPackage(BuildConfig.APPLICATION_ID)
+                            .putExtra("FromKSU", 1));
+        }
+    }
 
-	@Override
-	public boolean listensTo(String packageName) {
-		return listenPackage.equals(packageName);
-	}
+    @Override
+    public boolean listensTo(String packageName) {
+        return listenPackage1.equals(packageName) || listenPackage2.equals(packageName);
+    }
 }

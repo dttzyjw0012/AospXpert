@@ -15,6 +15,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +25,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -55,6 +59,7 @@ import com.yhc.aospxpert.databinding.UpdateFragmentBinding;
 import com.yhc.aospxpert.modpacks.utils.ModuleFolderOperations;
 import com.yhc.aospxpert.ui.activities.SettingsActivity;
 import com.yhc.aospxpert.utils.AppUtils;
+import com.yhc.aospxpert.utils.DisplayUtils;
 import com.yhc.aospxpert.utils.ExtendedSharedPreferences;
 import com.yhc.aospxpert.utils.PreferenceHelper;
 
@@ -136,9 +141,19 @@ public class UpdateFragment extends BaseFragment {
 		//noinspection ConstantConditions
 		downloadManager = (DownloadManager) requireContext().getSystemService(Context.DOWNLOAD_SERVICE);
 
+		boolean isTabletDevice = DisplayUtils.isTablet();
+		View rootView;
 
-		//finally
-		binding = UpdateFragmentBinding.inflate(inflater, container, false);
+		if (isTabletDevice) {
+			View view = inflater.inflate(R.layout.update_fragment, container, false);
+			binding = UpdateFragmentBinding.bind(view);
+			rootView = view;
+		} else {
+			boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+			View view = inflater.inflate(isLandscape ? R.layout.update_fragment_land : R.layout.update_fragment, container, false);
+			binding = UpdateFragmentBinding.bind(view);
+			rootView = view;
+		}
 
 		if (getArguments() != null && getArguments().getBoolean("updateTapped", false)) {
 			String downloadPath = getArguments().getString("filePath");
@@ -149,7 +164,7 @@ public class UpdateFragment extends BaseFragment {
 			applyPrefsToUpdate();
 		}
 
-		return binding.getRoot();
+		return rootView;
 	}
 
 	private void applyPrefsToUpdate() {
@@ -204,7 +219,24 @@ public class UpdateFragment extends BaseFragment {
 							css.addRule("kbd", "border-color: " + intToHex(requireContext().getColor(R.color.changelog_bg)));
 							css.addRule("kbd", "color: " + intToHex(getColorFromAttribute(requireContext(), R.attr.colorOnSurface)));
 							css.addRule("a", "color: " + intToHex(getColorFromAttribute(requireContext(), R.attr.colorPrimary)));
+							css.addRule(".container", "padding-right: 5px", "padding-left: 5px", "margin-right: auto", "margin-left: auto");
 							mMarkdownView.addStyleSheet(css);
+							mMarkdownView.setWebViewClient(new WebViewClient() {
+								@Override
+								public void onPageFinished(WebView view, String url) {
+									view.postVisualStateCallback(0, new WebView.VisualStateCallback() {
+										@Override
+										public void onComplete(long requestId) {
+											if (binding != null) {
+												binding.progressBar.post(() -> binding.progressBar.setVisibility(View.GONE));
+											}
+										}
+									});
+								}
+							});
+							mMarkdownView.getSettings().setJavaScriptEnabled(false);
+							mMarkdownView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+							mMarkdownView.getSettings().setDomStorageEnabled(false);
 							mMarkdownView.loadMarkdownFromUrl((String) result.get("changelog"));
 						} catch (Throwable ignored) {
 						}
@@ -257,7 +289,7 @@ public class UpdateFragment extends BaseFragment {
 
 		binding.updateBtn.setOnClickListener(view1 -> {
 			if (rebootPending) {
-				AppUtils.Restart("system");
+				AppUtils.restart("system");
 			} else {
 				String zipURL = (String) latestVersion.get("zipUrl_Xposed");
 				if (zipURL == null) zipURL = (String) latestVersion.get("zipUrl");

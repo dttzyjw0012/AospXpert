@@ -7,8 +7,8 @@
     android:focusable="true"
     android:foreground="?android:selectableItemBackgroundBorderless"
     android:minHeight="?android:attr/listPreferredItemHeight"
-    android:paddingHorizontal="@dimen/preference_padding_horizontal"
-    android:paddingVertical="@dimen/preference_padding_vertical">
+    android:layout_marginBottom="@dimen/preference_padding_vertical"
+    android:paddingHorizontal="@dimen/ui_container_margin_side">
 
     <ImageView
         android:id="@android:id/icon"
@@ -16,6 +16,7 @@
         android:layout_height="20dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/preference_padding_horizontal"
         android:layout_marginEnd="18dp"
         android:contentDescription="@android:string/untitled"
         android:visibility="gone"
@@ -24,7 +25,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:layout_toStartOf="@android:id/widget_frame"
         android:layout_toEndOf="@android:id/icon"
         android:orientation="vertical">
@@ -38,7 +39,7 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/summary"
-            style="@style/TextAppearance.Material3.BodyMedium"
+            style="@style/TextAppearance.Preference.Summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"

@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">Este canal muestra notificaciones sobre las últimas actualizaciones.</string>
     <string name="new_update_title">Actualización disponible</string>
     <string name="new_update_desc">Una nueva versión de AospXpert está disponible</string>
+    <string name="skip_this_update">Omitir esta actualización</string>
     <string name="browser_not_found">Navegador no encontrado</string>
     <string name="settings_general_section_title">General</string>
     <string name="settings_update_section_title">Actualizar</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">Abrir página wiki</string>
     <string name="crowdin_title">Traducir a mi idioma</string>
     <string name="crowdin_summary">Ayúdanos a traducir %s a tu propio idioma</string>
+    <string name="nothing_to_show">No hay nada que mostrar</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">Pantalla de bloqueo</string>
     <string name="lockscreen_header_summary">Cambia el teclado para que coincida con tu gusto</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">Problemas de conectividad de punto de acceso</string>
     <string name="hotspot_disable_approval_summary">Permitir que los clientes no \"pre-aprobados\" se conecten sin problemas</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">Fondo de pantalla de efecto profundo</string>
     <string name="depth_wallpaper_title">Fondo de pantalla de efecto profundo</string>
     <string name="depth_wallpaper_summary">Integrar dinámicamente el fondo de pantalla con el reloj</string>
     <string name="depth_wallpaper_ai_model_title">Modelo preferido de IA</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">Deshabilitar la animación de pantalla de desbloqueo</string>
     <string name="ls_general_options">Opciones de pantalla de bloqueo</string>
     <string name="hide_avatar_title">Eliminar avatar de usuario (modo multiusuario)</string>
+    <string name="fingerprint_options">Huella digital</string>
     <string name="transparent_fingerprint_circle">Ocultar círculo del icono de la huella digital</string>
     <string name="transparent_fingerprint_circle_off">El círculo se activará</string>
     <string name="transparent_fingerprint_circle_on">El círculo se ocultará</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">Hoy</string>
     <string name="nt_stat_mode_week">Semana actual</string>
     <string name="nt_stat_mode_month">Mes actual</string>
+    <string name="sb_ignored_icons_category">Iconos ignorados en la barra de estado</string>
+    <string name="sb_ignored_icons">Barra de Estado</string>
+    <string name="sb_ignored_icons_statusbar">Seleccione qué icono se ocultará en la barra de estado</string>
+    <string name="sb_kg_ignored_icons">Pantalla de bloqueo</string>
+    <string name="sb_ignored_icons_kg">Seleccione qué icono se ocultará en la barra de estado de teclado</string>
+    <string name="sb_qs_ignored_icons">Ajustes rápidos</string>
+    <string name="sb_ignored_icons_qs">Seleccione qué icono se ocultará en los ajustes rápidos</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">Sin Llamadas</string>
+    <string name="status_bar_call_strength">Intensidad de señal</string>
+    <string name="status_bar_alarm_clock">Alarma</string>
+    <string name="status_bar_rotate">Auto Rotar</string>
+    <string name="status_bar_headset">Auriculares conectados</string>
+    <string name="status_bar_data_saver">Ahorro de datos</string>
+    <string name="status_bar_ime">Método de entrada</string>
+    <string name="status_bar_sync_failing">Fallo de sincronización</string>
+    <string name="status_bar_sync_active">Sincronización Activa</string>
+    <string name="status_bar_nfc">NFC Activo</string>
+    <string name="status_bar_tty">Modo TTY</string>
+    <string name="status_bar_speakerphone">Altavoz activado</string>
+    <string name="status_bar_cdma_eri">CDMA ERI</string>
+    <string name="status_bar_data_connection">Conexión de datos</string>
+    <string name="status_bar_phone_evdo_signal">Señal EVDO</string>
+    <string name="status_bar_phone_signal">Señal del teléfono</string>
+    <string name="status_bar_secure">Modo Seguro</string>
+    <string name="status_bar_managed_profile">Editar Perfil</string>
+    <string name="status_bar_connected_display">Pantalla Conectada</string>
+    <string name="status_bar_vpn">VPN activa</string>
+    <string name="status_bar_bluetooth">Bluetooth conectado</string>
+    <string name="status_bar_camera">Cámara en uso</string>
+    <string name="status_bar_microphone">Micrófono en uso</string>
+    <string name="status_bar_location">Ubicación activa</string>
+    <string name="status_bar_mute">Silenciado</string>
+    <string name="status_bar_volume">Nivel de volumen</string>
+    <string name="status_bar_zen">No molestar</string>
+    <string name="status_bar_screen_record">Grabación de pantalla</string>
+    <string name="status_bar_cast">Emitiendo</string>
+    <string name="status_bar_ethernet">Ethernet Conectado</string>
+    <string name="status_bar_oem_satellite">Conexión Satellite</string>
+    <string name="status_bar_wifi">Wi-Fi conectado</string>
+    <string name="status_bar_hotspot">Punto de acceso activo</string>
+    <string name="status_bar_mobile">Datos móviles</string>
+    <string name="status_bar_airplane">Modo Avión</string>
+    <string name="status_bar_battery">Nivel de Batería</string>
+    <string name="status_bar_sensors_off">Sensores desactivados</string>
+    <string name="status_bar_clock">Reloj</string>
     <string name="sunday">Domingo</string>
     <string name="monday">Lunes</string>
     <string name="tuesday">Martes</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">Altura en comparación con el tamaño estándar</string>
     <string name="gesture_nav_pill_height_title">Altura en comparación con el tamaño estándar</string>
     <string name="threebutton_header_title">Navegación con 3 botones</string>
+    <string name="taskbar_header_title">Barra de Tareas</string>
     <string name="modify_3button_title">Modificar el orden de los botones</string>
     <string name="three_button_left_title">Botón izquierdo</string>
     <string name="three_button_center_title">Botón central</string>
     <string name="three_button_right_title">Botón derecho</string>
     <string name="hide_navbar_title">Ocultar barra de navegación</string>
-    <string name="taskbar_as_recents_title">Convertir barra de tareas en barra de recientes</string>
+    <string name="taskbar_as_recents_title">Convierte la barra de tareas a la barra de recientes AospXpert</string>
+    <string name="taskbar_hide_allapps_title">Ocultar botón de todas las aplicaciones</string>
+    <string name="taskbar_enable_google_recents">Activar recientes de Android en la barra de tareas</string>
     <string name="taskbar_height_title">Altura de la barra de tareas</string>
     <string name="taskbar_radius_title">Curva de la esquina de la barra de tareas</string>
     <string name="colorpill">Color del acento en la píldora de gestos</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">Forzar activada</string>
     <string name="taskbar_force_disable_title">Forzar desactivada</string>
     <string name="taskbar_transient_title">Esconder automáticamente</string>
+    <string name="taskbar_on_launcher_title">Mostrar en Inicio</string>
     <string name="remap_physical_buttons_title">Mapear botones físicos</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">Pasar por alto la verificación de la firma del paquete</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">También ignorará el botón flotante de rotación manual</string>
     <string name="force_no_cutout">Ignora el recorte de la cámara</string>
     <string name="clear_all_reposition_title">Agregar un botón de borrar todo en aplicaciones recientes</string>
-    <string name="force_themed_icons_title">Generar automáticamente íconos temáticos faltantes (Solo Android - Pixel launcher)</string>
-    <string name="reapply_themed_config">Vuelva a habilitar los iconos temáticos para aplicar</string>
+    <string name="force_themed_icons_title">Autogenerar iconos temáticos faltantes</string>
+    <string name="force_themed_icons_summary">Sólo lanzador Pixel</string>
     <string name="volume_button_step_title">Pasos de volumen (0 a 100%)</string>
     <string name="display_resolution_switch_title">Modificar resolución de pantalla</string>
     <string name="display_resolution_switch_summary">Antes de activar esto, asegúrese de reiniciar todos los cambios de tamaño de pantalla/dpi por defecto</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">Mientras la pantalla está apagada…</string>
     <string name="custom_themed_icons_title">Iconos temáticos personalizados</string>
     <string name="px_in_settings_title">Añadir AospXpert a los elementos de configuración</string>
+    <string name="advanced_power_menu_title">Menú avanzado de apagado</string>
     <string name="sleep_on_flat_screen_title">Apagar la pantalla en superficie plana</string>
     <string name="sleep_on_flat_screen_tile_title">Dormir en la superficie</string>
     <string name="flat_screen_timeout_title">Tiempo de espera de pantalla en superficie plana</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">Pulsación larga de la barra de estado para cambiar de perfil</string>
     <string name="statusbar_app_switch_icon">Mostrar un icono en la barra de estado cuando el cambio está disponible</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">Desbloqueado para todas las aplicaciones a través de <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font>: ¡Disfruta!</string>
+    <string name="settings_cloned_apps_active">Desbloqueado para todas las aplicaciones a través de <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font>: ¡Disfruta!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">Información de la batería…</string>
     <string name="power_indication_error">Error obteniendo datos de carga</string>
@@ -425,11 +481,12 @@
     <string name="menu_updates">Actualizaciones de la aplicación</string>
     <string name="monitoring_category_title">Opciones de monitoreo</string>
     <string name="netstat_header">Configuración de estadísticas de red</string>
-    <string name="string_formatter_manual_body_v3">Además del texto normal, las variables dinámicas también están disponibles, como fecha, uso de datos y temperatura:\n\n$G\&lt;format\&gt; : Fecha georgiana, según el formato*\n$P&lt;format&gt; : Fecha persa, según el formato*\n$Nrx : Descargas totales en el período especificado ** ***\n$Ntx: Subidas totales en el período especificado ** ***\n$Nall : Tráfico total en el período especificado Nombre SSID WiFi (si corresponde)\n\n$T\&lt;format\&gt;[interval] : Temperatura; \nformat puede ser b (para batería), c (para cpu), g (para gpu) y s (para piel) \nLastly, hay un número opcional de intervalo de actualización en segundos (predeterminado: 60 segundos) \n\n*for documentación de formato, busque \"Formato de fecha Java\"\n** Puede especificar el período de estadísticas en AOSPXpert/Menú misceláneo/Configuración de estadísticas de red\n*** si reemplazas $N con $Nc obtendrás con estadísticas de datos móviles (por ejemplo, $Ncrx en lugar de Nrx)</string>
+    <string name="string_formatter_manual_body_v3">Además del texto normal, las variables dinámicas también están disponibles, como fecha, uso de datos y temperatura:\n\n$G\&lt;format\&gt; : Fecha georgiana, según el formato*\n$P&lt;format&gt; : Fecha persa, según el formato*\n$Nrx : Descargas totales en el período especificado ** ***\n$Ntx: Subidas totales en el período especificado ** ***\n$Nall : Tráfico total en el período especificado Nombre SSID WiFi (si corresponde)\n\n$T\&lt;format\&gt;[interval] : Temperatura; \nformat puede ser b (para batería), c (para cpu), g (para gpu) y s (para piel) \nLastly, hay un número opcional de intervalo de actualización en segundos (predeterminado: 60 segundos) \n\n*for documentación de formato, busque \"Formato de fecha Java\"\n** Puede especificar el período de estadísticas en AOSPMods/Menú misceláneo/Configuración de estadísticas de red\n*** si reemplazas $N con $Nc obtendrás con estadísticas de datos móviles (por ejemplo, $Ncrx en lugar de Nrx)</string>
     <string name="update_channel_name">Actualizaciones</string>
     <string name="download_channel_name">Descargas</string>
     <string name="assets_download_title">Descargando archivos</string>
     <string name="assets_download_body">Descargar archivos adicionales</string>
+    <string name="assets_download_size_body">Progress: %s</string>
     <string name="update_notification_title">Actualización descargada</string>
     <string name="update_notification_text">Toque aquí para instalar</string>
     <string name="download_failed">Error al descargar la actualización</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">Cambiar rama</string>
     <string name="reinstall_word">Reinstalar</string>
     <string name="changelog_title">Lista de cambios</string>
-    <string name="own_prefs_header">Configuración de AOSPXpert</string>
+    <string name="own_prefs_header">Configuración de AOSPMods</string>
     <string name="language_title">Idioma</string>
     <string name="toggle_dark_apply">(Alternar tema oscuro para aplicar)</string>
     <string name="gesture_nav_extra_cat">Gestos adicionales de la barra de navegación</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">No hay packs de iconos instalados</string>
     <string name="icon_pack_disclaimer_title">Aviso legal</string>
     <string name="icon_pack_disclaimer_desc">Los paquetes de iconos no son desarrollados o distribuidos por AospXpert. Como tal, el equipo de AospXpert no puede proporcionar soporte para paquetes de iconos. Soporte sobre cómo AospXpert maneja los paquetes de iconos sólo se proporcionará a los respectivos desarrolladores de paquetes.\n\nPara instrucciones sobre cómo compilar un paquete de iconos, por favor consulte la guía aquí: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">Avanzado…</string>
+    <string name="reboot_bootloader_title">Reiniciar en bootloader</string>
+    <string name="soft_reboot_title">Reinicio rápido</string>
+    <string name="restart_systemui_title">Reiniciar SystemUI</string>
 </resources>

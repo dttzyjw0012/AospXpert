@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.concurrent.CountDownLatch;
@@ -22,7 +20,7 @@ import com.yhc.aospxpert.databinding.ActivitySplashScreenBinding;
 import com.yhc.aospxpert.utils.AppUtils;
 
 @SuppressLint("CustomSplashScreen")
-public class SplashScreenActivity extends AppCompatActivity {
+public class SplashScreenActivity extends BaseActivity {
 	/**
 	 * @noinspection unused
 	 */

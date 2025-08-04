@@ -20,6 +20,7 @@
     <string name="notification_channel_update_desc">این کانال اطلاع رسانی در مورد آخرین به روز رسانی ها را نشان می دهد.</string>
     <string name="new_update_title">نسخه جدید داریم</string>
     <string name="new_update_desc">نسخه جدید AospXpert آماده است</string>
+    <string name="skip_this_update">گذشتن از این به‌روزرسانی</string>
     <string name="browser_not_found">مرورگر یافت نشد</string>
     <string name="settings_general_section_title">عمومی</string>
     <string name="settings_update_section_title">به‌روزرسانی</string>
@@ -36,6 +37,7 @@
     <string name="usage_summary">صفحه ویکی را باز کنید</string>
     <string name="crowdin_title">همکاری در ترجمه این برنامه</string>
     <string name="crowdin_summary">کمک کنید که ترجمه %s تکمیل شود</string>
+    <string name="nothing_to_show">Nothing to show</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">صفحه قفل</string>
     <string name="lockscreen_header_summary">صفحه قفل رو جوری عوض کن که میخوای</string>
@@ -62,6 +64,7 @@
     <string name="hotspot_disable_approval_title">حل مشکلات اتصال هات اسپات</string>
     <string name="hotspot_disable_approval_summary">به مشتریان غیر\"از قبل تایید شده\" اجازه دهید به طور یکپارچه متصل شوند</string>
     <!--Lock screen related-->
+    <string name="depth_wallpaper_options">تصویر‌زمینه با افکت عمق</string>
     <string name="depth_wallpaper_title">والپیپر افکت عمق</string>
     <string name="depth_wallpaper_summary">پیش زمینه کاغذ دیواری را به صورت پویا با ساعت ادغام کنید</string>
     <string name="depth_wallpaper_ai_model_title">مدل ترجیحی هوش مصنوعی</string>
@@ -72,6 +75,7 @@
     <string name="disable_unlock_hint_title">حذف انیمیشن راهنمایی باز کردن قفل</string>
     <string name="ls_general_options">تنظیمات قفل صفحه</string>
     <string name="hide_avatar_title">حذف نمایه کاربر (حالت چند کاربره)</string>
+    <string name="fingerprint_options">اثرانگشت</string>
     <string name="transparent_fingerprint_circle">پنهان کردن دایره اثر انگشت زیر نمایشگر</string>
     <string name="transparent_fingerprint_circle_off">دایره اطراف نماد اثر انگشت فعال است</string>
     <string name="transparent_fingerprint_circle_on">دایره اطراف نماد اثر انگشت پنهان شد</string>
@@ -197,6 +201,53 @@
     <string name="nt_stat_mode_today">امروز</string>
     <string name="nt_stat_mode_week">هفته جاری</string>
     <string name="nt_stat_mode_month">ماه جاری</string>
+    <string name="sb_ignored_icons_category">نمادهای نادیده گرفته‌شده در نوار وضعیت</string>
+    <string name="sb_ignored_icons">نوار وضعیت</string>
+    <string name="sb_ignored_icons_statusbar">انتخاب کنید کدام نماد در نوار وضعیت پنهان شود</string>
+    <string name="sb_kg_ignored_icons">صفحه‌قفل</string>
+    <string name="sb_ignored_icons_kg">انتخاب کنید کدام نماد در نوار وضعیت صفحه قفل پنهان شود</string>
+    <string name="sb_qs_ignored_icons">تنظیمات سریع</string>
+    <string name="sb_ignored_icons_qs">انتخاب کنید کدام نماد در تنظیمات سریع پنهان شود</string>
+    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_vowifi">VoWiFi</string>
+    <string name="status_bar_no_calling">بدون تماس</string>
+    <string name="status_bar_call_strength">قدرت سیگنال تماس</string>
+    <string name="status_bar_alarm_clock">ساعت زنگ‌دار</string>
+    <string name="status_bar_rotate">چرخش خودکار</string>
+    <string name="status_bar_headset">هدست متصل شد</string>
+    <string name="status_bar_data_saver">صرفه‌جویی داده</string>
+    <string name="status_bar_ime">روش ورودی</string>
+    <string name="status_bar_sync_failing">همگام‌سازی ناموفق</string>
+    <string name="status_bar_sync_active">همگام‌سازی فعال</string>
+    <string name="status_bar_nfc">میدان‌نزدیک فعال</string>
+    <string name="status_bar_tty">حالت کم شنوا</string>
+    <string name="status_bar_speakerphone">اسپیکر روشن</string>
+    <string name="status_bar_cdma_eri">اصطلاحات CDMA</string>
+    <string name="status_bar_data_connection">اتصال داده</string>
+    <string name="status_bar_phone_evdo_signal">سیگنال EVDO</string>
+    <string name="status_bar_phone_signal">سیگنال تلفن</string>
+    <string name="status_bar_secure">حالت امن</string>
+    <string name="status_bar_managed_profile">نمایه مدیریت‌شده</string>
+    <string name="status_bar_connected_display">نمایشگر متصل</string>
+    <string name="status_bar_vpn">فیلترشکن فعال</string>
+    <string name="status_bar_bluetooth">بلوتوث متصل</string>
+    <string name="status_bar_camera">دوربین درحال استفاده</string>
+    <string name="status_bar_microphone">میکروفون درحال استفاده</string>
+    <string name="status_bar_location">مکان فعال</string>
+    <string name="status_bar_mute">بی‌صدا شده</string>
+    <string name="status_bar_volume">سطح صدا</string>
+    <string name="status_bar_zen">مزاحم نشوید</string>
+    <string name="status_bar_screen_record">ضبط صفحه‌نمایش</string>
+    <string name="status_bar_cast">بازتاباندن</string>
+    <string name="status_bar_ethernet">اترنت متصل</string>
+    <string name="status_bar_oem_satellite">اتصال ماهواره‌ای</string>
+    <string name="status_bar_wifi">وای‌فای متصل</string>
+    <string name="status_bar_hotspot">نقطه اتصال فعال است</string>
+    <string name="status_bar_mobile">داده‌ همراه</string>
+    <string name="status_bar_airplane">حالت پرواز</string>
+    <string name="status_bar_battery">مقدار باتری</string>
+    <string name="status_bar_sensors_off">حسگرها خاموش</string>
+    <string name="status_bar_clock">ساعت</string>
     <string name="sunday">یکشنبه</string>
     <string name="monday">دوشنبه</string>
     <string name="tuesday">سه‌شنبه</string>
@@ -254,12 +305,15 @@
     <string name="gesture_nav_pill_width_title">عرض در نسبت به اندازه استاندارد</string>
     <string name="gesture_nav_pill_height_title">ارتفاع نسبت به اندازه استاندارد</string>
     <string name="threebutton_header_title">نوار ناوبری 3 کلیده</string>
+    <string name="taskbar_header_title">Taskbar navigation</string>
     <string name="modify_3button_title">تنظیم محل دکمه های ناوبری</string>
     <string name="three_button_left_title">دکمه سمت چپ</string>
     <string name="three_button_center_title">دکمه وسط</string>
     <string name="three_button_right_title">دکمه سمت راست</string>
     <string name="hide_navbar_title">پنهان کردن نوار ناوبری</string>
-    <string name="taskbar_as_recents_title">تبدیل نوار برنامه به نوار اخیر</string>
+    <string name="taskbar_as_recents_title">تبدیل نوار وظیفه را به نوار اخیر AospXpert</string>
+    <string name="taskbar_hide_allapps_title">دکمه پنهان کردن همه برنامه‌ها</string>
+    <string name="taskbar_enable_google_recents">فعال کردن اخیراً اندروید در نوار وظیفه</string>
     <string name="taskbar_height_title">ارتفاع نوار برنامه</string>
     <string name="taskbar_radius_title">گردی پایین نوار برنامه</string>
     <string name="colorpill">رنگ نوار ناوبری بر اساس رنگبندی سیستم</string>
@@ -269,6 +323,7 @@
     <string name="taskbar_force_enable_title">فعال باشد</string>
     <string name="taskbar_force_disable_title">غیر فعال باشد</string>
     <string name="taskbar_transient_title">پنهان کردن خودکار</string>
+    <string name="taskbar_on_launcher_title">نمایش در خانه</string>
     <string name="remap_physical_buttons_title">دکمه های فیزیکی را مجدداً نقشه برداری کنید</string>
     <!-- Package manager -->
     <string name="pm_bypass_signature_title">دور زدن چک امضای بسته</string>
@@ -285,8 +340,8 @@
     <string name="allow_all_screen_rotations_summary">همچنین دکمه شناور چرخش دستی را نادیده می گیرد</string>
     <string name="force_no_cutout">فرض کن صفحه نمایش بریدگی دوربین ندارد</string>
     <string name="clear_all_reposition_title">دکمه بستن تمام برنامه ها در پایین صفحه Recent اضافه شود</string>
-    <string name="force_themed_icons_title">ایجاد خودکار نمادهای تک رنگ ناقص (فقط راه‌انداز پیکسل)</string>
-    <string name="reapply_themed_config">مجدداً نمادهای مضمون را فعال کنید تا اعمال شوند</string>
+    <string name="force_themed_icons_title">تولید خودکار نمادهای تم‌دار گمشده</string>
+    <string name="force_themed_icons_summary">فقط لانچر پیکسل</string>
     <string name="volume_button_step_title">مراحل صدای موزیک (0 تا 100%)</string>
     <string name="display_resolution_switch_title">تغییر رزولوشن صفحه نمایش</string>
     <string name="display_resolution_switch_summary">قبل از فعال کردن این، لطفاً تمام تنظیمات مربوط به اندازه/dpi صفحه نمایش را به حالت پیش‌فرض برگردانید</string>
@@ -310,6 +365,7 @@
     <string name="doze_header">وقتی که صفحه نمایش خاموش است…</string>
     <string name="custom_themed_icons_title">نمادهای با تم سفارشی</string>
     <string name="px_in_settings_title">AospXpert را به موارد تنظیمات اضافه کنید</string>
+    <string name="advanced_power_menu_title">منوی پیشرفته نیرو</string>
     <string name="sleep_on_flat_screen_title">صفحه نمایش را روی سطح صاف خاموش کنید</string>
     <string name="sleep_on_flat_screen_tile_title">روی سطح بخوابید</string>
     <string name="flat_screen_timeout_title">وقفه زمانی نمایشگر روی سطح صاف</string>
@@ -346,7 +402,7 @@
     <string name="statusbar_long_press_app_switch">برای تغییر نمایه، نوار وضعیت را طولانی فشار دهید</string>
     <string name="statusbar_app_switch_icon">هنگامی که جابجایی در دسترس است، نمادی را در نوار وضعیت نشان دهید</string>
     <!-- Cloned apps bragging message -->
-    <string name="settings_cloned_apps_active">از طریق <font fgcolor="#FF64A829"><b><u>AOSP Xpert</u></b></font> بدون محدودیت باز شد: حالشو ببر!</string>
+    <string name="settings_cloned_apps_active">از طریق <font fgcolor="#FF64A829"><b><u>Aosp Xpert</u></b></font> بدون محدودیت باز شد: حالشو ببر!</string>
     <!-- SystemUI hook -->
     <string name="battery_info_button_title">اطلاعات باتری…</string>
     <string name="power_indication_error">خطا در واکشی داده‌های شارژ</string>
@@ -430,6 +486,7 @@
     <string name="download_channel_name">دانلودها</string>
     <string name="assets_download_title">دانلود فایل ها</string>
     <string name="assets_download_body">دانلود فایل های همراه</string>
+    <string name="assets_download_size_body">پیشرفت: %s</string>
     <string name="update_notification_title">به روز رسانی دانلود شد</string>
     <string name="update_notification_text">برای نصب اینجا ضربه بزنید</string>
     <string name="download_failed">نسخه جدید دریافت نشد</string>
@@ -450,7 +507,7 @@
     <string name="switch_branches">تغییر نسخه</string>
     <string name="reinstall_word">نصب مجدد</string>
     <string name="changelog_title">تغییرات</string>
-    <string name="own_prefs_header">تنظیمات AOSPXpert</string>
+    <string name="own_prefs_header">تنظیمات AOSPMods</string>
     <string name="language_title">زبان</string>
     <string name="toggle_dark_apply">(برای اعمال، یک بار رنگ صفحه را تیره/روشن کنید)</string>
     <string name="gesture_nav_extra_cat">حرکات از پایین صفحه</string>
@@ -538,4 +595,9 @@
     <string name="no_icon_pack_installed">هیچ بسته آیکونی نصب نشده است</string>
     <string name="icon_pack_disclaimer_title">سلب مسئولیت</string>
     <string name="icon_pack_disclaimer_desc">بسته‌های آیکون توسط AospXpert توسعه یا توزیع نشده‌اند. به این ترتیب، تیم AospXpert قادر به ارائه پشتیبانی از بسته‌های آیکون نیست. پشتیبانی در مورد نحوه مدیریت AospXpert با بسته‌های نماد فقط به توسعه‌دهندگان بسته مربوطه ارائه می‌شود.\n\nبرای دستورالعمل های نحوه کامپایل یک بسته آیکون، لطفاً به راهنمای اینجا مراجعه کنید: %s</string>
+    <!--Advanced power options-->
+    <string name="advanced_option_button_title">پیشرفته…</string>
+    <string name="reboot_bootloader_title">راه‌اندازی مجدد به بوت‌لودر</string>
+    <string name="soft_reboot_title">راه‌اندازی مجدد نرم</string>
+    <string name="restart_systemui_title">راه‌اندازی مجدد رابط سیستم</string>
 </resources>
