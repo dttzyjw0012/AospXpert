@@ -16,7 +16,7 @@ import java.util.List;
 import com.yhc.aospxpert.BuildConfig;
 import com.yhc.aospxpert.R;
 import com.yhc.aospxpert.ui.preferences.MaterialPrimarySwitchPreference;
-import sh.siava.rangesliderpreference.RangeSliderPreference;
+import com.yhc.rangesliderpreference.RangeSliderPreference;
 
 public class PreferenceHelper {
 	public static final int FULL_VERSION = 0;

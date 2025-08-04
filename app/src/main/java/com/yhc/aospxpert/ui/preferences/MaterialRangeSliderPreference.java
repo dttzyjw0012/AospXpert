@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.preference.PreferenceViewHolder;
 
 import com.yhc.aospxpert.R;
-import sh.siava.rangesliderpreference.RangeSliderPreference;
+import com.yhc.rangesliderpreference.RangeSliderPreference;
 
 public class MaterialRangeSliderPreference extends RangeSliderPreference {
 

@@ -6,7 +6,7 @@ import com.crossbowffs.remotepreferences.RemotePreferences;
 
 import java.util.List;
 
-import sh.siava.rangesliderpreference.RangeSliderPreference;
+import com.yhc.rangesliderpreference.RangeSliderPreference;
 
 public class ExtendedRemotePreferences extends RemotePreferences {
 	public ExtendedRemotePreferences(Context context, String authority, String prefFileName) {

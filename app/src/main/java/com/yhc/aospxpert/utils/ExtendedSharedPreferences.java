@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import sh.siava.rangesliderpreference.RangeSliderPreference;
+import com.yhc.rangesliderpreference.RangeSliderPreference;
 
 public class ExtendedSharedPreferences implements SharedPreferences {
 	private final SharedPreferences prefs;

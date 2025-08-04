@@ -79,7 +79,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Change the desc for LSPosed.">
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Fix fault of merge.">
       <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/.idea/runConfigurations.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/src/main/java/com/yhc/rangesliderpreference/RangeSliderPreference.java" afterDir="false" />
@@ -328,6 +328,11 @@
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\resources" />
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\src\main\java\sh\siava\pixelxpert\utils" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yhc.aospxpert.ui.preferences" />
+      <recent name="com.yhc.aospxpert.ui.fragments" />
+      <recent name="com.yhc.aospxpert.modpacks.systemui" />
+    </key>
   </component>
   <component name="RunManager" selected="Shell Script.makeMagisk.sh">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -421,14 +426,6 @@
       <workItem from="1742196728572" duration="309000" />
       <workItem from="1742197046059" duration="10882000" />
       <workItem from="1742261593803" duration="623000" />
-    </task>
-    <task id="LOCAL-00114" summary="removed unused strings">
-      <option name="closed" value="true" />
-      <created>1733638139464</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1733638139465</updated>
     </task>
     <task id="LOCAL-00115" summary="CHANGELOG: Added option to sleep when put on flat surface (Misc)">
       <option name="closed" value="true" />
@@ -814,7 +811,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754325054955</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Fix fault of merge.">
+      <option name="closed" value="true" />
+      <created>1754330822606</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1754330822606</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -963,7 +968,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="CHANGELOG: Fixed random preferences shown on the app" />
     <MESSAGE value="CHANGELOG: A15QPR2 &amp; A16: Fixed hiding privacy indicators" />
     <MESSAGE value="CHANGELOG: QS Light theme: fixed icon colors during/after longpress" />
     <MESSAGE value="CHANGELOG:" />
@@ -988,7 +992,8 @@
     <MESSAGE value="Merge the changes from PixelXpert Program(canary 425-446)" />
     <MESSAGE value="Merge the changes from PixelXpert Program(canary 425-446)" />
     <MESSAGE value="Change the desc for LSPosed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the desc for LSPosed." />
+    <MESSAGE value="Fix fault of merge." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix fault of merge." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

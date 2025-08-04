@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.yhc.aospxpert.BuildConfig;
 import com.yhc.aospxpert.AOSPXpert;
-import sh.siava.rangesliderpreference.RangeSliderPreference;
+import com.yhc.rangesliderpreference.RangeSliderPreference;
 
 /** @noinspection unused*/
 public class PXPreferences {
