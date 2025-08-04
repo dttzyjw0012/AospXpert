@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Icône avec thème alternatif</string>
-    <string name="xposed_desc">Personnalisations pour les appareils Google Pixel</string>
+    <string name="xposed_desc">Personnalisations pour les appareils AOSP</string>
     <string name="volume_tile_title">Volume des médias</string>
     <string name="app_switch_tile_title">Changer de profil d\'application</string>
     <string name="hide_default">Cacher (par défaut)</string>

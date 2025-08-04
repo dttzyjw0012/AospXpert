@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Альтернативна тематична іконка</string>
-    <string name="xposed_desc">Налаштування для пристроїв Google Pixel</string>
+    <string name="xposed_desc">Налаштування для пристроїв AOSP</string>
     <string name="volume_tile_title">Гучність носія</string>
     <string name="app_switch_tile_title">Змінити профіль програми</string>
     <string name="hide_default">Сховати (За замовчуванням)</string>

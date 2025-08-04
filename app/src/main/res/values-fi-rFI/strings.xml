@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Vaihtoehtoinen teemakuvake</string>
-    <string name="xposed_desc">Google Pixel -laitteiden mukautukset</string>
+    <string name="xposed_desc">AOSP -laitteiden mukautukset</string>
     <string name="volume_tile_title">Media Volume</string>
     <string name="app_switch_tile_title">Vaihda sovellusprofiilia</string>
     <string name="hide_default">Piilota (oletus)</string>

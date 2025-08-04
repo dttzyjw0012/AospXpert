@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Abilita l\'icona dell\'app a tema AOSP Mods alternativa</string>
-    <string name="xposed_desc">Personalizzazioni per dispositivi Google Pixel</string>
+    <string name="xposed_desc">Personalizzazioni per dispositivi AOSP</string>
     <string name="volume_tile_title">Volume multimedia</string>
     <string name="app_switch_tile_title">Cambia profilo dell\'app</string>
     <string name="hide_default">Nascondi (Default)</string>

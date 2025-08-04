@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Alternative AOSP Mods-Symbole aktivieren</string>
-    <string name="xposed_desc">Anpassungen für Google Pixel-Geräte</string>
+    <string name="xposed_desc">Anpassungen für AOSP-Geräte</string>
     <string name="volume_tile_title">Medienlautstärke</string>
     <string name="app_switch_tile_title">App-Profil wechseln</string>
     <string name="hide_default">Verstecken (Standard)</string>

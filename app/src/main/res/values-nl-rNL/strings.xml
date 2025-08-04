@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Alternatief thema-icoon</string>
-    <string name="xposed_desc">Aanpassingen voor Google Pixel toestellen</string>
+    <string name="xposed_desc">Aanpassingen voor AOSP toestellen</string>
     <string name="volume_tile_title">Mediavolume</string>
     <string name="app_switch_tile_title">Van app-profiel wisselen</string>
     <string name="hide_default">Verbergen (standaard)</string>

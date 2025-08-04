@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Alternatív témájú ikon</string>
-    <string name="xposed_desc">Testreszabás Google Pixel eszközökhöz</string>
+    <string name="xposed_desc">Testreszabás AOSP eszközökhöz</string>
     <string name="volume_tile_title">Média kötet</string>
     <string name="app_switch_tile_title">Alkalmazás profil váltás</string>
     <string name="hide_default">Elrejtés (alapértelmezett)</string>

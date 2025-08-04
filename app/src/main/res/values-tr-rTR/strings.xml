@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Alternatif Temalı Simge</string>
-    <string name="xposed_desc">Google Pixel cihazları için özelleştirmeler</string>
+    <string name="xposed_desc">AOSP cihazları için özelleştirmeler</string>
     <string name="volume_tile_title">Medya Sesi</string>
     <string name="app_switch_tile_title">Uygulama Profilini Değiştir</string>
     <string name="hide_default">Gizle (Varsayılan)</string>

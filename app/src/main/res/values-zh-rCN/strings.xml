@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">其他主题图标</string>
-    <string name="xposed_desc">自定义 Google Pixel 设备</string>
+    <string name="xposed_desc">自定义 AOSP 设备</string>
     <string name="volume_tile_title">媒体音量</string>
     <string name="app_switch_tile_title">Switch App Profile</string>
     <string name="hide_default">隐藏 (默认)</string>

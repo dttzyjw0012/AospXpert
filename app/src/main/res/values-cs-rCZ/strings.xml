@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Ikona s alternativní tématikou</string>
-    <string name="xposed_desc">Přizpůsobení zařízení Google Pixel</string>
+    <string name="xposed_desc">Přizpůsobení zařízení AOSP</string>
     <string name="volume_tile_title">Hlasitost médií</string>
     <string name="app_switch_tile_title">Přepnout profil aplikace</string>
     <string name="hide_default">Skrýt (výchozí)</string>

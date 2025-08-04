@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Алтернативни стил иконе</string>
-    <string name="xposed_desc">Персонализација за Google Pixel уређаје</string>
+    <string name="xposed_desc">Персонализација за AOSP уређаје</string>
     <string name="volume_tile_title">Јачина звука медија</string>
     <string name="app_switch_tile_title">Промените профил апликације</string>
     <string name="hide_default">Сакриј (подразумевано)</string>

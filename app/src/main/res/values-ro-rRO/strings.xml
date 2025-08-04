@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Pictogramă tematică alternativă</string>
-    <string name="xposed_desc">Personalizări pentru dispozitivele Google Pixel</string>
+    <string name="xposed_desc">Personalizări pentru dispozitivele AOSP</string>
     <string name="volume_tile_title">Volumul media</string>
     <string name="app_switch_tile_title">Schimbă profilul aplicației</string>
     <string name="hide_default">Ascuns (implicit)</string>

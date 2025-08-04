@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">הפעל סמל אפליקציה חלופי עם ערכות נושא של AOSP Mods</string>
-    <string name="xposed_desc">Customizations for Google Pixel devices</string>
+    <string name="xposed_desc">Customizations for AOSP devices</string>
     <string name="volume_tile_title">עוצמת קול של מדיה</string>
     <string name="app_switch_tile_title">החלף פרופיל אפליקציה</string>
     <string name="hide_default">הסתר (ברירת מחדל)</string>

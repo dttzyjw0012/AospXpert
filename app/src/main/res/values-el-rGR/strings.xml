@@ -2,7 +2,7 @@
 <resources>
     <!--General strings-->
     <string name="app_themed_icon_title">Εικονίδιο εναλλακτικού θέματος</string>
-    <string name="xposed_desc">Προσαρμογές για συσκευές Google Pixel</string>
+    <string name="xposed_desc">Προσαρμογές για συσκευές AOSP</string>
     <string name="volume_tile_title">Ένταση πολυμέσων</string>
     <string name="app_switch_tile_title">Εναλλαγή προφίλ εφαρμογής</string>
     <string name="hide_default">Απόκρυψη (Προεπιλογή)</string>
