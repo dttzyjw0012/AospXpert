@@ -140,7 +140,7 @@ assertAospRom()
 
   ui_print 'And it is a canary build'
   ui_print 'Please install it very carefully'
-  ui_print 'This module will make your device to a bricked device!'
+  ui_print 'This module will make your device to a bricked device probably!'
   ui_print ''
 
   ui_print 'So do u still want to install it?'

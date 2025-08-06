@@ -18,6 +18,16 @@
           <theme>@style/AppTheme.PixelXpert</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/update_fragment.xml">
+        <config>
+          <theme>@style/AppTheme.AospXpert</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/update_fragment_land.xml">
+        <config>
+          <theme>@style/AppTheme.AospXpert</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/view_header_expandable.xml">
         <config>
           <theme>@style/AppTheme.PixelXpert</theme>
@@ -79,11 +89,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Fix submodule package name.">
-      <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference/.idea/runConfigurations.xml" afterDir="false" />
+    <list default="true" id="4fb06cc4-2552-4377-a1ed-ab85eacd6385" name="Changes" comment="Fix fault of merge.">
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Submodules/RangeSliderPreference" beforeDir="false" afterPath="$PROJECT_DIR$/Submodules/RangeSliderPreference" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CanaryChangelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/CanaryChangelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MagiskModBase/customize.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagiskModBase/system/priv-app/AOSPXpert/.placeholder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,12 +115,23 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PixelXpert" type="f1a62948:ProjectNode" />
+                <item name="AospXpert" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AospXpert" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -231,9 +255,7 @@
     &quot;accountId&quot;: &quot;c4197360-fcfd-4127-a537-2d7690ad83e5&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/.gradle/caches/8.10.2/transforms/5ab34855bcc0c92a1b7769ff1008a389/transformed/core-1.13.0/res/values/values.xml" root0="SKIP_INSPECTION" />
-  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.10.2-bin/a04bxjujx95o3nb99gddekhwo/gradle-8.10.2" javaHome="$APPLICATION_HOME_DIR$/jbr" gradleVersion="8.10.2" />
   <component name="KotlinScriptingSettings">
     <scriptDefinition className="org.jetbrains.kotlin.scripting.resolve.KotlinScriptDefinitionFromAnnotatedTemplate" definitionName="KotlinBuildScript">
       <order>2147483647</order>
@@ -264,46 +286,48 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Android App.app.executor": "Debug",
-    "ApkExportedModule": "PixelXpert.app",
-    "ExportApk.ApkPathForPixelXpert.app": "C:\\Users\\83018\\Documents\\GitHub\\PixelXpert\\app",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.makeMagisk.sh.executor": "Run",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.android.tools.idea.streaming.zoom.toolbar.visible": "false",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "aosp-canary",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/nameless/AndroidStudioProjects/AospXpert/Submodules/RangeSliderPreference",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "http.proxy",
-    "show.do.not.copy.http.proxy.settings.to.gradle": "true",
-    "show.migrate.to.gradle.popup": "false",
-    "vcs.patch.to.clipboard": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Debug&quot;,
+    &quot;ApkExportedModule&quot;: &quot;PixelXpert.app&quot;,
+    &quot;ExportApk.ApkPathForPixelXpert.app&quot;: &quot;C:\\Users\\83018\\Documents\\GitHub\\PixelXpert\\app&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/home/nameless/.local/share/JetBrains/IntelliJIdea2024.3/Shell Script/shellcheck&quot;,
+    &quot;Shell Script.makeMagisk.sh.executor&quot;: &quot;Run&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.android.tools.idea.streaming.zoom.toolbar.visible&quot;: &quot;false&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aosp-canary&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nameless/AndroidStudioProjects/AospXpert/.idea&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;device.mirroring&quot;,
+    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vcs.patch.to.clipboard&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ExportApk.BuildVariants": [
-      "release"
+  &quot;keyToStringList&quot;: {
+    &quot;ExportApk.BuildVariants&quot;: [
+      &quot;release&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Default Config" />
     <option name="BUILD_VARIANTS_TAB" value="Flavors" />
@@ -316,11 +340,11 @@
       <recent name="sh.siava.pixelxpert.service.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea" />
       <recent name="$PROJECT_DIR$/MagiskModBase/common" />
       <recent name="$PROJECT_DIR$/app/src/main/java/sh/siava/pixelxpert/modpacks/android" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/lib" />
-      <recent name="C:\Users\83018\Documents\GitHub\PixelXpert" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\83018\Documents\GitHub\PixelXpert\app\resources" />
@@ -350,11 +374,10 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java>
         <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
@@ -401,8 +424,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -424,14 +447,21 @@
       <workItem from="1742196728572" duration="309000" />
       <workItem from="1742197046059" duration="10882000" />
       <workItem from="1742261593803" duration="623000" />
-    </task>
-    <task id="LOCAL-00116" summary="CHANGELOG: Improved the 'sleep on flat surface' feature">
-      <option name="closed" value="true" />
-      <created>1733835779890</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1733835779890</updated>
+      <workItem from="1754417919441" duration="32000" />
+      <workItem from="1754418231092" duration="104000" />
+      <workItem from="1754418347218" duration="178000" />
+      <workItem from="1754418538053" duration="235000" />
+      <workItem from="1754418781140" duration="95000" />
+      <workItem from="1754418889021" duration="27000" />
+      <workItem from="1754419321602" duration="59000" />
+      <workItem from="1754419392677" duration="80000" />
+      <workItem from="1754419489331" duration="86000" />
+      <workItem from="1754419673200" duration="39000" />
+      <workItem from="1754419740438" duration="37000" />
+      <workItem from="1754419816068" duration="209000" />
+      <workItem from="1754420183658" duration="71000" />
+      <workItem from="1754420345594" duration="70000" />
+      <workItem from="1754420465320" duration="7366000" />
     </task>
     <task id="LOCAL-00117" summary="CHANGELOG: Fixed 'sleep on flat surface' unintentional sleeps">
       <option name="closed" value="true" />
@@ -817,7 +847,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754331571839</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="Fix fault of merge.">
+      <option name="closed" value="true" />
+      <created>1754333048384</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1754333048385</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -834,91 +872,8 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="2b6661bb-5b79-479d-91c2-cf335c62a7c9" value="TOOL_WINDOW" />
-        <entry key="d62c6696-4d44-42fd-9c2c-5b8a59940992" value="TOOL_WINDOW" />
-        <entry key="9e76f9fd-c50f-4a7a-906e-8ad494c88882" value="TOOL_WINDOW" />
-        <entry key="892d9780-c367-47b5-bd94-79973966956c" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="2b6661bb-5b79-479d-91c2-cf335c62a7c9">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="structure">
-                    <value>
-                      <list>
-                        <option value="dir:/home/nameless/AndroidStudioProjects/AospXpert/app/src/main/res/layout" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-            </State>
-          </value>
-        </entry>
-        <entry key="892d9780-c367-47b5-bd94-79973966956c">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$/Submodules/RangeSliderPreference" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-            </State>
-          </value>
-        </entry>
-        <entry key="9e76f9fd-c50f-4a7a-906e-8ad494c88882">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="structure">
-                    <value>
-                      <list>
-                        <option value="dir:/home/nameless/AndroidStudioProjects/AospXpert/app/src/main/res/xml" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -933,31 +888,6 @@
                   </entry>
                 </map>
               </option>
-            </State>
-          </value>
-        </entry>
-        <entry key="d62c6696-4d44-42fd-9c2c-5b8a59940992">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="structure">
-                    <value>
-                      <list>
-                        <option value="dir:/home/nameless/AndroidStudioProjects/AospXpert/app/src/main/res" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
@@ -988,10 +918,10 @@
     <MESSAGE value="Merge the changes from PixelXpert Program(canary 425-446)" />
     <MESSAGE value="Merge the changes from PixelXpert Program(canary 425-446)" />
     <MESSAGE value="Change the desc for LSPosed." />
-    <MESSAGE value="Fix fault of merge." />
     <MESSAGE value="Fix submodule package name." />
     <MESSAGE value="submodule" />
-    <option name="LAST_COMMIT_MESSAGE" value="submodule" />
+    <MESSAGE value="Fix fault of merge." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix fault of merge." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

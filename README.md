@@ -5,7 +5,7 @@
 ### For pure AOSP roms Android 13 (Dec 2022) to Android 16 (June 2025):
 
 [//]: # ([![Latest Release]&#40;https://img.shields.io/github/v/release/siavash79/AospXpert?color=green&include_prereleases&label=Download%20Latest%20Stable&#41;]&#40;https://github.com/siavash79/AospXpert/releases/latest&#41;)
-[![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_426)
+[![Latest Canary Release](https://img.shields.io/badge/Download%20Latest-Canary-blue)](https://github.com/dttzyjw0012/AospXpert/releases/tag/canary_427)
 
 [//]: # (![Downloads - Stable channel]&#40;https://img.shields.io/github/downloads/siavash79/AospXpert/total?color=red&label=Downloads%20-%20Stable%20Channel&#41;)
 
