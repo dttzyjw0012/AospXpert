@@ -49,6 +49,7 @@ public class PreferenceHelper {
 
 	public static boolean isVisible(String key) {
 		if (instance == null) return true;
+        int taskBarMode = 1;
 
 		switch (key) {
 			case "nav_keyboard_height_cat":
@@ -82,9 +83,14 @@ public class PreferenceHelper {
 			case "TaskbarAsRecents":
 			case "taskbarHeightOverride":
 			case "TaskbarRadiusOverride":
+                taskBarMode = Integer.parseInt(instance.mPreferences.getString("taskBarMode", "0"));
+                return taskBarMode == 1;
+
 			case "TaskbarTransient":
-				int taskBarMode = Integer.parseInt(instance.mPreferences.getString("taskBarMode", "0"));
-				return taskBarMode == 1;
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                    taskBarMode = Integer.parseInt(instance.mPreferences.getString("taskBarMode", "0"));
+                    return taskBarMode == 1;
+                }
 
 			case "EnableGoogleRecents":
 				return !instance.mPreferences.getBoolean("TaskbarAsRecents", false);

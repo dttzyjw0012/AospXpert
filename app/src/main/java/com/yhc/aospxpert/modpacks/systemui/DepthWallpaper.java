@@ -19,6 +19,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
+import android.os.Build;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -84,38 +85,41 @@ public class DepthWallpaper extends XposedModPack {
 
 		ReflectedClass AodBurnInLayerClass = ReflectedClass.ofIfPossible("com.android.systemui.keyguard.ui.view.layout.sections.AodBurnInLayer");
 
-		//A15 compose keyguard
-		AodBurnInLayerClass
-				.afterConstruction()
-				.run(param -> {
-					View entryV = (View) param.thisObject;
 
-					if(!DWallpaperEnabled) return;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+            //A15 compose keyguard
+            AodBurnInLayerClass
+                    .afterConstruction()
+                    .run(param -> {
+                        View entryV = (View) param.thisObject;
 
-					Resources res = mContext.getResources();
+                        if (!DWallpaperEnabled) return;
 
-					entryV.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
-						@SuppressLint("DiscouragedApi")
-						@Override
-						public void onViewAttachedToWindow(@NonNull View v) {
-							ReflectionTools.runDelayedOnMainThread(entryV, 1000, () -> {
-								ViewGroup rootView = (ViewGroup) entryV.getParent();
+                        Resources res = mContext.getResources();
 
-								if(!mLayersCreated) {
-									createLayers();
-								}
+                        entryV.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+                            @SuppressLint("DiscouragedApi")
+                            @Override
+                            public void onViewAttachedToWindow(@NonNull View v) {
+                                ReflectionTools.runDelayedOnMainThread(entryV, 1000, () -> {
+                                    ViewGroup rootView = (ViewGroup) entryV.getParent();
 
-								reAddView(rootView, mLockScreenSubject, 0);
-								reAddView(rootView, rootView.findViewById(res.getIdentifier("lockscreen_clock_view_large", "id", mContext.getPackageName())), 0);
-								reAddView(rootView, rootView.findViewById(res.getIdentifier("lockscreen_clock_view", "id", mContext.getPackageName())),0);
-							});
-						}
+                                    if (!mLayersCreated) {
+                                        createLayers();
+                                    }
 
-						@Override
-						public void onViewDetachedFromWindow(@NonNull View v) {
-						}
-					});
-				});
+                                    reAddView(rootView, mLockScreenSubject, 0);
+                                    reAddView(rootView, rootView.findViewById(res.getIdentifier("lockscreen_clock_view_large", "id", mContext.getPackageName())), 0);
+                                    reAddView(rootView, rootView.findViewById(res.getIdentifier("lockscreen_clock_view", "id", mContext.getPackageName())), 0);
+                                });
+                            }
+
+                            @Override
+                            public void onViewDetachedFromWindow(@NonNull View v) {
+                            }
+                        });
+                    });
+        }
 
 		ScrimViewClass
 				.before("setViewAlpha")
@@ -143,36 +147,39 @@ public class DepthWallpaper extends XposedModPack {
 					}
 				});
 
-		CentralSurfacesImplClass
-				.after("start")
-				.run(param -> {
-					if(!DWallpaperEnabled) return;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            CentralSurfacesImplClass
+                    .after("start")
+                    .run(param -> {
+                        if (!DWallpaperEnabled) return;
 
-					Resources res = mContext.getResources();
+                        Resources res = mContext.getResources();
 
-					View scrimBehind = (View) getObjectField(mScrimController, "mScrimBehind");
-					ViewGroup rootView = (ViewGroup) scrimBehind.getParent();
+                        View scrimBehind = (View) getObjectField(mScrimController, "mScrimBehind");
+                        ViewGroup rootView = (ViewGroup) scrimBehind.getParent();
 
-					@SuppressLint("DiscouragedApi")
-					ViewGroup targetView = rootView.findViewById(res.getIdentifier("notification_container_parent", "id", mContext.getPackageName()));
+                        @SuppressLint("DiscouragedApi")
+                        ViewGroup targetView = rootView.findViewById(res.getIdentifier("notification_container_parent", "id", mContext.getPackageName()));
 
-					if(!mLayersCreated) {
-						createLayers();
-					}
+                        if (!mLayersCreated) {
+                            createLayers();
+                        }
 
-					reAddView(rootView, mWallpaperBackground, 0);
+                        reAddView(rootView, mWallpaperBackground, 0);
 
-					targetView.addView(mLockScreenSubject,1);
-				});
+                        targetView.addView(mLockScreenSubject, 1);
+                    });
+        }
 
-		CanvasEngineClass
-				.after("onSurfaceDestroyed")
-				.run(param -> {
-					if(DWallpaperEnabled && isLockScreenWallpaper(param.thisObject))
-					{
-						invalidateLSWSC();
-					}
-				});
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            CanvasEngineClass
+                    .after("onSurfaceDestroyed")
+                    .run(param -> {
+                        if (DWallpaperEnabled && isLockScreenWallpaper(param.thisObject)) {
+                            invalidateLSWSC();
+                        }
+                    });
+        }
 
 		CanvasEngineClass
 				.after("onCreate")
@@ -197,60 +204,62 @@ public class DepthWallpaper extends XposedModPack {
 						wallpaperProcessorThread[0].interrupt();
 					}
 
-					if(DWallpaperEnabled && isLockScreenWallpaper(param.thisObject))
-					{
-						wallpaperProcessorThread[0] =new Thread(() -> {
-							Bitmap wallpaperBitmap = Bitmap.createBitmap((Bitmap) param.args[0]);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                        if (DWallpaperEnabled && isLockScreenWallpaper(param.thisObject)) {
+                            wallpaperProcessorThread[0] = new Thread(() -> {
+                                Bitmap wallpaperBitmap = Bitmap.createBitmap((Bitmap) param.args[0]);
 
-							boolean cacheIsValid = assertCache(wallpaperBitmap);
+                                boolean cacheIsValid = assertCache(wallpaperBitmap);
 
-							Rect displayBounds =  ((Context) callMethod(param.thisObject, "getDisplayContext")).getSystemService(WindowManager.class)
-									.getCurrentWindowMetrics()
-									.getBounds();
+                                Rect displayBounds = ((Context) callMethod(param.thisObject, "getDisplayContext")).getSystemService(WindowManager.class)
+                                        .getCurrentWindowMetrics()
+                                        .getBounds();
 
-							float ratioW = 1f * displayBounds.width() / wallpaperBitmap.getWidth();
-							float ratioH = 1f * displayBounds.height() / wallpaperBitmap.getHeight();
+                                float ratioW = 1f * displayBounds.width() / wallpaperBitmap.getWidth();
+                                float ratioH = 1f * displayBounds.height() / wallpaperBitmap.getHeight();
 
-							int desiredHeight = Math.round(Math.max(ratioH, ratioW) * wallpaperBitmap.getHeight());
-							int desiredWidth = Math.round(Math.max(ratioH, ratioW) * wallpaperBitmap.getWidth());
+                                int desiredHeight = Math.round(Math.max(ratioH, ratioW) * wallpaperBitmap.getHeight());
+                                int desiredWidth = Math.round(Math.max(ratioH, ratioW) * wallpaperBitmap.getWidth());
 
-							int xPixelShift = (desiredWidth - displayBounds.width()) / 2;
-							int yPixelShift = (desiredHeight - displayBounds.height()) / 2;
+                                int xPixelShift = (desiredWidth - displayBounds.width()) / 2;
+                                int yPixelShift = (desiredHeight - displayBounds.height()) / 2;
 
-							Bitmap scaledWallpaperBitmap = Bitmap.createScaledBitmap(wallpaperBitmap, desiredWidth, desiredHeight, true);
+                                Bitmap scaledWallpaperBitmap = Bitmap.createScaledBitmap(wallpaperBitmap, desiredWidth, desiredHeight, true);
 
-							//crop to display bounds
-							scaledWallpaperBitmap = Bitmap.createBitmap(scaledWallpaperBitmap, xPixelShift, yPixelShift, displayBounds.width(), displayBounds.height());
-							Bitmap finalScaledWallpaperBitmap = Bitmap.createBitmap(scaledWallpaperBitmap);
+                                //crop to display bounds
+                                scaledWallpaperBitmap = Bitmap.createBitmap(scaledWallpaperBitmap, xPixelShift, yPixelShift, displayBounds.width(), displayBounds.height());
+                                Bitmap finalScaledWallpaperBitmap = Bitmap.createBitmap(scaledWallpaperBitmap);
 
-							if(!mLayersCreated) {
-								createLayers();
-							}
+                                if (!mLayersCreated) {
+                                    createLayers();
+                                }
 
-							mWallpaperBackground.post(() -> mWallpaperBitmapContainer.setBackground(new BitmapDrawable(mContext.getResources(), finalScaledWallpaperBitmap)));
+                                mWallpaperBackground.post(() -> mWallpaperBitmapContainer.setBackground(new BitmapDrawable(mContext.getResources(), finalScaledWallpaperBitmap)));
 
-							if(!cacheIsValid) {
-								try {
-									String cachePath = Constants.getLockScreenSubjectCachePath(mContext);
+                                if (!cacheIsValid) {
+                                    try {
+                                        String cachePath = Constants.getLockScreenSubjectCachePath(mContext);
 
-									Bitmap subjectBitmap = XPLauncher.getRootProviderProxy().extractSubject(finalScaledWallpaperBitmap, SegmentorAI);
+                                        Bitmap subjectBitmap = XPLauncher.getRootProviderProxy().extractSubject(finalScaledWallpaperBitmap, SegmentorAI);
 
-									if(subjectBitmap != null) {
-										FileOutputStream subjectOutputStream = new FileOutputStream(cachePath);
-										subjectBitmap.compress(Bitmap.CompressFormat.PNG, 100, subjectOutputStream);
-										subjectOutputStream.close();
+                                        if (subjectBitmap != null) {
+                                            FileOutputStream subjectOutputStream = new FileOutputStream(cachePath);
+                                            subjectBitmap.compress(Bitmap.CompressFormat.PNG, 100, subjectOutputStream);
+                                            subjectOutputStream.close();
 
-										Thread.sleep(500); //letting the filesystem settle down
+                                            Thread.sleep(500); //letting the filesystem settle down
 
-										setDepthWallpaper();
-									}
-								} catch (Throwable ignored) {}
-							}
+                                            setDepthWallpaper();
+                                        }
+                                    } catch (Throwable ignored) {
+                                    }
+                                }
 
-							wallpaperProcessorThread[0] = null;
-						});
-						wallpaperProcessorThread[0].start();
-					}
+                                wallpaperProcessorThread[0] = null;
+                            });
+                            wallpaperProcessorThread[0].start();
+                        }
+                    }
 				});
 
 		ScrimControllerClass
@@ -340,6 +349,10 @@ public class DepthWallpaper extends XposedModPack {
 	}
 	private void setDepthWallpaper()
 	{
+        if (!(Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE)) {
+            return;
+        }
+
 		String state = getObjectField(mScrimController, "mState").toString();
 		boolean showSubject = DWallpaperEnabled
 				&&

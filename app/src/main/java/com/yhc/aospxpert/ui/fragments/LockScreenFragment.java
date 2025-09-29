@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -57,23 +58,25 @@ public class LockScreenFragment extends ControlledPreferenceFragmentCompat {
 			return;
 		}
 
-		if (key.equals("DWallpaperEnabled")) {
-			try {
-				boolean DepthEffectEnabled = mPreferences.getBoolean("DWallpaperEnabled", false);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            if (key.equals("DWallpaperEnabled")) {
+                try {
+                    boolean DepthEffectEnabled = mPreferences.getBoolean("DWallpaperEnabled", false);
 
-				if (DepthEffectEnabled && getContext() != null) {
-					new MaterialAlertDialogBuilder(getContext(), R.style.MaterialComponents_MaterialAlertDialog)
-							.setTitle(R.string.depth_effect_alert_title)
-							.setMessage(getString(R.string.depth_effect_alert_body, getString(R.string.sysui_restart_needed)))
-							.setPositiveButton(R.string.depth_effect_ok_btn, (dialog, which) -> AppUtils.restart("systemui"))
-							.setCancelable(false)
-							.show();
-				}
-			} catch (Exception ignored) {
-			}
-		} else if (key.equals("SegmentorAI")) {
-			updateModelAvailabilitySummary();
-		}
+                    if (DepthEffectEnabled && getContext() != null) {
+                        new MaterialAlertDialogBuilder(getContext(), R.style.MaterialComponents_MaterialAlertDialog)
+                                .setTitle(R.string.depth_effect_alert_title)
+                                .setMessage(getString(R.string.depth_effect_alert_body, getString(R.string.sysui_restart_needed)))
+                                .setPositiveButton(R.string.depth_effect_ok_btn, (dialog, which) -> AppUtils.restart("systemui"))
+                                .setCancelable(false)
+                                .show();
+                    }
+                } catch (Exception ignored) {
+                }
+            } else if (key.equals("SegmentorAI")) {
+                updateModelAvailabilitySummary();
+            }
+        }
 	}
 
 	private void updateModelAvailabilitySummary() {

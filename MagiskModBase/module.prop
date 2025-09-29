@@ -1,7 +1,7 @@
 id=AOSPXpert
 name=AOSP Xpert
-version=aosp canary 427
-versionCode=427
+version=aosp canary 428
+versionCode=428
 author=AOSP Xpert Team
 description=Xposed based module for customizations on AOSP roms. Android 13+
 updateJson=https://raw.githubusercontent.com/dttzyjw0012/AospXpert/stable/MagiskModuleUpdate_Xposed.json

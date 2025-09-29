@@ -4,7 +4,7 @@
     <string name="app_themed_icon_title">其他主题图标</string>
     <string name="xposed_desc">自定义 AOSP 设备</string>
     <string name="volume_tile_title">媒体音量</string>
-    <string name="app_switch_tile_title">Switch App Profile</string>
+    <string name="app_switch_tile_title">切换应用配置</string>
     <string name="hide_default">隐藏 (默认)</string>
     <string name="percent_of_default_size">% 默认</string>
     <string name="overlay_none_title">(默认)</string>
@@ -37,7 +37,7 @@
     <string name="usage_summary">打开 Wiki 页面</string>
     <string name="crowdin_title">翻译到你的语言</string>
     <string name="crowdin_summary">帮助我们将 %s 翻译成您的语言</string>
-    <string name="nothing_to_show">Nothing to show</string>
+    <string name="nothing_to_show">无内容</string>
     <!--Category titles-->
     <string name="lockscreen_header_title">锁屏</string>
     <string name="lockscreen_header_summary">把屏幕锁改成合你口味的样子</string>
@@ -65,7 +65,7 @@
     <string name="hotspot_disable_approval_summary">允许非“预先批准”客户端无缝连接</string>
     <!--Lock screen related-->
     <string name="depth_wallpaper_options">深度效果的壁纸</string>
-    <string name="depth_wallpaper_title">深度效果壁纸</string>
+    <string name="depth_wallpaper_title">深度效果壁纸(a14+)</string>
     <string name="depth_wallpaper_summary">动态整合壁纸的前景和时钟</string>
     <string name="depth_wallpaper_ai_model_title">首选的 AI 模型</string>
     <string name="depth_wallpaper_opacity_title">壁纸前景透明度</string>
@@ -106,7 +106,7 @@
     <string name="easy_unlock_title">简易解锁 (Pin/密码)</string>
     <string name="easy_unlock_summary">如果第一次未生效，请重试</string>
     <string name="charging_info_title">锁屏显示充电信息</string>
-    <string name="disable_lockscreen_pill_title">不显示 “自定义锁屏”胶囊</string>
+    <string name="disable_lockscreen_pill_title">不显示 “自定义锁屏”胶囊(a14+)</string>
     <string name="imperial_units_title">使用英制单位</string>
     <!--Status bar related-->
     <string name="double_tap_sleep_title">双击息屏</string>
@@ -172,7 +172,7 @@
     <string name="dual_tone_battery_title">双色电池图标</string>
     <string name="dual_tone_battery_on_summary">开启 (仅当纵向图标时生效)</string>
     <string name="unread_messages_title">显示未读通知数量</string>
-    <string name="status_bar_height">状态高度</string>
+    <string name="status_bar_height">状态栏高度 (旋转屏幕以应用)</string>
     <string name="sb_padding_title">状态栏内边距</string>
     <string name="sb_padding_summary">最小 / 最大 等同于设备默认值</string>
     <string name="sbbb_header_title">电量条</string>
@@ -261,11 +261,11 @@
     <string name="qs_footer_text_value">输入自定义文本</string>
     <string name="qs_footer_text_summary">留空以移除</string>
     <string name="qs_footer_text_desc">关闭并打开屏幕后生效</string>
-    <string name="qs_leveled_flashlight_title">手电筒磁贴亮度可调</string>
+    <string name="qs_leveled_flashlight_title">闪光灯级别的磁贴</string>
     <string name="qs_flashlight_level_global_title">全局应用手电筒亮度</string>
     <string name="qs_tile_vertical_title">将磁贴图标移至顶部</string>
     <string name="qs_tile_qty_title">磁贴面板数量设定</string>
-    <string name="qs_leveled_flashlight_summary">需要硬件支持</string>
+    <string name="qs_leveled_flashlight_summary">长按瓷块显示滑动条\n 需要硬件支持</string>
     <string name="light_qs_title">浅色主题下使用浅色磁贴面板 (可能会出现问题)</string>
     <string name="qs_pulldown_size">快速下拉磁贴面板</string>
     <string name="qs_pulldown_switch_title">快速下拉磁贴面板</string>
@@ -305,7 +305,7 @@
     <string name="gesture_nav_pill_width_title">对比标准大小的宽度</string>
     <string name="gesture_nav_pill_height_title">对比标准大小的高度</string>
     <string name="threebutton_header_title">三按钮导航</string>
-    <string name="taskbar_header_title">Taskbar navigation</string>
+    <string name="taskbar_header_title">任务栏导航</string>
     <string name="modify_3button_title">更改按钮顺序</string>
     <string name="three_button_left_title">左按钮</string>
     <string name="three_button_center_title">中按钮</string>
@@ -322,7 +322,7 @@
     <string name="taskbar_status_title">任务栏</string>
     <string name="taskbar_force_enable_title">强制开启</string>
     <string name="taskbar_force_disable_title">强制关闭</string>
-    <string name="taskbar_transient_title">Auto hide</string>
+    <string name="taskbar_transient_title">自动隐藏(a14+)</string>
     <string name="taskbar_on_launcher_title">在首页显示</string>
     <string name="remap_physical_buttons_title">重映射物理按钮</string>
     <!-- Package manager -->
@@ -383,6 +383,7 @@
     <string name="disable_overscroll">禁用过度滚动效果</string>
     <string name="overscroll_on_summary">重要:你必须在 LSPosed 作用域中勾选你要禁用的app</string>
     <string name="control_flashlight_with_volume_keys">使用音量键控制手电筒亮度</string>
+    <string name="flashlight_fade_effect">闪光灯淡入淡出效果</string>
     <string name="milliseconds">毫秒</string>
     <string name="duration_seconds">%d 秒</string>
     <string name="hours">小时</string>

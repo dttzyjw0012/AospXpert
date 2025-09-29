@@ -176,6 +176,10 @@ public class ScreenGestures extends XposedModPack {
 	}
 
 	private void hookLockScreenCustomizePill() {
+        if(!(Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE)) {
+            return;
+        }
+
 		try { //A13 doesn't have such thing
 			View mView = (View) getObjectField(NotificationPanelViewController, "mView");
 

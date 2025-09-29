@@ -18,6 +18,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Process;
 import android.os.UserHandle;
 import android.view.View;
@@ -195,13 +196,15 @@ public class TaskbarActivator extends XposedModPack {
 					param.setResult(taskbarMode == TASKBAR_ON);
 				});
 
-		//auto hide
-		DisplayControllerClass
-				.before("isTransientTaskbar")
-				.run(param -> {
-					if (taskbarMode == TASKBAR_ON)
-						param.setResult(TaskbarTransient);
-				});
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            //auto hide
+            DisplayControllerClass
+                    .before("isTransientTaskbar")
+                    .run(param -> {
+                        if (taskbarMode == TASKBAR_ON)
+                            param.setResult(TaskbarTransient);
+                    });
+        }
 
 		LauncherModelClass
 				.afterConstruction()

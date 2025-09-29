@@ -72,7 +72,7 @@
 
     <!--Lock screen related-->
     <string name="depth_wallpaper_options">Depth effect wallpaper</string>
-    <string name="depth_wallpaper_title">Depth effect wallpaper</string>
+    <string name="depth_wallpaper_title">Depth effect wallpaper(a14+)</string>
     <string name="depth_wallpaper_summary">Dynamically integrate wallpaper\'s foreground with the clock</string>
     <string name="depth_wallpaper_ai_model_title">Preferred AI model</string>
     <string name="depth_wallpaper_opacity_title">Wallpaper foreground opacity</string>
@@ -113,7 +113,7 @@
     <string name="easy_unlock_title">Easy unlock (Pin/Password)</string>
     <string name="easy_unlock_summary">If it didn\'t work the first time, try again</string>
     <string name="charging_info_title">Charging information on lockscreen</string>
-    <string name="disable_lockscreen_pill_title">Don\'t show \"Customize Lock Screen\" pill</string>
+    <string name="disable_lockscreen_pill_title">Don\'t show \"Customize Lock Screen\" pill(a14+)</string>
     <string name="imperial_units_title">Use imperial units</string>
 
     <!--Status bar related-->
@@ -356,7 +356,7 @@
     <string name="taskbar_status_title">Android Taskbar</string>
     <string name="taskbar_force_enable_title">Force Enabled</string>
     <string name="taskbar_force_disable_title">Force Disabled</string>
-    <string name="taskbar_transient_title">Auto hide</string>
+    <string name="taskbar_transient_title">Auto hide(a14+)</string>
     <string name="taskbar_on_launcher_title">Show on home</string>
     <string name="remap_physical_buttons_title">Remap physical buttons</string>
 
@@ -377,7 +377,7 @@
     <string name="force_no_cutout">Ignore the camera cutout</string>
     <string name="clear_all_reposition_title">Add an accessible clear-all button to recents page</string>
     <string name="force_themed_icons_title">Auto-generate missing themed icons</string>
-    <string name="force_themed_icons_summary">Aosp launcher only</string>
+    <string name="force_themed_icons_summary">Pixel launcher only</string>
     <string name="volume_button_step_title">Volume steps (0 to 100%)</string>
 
     <string name="display_resolution_switch_title">Modify display resolution</string>

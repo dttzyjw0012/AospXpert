@@ -1,4 +1,8 @@
-**canary-427**
+**canary-428**
+- Add new translate texts for Chinese(China)
+- Add protections for features of higher version Android when use lower version
+
+- **canary-427**
 - Add AOSP rom check in magisk module
 - Merge the changes from PixelXpert Program(canary 425-446)
 

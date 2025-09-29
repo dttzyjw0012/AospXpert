@@ -143,7 +143,7 @@ assertAospRom()
   ui_print 'This module will make your device to a bricked device probably!'
   ui_print ''
 
-  ui_print 'So do u still want to install it?'
+  ui_print 'So do you still want to install it?'
   ui_print 'Volume Up: Continue'
   ui_print 'Volume Down: Abort'
   if [[ "$(getevent -l | grep -m 1 KEY_VOLUME)" == *"VOLUMEDOWN"* ]]; then

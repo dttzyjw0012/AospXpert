@@ -15,8 +15,8 @@ android {
 		applicationId = "com.yhc.aospxpert"
 		minSdk = 33
 		targetSdk = 35
-		versionCode = 427
-		versionName = "aosp-canary-427"
+		versionCode = 428
+		versionName = "aosp-canary-428"
 		setProperty("archivesBaseName", "AOSPXpert.apk")
 		ndk {
 			//noinspection ChromeOsAbiSupport
